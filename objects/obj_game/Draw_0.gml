@@ -17,9 +17,9 @@ switch(room){
 			room_width/2, 200,
 			@"Score 100 points to win!
 
-SPACE: Laser Muskets Fire
+TAP: Create bomb
 
->> PRESS ENTER TO START <<
+>> TAP TO START <<
 "
 		);
 		draw_set_halign(fa_left);
@@ -34,7 +34,7 @@ SPACE: Laser Muskets Fire
 		);
 		draw_text(
 			room_width/2, 300,
-			"PRESS ENTER TO RESTART"
+			"TAP TO RESTART"
 		);
 		draw_set_halign(fa_left);	
 		break;
@@ -52,7 +52,7 @@ SPACE: Laser Muskets Fire
 		);
 		draw_text(
 			room_width/2, 350,
-			"PRESS ENTER TO RESTART"
+			"TAP TO RESTART"
 		);
 		draw_set_halign(fa_left);	
 		break;	

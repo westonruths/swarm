@@ -8,7 +8,7 @@ repeat(5){
 	instance_create_layer(x,y,"Instances",obj_debri)
 }
 
-enemy_health -= 2;
+enemy_health -= global.bullet_damage;
 speed = 0;
 
 sprite_index = spr_eyeball_hurt;

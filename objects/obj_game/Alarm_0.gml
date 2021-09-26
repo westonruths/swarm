@@ -1,11 +1,11 @@
 /// @description spawn enemies
 // You can write your code in this editor
 if(room != rm_game) {
-	exit;	
+	exit;
 }
 
 var xx = room_width;
-var yy = irandom_range(100, room_height-100);
+var yy = spawn_list[| irandom(ds_list_size(spawn_list)-1)];;
 
 instance_create_layer(xx, yy, "Instances", obj_eyeball)
 
