@@ -7,5 +7,3 @@ if (instance_exists(char)) {
 } else {
 	char = noone;
 }
-
-print(char);

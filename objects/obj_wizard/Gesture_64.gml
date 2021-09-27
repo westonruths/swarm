@@ -4,7 +4,11 @@
 var x_goto = event_data[? "posX"]
 var y_goto = event_data[? "posY"]
 
-if (y_goto >= 640) {
+if (y_goto >= global.bottom_game) {
+	exit;
+}
+
+if (x_goto <= global.right_limit) {
 	exit;
 }
 

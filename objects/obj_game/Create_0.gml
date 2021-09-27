@@ -9,10 +9,8 @@ win_score = 100;
 
 draw_set_font(fnt_text);
 
-top_game = 64;
-bottom_game = room_height - 64;
+global.top_game = 23;
+global.bottom_game = room_height - 44;
+global.left_limit = 30;
+global.right_limit = global.left_limit + (7*44)
 
-spawn_list = ds_list_create();
-for (var i = top_game+32; i<bottom_game; i+=32) {
-	ds_list_add(spawn_list, i);
-}

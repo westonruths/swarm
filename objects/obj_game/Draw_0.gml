@@ -2,8 +2,8 @@
 // You can write your code in this editor
 switch(room){
 	case rm_game:
-		draw_text(20,20, "SCORE: " + string(score));
-		draw_text(20,40, "HEALTH: " + string(health));
+		draw_text(20,2, "SCORE: " + string(score));
+		draw_text(120,2, "HEALTH: " + string(health));
 		break;
 	
 	case rm_start:
