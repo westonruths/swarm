@@ -16,7 +16,7 @@ switch(room){
 		);
 		draw_text(
 			room_width/2, 200,
-			@"score 100 points to win!
+			@"score 200 points to win!
 
 TAP: Create bomb
 
