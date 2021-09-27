@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_gun_idle",
-    "path": "sprites/spr_gun_idle/spr_gun_idle.yy",
+    "name": "spr_gun_spawn",
+    "path": "sprites/spr_gun_spawn/spr_gun_spawn.yy",
   },
   "solid": false,
   "visible": true,

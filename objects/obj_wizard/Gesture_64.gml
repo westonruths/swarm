@@ -8,8 +8,8 @@ if (y_goto >= global.bottom_game) {
 	exit;
 }
 
-if (x_goto <= global.right_limit) {
-	exit;
+if (x_goto <= global.right_limit+15) {
+	//exit;
 }
 
 instance_create_layer(x_goto, y_goto,"Instances",obj_mine);

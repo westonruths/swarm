@@ -3,7 +3,11 @@
 
 visible = true;
 if (instance_exists(char)) {
-	visible = false
-} else {
+	visible = false;
+} else {	
 	char = noone;
+}
+
+if (global.money < money_cost) {
+	visible = false;
 }

@@ -2,9 +2,11 @@
 // You can write your code in this editor
 
 enemy_health = 10;
+enemy_health_max = 10;
 enemy_speed = 1;
 
 point_value = 10;
+money_value = 5;
 damage = 10;
 enemy_damage = 1;
 

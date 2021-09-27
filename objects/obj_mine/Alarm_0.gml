@@ -5,6 +5,7 @@ sprite_index = spr_mine_explosion;
 with(obj_enemy) {
 	var dis = point_distance(x, y, other.x, other.y);
 	if (dis > other.close_range && dis <= other.long_range) {
+		audio_play_sound(snd_hit, 1, false);
 		enemy_health -= 4;
 	}
    

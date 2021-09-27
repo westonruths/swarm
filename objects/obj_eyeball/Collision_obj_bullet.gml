@@ -12,3 +12,4 @@ enemy_health -= global.bullet_damage;
 speed = 0;
 
 sprite_index = spr_eyeball_hurt;
+audio_play_sound(snd_hit, 1, false);

@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_laser.mp3",
-  "duration": 0.8741,
+  "soundFile": "snd_laser.wav",
+  "duration": 2.399977,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
