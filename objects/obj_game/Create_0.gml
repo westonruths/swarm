@@ -15,3 +15,4 @@ global.bottom_game = room_height - 64;
 global.left_limit = 30;
 global.right_limit = global.left_limit + (7*44)
 
+global.build_phase = false;

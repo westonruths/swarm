@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (global.build_phase){
+	exit;
+}
 
 var x_goto = event_data[? "posX"]
 var y_goto = event_data[? "posY"]
