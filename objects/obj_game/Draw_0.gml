@@ -3,8 +3,8 @@
 switch(room){
 	case rm_game:
 		draw_text(20,2, "SCORE: " + string(score));
-		draw_text(120,2, "HEALTH: " + string(health));
-		draw_text(260,2, "MONEY: " + string(global.money));
+		draw_text(150,2, "HEALTH: " + string(health));
+		draw_text(300,2, "MONEY: " + string(global.money));
 		break;
 	
 	case rm_start:
@@ -16,7 +16,7 @@ switch(room){
 		);
 		draw_text(
 			room_width/2, 200,
-			@"score 200 points to win!
+			@"score 150 points to win!
 
 TAP: Create bomb
 

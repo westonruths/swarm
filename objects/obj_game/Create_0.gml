@@ -6,7 +6,7 @@ global.money = 10;
 
 global.bullet_damage = 5;
 
-win_score = 2000;
+win_score = 150;
 
 draw_set_font(fnt_text);
 

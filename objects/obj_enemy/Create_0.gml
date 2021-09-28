@@ -7,8 +7,8 @@ enemy_speed = 1;
 
 point_value = 10;
 money_value = 5;
-damage = 10;
-enemy_damage = 1;
+damage = 10; //damage down to score
+enemy_damage = 2; //damage down to other characters
 
 attack = false;
 
