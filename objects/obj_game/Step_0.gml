@@ -10,4 +10,8 @@ if (room = rm_game) {
 		room_goto(rm_gameover);	
 		audio_play_sound(snd_lose, 1, false);
 	}
+	
+	if (global.building) {
+		alarm[0] = 0;
+	} 
 }

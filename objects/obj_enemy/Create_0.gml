@@ -5,6 +5,9 @@ enemy_health = 10;
 enemy_health_max = 10;
 enemy_speed = 1;
 
+original_enemy_damage = 2;
+original_speed = 1;
+
 point_value = 10;
 money_value = 5;
 damage = 10; //damage down to score

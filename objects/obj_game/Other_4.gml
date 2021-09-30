@@ -1,14 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 if(room == rm_game){
-	global.build_phase = true;
-	alarm[2] = 1;
-	
 	if(audio_is_playing(msc_song)){
 		audio_stop_sound(msc_song);
 	}
 	
 	//audio_play_sound(msc_song, 2, true);
+	
+	//spawn_enemies
+	alarm[0] = 60;
 	
 	//setup map
 	obj_size = sprite_get_width(spr_cell);
@@ -24,7 +24,7 @@ if(room == rm_game){
 			if(i==first_cell_y+buffer*3 && j==first_cell_x){
 				instance_create_layer(j,i,"Instances",obj_wizard);
 			} else {
-				instance_create_layer(j,i,"Instances",obj_cell);
+				instance_create_layer(j,i,"Menu_Objects",obj_cell);
 			}
 		}
 	}

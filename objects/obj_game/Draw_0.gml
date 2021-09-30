@@ -4,7 +4,7 @@ switch(room){
 	case rm_game:
 		draw_text(20,2, "SCORE: " + string(score));
 		draw_text(150,2, "HEALTH: " + string(health));
-		draw_text(300,2, "MONEY: " + string(global.money));
+		draw_text(300,2, "GOLD: " + string(global.money));
 		break;
 	
 	case rm_start:
