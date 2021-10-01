@@ -6,3 +6,17 @@ var y_goto = event_data[? "posY"]
 
 x = x_goto+10
 y = y_goto
+
+var cell = instance_nearest(x, y, obj_cell)
+if instance_exists(cell) {
+	with(obj_cell){
+		sprite_index = spr_cell;
+	}
+	
+	with(cell){
+		var dis = point_distance(x, y, other.x, other.y);
+		if (dis <= sprite_width) {
+			sprite_index = spr_cell_selected;
+		}
+	}
+}

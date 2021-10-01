@@ -10,5 +10,3 @@ with(obj_enemy){
 	speed = original_speed;
 	enemy_damage = original_enemy_damage;
 }
-
-instance_destroy();

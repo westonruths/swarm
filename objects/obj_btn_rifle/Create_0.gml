@@ -1,9 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+base_time = room_speed*10
 
-global.building = true;
+alarm[0] = 1;
 
-//initialize build menu
-with (obj_game) {
-	alarm[2] = 1;
-}
+ready = true;
