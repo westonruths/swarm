@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 draw_self();
-//draw_text(x+20,y-15, enemy_health);
 
 var pc;
 pc = (enemy_health / enemy_health_max) * 100;

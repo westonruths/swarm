@@ -7,3 +7,5 @@ repeat(20){
 }
 
 audio_play_sound(snd_lose, 1, false);
+
+instance_destroy()

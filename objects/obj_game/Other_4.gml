@@ -21,11 +21,7 @@ if(room == rm_game){
 	for (var i = first_cell_y; i<global.bottom_game; i+=buffer) {
 		ds_list_add(spawn_list, i);
 		for (var j = first_cell_x; j<global.right_limit; j+=buffer) {
-			if(i==first_cell_y+buffer*3 && j==first_cell_x){
-				instance_create_layer(j,i,"Instances",obj_wizard);
-			} else {
-				instance_create_layer(j,i,"Menu_Objects",obj_cell);
-			}
+			instance_create_layer(j,i,"Menu_Objects",obj_cell);
 		}
 	}
 }

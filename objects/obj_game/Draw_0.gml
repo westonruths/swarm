@@ -5,6 +5,7 @@ switch(room){
 		draw_text(20,2, "SCORE: " + string(score));
 		draw_text(150,2, "HEALTH: " + string(health));
 		draw_text(300,2, "GOLD: " + string(global.money));
+		draw_text(450,2, "WOOD: " + string(global.wood));
 		break;
 	
 	case rm_start:

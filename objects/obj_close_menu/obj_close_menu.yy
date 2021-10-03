@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "build_menu",
-    "path": "folders/Objects/build_menu.yy",
+    "name": "build_ui",
+    "path": "folders/Objects/build_ui.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_close_menu",

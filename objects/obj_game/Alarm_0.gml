@@ -9,4 +9,5 @@ var yy = spawn_list[| irandom(ds_list_size(spawn_list)-1)];;
 
 instance_create_layer(xx, yy, "Instances", obj_eyeball)
 
-alarm[0] = 4*room_speed;
+// Reset alarm to spawn next enemy
+//alarm[0] = 4*room_speed;

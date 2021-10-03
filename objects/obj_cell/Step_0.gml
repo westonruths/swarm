@@ -7,12 +7,12 @@ if (global.building) {
 	visible = true;
 }
 
-if (instance_exists(char)) {
+if (instance_exists(build_obj)) {
 	visible = false;
 } else {	
-	char = noone;
+	build_obj = noone;
 }
 
-if (global.money < global.rifle_cost) {
-	visible = false;
-}
+//if (global.money < global.rifle_cost) {
+//	visible = false;
+//}
