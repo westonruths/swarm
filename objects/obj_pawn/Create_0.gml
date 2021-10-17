@@ -4,6 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
+// Randomly select name
+name = Name();
+
 // The active weapon being employed
 active_wpn = instance_create_layer(x,y,"Items",obj_wpn)
 
@@ -18,11 +21,33 @@ defend_target = noone
 fell_target = noone
 haul_target = noone
 
+// Idle target
+targetX = x + irandom_range(-50,50)
+targetY = y + irandom_range(-50,50)
+
 // Item we are holding
 item_holding = noone;
 
-jobs[0] = Haul
-jobs[1] = Fell
-jobs[2] = Defend
+jobs[0] = Defend
+jobs[1] = Patient
+jobs[2] = Doctor
+jobs[3] = Cook
+jobs[4] = Hunt
+jobs[5] = Construct
+jobs[6] = Grow
+jobs[7] = Mine
+jobs[8] = PlantCut
+jobs[9] = Haul
+jobs[10] = Research
 
-
+// Create job cells
+menu_open = false;
+var listSize = array_length(jobs);
+for(var i = 0; i < listSize; i++) {
+	task_cells[i] = instance_create_layer(40 + i*69,room_height - 85,"Menu_Objects",obj_task_cell);
+	with(task_cells[i]) {
+		job = other.jobs[i]
+		pawn = other
+		visible = false
+	}
+}

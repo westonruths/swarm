@@ -18,3 +18,5 @@ global.right_limit = global.left_limit + (7*44)
 global.building = false;
 global.build_x = room_width - (3/4) * sprite_get_width(spr_build_menu);
 global.build_y = 50;
+
+global.menu_open = false;

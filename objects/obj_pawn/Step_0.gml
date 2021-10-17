@@ -1,9 +1,10 @@
 /// @description Core Pawn Logic
 speed = 0;
 
-if (global.building) {
+if (global.building || global.menu_open) {
 	exit;
 } 
+menu_open = false;
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
 
@@ -27,7 +28,17 @@ with(item_holding){
 	depth = other.depth-1;
 }
 
-var listSize = array_length(jobs);
+Idle()
+
+// Loop through and execute enabled tasks
+var listSize = array_length(task_cells);
 for(var i = listSize - 1; i >= 0; i--) {
-	script_execute(jobs[i])
+	with(task_cells[i]) {
+		visible = false
+	}
+	
+	if (task_cells[i].enabled) {
+		script_execute(task_cells[i].job)
+	}
 }
+	

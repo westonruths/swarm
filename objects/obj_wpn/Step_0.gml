@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.building) {
+if (global.building || global.menu_open) {
 	exit;
 } 
 

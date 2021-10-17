@@ -10,8 +10,8 @@ if instance_exists(cell) {
 			if (build_obj == noone && global.wood >= other.build_cost) {
 				var xx = x;
 				var yy = y;
-				obj_build = instance_create_layer(xx,yy,"Instances",other.obj_building_type);
-				global.money -= other.build_cost;
+				build_obj = instance_create_layer(xx,yy,"Instances",other.obj_building_type);
+				global.wood -= other.build_cost;
 			}
 		}
 	}
