@@ -1,7 +1,7 @@
 /// @description Core Pawn Logic
 speed = 0;
 
-if (global.building || global.menu_open) {
+if (global.time_pause) {
 	exit;
 } 
 menu_open = false;

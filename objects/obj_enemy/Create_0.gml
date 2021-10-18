@@ -3,15 +3,16 @@
 
 enemy_health = 10;
 enemy_health_max = 10;
-enemy_speed = 1;
+enemy_speed = 0.8;
 
-original_enemy_damage = 2;
-original_speed = 1;
 
 point_value = 10;
 money_value = 5;
 damage = 10; //damage down to score
 enemy_damage = 2; //damage down to other characters
+
+original_enemy_damage = enemy_damage;
+original_speed = enemy_speed;
 
 attack = false;
 

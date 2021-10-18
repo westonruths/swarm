@@ -1,5 +1,12 @@
-//if(keyboard_check_pressed(ord("T"))){ time_pause = !time_pause; }
-if(time_pause) exit;
+//if(keyboard_check_pressed(ord("T"))){ global.time_pause = !global.time_pause; }
+if (global.building || global.menu_open) {
+	global.time_pause = true
+} else {
+	global.time_pause = false
+}
+
+
+if(global.time_pause){ exit; }
 
 //Increment Time
 global.seconds += time_increment;

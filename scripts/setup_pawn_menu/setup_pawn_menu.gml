@@ -4,6 +4,9 @@ function setup_pawn_menu(){
 	with(obj_task_cell) {
 		visible = false
 	}
+	with(obj_pawn) { 
+		menu_open = false;
+	}
 
 	global.menu_open = true;
 	global.building = false;

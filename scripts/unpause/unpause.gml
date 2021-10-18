@@ -3,9 +3,5 @@
 function unpause(){
 	global.building = false;
 	global.menu_open = false;
-
-	with(obj_enemy){
-		speed = original_speed;
-		enemy_damage = original_enemy_damage;
-	}
+	global.time_pause = false;
 }

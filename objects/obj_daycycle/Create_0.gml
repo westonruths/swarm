@@ -7,7 +7,7 @@ global.season = 1;
 global.year = 1;
 
 time_increment = room_speed/2;	//global.seconds per step
-time_pause = false;
+global.time_pause = false;
 
 max_darkness = 0.7;
 darkness = 0;
