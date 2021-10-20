@@ -9,7 +9,7 @@ global.year = 1;
 time_increment = room_speed/2;	//global.seconds per step
 global.time_pause = false;
 
-max_darkness = 0.7;
+max_darkness = 0.6;
 darkness = 0;
 light_colour = c_black;
 draw_daylight = true;

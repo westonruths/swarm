@@ -5,7 +5,8 @@ function Defend(){
 	if (instance_exists(enemy)) {
 		
 		// Move towards closest enemy to engage
-		move_towards_point(enemy.x, enemy.y, char_speed)
+		move_towards_point(enemy.x, enemy.y, spd)
+		
 		defend_target = enemy
 	
 		// Equip our primary weapon

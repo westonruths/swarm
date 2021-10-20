@@ -5,8 +5,8 @@ if(room != rm_game) {
 }
 
 if (score >= win_score) {
-	room_goto(rm_win);
-	audio_play_sound(snd_win, 1, false);
+	//room_goto(rm_win);
+	//audio_play_sound(snd_win, 1, false);
 }
 
 if (health <= 0){

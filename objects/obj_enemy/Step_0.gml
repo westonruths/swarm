@@ -26,7 +26,7 @@ if place_meeting(x,y,obj_enemy) {
 }
 if place_meeting(x,y,obj_char) {
     with instance_place(x,y,obj_char) {
-        move_towards_point(other.x,other.y,-char_speed); //-towards = away
+        move_towards_point(other.x,other.y,-spd); //-towards = away
     }
 	move_towards_point(x,y,-enemy_speed); //-towards = away
 }

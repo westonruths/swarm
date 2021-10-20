@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_pawn_dead",
-    "path": "sprites/spr_pawn_dead/spr_pawn_dead.yy",
+    "name": "spr_bull",
+    "path": "sprites/spr_bull/spr_bull.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_animal",
+    "path": "objects/obj_animal/obj_animal.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "characters",
-    "path": "folders/Objects/characters.yy",
+    "name": "animals",
+    "path": "folders/Objects/animals.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_pawn_dead",
+  "name": "obj_bull",
   "tags": [],
   "resourceType": "GMObject",
 }

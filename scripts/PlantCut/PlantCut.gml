@@ -2,7 +2,7 @@
 function PlantCut() {
 	if (instance_exists(fell_target)) {
 		if (distance_to_object(fell_target) > 2) { 
-			move_towards_point(fell_target.x, fell_target.y, char_speed)
+			move_towards_point(fell_target.x, fell_target.y, spd)
 		} else {
 			speed = 0
 		}
