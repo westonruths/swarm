@@ -3,3 +3,5 @@
 with(active_wpn){
 	instance_destroy();
 }
+
+//path_delete(path)

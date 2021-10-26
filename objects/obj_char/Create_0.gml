@@ -7,3 +7,5 @@ spd = 1;
 targetX = x
 targetY = y
 timer = room_speed
+
+path = path_add();

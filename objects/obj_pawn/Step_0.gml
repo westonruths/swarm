@@ -1,5 +1,4 @@
 /// @description Core Pawn Logic
-speed = 0;
 
 if (global.time_pause) {
 	exit;
@@ -41,4 +40,9 @@ for(var i = listSize - 1; i >= 0; i--) {
 		script_execute(task_cells[i].job)
 	}
 }
-	
+
+if mp_grid_path(global.grid, path, x, y, targetX, targetY, true) {
+	path_start(path, spd, path_action_stop, true);
+	//print(name, targetX, targetY, path_index, path)
+}
+

@@ -16,8 +16,7 @@ original_speed = enemy_speed;
 
 attack = false;
 
+path = path_add();
+
 direction = 180;
 speed = 1;
-//path = path_add();
-//mp_potential_path(path, -100, y, 3, 4, 1);
-//path_start(path, enemy_speed, path_action_continue, 0);
