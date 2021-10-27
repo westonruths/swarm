@@ -19,7 +19,11 @@ if place_meeting(x,y,obj_enemy) {
 	targetX = irandom_range(x-100, x+100)
 	targetY = irandom_range(y-100, y+100)
 }
+
 if place_meeting(x,y,obj_char) {
-	targetX = x
-	targetY = y
+	//targetX = x
+	//targetY = y
+	path_speed = 0
+} else {
+	path_speed = enemy_speed
 }

@@ -5,7 +5,6 @@ function Defend(){
 	if (instance_exists(enemy)) {
 		
 		// Move towards closest enemy to engage
-		//move_towards_point(enemy.x, enemy.y, spd)
 		targetX = enemy.x
 		targetY = enemy.y
 		

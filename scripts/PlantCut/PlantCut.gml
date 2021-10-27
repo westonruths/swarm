@@ -5,9 +5,7 @@ function PlantCut() {
 			targetX = fell_target.x
 			targetY = fell_target.y
 		} else {
-			targetX = x
-			targetY = y
-			alarm[0] = 0
+			path_speed = 0
 		}
 		active_wpn_index = 2 // Axe
 		with(active_wpn){

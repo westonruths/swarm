@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cd5033cf-7800-4a7d-814d-6964a0d2cdc3","path":"sprites/spr_stockpile/spr_stockpile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cd5033cf-7800-4a7d-814d-6964a0d2cdc3","path":"sprites/spr_stockpile/spr_stockpile.yy",},"LayerId":{"name":"198ed923-bbc7-4c9a-b791-1acb9c7ea3c3","path":"sprites/spr_stockpile/spr_stockpile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_stockpile","path":"sprites/spr_stockpile/spr_stockpile.yy",},"resourceVersion":"1.0","name":"cd5033cf-7800-4a7d-814d-6964a0d2cdc3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"66d64c65-b0a5-4bfd-876e-93358fda79d6","path":"sprites/spr_wall/spr_wall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"66d64c65-b0a5-4bfd-876e-93358fda79d6","path":"sprites/spr_wall/spr_wall.yy",},"LayerId":{"name":"03fa4caa-ff10-4254-bf2a-93d0902d99fe","path":"sprites/spr_wall/spr_wall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"resourceVersion":"1.0","name":"66d64c65-b0a5-4bfd-876e-93358fda79d6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_stockpile","path":"sprites/spr_stockpile/spr_stockpile.yy",},
+    "spriteId": {"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"dcb10418-1fce-46b1-be57-365274c792b7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd5033cf-7800-4a7d-814d-6964a0d2cdc3","path":"sprites/spr_stockpile/spr_stockpile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3bd5b2f5-5cf5-41f4-a70f-2b832b6c7eee","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"66d64c65-b0a5-4bfd-876e-93358fda79d6","path":"sprites/spr_wall/spr_wall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_stockpile","path":"sprites/spr_stockpile/spr_stockpile.yy",},
+    "parent": {"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_stockpile",
+    "name": "spr_wall",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"198ed923-bbc7-4c9a-b791-1acb9c7ea3c3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"03fa4caa-ff10-4254-bf2a-93d0902d99fe","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/buildings.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_stockpile",
+  "name": "spr_wall",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if (global.time_pause) {
-	speed = 0;
+	path_speed = 0;
 	exit;
 } 
 

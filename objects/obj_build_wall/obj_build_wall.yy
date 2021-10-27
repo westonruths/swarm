@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_house",
-    "path": "sprites/spr_house/spr_house.yy",
+    "name": "spr_wall",
+    "path": "sprites/spr_wall/spr_wall.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_building",
-    "path": "objects/obj_building/obj_building.yy",
+    "name": "obj_build_ui",
+    "path": "objects/obj_build_ui/obj_build_ui.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,15 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "buildings",
-    "path": "folders/Objects/buildings.yy",
+    "name": "build_ui",
+    "path": "folders/Objects/build_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_house",
+  "name": "obj_build_wall",
   "tags": [],
   "resourceType": "GMObject",
 }

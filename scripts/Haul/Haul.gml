@@ -15,7 +15,6 @@ function Haul(){
 		} else if (instance_exists(haul_target)) {
 			targetX = haul_target.x
 			targetY = haul_target.y
-			alarm[0] = 0
 			
 			active_wpn_index = 0 //no wpn
 			with(active_wpn){

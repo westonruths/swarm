@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-obj_building_ui = obj_build_stockpile
-obj_building_type = obj_stockpile
-name = "Stockpile"
+if (global.building){
+	draw_set_color(c_white)
+	draw_line(x, y, dragX, dragY);
+}
+
