@@ -9,7 +9,7 @@ if(room == rm_game){
 	
 	//setup map
 	obj_size = sprite_get_width(spr_cell);
-	buffer = obj_size + 2;
+	buffer = global.grid_resolution
 	first_cell_y = global.top_game + obj_size/2;
 	first_cell_x = global.left_limit + obj_size/2;
 	
