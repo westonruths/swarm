@@ -9,7 +9,5 @@ repeat(5){
 	instance_create_layer(x,y,"Instances",obj_debri)
 }
 
-speed = 0;
-
 sprite_index = spr_eyeball_hurt;
 audio_play_sound(snd_hit, 1, false);

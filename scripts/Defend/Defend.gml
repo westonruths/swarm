@@ -6,9 +6,8 @@ function Defend(){
 		
 		// Move towards closest enemy to engage
 		//move_towards_point(enemy.x, enemy.y, spd)
-		path = path_add();
-		mp_grid_path(global.grid, path, x, y, targetX, targetY, 1);
-		path_start(path, spd, path_action_stop, true);
+		targetX = enemy.x
+		targetY = enemy.y
 		
 		defend_target = enemy
 	
@@ -20,7 +19,8 @@ function Defend(){
 			weapon = other.active_wpn_index
 		}
 		if (distance_to_point(enemy.x,enemy.y) < active_wpn.range) {
-			speed = 0
+			targetX = x
+			targetY = y
 			
 			// Drop current item that we are holding
 			with(item_holding){
@@ -33,6 +33,4 @@ function Defend(){
 			haul_target = noone
 		}
 	}
-
-
 }

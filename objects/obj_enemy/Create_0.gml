@@ -18,5 +18,7 @@ attack = false;
 
 path = path_add();
 
-direction = 180;
-speed = 1;
+targetX = -100
+targetY = y
+
+alarm[0] = 10

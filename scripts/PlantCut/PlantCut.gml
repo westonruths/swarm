@@ -2,9 +2,12 @@
 function PlantCut() {
 	if (instance_exists(fell_target)) {
 		if (distance_to_object(fell_target) > 2) { 
-			move_towards_point(fell_target.x, fell_target.y, spd)
+			targetX = fell_target.x
+			targetY = fell_target.y
 		} else {
-			speed = 0
+			targetX = x
+			targetY = y
+			alarm[0] = 0
 		}
 		active_wpn_index = 2 // Axe
 		with(active_wpn){

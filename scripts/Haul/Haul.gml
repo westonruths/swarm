@@ -4,7 +4,8 @@ function Haul(){
 	if (instance_exists(stockpile)) {
 		// Move item back to stockpile
 		if (instance_exists(item_holding)){
-			move_towards_point(stockpile.x, stockpile.y, spd)
+			targetX = stockpile.x
+			targetY = stockpile.y
 	
 			active_wpn_index = 0 //no wpn
 			with(active_wpn){
@@ -12,7 +13,9 @@ function Haul(){
 				weapon = other.active_wpn_index
 			}
 		} else if (instance_exists(haul_target)) {
-			move_towards_point(haul_target.x, haul_target.y, spd)
+			targetX = haul_target.x
+			targetY = haul_target.y
+			alarm[0] = 0
 			
 			active_wpn_index = 0 //no wpn
 			with(active_wpn){

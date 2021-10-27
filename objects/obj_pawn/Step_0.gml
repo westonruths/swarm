@@ -1,8 +1,10 @@
 /// @description Core Pawn Logic
 
 if (global.time_pause) {
+	path_speed = 0;
 	exit;
 } 
+
 menu_open = false;
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
@@ -27,9 +29,9 @@ with(item_holding){
 	depth = other.depth-1;
 }
 
+// Loop through and execute enabled tasks
 Idle()
 
-// Loop through and execute enabled tasks
 var listSize = array_length(task_cells);
 for(var i = listSize - 1; i >= 0; i--) {
 	with(task_cells[i]) {
@@ -39,10 +41,5 @@ for(var i = listSize - 1; i >= 0; i--) {
 	if (task_cells[i].enabled) {
 		script_execute(task_cells[i].job)
 	}
-}
-
-if mp_grid_path(global.grid, path, x, y, targetX, targetY, true) {
-	path_start(path, spd, path_action_stop, true);
-	//print(name, targetX, targetY, path_index, path)
 }
 

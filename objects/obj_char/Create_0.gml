@@ -6,6 +6,7 @@ char_health_max = 10;
 spd = 1;
 targetX = x
 targetY = y
-timer = room_speed
 
 path = path_add();
+
+alarm[0] = 10
