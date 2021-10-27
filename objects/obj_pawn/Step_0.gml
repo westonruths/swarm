@@ -5,6 +5,9 @@ if (global.time_pause) {
 	exit;
 } 
 
+old_targetX = targetX
+old_targetY = targetY
+
 menu_open = false;
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
@@ -43,3 +46,10 @@ for(var i = listSize - 1; i >= 0; i--) {
 	}
 }
 
+//update path immediately if target changed
+if old_targetX != targetX && old_targetY != targetY {
+	if (name == "Ryan") {
+		print(old_targetX, old_targetY, targetX, targetY)
+	}
+	alarm[0] = 0	
+}

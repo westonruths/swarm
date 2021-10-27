@@ -21,6 +21,7 @@
     {"id":{"name":"Name","path":"scripts/Name/Name.yy",},"order":5,},
     {"id":{"name":"ts_16x16","path":"tilesets/ts_16x16/ts_16x16.yy",},"order":11,},
     {"id":{"name":"snd_explosion","path":"sounds/snd_explosion/snd_explosion.yy",},"order":7,},
+    {"id":{"name":"obj_building_drag","path":"objects/obj_building_drag/obj_building_drag.yy",},"order":7,},
     {"id":{"name":"obj_debri","path":"objects/obj_debri/obj_debri.yy",},"order":3,},
     {"id":{"name":"spr_struct","path":"sprites/spr_struct/spr_struct.yy",},"order":5,},
     {"id":{"name":"spr_shadow_plant","path":"sprites/spr_shadow_plant/spr_shadow_plant.yy",},"order":8,},

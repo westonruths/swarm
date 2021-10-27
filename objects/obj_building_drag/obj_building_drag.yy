@@ -1,15 +1,12 @@
 {
-  "spriteId": {
-    "name": "spr_stockpile",
-    "path": "sprites/spr_stockpile/spr_stockpile.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_building_drag",
-    "path": "objects/obj_building_drag/obj_building_drag.yy",
+    "name": "obj_building",
+    "path": "objects/obj_building/obj_building.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,7 +21,10 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":3,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,7 +33,7 @@
     "path": "folders/Objects/buildings.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_stockpile",
+  "name": "obj_building_drag",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -6,4 +6,4 @@ if (enemy_health<enemy_health_max) {
 	draw_healthbar(x+10,y-5, x+30, y-10, pc, c_black, c_red, c_lime, 0, true, true)
 }
 
-draw_path(path, x, y, 1);
+//draw_path(path, x, y, 1);
