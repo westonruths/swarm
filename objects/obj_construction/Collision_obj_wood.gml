@@ -1,3 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_self()
+
+wood_cost -= 1	
+
+with(other){
+	instance_destroy()
+}

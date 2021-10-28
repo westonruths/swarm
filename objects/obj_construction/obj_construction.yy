@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_lumber_mill",
-    "path": "sprites/spr_lumber_mill/spr_lumber_mill.yy",
+    "name": "spr_construction",
+    "path": "sprites/spr_construction/spr_construction.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_building",
-    "path": "objects/obj_building/obj_building.yy",
+    "name": "obj_building_drag",
+    "path": "objects/obj_building_drag/obj_building_drag.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,7 +23,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +35,7 @@
     "path": "folders/Objects/buildings.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_lumber_mill",
+  "name": "obj_construction",
   "tags": [],
   "resourceType": "GMObject",
 }

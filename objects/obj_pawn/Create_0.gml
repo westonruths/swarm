@@ -24,6 +24,12 @@ haul_target = noone
 // Idle target
 targetX = x + irandom_range(-50,50)
 targetY = y + irandom_range(-50,50)
+old_targetX = targetX
+old_targetY = targetY
+
+// Timer setup
+alarm[0] = 10
+alarm[1] = 10
 
 // Item we are holding
 item_holding = noone;

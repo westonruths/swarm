@@ -8,5 +8,3 @@ targetX = x
 targetY = y
 
 path = path_add();
-
-alarm[0] = 10

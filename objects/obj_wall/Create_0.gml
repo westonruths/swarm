@@ -4,5 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-obj_building_ui = obj_build_lumber_mill
-obj_building_type = obj_lumber_mill
+mp_grid_add_cell(global.grid, floor(x / global.grid_resolution), floor(y / global.grid_resolution));

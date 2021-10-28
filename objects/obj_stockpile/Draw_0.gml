@@ -4,8 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-wood_cost = 1;
-
-obj_building_ui = obj_build_wall
-obj_building_type = obj_wall
-name = "Wall"
+if (num_stored > 0) {
+	draw_text(x+5, y-5, string(num_stored));
+}

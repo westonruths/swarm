@@ -5,9 +5,6 @@ if (global.time_pause) {
 	exit;
 } 
 
-old_targetX = targetX
-old_targetY = targetY
-
 menu_open = false;
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
@@ -33,7 +30,7 @@ with(item_holding){
 }
 
 // Loop through and execute enabled tasks
-Idle()
+
 
 var listSize = array_length(task_cells);
 for(var i = listSize - 1; i >= 0; i--) {
@@ -48,8 +45,7 @@ for(var i = listSize - 1; i >= 0; i--) {
 
 //update path immediately if target changed
 if old_targetX != targetX && old_targetY != targetY {
-	if (name == "Ryan") {
-		print(old_targetX, old_targetY, targetX, targetY)
-	}
-	alarm[0] = 0	
+	alarm[0] = 10	
 }
+old_targetX = targetX
+old_targetY = targetY

@@ -4,4 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-mp_grid_clear_cell(global.grid, floor(x / global.grid_resolution), floor(y /global.grid_resolution));
+item = noone
+num_stored = 0
