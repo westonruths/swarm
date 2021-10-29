@@ -2,6 +2,8 @@
 function Haul(){
 	//find a stockpile that has an open spot
 	var stockpile = noone
+	var construct = noone
+	
 	if instance_exists(item_holding) {
 		//Find stockpile with the item we are holding
 		with(obj_stockpile) {
@@ -23,21 +25,29 @@ function Haul(){
 				}
 			}
 		} 
+		
+		//Find a construction site that needs our materials
+		with(obj_construction) {
+			if build_cost.needed(other.item_holding) {
+				construct = self
+			}
+		}
 	}
 	
-	var construct = instance_nearest(x, y, obj_construction)
 	if (instance_exists(item_holding)){
 		// Move item back to stockpile or construction site
 		if instance_exists(construct) {
-			if (distance_to_object(construct) > 2) { 
-				targetX = construct.x
-				targetY = construct.y
-			} else {
-				path_speed = 0
-				with (construct) { 
-					wood_cost -= 1
+			if construct.build_cost.needed(item_holding) {
+				if (distance_to_object(construct) > 2) { 
+					targetX = construct.x
+					targetY = construct.y
+				} else {
+					path_speed = 0
+					with (construct) { 
+						build_cost.reduce_cost(other.item_holding)
+					}
+					instance_destroy(item_holding)
 				}
-				instance_destroy(item_holding)
 			}
 		} else if instance_exists(stockpile) {
 			if (distance_to_object(stockpile) > 2) {
@@ -97,11 +107,21 @@ function Haul(){
 				}
 			}
 			
-			if (!chosen && !stored) || (!chosen && instance_exists(construct)){
-				var dist = distance_to_object(other)
-				if (dist < max_dist) {
-					other.haul_target = id
-					max_dist = dist
+			if (!chosen && !stored) || (!chosen && instance_exists(construct)) {
+				if instance_exists(construct) {
+					if construct.build_cost.needed(self) {
+						var dist = distance_to_object(other)
+						if (dist < max_dist) {
+							other.haul_target = id
+							max_dist = dist
+						}
+					}
+				} else {
+					var dist = distance_to_object(other)
+					if (dist < max_dist) {
+						other.haul_target = id
+						max_dist = dist
+					}
 				}
 			}
 		}

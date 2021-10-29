@@ -3,7 +3,6 @@
 max_hp = 5;
 hp = max_hp;
 
-original_wood_cost = 0;
-wood_cost = 0;
+build_cost = new building_costs(0, 0)
 
 obj_building_type = object_index

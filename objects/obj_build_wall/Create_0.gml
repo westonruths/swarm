@@ -4,8 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-wood_cost = 1;
-
+build_cost = new building_costs(1, 0)
 obj_building_ui = obj_build_wall
 obj_building_type = obj_wall
-name = "Wall"
+name = "Wooden Wall"

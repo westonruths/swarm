@@ -4,8 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-wood_cost = 0;
-
+build_cost = new building_costs(0, 0)
 obj_building_ui = obj_build_stockpile
 obj_building_type = obj_stockpile
 name = "Stockpile"
