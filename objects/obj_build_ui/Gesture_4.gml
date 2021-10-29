@@ -10,9 +10,10 @@ if instance_exists(cell) {
 		var dis = point_distance(x, y, other.x, other.y);
 	
 		if (dis <= sprite_width) {
-			if (build_obj == noone) {
+			if !instance_exists(build_obj) {
 				build_obj = instance_create_layer(x,y,"Buildings",obj_construction);
 				with(build_obj) {
+					original_wood_cost = tmp_wood_cost;
 					wood_cost = tmp_wood_cost;
 					obj_building_type = tmp_obj_building_type;	
 				}

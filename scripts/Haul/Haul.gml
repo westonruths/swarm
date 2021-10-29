@@ -28,7 +28,18 @@ function Haul(){
 	var construct = instance_nearest(x, y, obj_construction)
 	if (instance_exists(item_holding)){
 		// Move item back to stockpile or construction site
-		if instance_exists(stockpile) {
+		if instance_exists(construct) {
+			if (distance_to_object(construct) > 2) { 
+				targetX = construct.x
+				targetY = construct.y
+			} else {
+				path_speed = 0
+				with (construct) { 
+					wood_cost -= 1
+				}
+				instance_destroy(item_holding)
+			}
+		} else if instance_exists(stockpile) {
 			if (distance_to_object(stockpile) > 2) {
 				targetX = stockpile.x
 				targetY = stockpile.y
@@ -36,6 +47,7 @@ function Haul(){
 				var stored_item = instance_create_layer(stockpile.x,stockpile.y,"Items",item_holding.object_index);
 				with(stored_item) {
 					stored = true
+					stored_stockpile = stockpile
 				}
 				with(stockpile) {
 					item = stored_item
@@ -45,18 +57,7 @@ function Haul(){
 				instance_destroy(item_holding)
 			}
 		} 
-			
-		if instance_exists(construct) {
-			if (distance_to_object(construct) > 2) { 
-				targetX = construct.x
-				targetY = construct.y
-			} else {
-				path_speed = 0
-				with (construct) { wood_cost -= 1 }
-				instance_destroy(item_holding)
-			}
-		} 
-			
+
 		active_wpn_index = 0 //no wpn
 		with(active_wpn){
 			target = noone
@@ -64,9 +65,20 @@ function Haul(){
 		}
 	} else if (instance_exists(haul_target)) {
 		// Go move towards haul target
-		targetX = haul_target.x
-		targetY = haul_target.y
-			
+		if (distance_to_object(haul_target) > 2) { 
+			targetX = haul_target.x
+			targetY = haul_target.y
+		} else {
+			item_holding = haul_target
+			with(haul_target) { 
+				stored = false 
+				with (stored_stockpile) {
+					num_stored -= 1
+				}
+				stored_stockpile = noone
+			}
+		}
+		
 		active_wpn_index = 0 //no wpn
 		with(active_wpn){
 			target = noone
