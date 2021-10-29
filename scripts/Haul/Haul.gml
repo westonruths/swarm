@@ -1,28 +1,6 @@
 // Logic to haul items
 function Haul(){
 	//find a stockpile that has an open spot
-	//var stockpile = instance_nearest(x, y, obj_stockpile)
-	//if (instance_exists(item_holding) && instance_exists(stockpile)) {
-	//	if (instance_exists(stockpile.item)) {
-	//		if (item_holding.object_index != stockpile.item.object_index) {				
-	//			with(obj_stockpile) {
-	//				if (instance_exists(item)) {
-	//					if (other.item_holding.object_index == item.object_index) {
-	//						stockpile = self	
-	//					}
-	//				}
-	//			}
-	//		}
-	//	} else {
-	//		with(obj_stockpile) {
-	//			if (instance_exists(item)) {
-	//				if (other.item_holding.object_index == item.object_index) {
-	//					stockpile = self	
-	//				}
-	//			}
-	//		}
-	//	}
-	//}
 	var stockpile = noone
 	if instance_exists(item_holding) {
 		//Find stockpile with the item we are holding
@@ -107,7 +85,7 @@ function Haul(){
 				}
 			}
 			
-			if (!chosen && !stored) {
+			if (!chosen && !stored) || (!chosen && instance_exists(construct)){
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
 					other.haul_target = id
