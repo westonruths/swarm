@@ -1,6 +1,6 @@
 // Logic to haul items
 function Haul(){
-	//find a stockpile that has an open spot
+	//find a stockpile or construction site that has an open spot
 	var stockpile = noone
 	var construct = noone
 	
@@ -14,7 +14,7 @@ function Haul(){
 			} 
 		}
 	
-		//Place item in empty stockpile that is closest
+		//Place item we are holding in empty stockpile that is closest
 		if !instance_exists(stockpile) {
 			var max_dist_stockpile  = 9999
 			with(obj_stockpile) {
@@ -26,7 +26,7 @@ function Haul(){
 			}
 		} 
 		
-		//Find a construction site that needs our materials
+		//Find a construction site that needs the item we are holding
 		with(obj_construction) {
 			if build_cost.needed(other.item_holding) {
 				construct = self
@@ -34,6 +34,7 @@ function Haul(){
 		}
 	}
 	
+	// main logic depending on item holding
 	if (instance_exists(item_holding)){
 		// Move item back to stockpile or construction site
 		if instance_exists(construct) {
@@ -66,7 +67,14 @@ function Haul(){
 
 				instance_destroy(item_holding)
 			}
-		} 
+		} else {
+			with(item_holding){
+				x += 10;
+				y += 10;
+			}
+			item_holding = noone
+			haul_target = noone
+		}
 
 		active_wpn_index = 0 //no wpn
 		with(active_wpn){
@@ -74,19 +82,47 @@ function Haul(){
 			weapon = other.active_wpn_index
 		}
 	} else if (instance_exists(haul_target)) {
-		// Go move towards haul target
-		if (distance_to_object(haul_target) > 2) { 
-			targetX = haul_target.x
-			targetY = haul_target.y
-		} else {
-			item_holding = haul_target
-			with(haul_target) { 
-				stored = false 
-				with (stored_stockpile) {
-					num_stored -= 1
-				}
-				stored_stockpile = noone
+		// see if a construct needs the resource
+		with(obj_construction) {
+			if build_cost.needed(other.haul_target) {
+				construct = self
 			}
+		}
+			
+		if !haul_target.stored {
+			//Find stockpile with the item
+			with(obj_stockpile) {
+				if (instance_exists(item)) {
+					if (other.haul_target.object_index == item.object_index) {
+						stockpile = self	
+					}
+				} 
+			}
+			//Find stockpile that is empty
+			with(obj_stockpile) {
+				if (!instance_exists(item)) {
+					stockpile = self
+				}
+			}
+		}
+		
+		if instance_exists(construct) || instance_exists(stockpile) {
+			// Go move towards haul target
+			if (distance_to_object(haul_target) > 2) { 
+				targetX = haul_target.x
+				targetY = haul_target.y
+			} else {
+				item_holding = haul_target
+				with(haul_target) { 
+					stored = false 
+					with (stored_stockpile) {
+						num_stored -= 1
+					}
+					stored_stockpile = noone
+				}
+			}
+		} else {
+			haul_target = noone
 		}
 		
 		active_wpn_index = 0 //no wpn
@@ -101,27 +137,43 @@ function Haul(){
 		with(obj_item) {
 			var tmp_target = id
 			var chosen = false
+			
+			// see if a construct needs the resource
+			with(obj_construction) {
+				if build_cost.needed(other) {
+					construct = self
+				}
+			}
+			
+			if !stored {
+				//Find stockpile with the item
+				with(obj_stockpile) {
+					if (instance_exists(item)) {
+						if (other.object_index == item.object_index) {
+							stockpile = self	
+						}
+					} 
+				}
+				//Find stockpile that is empty
+				with(obj_stockpile) {
+					if (!instance_exists(item)) {
+						stockpile = self
+					}
+				}
+			}
+			
+			// See if another pawn is targeting this item
 			with(obj_pawn) {
 				if (haul_target == tmp_target) {
 					chosen = true;
 				}
 			}
-			
-			if (!chosen && !stored) || (!chosen && instance_exists(construct)) {
-				if instance_exists(construct) {
-					if construct.build_cost.needed(self) {
-						var dist = distance_to_object(other)
-						if (dist < max_dist) {
-							other.haul_target = id
-							max_dist = dist
-						}
-					}
-				} else {
-					var dist = distance_to_object(other)
-					if (dist < max_dist) {
-						other.haul_target = id
-						max_dist = dist
-					}
+		
+			if !chosen && (instance_exists(stockpile) || instance_exists(construct)) {
+				var dist = distance_to_object(other)
+				if (dist < max_dist) {
+					other.haul_target = id
+					max_dist = dist
 				}
 			}
 		}

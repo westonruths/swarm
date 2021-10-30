@@ -3,3 +3,6 @@
 
 // Inherit the parent event
 event_inherited();
+
+sprite_index = object_get_sprite(obj_building_type)
+image_alpha = 0.3

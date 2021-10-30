@@ -30,8 +30,6 @@ with(item_holding){
 }
 
 // Loop through and execute enabled tasks
-
-
 var listSize = array_length(task_cells);
 for(var i = listSize - 1; i >= 0; i--) {
 	with(task_cells[i]) {
