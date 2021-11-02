@@ -7,6 +7,7 @@ if (global.time_pause) {
 
 if (animal_health <= 0) {
 	instance_destroy();
+	instance_create_layer(x,y,"Items",obj_meat)
 }
 
 move_to_random_point()

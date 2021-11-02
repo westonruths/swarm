@@ -18,8 +18,11 @@ active_wpn_index = 0;
 
 // Action targets
 defend_target = noone
+construct_target = noone
 fell_target = noone
 haul_target = noone
+
+targets = [defend_target, construct_target, fell_target, haul_target]
 
 // Idle target
 targetX = x + irandom_range(-50,50)

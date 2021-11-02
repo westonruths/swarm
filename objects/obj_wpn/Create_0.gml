@@ -37,8 +37,21 @@ ds_map_add(weapons[2],"startup",0);
 ds_map_add(weapons[2],"length",6);
 ds_map_add(weapons[2],"cooldown",100);
 ds_map_add(weapons[2],"bulletspeed",7);
-ds_map_add(weapons[2],"range",35);
+ds_map_add(weapons[2],"range",45);
 ds_map_add(weapons[2],"num_bullets",1);
+
+//Hammer
+weapons[3] = ds_map_create();
+ds_map_add(weapons[3],"sprite",spr_hammer);
+ds_map_add(weapons[3],"recoil",6);
+ds_map_add(weapons[3],"damage",2);
+ds_map_add(weapons[3],"projectile",obj_hammer_hit);
+ds_map_add(weapons[3],"startup",0);
+ds_map_add(weapons[3],"length",6);
+ds_map_add(weapons[3],"cooldown",100);
+ds_map_add(weapons[3],"bulletspeed",7);
+ds_map_add(weapons[3],"range",48);
+ds_map_add(weapons[3],"num_bullets",1);
 
 
 weapon = 1;

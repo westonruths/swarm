@@ -3,8 +3,11 @@
 function building_costs(_wood, _stone) constructor
 {
     original_costs = [_wood, _stone]
-	costs = [_wood, _stone]
+	costs = original_costs
+	original_construction_health = (_wood + _stone) * 5
+	construction_health = original_construction_health
 
+	// see if the building is done being filled with needed resources
     static done = function()
     {
         for (var i=0;i<array_length_1d(costs);i++) {
@@ -14,11 +17,13 @@ function building_costs(_wood, _stone) constructor
 		return true
     }
 	
+	// produce a new building cost item with original costs
 	static new_cost = function()
 	{
 		return new building_costs(original_costs[0], original_costs[1])
 	}
 	
+	// reduce cost because a resource was placed
 	static reduce_cost = function(item_holding)
 	{
 		if (item_holding.object_index == obj_wood) {
@@ -30,6 +35,7 @@ function building_costs(_wood, _stone) constructor
 		}
 	}
 	
+	// return true/false if this building needs additional resources
 	static needed = function(haul_target)
 	{
 		if (haul_target.object_index == obj_wood) && (costs[0] > 0) {

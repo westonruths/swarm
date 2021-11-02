@@ -12,5 +12,13 @@ function Idle() {
 		
 		
 		targetY = irandom_range(y-100, y+100)
+		
+		active_wpn_index = 0 //no wpn
+		with(active_wpn){
+			target = noone
+			weapon = other.active_wpn_index
+		}
 	}
+	
+
 }

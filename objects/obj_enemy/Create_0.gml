@@ -11,8 +11,8 @@ money_value = 5;
 damage = 10; //damage down to score
 enemy_damage = 2; //damage down to other characters
 
-original_enemy_damage = enemy_damage;
-original_speed = enemy_speed;
+//original_enemy_damage = enemy_damage;
+//original_speed = enemy_speed;
 
 attack = false;
 

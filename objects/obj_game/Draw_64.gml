@@ -2,10 +2,10 @@
 // You can write your code in this editor
 switch(room){
 	case rm_game:
-		draw_text(20,2, "SCORE: " + string(score));
-		draw_text(150,2, "HEALTH: " + string(health));
-		draw_text(300,2, "GOLD: " + string(global.money));
-		draw_text(450,2, "WOOD: " + string(global.wood));
+		//draw_text(20,2, "SCORE: " + string(score));
+		//draw_text(150,2, "HEALTH: " + string(health));
+		//draw_text(300,2, "GOLD: " + string(global.money));
+		//draw_text(450,2, "WOOD: " + string(global.wood));
 		break;
 	
 	case rm_start:

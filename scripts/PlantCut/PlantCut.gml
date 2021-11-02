@@ -1,6 +1,9 @@
 // Logic to cut down trees
 function PlantCut() {
 	if (instance_exists(fell_target)) {
+		haul_target = noone
+		drop_item()
+		
 		if (distance_to_object(fell_target) > 2) { 
 			targetX = fell_target.x
 			targetY = fell_target.y

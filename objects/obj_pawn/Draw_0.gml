@@ -4,6 +4,12 @@
 // Inherit the parent event
 event_inherited();
 
+draw_text(x-10, y - 35, name)
+
+if menu_open {
+	draw_ellipse_colour(x-10, y+1, x+10, y+10, c_green, c_green, true);
+}
+
 if path_index != -1 {
 	draw_path(path, x, y, 1);
 }

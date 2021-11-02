@@ -6,6 +6,11 @@ if obj_building_type < 0 {
 }
 
 if build_cost.done() {
+	mp_grid_add_cell(global.grid, floor(x / global.grid_resolution), floor(y / global.grid_resolution));
+}
+
+if build_cost.construction_health <= 0 {
+	mp_grid_clear_cell(global.grid, floor(x / global.grid_resolution), floor(y /global.grid_resolution));
 	var new_build_obj = instance_create_layer(x,y,"Buildings",obj_building_type);
 	
 	var cell = instance_nearest(x, y, obj_cell)
@@ -19,3 +24,4 @@ if build_cost.done() {
 	
 	instance_destroy();
 }
+

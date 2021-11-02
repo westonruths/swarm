@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-path_speed = -1
-alarm[1] = -1
+move_to_random_point()
+if !mp_grid_path(global.grid, path, x, y, targetX, targetY, true) {
+	x += sprite_width
+}

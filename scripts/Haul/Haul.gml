@@ -39,9 +39,9 @@ function Haul(){
 		// Move item back to stockpile or construction site
 		if instance_exists(construct) {
 			if construct.build_cost.needed(item_holding) {
-				if (distance_to_object(construct) > 2) { 
+				if (distance_to_object(construct) > 5) { 
 					targetX = construct.x
-					targetY = construct.y
+					targetY = construct.y 
 				} else {
 					path_speed = 0
 					with (construct) { 
@@ -68,11 +68,7 @@ function Haul(){
 				instance_destroy(item_holding)
 			}
 		} else {
-			with(item_holding){
-				x += 10;
-				y += 10;
-			}
-			item_holding = noone
+			drop_item()
 			haul_target = noone
 		}
 
@@ -90,7 +86,7 @@ function Haul(){
 		}
 			
 		if !haul_target.stored {
-			//Find stockpile with the item
+			//Find stockpile with the needed item
 			with(obj_stockpile) {
 				if (instance_exists(item)) {
 					if (other.haul_target.object_index == item.object_index) {
@@ -120,9 +116,18 @@ function Haul(){
 					}
 					stored_stockpile = noone
 				}
+				haul_target = noone
 			}
 		} else {
-			haul_target = noone
+			var tmp_haul_target = noone
+			with(obj_item) {
+				with(obj_construction) {
+					if build_cost.needed(other) {
+						tmp_haul_target = other
+					}
+				}
+			}
+			haul_target = tmp_haul_target
 		}
 		
 		active_wpn_index = 0 //no wpn
