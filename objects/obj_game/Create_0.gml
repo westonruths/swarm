@@ -6,8 +6,6 @@ global.grid = mp_grid_create(0, 0, room_width div global.grid_resolution + 1,
 
 score = 0;
 health = 100;
-global.money = 30;
-global.wood = 30;
 
 win_score = 150;
 

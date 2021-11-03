@@ -1,5 +1,5 @@
 //if(keyboard_check_pressed(ord("T"))){ global.time_pause = !global.time_pause; }
-if (global.building || global.menu_open) {
+if (global.building || global.menu_open || global.time_pause) {
 	global.time_pause = true
 } else {
 	global.time_pause = false
