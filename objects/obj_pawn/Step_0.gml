@@ -22,11 +22,19 @@ with(active_wpn){
 	depth = other.depth-2;
 }
 
-// Update item_holding location
-with(item_holding){
+with(tool){
 	x = other.x;
 	y = other.y;
-	depth = other.depth-1;
+	depth = other.depth-2;
+	image_xscale = other.image_xscale
+}
+
+// Update item_holding location
+with(item_holding){
+	x = other.x-3;
+	y = other.y - 17;
+	depth = other.depth-3;
+	image_xscale = other.image_xscale
 }
 
 // Loop through and execute enabled tasks

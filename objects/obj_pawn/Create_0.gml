@@ -7,6 +7,10 @@ event_inherited();
 // Randomly select name
 name = Name();
 
+// Setup tool
+tool = instance_create_layer(x,y,"Items",obj_tool)
+with (tool) { pawn = other }
+
 // The active weapon being employed
 active_wpn = instance_create_layer(x,y,"Items",obj_wpn)
 

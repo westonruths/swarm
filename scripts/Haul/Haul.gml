@@ -1,5 +1,12 @@
 // Logic to haul items
 function Haul(){
+	
+	if instance_exists(item_holding) {
+		sprite_index = spr_pawn_carry
+	} else {
+		sprite_index = spr_pawn_run
+	}
+	
 	//find a stockpile or construction site that has an open spot
 	var stockpile = noone
 	var construct = noone

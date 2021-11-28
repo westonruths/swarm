@@ -1,5 +1,12 @@
 // Logic to cut down trees
-function PlantCut() {
+function PlantCut() {	
+	if path_speed == 0 {
+		sprite_index = spr_pawn_chop
+	} else {
+		sprite_index = spr_pawn_run
+	}
+	
+	
 	if (instance_exists(fell_target)) {
 		haul_target = noone
 		drop_item()
@@ -9,11 +16,6 @@ function PlantCut() {
 			targetY = fell_target.y
 		} else {
 			path_speed = 0
-		}
-		active_wpn_index = 2 // Axe
-		with(active_wpn){
-			target = other.fell_target
-			weapon = other.active_wpn_index
 		}
 	} else {
 		var max_dist  = 9999
