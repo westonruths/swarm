@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_building_drag",
-    "path": "objects/obj_building_drag/obj_building_drag.yy",
+    "name": "obj_drag",
+    "path": "objects/obj_drag/obj_drag.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "buildings",
-    "path": "folders/Objects/buildings.yy",
+    "name": "walls",
+    "path": "folders/Objects/buildings/walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_stonewall",

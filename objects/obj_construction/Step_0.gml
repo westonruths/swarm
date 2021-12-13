@@ -6,7 +6,7 @@ if obj_building_type < 0 {
 }
 
 if build_cost.done() {
-	mp_grid_add_cell(global.grid, floor(x / global.grid_resolution), floor(y / global.grid_resolution));
+	//mp_grid_add_cell(global.grid, floor(x / global.grid_resolution), floor(y / global.grid_resolution));
 }
 
 if build_cost.construction_health <= 0 {

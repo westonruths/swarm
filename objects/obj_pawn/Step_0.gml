@@ -3,7 +3,9 @@
 if (global.time_pause) {
 	path_speed = 0;
 	exit;
-} 
+} else {
+	path_speed = 1	
+}
 
 menu_open = false;
 
@@ -22,6 +24,7 @@ with(active_wpn){
 	depth = other.depth-2;
 }
 
+image_index = tool.image_index
 with(tool){
 	x = other.x;
 	y = other.y;
@@ -37,7 +40,14 @@ with(item_holding){
 	image_xscale = other.image_xscale
 }
 
+// Update position of selector
+with(selector) {
+	x = other.x;
+	y = other.y;
+}
+
 // Loop through and execute enabled tasks
+Idle()
 var listSize = array_length(task_cells);
 for(var i = listSize - 1; i >= 0; i--) {
 	with(task_cells[i]) {
@@ -50,8 +60,21 @@ for(var i = listSize - 1; i >= 0; i--) {
 }
 
 //update path immediately if target changed
-if old_targetX != targetX && old_targetY != targetY {
-	alarm[0] = 10	
+if old_targetX != targetX || old_targetY != targetY {
+	//move towards point
+	if mp_grid_path(global.grid, path, x, y, targetX, targetY, true)  {
+		path_start(path, spd, path_action_stop, true)
+	} else {
+		move_to_random_point()
+	}
 }
 old_targetX = targetX
 old_targetY = targetY
+
+targets = [defend_target, construct_target, fell_target, haul_target]
+
+//if moving then just be idle
+if path_position == 1 && (sprite_index == spr_pawn_idle || sprite_index == spr_pawn_walk) {
+	sprite_index = spr_pawn_idle
+}
+

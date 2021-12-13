@@ -18,6 +18,8 @@ with(obj_pawn) {
 	with (pawn_btn) {
 		pawn = other
 		sprite_index = other.sprite_index
+		pawn_selector = instance_create_layer(x, y, "Instances", obj_pawn_selector)
+		with (pawn_selector) { pawn = other.pawn }
 	}
 	i++
 }

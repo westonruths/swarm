@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 switch(pawn.sprite_index){
 	case spr_pawn_carry:
 		sprite_index = spr_carry

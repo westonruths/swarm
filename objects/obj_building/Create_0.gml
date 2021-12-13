@@ -5,3 +5,5 @@ hp = max_hp;
 
 build_cost = new building_costs(0, 0)
 obj_building_type = object_index
+
+cancel_btn = noone

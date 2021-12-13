@@ -1,22 +1,20 @@
 // Logic to haul items
 function Haul(){
-	
-	if instance_exists(item_holding) {
-		sprite_index = spr_pawn_carry
-	} else {
-		sprite_index = spr_pawn_run
-	}
-	
 	//find a stockpile or construction site that has an open spot
 	var stockpile = noone
 	var construct = noone
+	var main_pawn = id
 	
-	if instance_exists(item_holding) {
+	// main logic depending on item holding
+	if (instance_exists(item_holding)){
+		haul_target = noone
+		sprite_index = spr_pawn_carry
+		
 		//Find stockpile with the item we are holding
 		with(obj_stockpile) {
 			if (instance_exists(item)) {
 				if (other.item_holding.object_index == item.object_index) {
-					stockpile = self	
+					stockpile = id	
 				}
 			} 
 		}
@@ -27,7 +25,7 @@ function Haul(){
 			with(obj_stockpile) {
 				var dist_stockpile = distance_to_object(other)
 				if (dist_stockpile < max_dist_stockpile && !instance_exists(item)) {
-					stockpile = self
+					stockpile = id
 					max_dist_stockpile = dist_stockpile
 				}
 			}
@@ -35,22 +33,24 @@ function Haul(){
 		
 		//Find a construction site that needs the item we are holding
 		with(obj_construction) {
-			if build_cost.needed(other.item_holding) {
-				construct = self
+			var construct_chosen = false
+			with(obj_pawn) {
+				if other == target_construct && id != main_pawn {
+					construct_chosen = true	
+				}
+			}
+			
+			if !construct_chosen && build_cost.needed(other.item_holding) && place_empty(x,y,obj_pawn) {
+				construct = id
 			}
 		}
-	}
-	
-	// main logic depending on item holding
-	if (instance_exists(item_holding)){
+		
 		// Move item back to stockpile or construction site
 		if instance_exists(construct) {
 			if construct.build_cost.needed(item_holding) {
-				if (distance_to_object(construct) > 5) { 
-					targetX = construct.x
-					targetY = construct.y 
+				if (distance_to_object(construct) > global.grid_resolution/2) { 
+					move_to_around_point(construct.x, construct.y)
 				} else {
-					path_speed = 0
 					with (construct) { 
 						build_cost.reduce_cost(other.item_holding)
 					}
@@ -58,10 +58,12 @@ function Haul(){
 				}
 			}
 		} else if instance_exists(stockpile) {
+			// Move to stockpile
 			if (distance_to_object(stockpile) > 2) {
 				targetX = stockpile.x
 				targetY = stockpile.y
 			} else {
+				// Deposit item at stockpile
 				var stored_item = instance_create_layer(stockpile.x,stockpile.y,"Items",item_holding.object_index);
 				with(stored_item) {
 					stored = true
@@ -85,26 +87,35 @@ function Haul(){
 			weapon = other.active_wpn_index
 		}
 	} else if (instance_exists(haul_target)) {
+		item_holding = noone
 		// see if a construct needs the resource
 		with(obj_construction) {
-			if build_cost.needed(other.haul_target) {
-				construct = self
+			var construct_chosen = false
+			with(obj_pawn) {
+				if other == obj_pawn.target_construct {
+					construct_chosen = true	
+				}
+			}
+			
+			if !construct_chosen && build_cost.needed(other.haul_target) && place_empty(x,y,obj_pawn) {
+				construct = id
 			}
 		}
-			
+		
+		// see if a stockpile has our needed item
 		if !haul_target.stored {
 			//Find stockpile with the needed item
 			with(obj_stockpile) {
 				if (instance_exists(item)) {
 					if (other.haul_target.object_index == item.object_index) {
-						stockpile = self	
+						stockpile = id
 					}
 				} 
 			}
 			//Find stockpile that is empty
 			with(obj_stockpile) {
 				if (!instance_exists(item)) {
-					stockpile = self
+					stockpile = id
 				}
 			}
 		}
@@ -115,6 +126,7 @@ function Haul(){
 				targetX = haul_target.x
 				targetY = haul_target.y
 			} else {
+				// Pick up item
 				item_holding = haul_target
 				with(haul_target) { 
 					stored = false 
@@ -130,7 +142,7 @@ function Haul(){
 			with(obj_item) {
 				with(obj_construction) {
 					if build_cost.needed(other) {
-						tmp_haul_target = other
+						tmp_haul_target = other.id
 					}
 				}
 			}
@@ -142,6 +154,17 @@ function Haul(){
 			target = noone
 			weapon = other.active_wpn_index
 		}
+		
+		// See if another pawn is targeting or carrying this item
+		with(obj_pawn) {
+			if (haul_target == other.haul_target) && id != other.id {
+				other.haul_target = noone
+			}
+				
+			if (item_holding == other.haul_target) && id != other.id {
+				other.haul_target = noone
+			}
+		}
 	} else {
 		// Identify haul target
 		var max_dist  = 9999
@@ -150,10 +173,16 @@ function Haul(){
 			var tmp_target = id
 			var chosen = false
 			
-			// see if a construct needs the resource
 			with(obj_construction) {
-				if build_cost.needed(other) {
-					construct = self
+				var construct_chosen = false
+				with(obj_pawn) {
+					if other == obj_pawn.target_construct {
+						construct_chosen = true	
+					}
+				}
+			
+				if !construct_chosen && build_cost.needed(other) && place_empty(x,y,obj_pawn) {
+					construct = id
 				}
 			}
 			
@@ -162,25 +191,30 @@ function Haul(){
 				with(obj_stockpile) {
 					if (instance_exists(item)) {
 						if (other.object_index == item.object_index) {
-							stockpile = self	
+							stockpile = id	
 						}
 					} 
 				}
 				//Find stockpile that is empty
 				with(obj_stockpile) {
 					if (!instance_exists(item)) {
-						stockpile = self
+						stockpile = id
 					}
 				}
 			}
 			
-			// See if another pawn is targeting this item
+			// See if another pawn is targeting or carrying this item
 			with(obj_pawn) {
 				if (haul_target == tmp_target) {
 					chosen = true;
 				}
+				
+				if (item_holding == tmp_target) {
+					chosen = true;
+				}
 			}
-		
+			
+			// Get the closest item that isn't chosen or already at another spot
 			if !chosen && (instance_exists(stockpile) || instance_exists(construct)) {
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
@@ -189,9 +223,7 @@ function Haul(){
 				}
 			}
 		}
-			
-		with(haul_target){
-			chosen = true;
-		}
 	}
+	
+	target_construct = construct
 }

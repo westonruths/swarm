@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "buildings",
-    "path": "folders/Objects/buildings.yy",
+    "name": "furniture",
+    "path": "folders/Objects/buildings/furniture.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_stove",

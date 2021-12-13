@@ -1,8 +1,16 @@
-/// @description update paths and tasks
-if mp_grid_path(global.grid, path, x, y, targetX, targetY, true) {
-	path_start(path, spd, path_action_stop, true);
-} else {
-	move_to_random_point()
-}
+/// @description Tap Event
+// Close out other pawn menus
+setup_pawn_menu()
 
-alarm[0] = irandom_range(1, room_speed*3)
+print(name)
+print("Defend Target: ", defend_target)
+print("Construct Target: ", construct_target)
+print("Plant Cut Target: ", fell_target)
+print("Haul Target: ", haul_target)
+print("Item Holding: ", item_holding)
+print("Current X, Y: ", x, y)
+print("Target X, Y: ", targetX, targetY)
+print("Path Speed: ", path_speed)
+print("Path Position: ", path_position)
+print("Targets: ", targets)
+print("---------------------------------------")

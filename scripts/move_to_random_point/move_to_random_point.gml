@@ -3,6 +3,11 @@
 function move_to_random_point(){
 	targetX = irandom_range(x-100, x+100)
 	targetY = irandom_range(y-100, y+100)
+	
+	if place_empty(targetX, targetY) == false {
+		targetX = irandom_range(x-200, x+200)
+		targetY = irandom_range(y-200, y+200)
+	}
 
 	if (targetX < 100) {
 		targetX = 100

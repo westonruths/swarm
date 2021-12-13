@@ -7,6 +7,10 @@ event_inherited();
 // Randomly select name
 name = Name();
 
+// Create selector object
+selector = instance_create_layer(x, y, "Instances", obj_pawn_selector)
+with (selector) { pawn = other }
+
 // Setup tool
 tool = instance_create_layer(x,y,"Items",obj_tool)
 with (tool) { pawn = other }
@@ -29,17 +33,17 @@ haul_target = noone
 targets = [defend_target, construct_target, fell_target, haul_target]
 
 // Idle target
+idle_counter = 50
 targetX = x + irandom_range(-50,50)
 targetY = y + irandom_range(-50,50)
 old_targetX = targetX
 old_targetY = targetY
 
-// Timer setup
-alarm[0] = 10
-alarm[1] = 10
-
 // Item we are holding
-item_holding = noone;
+item_holding = noone
+
+// Construct target
+target_construct = noone
 
 jobs[0] = Defend
 jobs[1] = Patient

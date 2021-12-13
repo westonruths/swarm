@@ -1,22 +1,17 @@
 // Logic to cut down trees
 function PlantCut() {	
-	if path_speed == 0 {
-		sprite_index = spr_pawn_chop
-	} else {
-		sprite_index = spr_pawn_run
-	}
-	
-	
 	if (instance_exists(fell_target)) {
 		haul_target = noone
 		drop_item()
 		
-		if (distance_to_object(fell_target) > 2) { 
-			targetX = fell_target.x
-			targetY = fell_target.y
+		move_to_around_point(fell_target.x, fell_target.y)
+		if path_position == 1 {
+			direction = point_direction(x, y, fell_target.x, fell_target.y)
+			sprite_index = spr_pawn_chop
 		} else {
-			path_speed = 0
+			sprite_index = spr_pawn_walk
 		}
+		
 	} else {
 		var max_dist  = 9999
 			
