@@ -9,7 +9,8 @@ camera = view_camera[0]
 
 drag_room_x = 0
 drag_room_y = 0
-
+drag_offsetX = 0
+drag_offsetY = 0
 
 
 global.grid_resolution = 32
