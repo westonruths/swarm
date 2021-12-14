@@ -42,6 +42,8 @@ function Haul(){
 			
 			if !construct_chosen && build_cost.needed(other.item_holding) && place_empty(x,y,obj_pawn) {
 				construct = id
+			} else {
+				draw_ellipse_colour(x-5, y-5, x+5, y+5, c_red, c_red, true);	
 			}
 		}
 		

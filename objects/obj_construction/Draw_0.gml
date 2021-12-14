@@ -10,7 +10,6 @@ if (obj_building_type == obj_wall) {
 	render_wall()
 }
 
-
 image_alpha = 0.3
 
 if build_cost.done() {
