@@ -4,9 +4,10 @@ function Construct(){
 	if (instance_exists(construct_target)) {
 		fell_target = noone
 		haul_target = noone
+		item_holding = noone
 		drop_item()
 		
-		move_to_around_point(construct_target.x, construct_target.y)
+		move_to_around_empty_point(construct_target.x, construct_target.y)
 		if path_position == 1 {
 			direction = point_direction(x, y, construct_target.x, construct_target.y)
 			sprite_index = spr_pawn_hammering

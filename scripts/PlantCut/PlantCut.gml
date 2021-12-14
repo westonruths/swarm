@@ -4,7 +4,7 @@ function PlantCut() {
 		haul_target = noone
 		drop_item()
 		
-		move_to_around_point(fell_target.x, fell_target.y)
+		move_to_around_free_point(fell_target.x, fell_target.y)
 		if path_position == 1 {
 			direction = point_direction(x, y, fell_target.x, fell_target.y)
 			sprite_index = spr_pawn_chop

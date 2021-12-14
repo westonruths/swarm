@@ -2,9 +2,13 @@
 
 if (global.time_pause) {
 	path_speed = 0;
+	image_speed = 0
+	with(tool) { image_speed = 0 }
 	exit;
 } else {
 	path_speed = 1	
+	image_speed = 1
+	with(tool) { image_speed = 1 }
 }
 
 menu_open = false;

@@ -1,3 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-room_speed = 500
+draw_sprite(spr_itemdisc_01, 0, x, y);
+draw_self()
