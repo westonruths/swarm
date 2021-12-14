@@ -4,10 +4,11 @@ if (global.building) || room != rm_game {
 	exit;
 }
 
-//var _x = drag_room_x - event_data[? "rawposX"]
-//var _y = drag_room_y - event_data[? "rawposY"]
-var _x = event_data[? "posX"] + drag_offsetX
-var _y = event_data[? "posY"] + drag_offsetY
+var _x = drag_room_x - event_data[? "rawposX"]
+var _y = drag_room_y - event_data[? "rawposY"]
+
+//var _x = event_data[? "posX"] + drag_offsetX
+//var _y = event_data[? "posY"] + drag_offsetY
 
 camera_set_view_pos(camera, _x, _y)
 
