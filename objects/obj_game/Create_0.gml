@@ -2,16 +2,18 @@
 // You can write your code in this editor
 global.view_width = 812
 global.view_height = 375
-
 camera = view_camera[0]
-
-//window_set_fullscreen(true);
-
 drag_room_x = 0
 drag_room_y = 0
-drag_offsetX = 0
-drag_offsetY = 0
+pinching = false
 
+//Debug
+touch_x[0] = 0;
+touch_y[0] = 0;
+touch_x[1] = 0;
+touch_y[1] = 0;
+midpoint_x = 0;
+midpoint_y = 0;
 
 global.grid_resolution = 32
 global.grid = mp_grid_create(0, 0, room_width div global.grid_resolution + 1, 

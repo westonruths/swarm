@@ -17,4 +17,4 @@ if (health <= 0){
 if (global.hours == 1) {
 	//Spawn enemies in the wee hours of the morning
 	//spawn_enemies();
-} 
+}
