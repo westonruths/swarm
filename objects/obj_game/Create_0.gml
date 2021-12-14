@@ -1,5 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.view_width = 812
+global.view_height = 375
+
+camera = view_camera[0]
+
+//window_set_fullscreen(true);
+
+drag_room_x = 0
+drag_room_y = 0
+
+
+
 global.grid_resolution = 32
 global.grid = mp_grid_create(0, 0, room_width div global.grid_resolution + 1, 
 						room_height div global.grid_resolution + 1, global.grid_resolution, global.grid_resolution);
@@ -18,7 +30,7 @@ global.right_limit = global.left_limit + (10*global.grid_resolution)
 
 
 global.building = false;
-global.build_x = room_width - (3/4) * sprite_get_width(spr_build_menu);
+global.build_x = global.view_width - (3/4) * sprite_get_width(spr_build_menu);
 global.build_y = 50;
 
 global.menu_open = false;

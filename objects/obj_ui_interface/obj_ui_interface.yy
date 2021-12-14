@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_cell",
-    "path": "sprites/spr_cell/spr_cell.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -22,17 +19,15 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "build_ui",
-    "path": "folders/Objects/ui/build_ui.yy",
+    "name": "ui",
+    "path": "folders/Objects/ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_cell",
+  "name": "obj_ui_interface",
   "tags": [],
   "resourceType": "GMObject",
 }

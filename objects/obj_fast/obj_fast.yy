@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_ui_interface",
+    "path": "objects/obj_ui_interface/obj_ui_interface.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

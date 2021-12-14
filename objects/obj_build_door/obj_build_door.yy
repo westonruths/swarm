@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "build_ui",
-    "path": "folders/Objects/build_ui.yy",
+    "path": "folders/Objects/ui/build_ui.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_build_door",

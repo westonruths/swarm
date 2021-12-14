@@ -14,7 +14,7 @@ global.menu_open = true;
 //initialize build menu
 var i = 0;
 with(obj_pawn) {
-	var pawn_btn = instance_create_layer(80 + i*69, room_height - 85,"Menu_Objects",obj_pawn_btn);
+	var pawn_btn = instance_create_layer(80 + i*69, global.view_height - 85,"Menu_Objects",obj_pawn_btn);
 	with (pawn_btn) {
 		pawn = other
 		sprite_index = other.sprite_index
@@ -24,5 +24,5 @@ with(obj_pawn) {
 	i++
 }
 
-instance_create_layer(room_width,room_height - 140,"Menu",obj_close_menu);
-instance_create_layer(0,room_height,"Menu",obj_pawns_menu);
+instance_create_layer(global.view_width,global.view_height - 140,"Menu",obj_close_menu);
+instance_create_layer(0,global.view_height,"Menu",obj_pawns_menu);
