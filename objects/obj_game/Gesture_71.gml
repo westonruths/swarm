@@ -13,3 +13,9 @@ _y -= _h / 2;
 
 camera_set_view_pos(view_camera[0], _x, _y);
 camera_set_view_size(view_camera[0], _w, _h);
+
+camera_set_view_pos(camera,
+                    clamp( camera_get_view_x(camera), 0, room_width - camera_get_view_width(camera) ),
+                    clamp( camera_get_view_y(camera), 0, room_height - camera_get_view_height(camera) ));
+
+print(_x, _y, _w, _h)
