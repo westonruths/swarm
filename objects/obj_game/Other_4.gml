@@ -8,11 +8,11 @@ if(room == rm_game){
 	//audio_play_sound(msc_song, 2, true);
 	
 	//setup UI
-	instance_create_layer(global.view_width/2-sprite_get_width(spr_pawns_menu_btn), 
-							global.view_height-sprite_get_height(spr_pawns_menu_btn),
+	instance_create_layer(global.view_width-sprite_get_width(spr_pawns_menu_btn), 
+							global.view_height-sprite_get_height(spr_pawns_menu_btn) - 10,
 							"Menu_Objects",obj_pawns_menu_btn);
-	instance_create_layer(global.view_width/2+sprite_get_width(spr_build), 
-							global.view_height-sprite_get_height(spr_build),
+	instance_create_layer(global.view_width-sprite_get_width(spr_build), 
+							global.view_height-20-sprite_get_height(spr_build)-sprite_get_height(spr_pawns_menu_btn),
 							"Menu_Objects",obj_build_btn);
 	
 	//setup map

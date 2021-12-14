@@ -4,8 +4,8 @@ if (global.building) || room != rm_game {
 	exit;
 }
 
-var _x = drag_room_x - event_data[? "rawposX"]
-var _y = drag_room_y - event_data[? "rawposY"]
+var _x = drag_room_x - event_data[? "guiposX"]
+var _y = drag_room_y - event_data[? "guiposY"]
 
 camera_set_view_pos(camera, _x, _y)
 
@@ -16,5 +16,4 @@ camera_set_view_pos(camera,
 with (obj_ui_interface) {
 	x = (camera_get_view_x(view_camera[0]) + viewPosX);
 	y = (camera_get_view_y(view_camera[0]) + viewPosY);
-	//print(object_get_name(object_index), x, y)
 }
