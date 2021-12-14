@@ -6,6 +6,3 @@ if (global.building) || room != rm_game {
 
 drag_room_x = event_data[? "posX"]
 drag_room_y = event_data[? "posY"]
-
-//drag_offsetX = camera.x - event_data[? "posX"]
-//drag_offsetY = camera.y - event_data[? "posX"]

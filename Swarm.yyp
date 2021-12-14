@@ -61,6 +61,7 @@
     {"id":{"name":"move_to_random_point","path":"scripts/move_to_random_point/move_to_random_point.yy",},"order":8,},
     {"id":{"name":"spr_idle","path":"sprites/spr_idle/spr_idle.yy",},"order":2,},
     {"id":{"name":"spr_pawn_button","path":"sprites/spr_pawn_button/spr_pawn_button.yy",},"order":13,},
+    {"id":{"name":"obj_camera_center","path":"objects/obj_camera_center/obj_camera_center.yy",},"order":13,},
     {"id":{"name":"obj_stone","path":"objects/obj_stone/obj_stone.yy",},"order":2,},
     {"id":{"name":"spr_eyeball_hurt","path":"sprites/spr_eyeball_hurt/spr_eyeball_hurt.yy",},"order":3,},
     {"id":{"name":"t_right","path":"sprites/t_right/t_right.yy",},"order":15,},
