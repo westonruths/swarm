@@ -1,13 +1,20 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Construct(){
+	with (construct_target) {
+		if !place_empty(x,y,obj_pawn) {
+			construct_target = noone
+			other.sprite_index = spr_pawn_walk
+		}
+	}
+	
 	if (instance_exists(construct_target)) {
 		fell_target = noone
 		haul_target = noone
 		item_holding = noone
 		drop_item()
 		
-		move_to_around_empty_point(construct_target.x, construct_target.y)
+		move_to_around_free_point(construct_target.x, construct_target.y)
 		if path_position == 1 {
 			direction = point_direction(x, y, construct_target.x, construct_target.y)
 			sprite_index = spr_pawn_hammering
@@ -27,7 +34,7 @@ function Construct(){
 				}
 			}
 				
-			if (!chosen && build_cost.done()) {
+			if (!chosen && build_cost.done() && place_empty(x,y,obj_pawn)) {
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
 					other.construct_target = id

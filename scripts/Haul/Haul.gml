@@ -41,7 +41,7 @@ function Haul(){
 			}
 			
 			if !construct_chosen && build_cost.needed(other.item_holding) 
-					&& place_empty(x,y,obj_pawn) && move_to_around_empty_point(x, y) {
+					&& place_empty(x,y,obj_pawn) && move_to_around_free_point(x, y) {
 				construct = id
 			} else {
 				draw_ellipse_colour(x-5, y-5, x+5, y+5, c_red, c_red, true);	
@@ -51,7 +51,7 @@ function Haul(){
 		// Move item back to stockpile or construction site
 		if instance_exists(construct) {
 			if (distance_to_object(construct) > global.grid_resolution) { 
-				move_to_around_empty_point(construct.x, construct.y)
+				move_to_around_free_point(construct.x, construct.y)
 			} else {
 				with (construct) { 
 					build_cost.reduce_cost(other.item_holding)
@@ -61,7 +61,7 @@ function Haul(){
 		} else if instance_exists(stockpile) {
 			// Move to stockpile (be careful with global.grid_resoultion - don't make too small)
 			if (distance_to_object(stockpile) > global.grid_resolution/2) {
-				move_to_around_empty_point(stockpile.x, stockpile.y)
+				move_to_around_free_point(stockpile.x, stockpile.y)
 			} else {
 				// Deposit item at stockpile
 				var stored_item = instance_create_layer(stockpile.x,stockpile.y,"Items",item_holding.object_index);
@@ -98,7 +98,7 @@ function Haul(){
 			}
 			
 			if !construct_chosen && build_cost.needed(other.haul_target)  
-					&& place_empty(x,y,obj_pawn) && move_to_around_empty_point(x, y) {
+					&& place_empty(x,y,obj_pawn) && move_to_around_free_point(x, y) {
 				construct = id
 			}
 		}
@@ -183,7 +183,7 @@ function Haul(){
 				}
 			
 				if !construct_chosen && build_cost.needed(other)  
-					&& place_empty(x,y,obj_pawn) && move_to_around_empty_point(x, y) {
+					&& place_empty(x,y,obj_pawn) && move_to_around_free_point(x, y) {
 					construct = id
 				}
 			}

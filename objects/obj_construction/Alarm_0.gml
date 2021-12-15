@@ -1,6 +1,6 @@
 /// @description Construct action
 
-if !build_cost.done() {
+if !build_cost.done() || !place_empty(x, y, obj_pawn) {
 	exit
 }
 
