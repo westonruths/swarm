@@ -40,8 +40,13 @@ function Haul(){
 				}
 			}
 			
+			var spot_free = false
+			with(main_pawn) {
+				spot_free = move_to_around_free_point(other.x, other.y)
+			}
+			
 			if !construct_chosen && build_cost.needed(other.item_holding) 
-					&& place_empty(x,y,obj_pawn) && move_to_around_free_point(x, y) {
+					&& place_empty(x,y,obj_pawn) && spot_free {
 				construct = id
 			} else {
 				draw_ellipse_colour(x-5, y-5, x+5, y+5, c_red, c_red, true);	
@@ -97,8 +102,13 @@ function Haul(){
 				}
 			}
 			
+			var spot_free = false
+			with(main_pawn) {
+				spot_free = move_to_around_free_point(other.x, other.y)
+			}
+			
 			if !construct_chosen && build_cost.needed(other.haul_target)  
-					&& place_empty(x,y,obj_pawn) && move_to_around_free_point(x, y) {
+					&& place_empty(x,y,obj_pawn) && spot_free {
 				construct = id
 			}
 		}
@@ -169,7 +179,7 @@ function Haul(){
 	} else {
 		// Identify haul target
 		var max_dist  = 9999
-			
+		
 		with(obj_item) {
 			var tmp_target = id
 			var chosen = false
@@ -181,9 +191,14 @@ function Haul(){
 						construct_chosen = true	
 					}
 				}
-			
+		
+				var spot_free = false
+				with(main_pawn) {
+					spot_free = move_to_around_free_point(other.x, other.y)
+				}
+				
 				if !construct_chosen && build_cost.needed(other)  
-					&& place_empty(x,y,obj_pawn) && move_to_around_free_point(x, y) {
+					&& place_empty(x,y,obj_pawn) && spot_free {
 					construct = id
 				}
 			}
