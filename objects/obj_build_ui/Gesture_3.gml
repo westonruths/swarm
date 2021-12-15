@@ -4,7 +4,7 @@
 var x_goto = event_data[? "posX"]
 var y_goto = event_data[? "posY"]
 
-x = x_goto+10
+x = x_goto
 y = y_goto
 
 var cell = instance_nearest(x, y, obj_cell)
