@@ -26,12 +26,6 @@ win_score = 150;
 
 draw_set_font(fnt_text);
 
-global.top_game = global.grid_resolution;
-global.bottom_game = room_height - global.grid_resolution/2;
-global.left_limit = global.grid_resolution;
-global.right_limit = global.left_limit + (10*global.grid_resolution)
-
-
 global.building = false;
 global.build_x = global.view_width - (3/4) * sprite_get_width(spr_build_menu);
 global.build_y = 50;

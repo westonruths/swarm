@@ -16,6 +16,11 @@ if(room == rm_game){
 							"Menu_Objects",obj_build_btn);
 	
 	//setup map
+	global.top_game = global.grid_resolution * 2;
+	global.bottom_game = room_height - global.grid_resolution/2;
+	global.left_limit = global.grid_resolution * 2;
+	global.right_limit = room_width - global.grid_resolution/2;
+
 	obj_size = sprite_get_width(spr_cell);
 	buffer = global.grid_resolution
 	first_cell_y = global.top_game + obj_size/2;
@@ -26,7 +31,14 @@ if(room == rm_game){
 	for (var i = first_cell_y; i<global.bottom_game; i+=buffer) {
 		ds_list_add(spawn_list, i);
 		for (var j = first_cell_x; j<global.right_limit; j+=buffer) {
-			instance_create_layer(j,i,"BuildUI",obj_cell);
+			cell = instance_create_layer(j,i,"BuildUI",obj_cell);
+			var place_object = irandom_range(-50,10)
+			if (place_object > 0) {
+				with (cell) {
+					//setup forest
+					build_obj = instance_create_layer(x,y,"Buildings",obj_tree);
+				}
+			}
 		}
 	}
 }

@@ -248,7 +248,7 @@
     {"folderPath":"folders/Sprites/pawn_ui.yy","order":6,"resourceVersion":"1.0","name":"pawn_ui","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/animals.yy","order":7,"resourceVersion":"1.0","name":"animals","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/animals.yy","order":9,"resourceVersion":"1.0","name":"animals","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/plants.yy","order":10,"resourceVersion":"1.0","name":"plants","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/resources.yy","order":10,"resourceVersion":"1.0","name":"resources","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/plants.yy","order":8,"resourceVersion":"1.0","name":"plants","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/ui.yy","order":9,"resourceVersion":"1.0","name":"ui","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/ui.yy","order":11,"resourceVersion":"1.0","name":"ui","tags":[],"resourceType":"GMFolder",},

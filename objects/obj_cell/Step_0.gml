@@ -12,7 +12,3 @@ if (instance_exists(build_obj)) {
 } else {	
 	build_obj = noone;
 }
-
-//if (global.money < global.rifle_cost) {
-//	visible = false;
-//}
