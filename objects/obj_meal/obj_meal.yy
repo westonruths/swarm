@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "items",
-    "path": "folders/Objects/items.yy",
+    "name": "food",
+    "path": "folders/Objects/items/food.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_meal",

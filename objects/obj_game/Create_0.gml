@@ -15,9 +15,12 @@ touch_y[1] = 0;
 midpoint_x = 0;
 midpoint_y = 0;
 
+var room_x_size = 1624
+var room_y_size = 1496
+
 global.grid_resolution = 32
-global.grid = mp_grid_create(0, 0, room_width div global.grid_resolution + 1, 
-						room_height div global.grid_resolution + 1, global.grid_resolution, global.grid_resolution);
+global.grid = mp_grid_create(0, 0, room_x_size div global.grid_resolution + 1, 
+						room_y_size div global.grid_resolution + 1, global.grid_resolution, global.grid_resolution);
 
 score = 0;
 health = 100;

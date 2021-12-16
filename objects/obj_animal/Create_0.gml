@@ -6,9 +6,10 @@ animal_health_max = animal_health;
 spd = 1;
 targetX = x
 targetY = y
-
 path = path_add();
+
+selected = false
 
 name = "Animal"
 
-alarm[0] = 10
+alarm[0] = irandom_range(50, 150)

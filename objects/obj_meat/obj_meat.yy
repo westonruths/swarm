@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_item",
-    "path": "objects/obj_item/obj_item.yy",
+    "name": "obj_raw_food",
+    "path": "objects/obj_raw_food/obj_raw_food.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "items",
-    "path": "folders/Objects/items.yy",
+    "name": "food",
+    "path": "folders/Objects/items/food.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_meat",

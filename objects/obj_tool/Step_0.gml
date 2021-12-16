@@ -5,6 +5,9 @@ switch(pawn.sprite_index){
 	case spr_pawn_carry:
 		sprite_index = spr_carry
 		break;
+	case spr_pawn_cooking:
+		sprite_index = spr_cooking
+		break;
 	case spr_pawn_chop:
 		sprite_index = spr_chop
 		break;

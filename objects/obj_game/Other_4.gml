@@ -32,12 +32,24 @@ if(room == rm_game){
 		ds_list_add(spawn_list, i);
 		for (var j = first_cell_x; j<global.right_limit; j+=buffer) {
 			cell = instance_create_layer(j,i,"BuildUI",obj_cell);
-			var place_object = irandom_range(-50,10)
-			if (place_object > 0) {
+			
+			//place objects
+			var place_object = irandom_range(0,100)
+			if !place_empty(j, i) {
+				print(j, i, " is not empty")
+				place_object = -1
+			}
+			
+			// place trees
+			if (place_object > 0 && place_object < 20) {
 				with (cell) {
-					//setup forest
 					build_obj = instance_create_layer(x,y,"Buildings",obj_tree);
 				}
+			} 
+			
+			// place animals
+			if (place_object > 20 && place_object < 24) {
+				instance_create_layer(j, i, "Instances", obj_bull)
 			}
 		}
 	}

@@ -23,7 +23,7 @@ if (char_health <= 0) {
 
 // Update weapon location
 with(active_wpn){
-	x = other.x;
+	x = other.x + other.image_xscale*10;
 	y = other.y;
 	depth = other.depth-2;
 }

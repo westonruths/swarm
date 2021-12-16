@@ -7,4 +7,7 @@ switch(sprite_index){
 	case spr_hammering:
 		with (pawn.construct_target) { alarm[0] = 1 }
 		break;
+	case spr_cooking:
+		with (pawn.cooking_target) { alarm[0] = 1 }
+		break;
 }

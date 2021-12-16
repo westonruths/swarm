@@ -10,6 +10,10 @@ if (animal_health <= 0) {
 	instance_create_layer(x,y,"Items",obj_meat)
 }
 
-move_to_random_point()
-
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
+
+if mp_grid_path(global.grid, path, x, y, targetX, targetY, true)  {
+	path_start(path, spd, path_action_stop, true)
+}
+
+

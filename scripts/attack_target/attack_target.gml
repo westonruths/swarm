@@ -2,11 +2,17 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function attack_target(enemy){
 	// Fire at closest enemy
-	if (instance_exists(enemy)) {
+	if instance_exists(enemy) {
+		direction = point_direction(x, y, enemy.x, enemy.y)
+		sprite_index = spr_pawn_run
+		
+		with(tool){
+			x = other.active_wpn.x
+			y = other.active_wpn.y
+		}
 		
 		// Move towards closest enemy to engage
-		targetX = enemy.x
-		targetY = enemy.y
+		move_to_around_free_point(enemy.x, enemy.y)
 		
 		defend_target = enemy
 	
@@ -17,7 +23,9 @@ function attack_target(enemy){
 			target = other.defend_target
 			weapon = other.active_wpn_index
 		}
+		
 		if (distance_to_point(enemy.x,enemy.y) < active_wpn.range) {
+			sprite_index = spr_pawn_idle
 			targetX = x
 			targetY = y
 			
