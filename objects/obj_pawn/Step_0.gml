@@ -2,7 +2,7 @@
 
 if (global.time_pause) {
 	path_speed = 0;
-	image_speed = 0
+	//image_speed = 0
 	with(tool) { image_speed = 0 }
 	exit;
 } else {
@@ -72,12 +72,12 @@ if old_targetX != targetX || old_targetY != targetY {
 	//move towards point
 	if mp_grid_path(global.grid, path, x, y, targetX, targetY, true)  {
 		path_start(path, spd, path_action_stop, true)
+	} else {
+		move_to_random_point()	
 	}
 }
 old_targetX = targetX
 old_targetY = targetY
-
-targets = [defend_target, construct_target, fell_target, haul_target]
 
 //if moving then just be idle
 if path_position == 1 && (sprite_index == spr_pawn_idle || sprite_index == spr_pawn_walk) {

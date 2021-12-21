@@ -16,4 +16,7 @@ if mp_grid_path(global.grid, path, x, y, targetX, targetY, true)  {
 	path_start(path, spd, path_action_stop, true)
 }
 
+if path_position == 1 {
+	image_index = 0
+}
 

@@ -28,11 +28,11 @@ active_wpn_index = 0;
 defend_target = noone
 hunt_target = noone
 construct_target = noone
+grow_target = noone
 cooking_target = noone
 fell_target = noone
+mine_target = noone
 haul_target = noone
-
-targets = [defend_target, hunt_target, construct_target, cooking_target, fell_target, haul_target]
 
 // Idle target
 idle_counter = 50

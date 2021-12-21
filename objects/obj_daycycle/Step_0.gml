@@ -69,7 +69,7 @@ if(draw_daylight){
 if(global.hours >= 24) {
 	global.seconds = 0;
 	global.day += 1;
-	//with(crops){ event_perform(ev_other, ev_user1); }
+	with(obj_crop){ alarm[1] = 1; }
 	if(global.day > 30){
 		global.day = 1;
 		global.season += 1;

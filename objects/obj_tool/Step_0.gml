@@ -17,6 +17,12 @@ switch(pawn.sprite_index){
 	case spr_pawn_hammering:
 		sprite_index = spr_hammering
 		break;
+	case spr_pawn_digging:
+		sprite_index = spr_digging
+		break;
+	case spr_pawn_mine:
+		sprite_index = spr_mine
+		break;
 	case spr_pawn_hurt:
 		sprite_index = spr_hurt
 		break;

@@ -13,15 +13,15 @@ function move_to_random_point(){
 		targetX = 100
 	}
 
-	if (targetX > room_width - 50) {
-		targetX = room_width - 50	
+	if (targetX > global.room_x_size - 50) {
+		targetX = global.room_x_size - 50	
 	}
 
 	if (targetY < 100) {
 		targetY = 100
 	}
 
-	if (targetY > room_height - 100) {
-		targetY = room_height - 100	
+	if (targetY > global.room_y_size - 100) {
+		targetY = global.room_y_size - 100	
 	}
 }

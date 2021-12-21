@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "plants",
-    "path": "folders/Sprites/plants.yy",
+    "name": "resources",
+    "path": "folders/Sprites/resources.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_tree",

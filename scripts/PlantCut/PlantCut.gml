@@ -1,5 +1,6 @@
 // Logic to cut down trees
 function PlantCut() {	
+	var main_pawn = self
 	with (fell_target) {
 		if selected == false {
 			other.fell_target = noone
@@ -23,13 +24,19 @@ function PlantCut() {
 		with(obj_tree) {
 			var tmp_target = id
 			var chosen = false
+			var spot_free = false
+			
 			with(obj_pawn) {
 				if (fell_target == tmp_target) {
 					chosen = true;
 				}
 			}
+			
+			with(main_pawn) {
+				spot_free = check_around_free_point(other.x, other.y)
+			}
 				
-			if (!chosen && selected) {
+			if (!chosen && selected && spot_free) {
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
 					other.fell_target = id

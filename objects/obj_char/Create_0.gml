@@ -8,3 +8,5 @@ targetX = x
 targetY = y
 
 path = path_add();
+
+test_path = path_add();

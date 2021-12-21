@@ -1,13 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Construct(){
-	with (construct_target) {
-		if !place_empty(x,y,obj_pawn) {
-			construct_target = noone
-			other.sprite_index = spr_pawn_walk
-		}
-	}
-	
 	if (instance_exists(construct_target)) {
 		fell_target = noone
 		haul_target = noone
