@@ -2,11 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Mine(){
 	var main_pawn = self
-	with (mine_target) {
-		if selected == false {
-			other.mine_target = noone
-		}
-	}
 		
 	if (instance_exists(mine_target)) {
 		haul_target = noone
@@ -27,9 +22,12 @@ function Mine(){
 			var chosen = false
 			var spot_free = false
 			
+			if !selected continue
+			
 			with(obj_pawn) {
 				if mine_target == tmp_target {
 					chosen = true
+					break
 				}
 			}
 			
