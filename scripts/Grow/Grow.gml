@@ -30,6 +30,7 @@ function Grow(){
 		with(obj_crop) {
 			var tmp_target = id
 			var chosen = false
+			
 			with(obj_pawn) {
 				if (grow_target == tmp_target) {
 					chosen = true;

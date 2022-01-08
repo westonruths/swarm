@@ -26,6 +26,8 @@ function PlantCut() {
 			var chosen = false
 			var spot_free = false
 			
+			if !selected continue
+			
 			with(obj_pawn) {
 				if (fell_target == tmp_target) {
 					chosen = true;

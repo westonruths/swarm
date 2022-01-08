@@ -24,12 +24,12 @@ function Mine(){
 			
 			if !selected continue
 			
-			with(obj_pawn) {
-				if mine_target == tmp_target {
-					chosen = true
-					break
-				}
-			}
+			//with(obj_pawn) {
+			//	if mine_target == tmp_target {
+			//		chosen = true
+			//		break
+			//	}
+			//}
 			
 			with(main_pawn) {
 				spot_free = check_around_free_point(other.x, other.y)
