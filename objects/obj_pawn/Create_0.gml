@@ -25,7 +25,6 @@ var hair_types = ["bowlhair_", "curlyhair_", "mophair_", "shorthair_", "spikeyha
 if gender == 0 {
 	var hair_types = ["longhair_"]
 }
-
 var i = irandom_range(0, array_length(hair_types)-1)
 
 with (hair) { 

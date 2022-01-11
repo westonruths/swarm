@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-render_mtn_wall()
+//render_mtn_wall()
 draw_self()
 
 draw_set_alpha(0.7);

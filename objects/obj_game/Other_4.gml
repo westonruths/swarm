@@ -83,4 +83,9 @@ if(room == rm_game){
 			}
 		}
 	}
+	
+	//render mountains
+	with (obj_mtn_wall) {
+		render_mtn_wall()
+	}
 }

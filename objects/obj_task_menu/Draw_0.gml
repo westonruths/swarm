@@ -11,7 +11,6 @@ draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, xsc
 draw_sprite_ext(pawn.hair.sprite_index, pawn.hair.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.tool.sprite_index, pawn.tool.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 
-
 // Draw text
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
