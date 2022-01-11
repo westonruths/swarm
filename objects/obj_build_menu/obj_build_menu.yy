@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_build_menu",
-    "path": "sprites/spr_build_menu/spr_build_menu.yy",
+    "name": "spr_lt_box",
+    "path": "sprites/spr_lt_box/spr_lt_box.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,6 +26,7 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

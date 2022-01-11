@@ -6,5 +6,5 @@ var c = c_yellow;
 //draw_text_color(10, 90, string(global.season), c,c,c,c, 1);
 //draw_text_color(10,110, string(global.year), c,c,c,c, 1);
 
-//draw_text_color(guiWidth/2-200,2, "Hour " + string(floor(global.hours))
-//					+ "   " + "Day " + string(global.day), c,c,c,c, 1);
+draw_text_color(guiWidth/2-200,guiHeight, "Hour " + string(floor(global.hours))
+					+ "   " + "Day " + string(global.day), c,c,c,c, 1);

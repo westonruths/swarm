@@ -1,8 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+char_health = 10;
+char_health_max = 10;
 
-// Inherit the parent event
-event_inherited();
+spd = 1;
+path = path_add();
+test_path = path_add();
 
 // Randomly select name
 name = Name();
@@ -14,6 +17,10 @@ with (selector) { pawn = other }
 // Setup tool
 tool = instance_create_layer(x,y,"Items",obj_tool)
 with (tool) { pawn = other }
+
+// Setup hair
+hair = instance_create_layer(x,y,"Items",obj_hair)
+with (hair) { pawn = other }
 
 // The active weapon being employed
 active_wpn = instance_create_layer(x,y,"Items",obj_wpn)

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_close",
-    "path": "sprites/spr_close/spr_close.yy",
+    "name": "spr_cancel",
+    "path": "sprites/spr_cancel/spr_cancel.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,6 +26,7 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

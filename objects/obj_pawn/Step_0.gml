@@ -1,8 +1,16 @@
 /// @description Core Pawn Logic
 
+with(hair){
+	image_index = other.image_index
+	x = other.x;
+	y = other.y;
+	depth = other.depth-2;
+	image_xscale = other.image_xscale
+}
+
 if (global.time_pause) {
 	path_speed = 0;
-	//image_speed = 0
+	image_speed = 0
 	with(tool) { image_speed = 0 }
 	exit;
 } else {
