@@ -1,5 +1,5 @@
 ///Name(M/F,First/Last/Full);
-function Name(){
+function Name(gender){
 	//Create 1d arrays for male and female names
 	MName[0] = "Isaac";
 	FName[0] = "Isabelle";
@@ -409,5 +409,8 @@ function Name(){
 	more random-ness to the code
 	*/
 	var size = array_length(MName);
-	return MName[irandom(size)];
+	if gender == 1
+		return MName[irandom(size)]
+	else
+		return FName[irandom(size)]
 }

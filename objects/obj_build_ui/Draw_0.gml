@@ -4,6 +4,9 @@ if (dragging) {
 	sprite_index = obj_sprite
 	image_xscale = 1
 	image_yscale = 1
+	
+	draw_text(x + 30, y, name);
+	
 	draw_self()
 	exit
 } else {

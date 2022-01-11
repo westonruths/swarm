@@ -8,7 +8,8 @@ path = path_add();
 test_path = path_add();
 
 // Randomly select name
-name = Name();
+var gender = irandom(1)
+name = Name(gender);
 
 // Create selector object
 selector = instance_create_layer(x, y, "Instances", obj_pawn_selector)
@@ -20,7 +21,17 @@ with (tool) { pawn = other }
 
 // Setup hair
 hair = instance_create_layer(x,y,"Items",obj_hair)
-with (hair) { pawn = other }
+var hair_types = ["bowlhair_", "curlyhair_", "mophair_", "shorthair_", "spikeyhair_"]
+if gender == 0 {
+	var hair_types = ["longhair_"]
+}
+
+var i = irandom_range(0, array_length(hair_types)-1)
+
+with (hair) { 
+	pawn = other 
+	hair_type = hair_types[i]
+}
 
 // The active weapon being employed
 active_wpn = instance_create_layer(x,y,"Items",obj_wpn)
