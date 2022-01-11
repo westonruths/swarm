@@ -70,7 +70,7 @@ jobs[10] = Research
 menu_open = false;
 var listSize = array_length(jobs);
 for(var i = 0; i < listSize; i++) {
-	task_cells[i] = instance_create_layer(40 + i*69,global.view_height - 85,"Menu_Objects",obj_task_cell);
+	task_cells[i] = instance_create_layer(global.view_width - 100,global.build_y + i*35,"Menu_Objects",obj_task_cell);
 	with(task_cells[i]) {
 		job = other.jobs[i]
 		pawn = other

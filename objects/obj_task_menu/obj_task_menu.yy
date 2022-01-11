@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_task_menu",
-    "path": "sprites/spr_task_menu/spr_task_menu.yy",
+    "name": "spr_lt_box",
+    "path": "sprites/spr_lt_box/spr_lt_box.yy",
   },
   "solid": false,
   "visible": true,

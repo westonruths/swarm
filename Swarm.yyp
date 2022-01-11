@@ -54,6 +54,7 @@
     {"id":{"name":"mophair_idle","path":"sprites/mophair_idle/mophair_idle.yy",},"order":4,},
     {"id":{"name":"spr_digging","path":"sprites/spr_digging/spr_digging.yy",},"order":10,},
     {"id":{"name":"drop_item","path":"scripts/drop_item/drop_item.yy",},"order":11,},
+    {"id":{"name":"spr_confirm","path":"sprites/spr_confirm/spr_confirm.yy",},"order":18,},
     {"id":{"name":"spr_pawn_walk","path":"sprites/spr_pawn_walk/spr_pawn_walk.yy",},"order":10,},
     {"id":{"name":"obj_meal","path":"objects/obj_meal/obj_meal.yy",},"order":0,},
     {"id":{"name":"corner_bottom_right","path":"sprites/corner_bottom_right/corner_bottom_right.yy",},"order":3,},

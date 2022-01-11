@@ -20,8 +20,8 @@ function setup_pawn_menu(){
 		}
 	}
 
-	instance_create_layer(global.view_width,global.view_height - 140,"Menu",obj_close_menu);
-	var task_menu = instance_create_layer(0,global.view_height,"Menu",obj_task_menu);
+	instance_create_layer(global.view_width-30,15,"Menu",obj_close_menu);
+	var task_menu = instance_create_layer(global.view_width-(global.view_width/3),0,"Menu",obj_task_menu);
 	with (task_menu) {
 		pawn = other
 	}

@@ -31,7 +31,7 @@ win_score = 150;
 draw_set_font(fnt_text);
 
 global.building = false;
-global.build_x = global.view_width - (global.view_width/3) + 10
+global.build_x = global.view_width - (global.view_width/3) + 5
 global.build_y = 30;
 
 global.menu_open = false;
