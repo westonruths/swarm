@@ -32,6 +32,7 @@ if (current_delay == 0) && (projectile != -1) {
 				direction = other.direction;
 				image_angle = point_direction(x,y,other.target.x,other.target.y)
 				speed = other.bulletspeed;
+				original_speed = other.bulletspeed;
 			}
 		} 
 	}
