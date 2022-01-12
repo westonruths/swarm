@@ -1,15 +1,12 @@
 //if(keyboard_check_pressed(ord("T"))){ global.time_pause = !global.time_pause; }
-if (global.building || global.menu_open || global.time_pause || global.saved_game_speed == 0) {
+//global.building || global.menu_open ||
+if (global.time_pause || global.saved_game_speed == 0) {
 	global.time_pause = true
 	global.game_speed = 0
 } else {
 	global.time_pause = false
 	global.game_speed = global.saved_game_speed
 }
-
-print("Saved Game Speed: ", global.saved_game_speed)
-print("Game Speed: ", global.game_speed)
-
 
 if(global.time_pause){ exit; }
 

@@ -38,4 +38,7 @@ switch(pawn.sprite_index){
 	case spr_pawn_eat:
 		sprite_index = spr_eat
 		break;
+	case spr_pawn_sleep:
+		sprite_index = spr_eat
+		break;
 }

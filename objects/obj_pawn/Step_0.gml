@@ -1,4 +1,7 @@
 /// @description Core Pawn Logic
+if (!global.menu_open) {
+	menu_open = false;
+}
 
 if (global.time_pause) {
 	path_speed = 0;
@@ -12,8 +15,6 @@ if (global.time_pause) {
 	with(tool) { image_speed = 1 * other.work_spd * global.game_speed}
 	with(hair) { image_speed = 1 * other.work_spd * global.game_speed}
 }
-
-menu_open = false;
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
 
@@ -81,14 +82,15 @@ with(selector) {
 Idle()
 var listSize = array_length(task_cells);
 for(var i = listSize - 1; i >= 0; i--) {
-	with(task_cells[i]) {
-		visible = false
-	}
+	//with(task_cells[i]) {
+	//	visible = false
+	//}
 	
 	if (task_cells[i].enabled) {
 		script_execute(task_cells[i].job)
 	}
 }
+Sleep()
 Eat()
 
 //update path immediately if target changed

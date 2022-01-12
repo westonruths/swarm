@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function setup_pawn_menu(){
+	// Close out other pawn menus
 	with(obj_task_cell) {
 		visible = false
 	}
@@ -8,11 +9,12 @@ function setup_pawn_menu(){
 		menu_open = false;
 	}
 
+	// Setup this pawn's menu
 	global.menu_open = true;
 	global.building = false;
 	menu_open = true;
 
-	//initialize build menu
+	//initialize tasking menu
 	var listSize = array_length(task_cells);
 	for(var i = 0; i < listSize; i++) {
 		with(task_cells[i]) {
