@@ -1,14 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 char_health = 100
+char_old_health = char_health
 char_health_max = 100
 
 char_food = 100
 char_food_max = 100
 
-char_energy = 100
+char_energy = 8
 char_energy_max = 100
 
+work_spd = 1
 spd = 1;
 path = path_add();
 test_path = path_add();

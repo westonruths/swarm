@@ -16,4 +16,7 @@ switch(sprite_index){
 	case spr_digging:
 		with (pawn.grow_target) { alarm[0] = 1 }
 		break;
+	case spr_dead:
+		image_index = image_number-1
+		break;
 }

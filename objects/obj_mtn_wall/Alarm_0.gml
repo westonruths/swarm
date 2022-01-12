@@ -1,4 +1,4 @@
-/// @description Chopped
+/// @description Mined
 
 hp -= 1;
 

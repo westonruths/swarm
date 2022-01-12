@@ -11,7 +11,6 @@ if(global.time_pause){ exit; }
 //Increment Time
 global.seconds += time_increment;
 global.minutes = global.seconds/60;
-global.hours = global.minutes/60;
 
 if(draw_daylight){
 	#region Phases and Variables
@@ -66,16 +65,30 @@ if(draw_daylight){
 
 
 #region Cycle Check
-if(global.hours >= 24) {
+if(global.minutes >= 60){
 	global.seconds = 0;
-	global.day += 1;
-	with(obj_crop){ alarm[1] = 1; }
-	if(global.day > 30){
-		global.day = 1;
-		global.season += 1;
-		if(global.season > 4){
-			global.season = 1;
-			global.year += 1;
+	global.hours += 1;
+	
+	// Pawns lose food and energy
+	with(obj_pawn) {
+		alarm[1] = 1;
+	}
+	
+	if(global.hours >= 24) {
+		global.day += 1;
+		
+		// Crops grow
+		with(obj_crop){ 
+			alarm[1] = 1; 
+		}
+		
+		if(global.day > 30){
+			global.day = 1;
+			global.season += 1;
+			if(global.season > 4){
+				global.season = 1;
+				global.year += 1;
+			}
 		}
 	}
 }

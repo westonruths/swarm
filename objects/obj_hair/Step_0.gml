@@ -12,7 +12,7 @@ switch(pawn.sprite_index){
 		sprite_index = asset_get_index(hair_type + "chop")
 		break;
 	case spr_pawn_dead:
-		sprite_index = noone
+		sprite_index = asset_get_index(hair_type + "dead")
 		break;
 	case spr_pawn_hammering:
 		sprite_index = asset_get_index(hair_type + "hammering")
@@ -24,7 +24,7 @@ switch(pawn.sprite_index){
 		sprite_index = asset_get_index(hair_type + "mining")
 		break;
 	case spr_pawn_hurt:
-		sprite_index = noone
+		sprite_index = asset_get_index(hair_type + "hurt")
 		break;
 	case spr_pawn_idle:
 		sprite_index = asset_get_index(hair_type + "idle")

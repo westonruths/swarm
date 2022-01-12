@@ -1,22 +1,16 @@
 /// @description Core Pawn Logic
 
-with(hair){
-	image_index = other.image_index
-	x = other.x;
-	y = other.y;
-	depth = other.depth-2;
-	image_xscale = other.image_xscale
-}
-
 if (global.time_pause) {
 	path_speed = 0;
 	image_speed = 0
 	with(tool) { image_speed = 0 }
+	with(hair) { image_speed = 0 }
 	exit;
 } else {
-	path_speed = 1	
-	image_speed = 1
-	with(tool) { image_speed = 1 }
+	path_speed = spd	
+	image_speed = 1 *work_spd
+	with(tool) { image_speed = 1 * other.work_spd }
+	with(hair) { image_speed = 1 * other.work_spd }
 }
 
 menu_open = false;
@@ -25,9 +19,25 @@ if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 
 
 // Check for character death
 if (char_health <= 0) {
-	instance_create_layer(x,y,"Instances",obj_pawn_dead)
-	instance_destroy();
+	path_speed = 0;
+	sprite_index = spr_pawn_dead
+	image_index = tool.image_index
+	with(hair) { image_index = other.image_index }
+	exit
 }
+
+//detect loss in health
+if (char_health < char_old_health) {
+	sprite_index = spr_pawn_hurt
+	char_old_health = char_health
+}
+if (sprite_index == spr_pawn_hurt && image_index < image_number - 1) {
+	path_speed = 0;
+	with(tool) { image_index = other.image_index }
+	with(hair) { image_index = other.image_index }
+	exit
+}
+char_old_health = char_health
 
 // Update weapon location
 with(active_wpn){
@@ -53,6 +63,15 @@ with(item_holding){
 	}
 	y = other.y-17;
 	depth = other.depth-3;
+	image_xscale = other.image_xscale
+}
+
+// Update hair
+with(hair){
+	image_index = other.image_index
+	x = other.x;
+	y = other.y;
+	depth = other.depth-2;
 	image_xscale = other.image_xscale
 }
 
@@ -91,4 +110,5 @@ old_targetY = targetY
 if path_position == 1 && (sprite_index == spr_pawn_idle || sprite_index == spr_pawn_walk) {
 	sprite_index = spr_pawn_idle
 }
+
 

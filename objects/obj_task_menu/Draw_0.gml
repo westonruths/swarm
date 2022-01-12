@@ -11,17 +11,12 @@ draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, xsc
 draw_sprite_ext(pawn.hair.sprite_index, pawn.hair.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.tool.sprite_index, pawn.tool.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 
-// Draw task info
-draw_set_color(c_black);
-draw_set_halign(fa_center);
-draw_set_font(fnt_btn);
-draw_text_transformed(global.view_width - 122, global.view_height/2, "Order of Work", 1, 1, 90);
-draw_arrow(global.view_width - 107, global.build_y, global.view_width - 107, global.view_height - 5, 12)
-
 // Draw status bars
 draw_set_color(c_black);
-draw_set_halign(fa_right);
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
 draw_set_font(fnt_btn);
+draw_set_halign(fa_right);
 
 draw_text(x + 52, y+90, "Health:");
 var ch = (pawn.char_health / pawn.char_health_max) * 100;
