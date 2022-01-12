@@ -48,8 +48,6 @@ with(active_wpn){
 
 image_index = tool.image_index
 with(tool){
-	x = other.x;
-	y = other.y;
 	depth = other.depth-2;
 	image_xscale = other.image_xscale
 }
@@ -69,8 +67,6 @@ with(item_holding){
 // Update hair
 with(hair){
 	image_index = other.image_index
-	x = other.x;
-	y = other.y;
 	depth = other.depth-2;
 	image_xscale = other.image_xscale
 }
@@ -93,6 +89,7 @@ for(var i = listSize - 1; i >= 0; i--) {
 		script_execute(task_cells[i].job)
 	}
 }
+Eat()
 
 //update path immediately if target changed
 if old_targetX != targetX || old_targetY != targetY {

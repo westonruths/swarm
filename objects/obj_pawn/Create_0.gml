@@ -58,6 +58,7 @@ cooking_target = noone
 fell_target = noone
 mine_target = noone
 haul_target = noone
+eat_target = noone
 
 // Idle target
 idle_counter = 50

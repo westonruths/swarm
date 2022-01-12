@@ -19,4 +19,10 @@ switch(sprite_index){
 	case spr_dead:
 		image_index = image_number-1
 		break;
+	case spr_eat:
+		with (pawn) {
+			char_food += eat_target.nutrition	
+		}
+		instance_destroy(pawn.eat_target)
+		break;
 }

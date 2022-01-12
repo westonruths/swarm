@@ -1,12 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.time_pause) {
-	path_speed = 0;
-	exit;
-} 
-
 image_speed = spd * global.game_speed
 path_speed = spd * global.game_speed
+
+if (global.time_pause) {
+	exit;
+} 
 
 if (animal_health <= 0) {
 	instance_destroy();

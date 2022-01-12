@@ -8,6 +8,7 @@ global.year = 1;
 
 global.game_speed = 1;
 global.time_pause = false;
+global.saved_game_speed = global.game_speed;
 
 max_darkness = 0.5;
 darkness = 0;
