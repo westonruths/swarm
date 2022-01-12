@@ -9,6 +9,7 @@ if (global.building || global.menu_open || global.time_pause) {
 if(global.time_pause){ exit; }
 
 //Increment Time
+time_increment = room_speed/2*global.game_speed;	//global.seconds per step
 global.seconds += time_increment;
 global.minutes = global.seconds/60;
 

@@ -7,10 +7,10 @@ if (global.time_pause) {
 	with(hair) { image_speed = 0 }
 	exit;
 } else {
-	path_speed = spd	
-	image_speed = 1 *work_spd
-	with(tool) { image_speed = 1 * other.work_spd }
-	with(hair) { image_speed = 1 * other.work_spd }
+	path_speed = spd * global.game_speed
+	image_speed = 1 * work_spd * global.game_speed
+	with(tool) { image_speed = 1 * other.work_spd * global.game_speed}
+	with(hair) { image_speed = 1 * other.work_spd * global.game_speed}
 }
 
 menu_open = false;

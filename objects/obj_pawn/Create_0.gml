@@ -7,7 +7,7 @@ char_health_max = 100
 char_food = 100
 char_food_max = 100
 
-char_energy = 8
+char_energy = 100
 char_energy_max = 100
 
 work_spd = 1

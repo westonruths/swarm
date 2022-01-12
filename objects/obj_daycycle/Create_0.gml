@@ -6,7 +6,7 @@ global.day = 1;
 global.season = 1;
 global.year = 1;
 
-time_increment = room_speed/2;	//global.seconds per step
+global.game_speed = 1;
 global.time_pause = false;
 
 max_darkness = 0.5;

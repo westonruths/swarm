@@ -5,6 +5,9 @@ if (global.time_pause) {
 	exit;
 } 
 
+image_speed = spd * global.game_speed
+path_speed = spd * global.game_speed
+
 if (animal_health <= 0) {
 	instance_destroy();
 	instance_create_layer(x,y,"Items",obj_meat)
