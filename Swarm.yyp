@@ -171,6 +171,7 @@
     {"id":{"name":"mophair_sleep","path":"sprites/mophair_sleep/mophair_sleep.yy",},"order":3,},
     {"id":{"name":"spr_lt_box","path":"sprites/spr_lt_box/spr_lt_box.yy",},"order":2,},
     {"id":{"name":"obj_play","path":"objects/obj_play/obj_play.yy",},"order":0,},
+    {"id":{"name":"_clear_previous_targets","path":"scripts/_clear_previous_targets/_clear_previous_targets.yy",},"order":15,},
     {"id":{"name":"spr_plant","path":"sprites/spr_plant/spr_plant.yy",},"order":4,},
     {"id":{"name":"obj_pawn","path":"objects/obj_pawn/obj_pawn.yy",},"order":1,},
     {"id":{"name":"spikeyhair_run","path":"sprites/spikeyhair_run/spikeyhair_run.yy",},"order":1,},

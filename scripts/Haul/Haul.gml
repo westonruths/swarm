@@ -192,7 +192,7 @@ function Haul(){
 		
 				var spot_free = false
 				with(main_pawn) {
-					spot_free = move_to_around_free_point(other.x, other.y)
+					spot_free = check_around_free_point(other.x, other.y)
 				}
 				
 				if !construct_chosen && build_cost.needed(other) && spot_free {

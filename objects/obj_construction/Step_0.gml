@@ -19,7 +19,7 @@ if build_cost.construction_health <= 0 {
 	}
 	
 	with(new_build_obj) {
-		build_cost = other.build_cost.new_cost()
+		build_cost = other.build_cost.new_cost(true)
 	}
 	
 	instance_destroy();

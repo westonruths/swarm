@@ -15,6 +15,9 @@ function Construct(){
 			sprite_index = spr_pawn_walk
 		}
 		
+		if construct_target.build_cost.built {
+			construct_target = noone
+		}
 	} else {
 		var max_dist  = 9999
 			

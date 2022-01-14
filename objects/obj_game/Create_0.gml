@@ -34,3 +34,5 @@ global.build_x = global.view_width - (global.view_width/3) + 5
 global.build_y = 30;
 
 global.menu_open = false;
+
+global.selected_mtns = ds_list_create()

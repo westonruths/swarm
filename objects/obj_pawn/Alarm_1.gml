@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 char_food -= 2
-char_energy -= 8
+char_energy -= 5
 
 if char_food <= 0 {
 	char_food = 0
@@ -13,4 +13,7 @@ if char_energy <= 0 {
 	char_energy = 0
 	spd = 0.5
 	work_spd = 0.5
+} else {
+	spd = 1
+	work_spd = 1
 }

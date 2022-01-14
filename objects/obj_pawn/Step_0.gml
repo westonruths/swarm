@@ -11,9 +11,12 @@ if (global.time_pause) {
 	exit;
 } else {
 	path_speed = spd * global.game_speed
-	image_speed = 1 * work_spd * global.game_speed
-	with(tool) { image_speed = 1 * other.work_spd * global.game_speed}
-	with(hair) { image_speed = 1 * other.work_spd * global.game_speed}
+	image_speed = 1 * global.game_speed
+	with(tool) { image_speed = 1 * global.game_speed}
+	with(hair) { image_speed = 1 * global.game_speed}
+	//image_speed = 1 * work_spd * global.game_speed
+	//with(tool) { image_speed = 1 * other.work_spd * global.game_speed}
+	//with(hair) { image_speed = 1 * other.work_spd * global.game_speed}
 }
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
@@ -79,24 +82,30 @@ with(selector) {
 }
 
 // Loop through and execute enabled tasks
+current_target = targets_listsize-1
 Idle()
 var listSize = array_length(task_cells);
-for(var i = listSize - 1; i >= 0; i--) {
-	//with(task_cells[i]) {
-	//	visible = false
-	//}
-	
+for(var i = listSize - 1; i >= 1; i--) {
 	if (task_cells[i].enabled) {
 		script_execute(task_cells[i].job)
 	}
+	current_target--
 }
+// Sleep and then eat next
 Sleep()
+current_target--
 Eat()
+current_target--
+// Do defend last since it is highest priority
+if (task_cells[0].enabled) {
+	script_execute(task_cells[0].job)
+}
+current_target--
 
 //update path immediately if target changed
 if old_targetX != targetX || old_targetY != targetY {
 	//move towards point
-	if mp_grid_path(global.grid, path, x, y, targetX, targetY, true)  {
+	if mp_grid_path(global.grid, path, x, y, targetX, targetY, false)  {
 		path_start(path, spd, path_action_stop, true)
 	} else {
 		move_to_random_point()	

@@ -5,10 +5,12 @@ visible = false;
 
 if (global.building) {
 	visible = true;
+	
+	if (instance_exists(build_obj)) {
+		visible = false;
+	} else {	
+		build_obj = noone;
+	}
 }
 
-if (instance_exists(build_obj)) {
-	visible = false;
-} else {	
-	build_obj = noone;
-}
+

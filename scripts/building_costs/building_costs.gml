@@ -1,11 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function building_costs(_wood, _stone) constructor
+function building_costs(_wood, _stone, _built) constructor
 {
     original_costs = [_wood, _stone]
 	costs = original_costs
 	original_construction_health = (_wood + _stone) * 5
 	construction_health = original_construction_health
+	built = _built
+	
+	if (built == undefined) { built = false }
 
 	// see if the building is done being filled with needed resources
     static done = function()
@@ -18,9 +21,11 @@ function building_costs(_wood, _stone) constructor
     }
 	
 	// produce a new building cost item with original costs
-	static new_cost = function()
+	static new_cost = function(_built)
 	{
-		return new building_costs(original_costs[0], original_costs[1])
+		built = _built
+		if (built == undefined) { built = false }
+		return new building_costs(original_costs[0], original_costs[1], built)
 	}
 	
 	// reduce cost because a resource was placed

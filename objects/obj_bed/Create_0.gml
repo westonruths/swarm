@@ -4,6 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-layer_sprite_create("Cover",x,y,spr_bed_covers)
-
-draw_self()
+cover_sprite = layer_sprite_create("Cover",x,y+3,spr_bed_covers)

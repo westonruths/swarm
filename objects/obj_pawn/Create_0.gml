@@ -60,6 +60,23 @@ mine_target = noone
 haul_target = noone
 eat_target = noone
 sleep_target = noone
+patient_target = noone
+doctor_target = noone
+
+targets[0] = defend_target
+targets[1] = eat_target
+targets[2] = sleep_target
+targets[3] = patient_target
+targets[4] = doctor_target
+targets[5] = cooking_target
+targets[6] = hunt_target
+targets[7] = construct_target
+targets[8] = grow_target
+targets[9] = mine_target
+targets[10] = fell_target
+targets[11] = haul_target
+targets_listsize = array_length(targets);
+current_target = targets_listsize-1
 
 // Idle target
 idle_counter = 50
@@ -84,7 +101,7 @@ jobs[6] = Grow
 jobs[7] = Mine
 jobs[8] = PlantCut
 jobs[9] = Haul
-jobs[10] = Research
+//jobs[10] = Research
 
 // Create job cells
 menu_open = false;
@@ -95,5 +112,6 @@ for(var i = 0; i < listSize; i++) {
 		job = other.jobs[i]
 		pawn = other
 		visible = false
+		enabled = true
 	}
 }

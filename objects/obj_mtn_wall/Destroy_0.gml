@@ -5,3 +5,5 @@ mp_grid_clear_cell(global.grid, floor(x / global.grid_resolution), floor(y /glob
 with (obj_mtn_wall) {
 	alarm[1] = 1
 }
+
+ds_list_delete(global.selected_mtns, ds_list_find_index(global.selected_mtns, id));

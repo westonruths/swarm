@@ -29,7 +29,7 @@ switch(sprite_index){
 		break;
 	case spr_sleep:
 		with (pawn) {
-			char_energy += 1
+			char_energy += 2
 		}
 		break;
 }

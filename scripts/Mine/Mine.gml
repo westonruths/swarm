@@ -16,30 +16,34 @@ function Mine(){
 		}
 	} else {
 		var max_dist  = 9999
+		
+		var size = ds_list_size(global.selected_mtns);
+		for(var i=0; i<size; i++){
+		    var mtn = ds_list_find_value(global.selected_mtns,i);
+			with(mtn) {
+				var tmp_target = id
+				var chosen = false
+				var spot_free = false
 			
-		with(obj_mtn_wall) {
-			var tmp_target = id
-			var chosen = false
-			var spot_free = false
+				if !selected continue
 			
-			if !selected continue
+				//with(obj_pawn) {
+				//	if mine_target == tmp_target {
+				//		chosen = true
+				//		break
+				//	}
+				//}
 			
-			//with(obj_pawn) {
-			//	if mine_target == tmp_target {
-			//		chosen = true
-			//		break
-			//	}
-			//}
-			
-			with(main_pawn) {
-				spot_free = check_around_free_point(other.x, other.y)
-			}
+				with(main_pawn) {
+					spot_free = check_around_free_point(other.x, other.y)
+				}
 				
-			if (!chosen && selected && spot_free) {
-				var dist = distance_to_object(other)
-				if (dist < max_dist) {
-					other.mine_target = id
-					max_dist = dist
+				if (!chosen && selected && spot_free) {
+					var dist = distance_to_object(other)
+					if (dist < max_dist) {
+						other.mine_target = id
+						max_dist = dist
+					}
 				}
 			}
 		}
