@@ -16,6 +16,7 @@ function Hunt(){
 	
 	// Fire at closest enemy
 	if instance_exists(animal) {
+		_clear_previous_targets()
 		direction = point_direction(x, y, animal.x, animal.y)
 		sprite_index = spr_pawn_run
 		
@@ -41,8 +42,6 @@ function Hunt(){
 			sprite_index = spr_pawn_idle
 			targetX = x
 			targetY = y
-				
-			_clear_previous_targets()
 		}
 	}
 }

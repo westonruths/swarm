@@ -4,10 +4,15 @@ function _clear_previous_targets(){
 	for(var i = targets_listsize - 1; i > current_target; i--) {
 		targets[i] = noone
 		
-		//drop if on haul unless cooking
-		if i == 11 && !instance_exists(cook_haul_target) {
+		//drop if on haul
+		if i == 11 {
 			drop_item()
 			target_construct = noone
+		}
+		
+		//drop food item for cooking
+		if i == 5 {
+			food_holding = noone
 		}
 	}
 	

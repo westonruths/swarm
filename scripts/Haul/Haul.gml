@@ -82,7 +82,7 @@ function Haul(){
 
 				instance_destroy(item_holding)
 			}
-		} else {
+		} else if !instance_exists(cook_haul_target) && !instance_exists(cooking_target) {
 			drop_item()
 			haul_target = noone
 		}
@@ -93,7 +93,7 @@ function Haul(){
 			weapon = other.active_wpn_index
 		}
 	} else if (instance_exists(haul_target)) {
-		item_holding = noone
+		//item_holding = noone
 		// see if a construct needs the resource
 		with(obj_construction) {
 			var construct_chosen = false

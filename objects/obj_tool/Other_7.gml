@@ -12,6 +12,11 @@ switch(sprite_index){
 		break;
 	case spr_cooking:
 		with (pawn.cooking_target) { alarm[0] = 1 }
+		with (pawn) {
+			if cooking_target.item_cooking == noone {
+				cooking_target = noone
+			}
+		}
 		break;
 	case spr_digging:
 		with (pawn.grow_target) { alarm[0] = 1 }

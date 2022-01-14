@@ -87,6 +87,7 @@ old_targetY = targetY
 
 // Item we are holding
 item_holding = noone
+food_holding = noone
 // Construct target
 target_construct = noone
 // Cook haul target
