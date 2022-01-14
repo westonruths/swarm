@@ -35,14 +35,14 @@ function Haul(){
 		with(obj_construction) {
 			var construct_chosen = false
 			with(obj_pawn) {
-				if other == target_construct && id != main_pawn {
-					construct_chosen = true	
+				if other == target_construct {
+					construct_chosen = true
 				}
 			}
 			
 			var spot_free = false
 			with(main_pawn) {
-				spot_free = move_to_around_free_point(other.x, other.y)
+				spot_free = check_around_free_point(other.x, other.y)
 			}
 			
 			if !construct_chosen && build_cost.needed(other.item_holding) && spot_free {
@@ -96,14 +96,14 @@ function Haul(){
 		with(obj_construction) {
 			var construct_chosen = false
 			with(obj_pawn) {
-				if other == obj_pawn.target_construct {
+				if other == target_construct {
 					construct_chosen = true	
 				}
 			}
 			
 			var spot_free = false
 			with(main_pawn) {
-				spot_free = move_to_around_free_point(other.x, other.y)
+				spot_free = check_around_free_point(other.x, other.y)
 			}
 			
 			if !construct_chosen && build_cost.needed(other.haul_target) && spot_free {
@@ -166,11 +166,11 @@ function Haul(){
 		
 		// See if another pawn is targeting or carrying this item
 		with(obj_pawn) {
-			if (haul_target == other.haul_target) && id != other.id {
+			if (haul_target == other.haul_target) {
 				other.haul_target = noone
 			}
 				
-			if (item_holding == other.haul_target) && id != other.id {
+			if (item_holding == other.haul_target) {
 				other.haul_target = noone
 			}
 		}
@@ -185,7 +185,7 @@ function Haul(){
 			with(obj_construction) {
 				var construct_chosen = false
 				with(obj_pawn) {
-					if other == obj_pawn.target_construct {
+					if other.id == target_construct {
 						construct_chosen = true	
 					}
 				}

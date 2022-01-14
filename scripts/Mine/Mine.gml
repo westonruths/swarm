@@ -4,8 +4,7 @@ function Mine(){
 	var main_pawn = self
 		
 	if (instance_exists(mine_target)) {
-		haul_target = noone
-		drop_item()
+		_clear_previous_targets()
 		
 		move_to_around_free_point(mine_target.x, mine_target.y)
 		if path_position == 1 && distance_to_object(mine_target) < global.grid_resolution {

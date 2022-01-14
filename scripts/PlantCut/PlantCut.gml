@@ -8,8 +8,7 @@ function PlantCut() {
 	}
 		
 	if (instance_exists(fell_target)) {
-		haul_target = noone
-		drop_item()
+		_clear_previous_targets()
 		
 		move_to_around_free_point(fell_target.x, fell_target.y)
 		if path_position == 1 && distance_to_object(fell_target) < global.grid_resolution {

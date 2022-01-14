@@ -11,8 +11,6 @@ function Sleep(){
 	if (instance_exists(sleep_target) && char_energy/char_energy_max < 1.0) {
 		_clear_previous_targets()
 		
-		drop_item()
-		
 		targetX = sleep_target.x-3
 		targetY = sleep_target.y
 		if path_position == 1 && distance_to_object(sleep_target) < global.grid_resolution {

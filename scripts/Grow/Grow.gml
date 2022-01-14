@@ -11,10 +11,7 @@ function Grow(){
 	}
 	
 	if (instance_exists(grow_target)) {
-		fell_target = noone
-		haul_target = noone
-		item_holding = noone
-		drop_item()
+		_clear_previous_targets()
 		
 		move_to_around_free_point(grow_target.x, grow_target.y)
 		if path_position == 1 {

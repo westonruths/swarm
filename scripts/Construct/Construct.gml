@@ -2,10 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Construct(){
 	if (instance_exists(construct_target)) {
-		fell_target = noone
-		haul_target = noone
-		item_holding = noone
-		drop_item()
+		_clear_previous_targets()
 		
 		move_to_around_free_point(construct_target.x, construct_target.y)
 		if path_position == 1 {
@@ -37,10 +34,6 @@ function Construct(){
 					max_dist = dist
 				}
 			}
-		}
-			
-		with(construct_target){
-			chosen = true;
 		}
 	}
 }

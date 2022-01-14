@@ -51,17 +51,17 @@ active_wpn_index = 0;
 
 // Action targets
 defend_target = noone
-hunt_target = noone
-construct_target = noone
-grow_target = noone
-cooking_target = noone
-fell_target = noone
-mine_target = noone
-haul_target = noone
 eat_target = noone
 sleep_target = noone
 patient_target = noone
 doctor_target = noone
+cooking_target = noone
+hunt_target = noone
+construct_target = noone
+grow_target = noone
+mine_target = noone
+fell_target = noone
+haul_target = noone
 
 targets[0] = defend_target
 targets[1] = eat_target
@@ -87,9 +87,10 @@ old_targetY = targetY
 
 // Item we are holding
 item_holding = noone
-
 // Construct target
 target_construct = noone
+// Cook haul target
+cook_haul_target = noone
 
 jobs[0] = Defend
 jobs[1] = Patient

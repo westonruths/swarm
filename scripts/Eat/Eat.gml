@@ -8,8 +8,7 @@ function Eat(){
 	var main_pawn = self
 		
 	if (instance_exists(eat_target)) {
-		haul_target = noone
-		drop_item()
+		_clear_previous_targets()
 		
 		//move_to_around_free_point(eat_target.x, eat_target.y)
 		targetX = eat_target.x + 10

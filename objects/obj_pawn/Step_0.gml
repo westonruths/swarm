@@ -82,6 +82,18 @@ with(selector) {
 }
 
 // Loop through and execute enabled tasks
+targets[0] = defend_target
+targets[1] = eat_target
+targets[2] = sleep_target
+targets[3] = patient_target
+targets[4] = doctor_target
+targets[5] = cooking_target
+targets[6] = hunt_target
+targets[7] = construct_target
+targets[8] = grow_target
+targets[9] = mine_target
+targets[10] = fell_target
+targets[11] = haul_target
 current_target = targets_listsize-1
 Idle()
 var listSize = array_length(task_cells);

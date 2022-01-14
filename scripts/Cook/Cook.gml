@@ -4,7 +4,8 @@ function Cook(){
 	//find a stockpile or construction site that has an open spot
 	var main_pawn = self
 	cooking_target = noone
-	hunt_target = noone
+	//hunt_target = noone
+	
 	
 	var holding_food = false
 	if instance_exists(item_holding) {
@@ -29,7 +30,7 @@ function Cook(){
 				
 				with(obj_pawn) {
 					if id != main_pawn.id {
-						if (haul_target == other.id) {
+						if (cook_haul_target == other.id) {
 							chosen = true;
 						}
 				
@@ -43,25 +44,26 @@ function Cook(){
 					var dist = distance_to_object(other)
 					if spot_free && (dist < max_dist) && !chosen{
 						sprite_index = spr_pawn_run
-						haul_target = other.id
+						cook_haul_target = other.id
 						max_dist = dist
 						targetX = other.x
 						targetY = other.y
+						_clear_previous_targets()
 					}
 				
 					// Go to food and pick it up
-					if instance_exists(haul_target) {
-						if (distance_to_object(haul_target) < global.grid_resolution) { 
+					if instance_exists(cook_haul_target) {
+						if (distance_to_object(cook_haul_target) < global.grid_resolution) { 
 							// Pick up item
-							item_holding = haul_target
-							with(haul_target) { 
+							item_holding = cook_haul_target
+							with(cook_haul_target) { 
 								stored = false 
 								with (stored_stockpile) {
 									num_stored -= 1
 								}
 								stored_stockpile = noone
 							}
-							haul_target = noone
+							cook_haul_target = noone
 						}
 					}
 				}
@@ -87,6 +89,7 @@ function Cook(){
 					cooking_target = other.id
 					max_dist_stove = dist
 					move_to_around_free_point(other.x, other.y)
+					_clear_previous_targets()
 				}
 			
 				if instance_exists(cooking_target) {
@@ -124,6 +127,7 @@ function Cook(){
 					} else {
 						sprite_index = spr_pawn_walk
 					}
+					_clear_previous_targets()
 				}
 			}
 		}

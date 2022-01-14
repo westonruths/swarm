@@ -30,11 +30,7 @@ function attack_target(enemy){
 			targetY = y
 			
 			// Drop current item that we are holding
-			drop_item()
-
-			fell_target = noone
-			haul_target = noone
-			construct_target = noone
+			_clear_previous_targets()
 		}
 	}
 }
