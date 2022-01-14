@@ -78,6 +78,7 @@ if(global.minutes >= 60){
 	}
 	
 	if(global.hours >= 24) {
+		global.hours = 0;
 		global.day += 1;
 		
 		// Crops grow
