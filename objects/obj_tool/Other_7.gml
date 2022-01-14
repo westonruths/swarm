@@ -4,6 +4,9 @@ switch(sprite_index){
 	case spr_chop:
 		with (pawn.fell_target) { alarm[0] = 1 }
 		break;
+	case spr_hunt:
+		with (pawn.hunt_target) { alarm[1] = 1 }
+		break;
 	case spr_mine:
 		with (pawn.mine_target) { alarm[0] = 1 }
 		break;

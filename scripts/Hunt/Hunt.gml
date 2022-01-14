@@ -1,47 +1,96 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Hunt(){
-	var max_dist  = 9999
-	var animal = noone
-	
-	with(obj_animal) {
-		if selected {
-			var dist = distance_to_object(other)
-			if (dist < max_dist) {
-				animal = id
-				max_dist = dist
+	var main_pawn = self
+	with (hunt_target) {
+		if selected == false {
+			other.hunt_target = noone
+		}
+	}
+		
+	if (instance_exists(hunt_target)) {
+		_clear_previous_targets()
+		
+		move_to_around_free_point(hunt_target.x, hunt_target.y)
+		if path_position == 1 && distance_to_object(hunt_target) < global.grid_resolution {
+			direction = point_direction(x, y, hunt_target.x, hunt_target.y)
+			sprite_index = spr_pawn_hunt
+		} else {
+			sprite_index = spr_pawn_run
+		}
+	} else {
+		var max_dist  = 9999
+			
+		with(obj_animal) {
+			var tmp_target = id
+			var chosen = false
+			var spot_free = false
+			
+			if !selected continue
+			
+			with(obj_pawn) {
+				if (hunt_target == tmp_target) {
+					chosen = true;
+				}
+			}
+			
+			with(main_pawn) {
+				spot_free = check_around_free_point(other.x, other.y)
+			}
+				
+			if (!chosen && selected && spot_free) {
+				var dist = distance_to_object(other)
+				if (dist < max_dist) {
+					other.hunt_target = id
+					max_dist = dist
+				}
 			}
 		}
 	}
 	
-	// Fire at closest enemy
-	if instance_exists(animal) {
-		_clear_previous_targets()
-		direction = point_direction(x, y, animal.x, animal.y)
-		sprite_index = spr_pawn_run
-		
-		with(tool){
-			x = other.active_wpn.x
-			y = other.active_wpn.y
-		}
-		
-		// Move towards closest enemy to engage
-		move_to_around_free_point(animal.x, animal.y)
-		
-		hunt_target = animal
+	#region Old Code
+	//var max_dist  = 9999
+	//var animal = noone
 	
-		// Equip our primary weapon
-		active_wpn_index = equipped_wpn
+	//with(obj_animal) {
+	//	if selected {
+	//		var dist = distance_to_object(other)
+	//		if (dist < max_dist) {
+	//			animal = id
+	//			max_dist = dist
+	//		}
+	//	}
+	//}
+	
+	//// Fire at closest enemy
+	//if instance_exists(animal) {
+	//	_clear_previous_targets()
+	//	direction = point_direction(x, y, animal.x, animal.y)
+	//	sprite_index = spr_pawn_run
 		
-		with(active_wpn){
-			target = other.hunt_target
-			weapon = other.active_wpn_index
-		}
+	//	with(tool){
+	//		x = other.active_wpn.x
+	//		y = other.active_wpn.y
+	//	}
 		
-		if (distance_to_point(animal.x,animal.y) < active_wpn.range) {
-			sprite_index = spr_pawn_idle
-			targetX = x
-			targetY = y
-		}
-	}
+	//	// Move towards closest enemy to engage
+	//	move_to_around_free_point(animal.x, animal.y)
+		
+	//	hunt_target = animal
+	
+	//	// Equip our primary weapon
+	//	active_wpn_index = equipped_wpn
+		
+	//	with(active_wpn){
+	//		target = other.hunt_target
+	//		weapon = other.active_wpn_index
+	//	}
+		
+	//	if (distance_to_point(animal.x,animal.y) < active_wpn.range) {
+	//		sprite_index = spr_pawn_idle
+	//		targetX = x
+	//		targetY = y
+	//	}
+	//}
+	#endregion
 }

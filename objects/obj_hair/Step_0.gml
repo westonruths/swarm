@@ -41,4 +41,7 @@ switch(pawn.sprite_index){
 	case spr_pawn_sleep:
 		sprite_index = asset_get_index(hair_type + "sleep")
 		break;
+	case spr_pawn_hunt:
+		sprite_index = asset_get_index(hair_type + "hunt")
+		break;
 }

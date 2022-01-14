@@ -50,7 +50,7 @@ function Cook(){
 				with(main_pawn) {
 					var dist = distance_to_object(other)
 					if spot_free && (dist < max_dist) && !chosen{
-						sprite_index = spr_pawn_run
+						sprite_index = spr_pawn_walk
 						cook_haul_target = other.id
 						max_dist = dist
 						targetX = other.x
