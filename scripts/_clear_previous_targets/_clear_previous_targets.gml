@@ -7,6 +7,7 @@ function _clear_previous_targets(){
 		//drop if on haul unless cooking
 		if i == 11 && !instance_exists(cook_haul_target) {
 			drop_item()
+			target_construct = noone
 		}
 	}
 	

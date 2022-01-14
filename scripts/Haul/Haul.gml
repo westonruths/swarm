@@ -35,7 +35,7 @@ function Haul(){
 		with(obj_construction) {
 			var construct_chosen = false
 			with(obj_pawn) {
-				if other == target_construct {
+				if other.id == target_construct && id != main_pawn.id {
 					construct_chosen = true
 				}
 			}
@@ -47,6 +47,7 @@ function Haul(){
 			
 			if !construct_chosen && build_cost.needed(other.item_holding) && spot_free {
 				construct = id
+				with (main_pawn) {target_construct = construct}
 			} else {
 				draw_ellipse_colour(x-5, y-5, x+5, y+5, c_red, c_red, true);	
 			}
@@ -61,6 +62,7 @@ function Haul(){
 					build_cost.reduce_cost(other.item_holding)
 				}
 				instance_destroy(item_holding)
+				target_construct = noone
 			}
 		} else if instance_exists(stockpile) {
 			// Move to stockpile (be careful with global.grid_resoultion - don't make too small)
@@ -96,7 +98,7 @@ function Haul(){
 		with(obj_construction) {
 			var construct_chosen = false
 			with(obj_pawn) {
-				if other == target_construct {
+				if other.id == target_construct && id != main_pawn.id {
 					construct_chosen = true	
 				}
 			}
@@ -108,6 +110,7 @@ function Haul(){
 			
 			if !construct_chosen && build_cost.needed(other.haul_target) && spot_free {
 				construct = id
+				with (main_pawn) {target_construct = construct}
 			}
 		}
 		
@@ -185,7 +188,7 @@ function Haul(){
 			with(obj_construction) {
 				var construct_chosen = false
 				with(obj_pawn) {
-					if other.id == target_construct {
+					if other.id == target_construct && id != main_pawn.id {
 						construct_chosen = true	
 					}
 				}
@@ -197,6 +200,9 @@ function Haul(){
 				
 				if !construct_chosen && build_cost.needed(other) && spot_free {
 					construct = id
+					with (main_pawn) {
+						target_construct = construct
+					}
 				}
 			}
 			
@@ -239,5 +245,5 @@ function Haul(){
 		}
 	}
 	
-	target_construct = construct
+	//target_construct = construct
 }
