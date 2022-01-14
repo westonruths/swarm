@@ -1,8 +1,11 @@
 /// @description Hunger and Energy Deplete
 // You can write your code in this editor
 
-char_food -= 2
-char_energy -= 5
+char_food -= 3
+
+if (sprite_index != spr_pawn_sleep) {
+	char_energy -= 5
+}
 
 if char_food <= 0 {
 	char_food = 0

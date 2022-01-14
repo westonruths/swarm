@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+image_index = tool.image_index
 draw_self();
 
 var ch = (char_health / char_health_max) * 100;
@@ -20,17 +21,15 @@ if menu_open {
 	draw_ellipse_colour(x-10, y+1, x+10, y+10, c_green, c_green, true);
 }
 
-draw_ellipse_colour(targetX-5, targetY-3, targetX+5, targetY+5, c_red, c_red, false);
-
-if instance_exists(construct_target) {
-	draw_ellipse_colour(construct_target.x-5, construct_target.y-3, 
-		construct_target.x+5, construct_target.y+5, c_blue, c_blue, false);
-}
-
-if path_index != -1 {
-	draw_set_color(c_white)
-	draw_path(path, x, y, 1);
-}
+//draw_ellipse_colour(targetX-5, targetY-3, targetX+5, targetY+5, c_red, c_red, false);
+//if instance_exists(construct_target) {
+//	draw_ellipse_colour(construct_target.x-5, construct_target.y-3, 
+//		construct_target.x+5, construct_target.y+5, c_blue, c_blue, false);
+//}
+//if path_index != -1 {
+//	draw_set_color(c_white)
+//	draw_path(path, x, y, 1);
+//}
 
 with(tool){
 	x = other.x;

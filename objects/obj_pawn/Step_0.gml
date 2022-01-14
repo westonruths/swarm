@@ -50,7 +50,6 @@ with(active_wpn){
 	depth = other.depth-2;
 }
 
-image_index = tool.image_index
 with(tool){
 	depth = other.depth-2;
 	image_xscale = other.image_xscale
