@@ -1,6 +1,6 @@
 global.seconds = 80000;
 global.minutes = 0;
-global.hours = 0;
+global.hours = 10;
 
 global.day = 1;
 global.season = 1;
@@ -13,10 +13,12 @@ global.saved_game_speed = global.game_speed;
 max_darkness = 0.5;
 darkness = 0;
 light_colour = c_black;
-draw_daylight = false;
 
-guiWidth = display_get_gui_width();
-guiHeight = display_get_gui_height();
+//turn on or off drawing of daylight
+draw_daylight = true;
+
+guiWidth = room_width
+guiHeight = room_height
 
 enum phase {
 	sunrise = 6,

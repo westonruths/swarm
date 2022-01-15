@@ -28,11 +28,11 @@ switch(sprite_index){
 		image_index = image_number-1
 		break;
 	case spr_eat:
-		if instance_exists(pawn.eat_target) {
-			with (pawn) {
-				char_food += eat_target.nutrition	
+		with (pawn) {
+			if instance_exists(eat_target) {
+				char_food += eat_target.nutrition
+				instance_destroy(eat_target)
 			}
-			instance_destroy(pawn.eat_target)
 		}
 		break;
 	case spr_sleep:

@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-nutrition = 60
+nutrition = 100

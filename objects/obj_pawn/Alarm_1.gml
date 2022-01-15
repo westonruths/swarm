@@ -3,6 +3,8 @@
 
 char_food -= 6
 
+if (char_food > 100) { char_food = 100 }
+
 if (sprite_index != spr_pawn_sleep) {
 	char_energy -= 5
 }
