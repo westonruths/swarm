@@ -20,7 +20,7 @@ if (sprite_index == spr_eyeball_attack) {
 
 	if (char != noone) {
 		with(char){
-			char_health -= attack_damage;
+			hp -= attack_damage;
 		}
 	}
 } 

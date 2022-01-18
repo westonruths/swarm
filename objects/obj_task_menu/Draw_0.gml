@@ -19,7 +19,7 @@ draw_set_font(fnt_btn);
 draw_set_halign(fa_right);
 
 draw_text(x + 52, y+90, "Health:");
-var ch = (pawn.char_health / pawn.char_health_max) * 100;
+var ch = (pawn.hp / pawn.hp_max) * 100;
 draw_healthbar(x+55,y+90, x+140, y+100, ch, c_black, c_red, c_red, 0, true, true)
 
 draw_text(x + 52, y+105, "Food:");

@@ -11,7 +11,7 @@ if (sprite_index != spr_pawn_sleep) {
 
 if char_food <= 0 {
 	char_food = 0
-	char_health -= 1	
+	hp -= 1	
 }
 
 if char_energy <= 0 {

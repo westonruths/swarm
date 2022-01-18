@@ -19,10 +19,8 @@ if (global.time_pause) {
 	//with(hair) { image_speed = 1 * other.work_spd * global.game_speed}
 }
 
-if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
-
 // Check for character death
-if (char_health <= 0) {
+if (hp <= 0) {
 	path_speed = 0;
 	sprite_index = spr_pawn_dead
 	image_index = tool.image_index
@@ -31,9 +29,9 @@ if (char_health <= 0) {
 }
 
 //detect loss in health
-if (char_health < char_old_health) {
+if (hp < old_hp) {
 	sprite_index = spr_pawn_hurt
-	char_old_health = char_health
+	old_hp = hp
 }
 if (sprite_index == spr_pawn_hurt && image_index < image_number - 1) {
 	path_speed = 0;
@@ -41,7 +39,7 @@ if (sprite_index == spr_pawn_hurt && image_index < image_number - 1) {
 	with(hair) { image_index = other.image_index }
 	exit
 }
-char_old_health = char_health
+old_hp = hp
 
 // Update weapon location
 with(active_wpn){

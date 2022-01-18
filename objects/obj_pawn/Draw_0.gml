@@ -1,13 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 image_index = tool.image_index
+if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
+
 draw_self();
 
-var ch = (char_health / char_health_max) * 100;
+var ch = (hp / hp_max) * 100;
 var cf = (char_food / char_food_max) * 100;
 var ce = (char_energy / char_energy_max) * 100;
 
-if (char_health<char_health_max && char_health > 0) {
+if (hp<hp_max && hp > 0) {
 	draw_healthbar(x-10,y+10, x+10, y+12, ch, c_black, c_red, c_red, 0, true, true)
 }
 

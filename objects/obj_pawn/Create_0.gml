@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-char_health = 100
-char_old_health = char_health
-char_health_max = 100
+hp = 100
+old_hp = hp
+hp_max = 100
 
 char_food = 100
 char_food_max = 100
