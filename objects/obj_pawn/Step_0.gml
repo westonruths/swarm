@@ -25,6 +25,10 @@ if (hp <= 0) {
 	sprite_index = spr_pawn_dead
 	image_index = tool.image_index
 	with(hair) { image_index = other.image_index }
+	
+	current_target = 0
+	_clear_previous_targets()
+	
 	exit
 }
 

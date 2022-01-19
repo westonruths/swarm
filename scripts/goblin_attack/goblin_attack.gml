@@ -1,20 +1,22 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function goblin_attack(){
-		
+
 	if instance_exists(hunt_target) {
+		//print(hunt_target.name, hunt_target.hp)
 		if hunt_target.hp <= 0 {
 			hunt_target = noone
 			exit
 		}
 		
 		move_to_around_free_point(hunt_target.x, hunt_target.y)
-		if path_position == 1 && distance_to_object(hunt_target) < global.grid_resolution {
+		//print(hunt_target.name, targetX, targetY)
+		if distance_to_object(hunt_target) < global.grid_resolution {
 			direction = point_direction(x, y, hunt_target.x, hunt_target.y)
 			sprite_index = spr_goblin_attack
 			
 			with(hunt_target) {
-				spd = 0
+				defend_target = other.id
 			}
 			
 		} else {

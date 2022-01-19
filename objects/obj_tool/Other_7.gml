@@ -7,6 +7,20 @@ switch(sprite_index){
 	case spr_hunt:
 		with (pawn.hunt_target) { alarm[1] = 1 }
 		break;
+	case spr_defend:
+		var attackRoll = irandom_range(1, 100);
+		if (attackRoll <= accuracy){
+		   //Successful attack
+		   var damage = irandom_range(1, strength);
+		   print(pawn.name, " lands a strike, dealing ", damage, " damage!")
+		   with(pawn.defend_target) {
+				hp -= damage
+		   }
+		}else{
+		    //Unsuccessful attack
+			print(pawn.name, " misses!")
+		}
+		break;
 	case spr_mine:
 		with (pawn.mine_target) { alarm[0] = 1 }
 		break;

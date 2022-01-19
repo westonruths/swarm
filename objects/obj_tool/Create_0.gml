@@ -3,3 +3,6 @@
 pawn = noone
 
 target = noone
+
+strength = 5
+accuracy = 70

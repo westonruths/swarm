@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+hp = 100
+old_hp = hp
+hp_max = 100
 
 targetX = x + irandom_range(-50,50)
 targetY = y + irandom_range(-50,50)

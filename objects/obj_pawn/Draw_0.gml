@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 image_index = tool.image_index
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
 
@@ -9,13 +10,13 @@ var ch = (hp / hp_max) * 100;
 var cf = (char_food / char_food_max) * 100;
 var ce = (char_energy / char_energy_max) * 100;
 
-if (hp<hp_max && hp > 0) {
+if (hp > 0) {
 	draw_healthbar(x-10,y+10, x+10, y+12, ch, c_black, c_red, c_red, 0, true, true)
+	draw_healthbar(x-10,y+13, x+10, y+15, cf, c_black, c_green, c_green, 0, true, true)
+	draw_healthbar(x-10,y+15, x+10, y+17, ce, c_black, c_blue, c_blue, 0, true, true)
 }
 
-draw_healthbar(x-10,y+10, x+10, y+12, ch, c_black, c_red, c_red, 0, true, true)
-draw_healthbar(x-10,y+13, x+10, y+15, cf, c_black, c_green, c_green, 0, true, true)
-draw_healthbar(x-10,y+15, x+10, y+17, ce, c_black, c_blue, c_blue, 0, true, true)
+
 
 //draw_text(x-10, y - 35, name)
 

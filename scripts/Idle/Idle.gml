@@ -14,8 +14,8 @@ function Idle() {
 	}
 	
 	// run away from enemy
-	var enemy = instance_nearest(x, y, obj_enemy)
-	if (instance_exists(enemy) && distance_to_point(enemy.x,enemy.y) < 100) {
+	var enemy = instance_nearest(x, y, obj_goblin)
+	if (instance_exists(enemy) && distance_to_point(enemy.x,enemy.y) < 100 && idle_counter <= 0) {
 		targetX = enemy.x - 100
 		
 		if (targetX < 50) {
