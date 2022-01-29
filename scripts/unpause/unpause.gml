@@ -4,4 +4,6 @@ function unpause(){
 	global.building = false;
 	global.menu_open = false;
 	global.time_pause = false;
+	
+	with (obj_cell) { visible = false }
 }
