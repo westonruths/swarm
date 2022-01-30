@@ -1,13 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.menu_open) || room != rm_game {
+if (global.menu_open) || room != rm_game || pinching {
 	exit;
 }
 
-
-
 var _x = drag_room_x - event_data[? "guiposX"]
 var _y = drag_room_y - event_data[? "guiposY"]
+
+print("dragging", _x, _y)
 
 camera_set_view_pos(camera, _x, _y)
 

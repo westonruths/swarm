@@ -2,35 +2,26 @@
 // You can write your code in this editor
 
 var _scale = event_data[? "relativescale"];
-var _w = camera_get_view_width(view_camera[0]);
-var _h = camera_get_view_height(view_camera[0]);
-var _x = camera_get_view_x(view_camera[0]) + (_w / 2);
-var _y = camera_get_view_y(view_camera[0]) + (_h / 2);
+var _w = camera_get_view_width(camera);
+var _h = camera_get_view_height(camera);
+var _x = camera_get_view_x(camera) + (_w / 2);
+var _y = camera_get_view_y(camera) + (_h / 2);
 
 _w *= _scale;
-_h = _w * (room_height / room_width);
-_x -= _w / 2;
-_y -= _h / 2;
+if _w > 1500 { 
+	_w = 1500 
+}
+_h = _w * (global.view_height / global.view_width);
 
-camera_set_view_pos(view_camera[0], _x, _y);
-camera_set_view_size(view_camera[0], _w, _h);
+print("Out: ", _scale, _w, _h, _x, _y)
 
-//var _scale = event_data[? "relativescale"];
-//var _w = camera_get_view_width(view_camera[0]);
-//var _h = camera_get_view_height(view_camera[0]);
-//_w *= _scale;
-//_h = _w * (room_height / room_width);
+//camera_set_view_pos(camera, _x, _y);
+camera_set_view_size(camera, _w, _h);
 
-//var _x = (room_width / 2) - (_w / 2);
-//var _y = (room_height / 2) - (_h / 2);
-
-//camera_set_view_pos(view_camera[0], _x, _y);
-//camera_set_view_size(view_camera[0], _w, _h);
-
-//camera_set_view_pos(camera,
-//                    clamp( camera_get_view_x(camera), 0, room_width - camera_get_view_width(camera) ),
-//                    clamp( camera_get_view_y(camera), 0, room_height - camera_get_view_height(camera) ));
-					
+camera_set_view_pos(camera,
+                    clamp( camera_get_view_x(camera), 0, room_width - camera_get_view_width(camera) ),
+                    clamp( camera_get_view_y(camera), 0, room_height - camera_get_view_height(camera) ));
+							
 					
 // Debug
 touch_x[0] = event_data[? "posX1"]

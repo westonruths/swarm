@@ -12,13 +12,13 @@ switch(sprite_index){
 		if (attackRoll <= accuracy){
 		   //Successful attack
 		   var damage = irandom_range(1, strength);
-		   print(pawn.name, " lands a strike, dealing ", damage, " damage!")
+		   //print(pawn.name, " lands a strike, dealing ", damage, " damage!")
 		   with(pawn.defend_target) {
 				hp -= damage
 		   }
 		}else{
 		    //Unsuccessful attack
-			print(pawn.name, " misses!")
+			//print(pawn.name, " misses!")
 		}
 		break;
 	case spr_mine:
