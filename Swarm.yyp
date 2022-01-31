@@ -61,6 +61,7 @@
     {"id":{"name":"spr_play_off","path":"sprites/spr_play_off/spr_play_off.yy",},"order":5,},
     {"id":{"name":"spr_soil","path":"sprites/spr_soil/spr_soil.yy",},"order":0,},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":4,},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":13,},
     {"id":{"name":"spr_pawn_digging","path":"sprites/spr_pawn_digging/spr_pawn_digging.yy",},"order":16,},
     {"id":{"name":"ts_sunnyside","path":"tilesets/ts_sunnyside/ts_sunnyside.yy",},"order":15,},
     {"id":{"name":"mophair_idle","path":"sprites/mophair_idle/mophair_idle.yy",},"order":4,},
@@ -363,6 +364,7 @@
   ],
   "isDnDProject": false,
   "isEcma": false,
+  "tutorialPath": "",
   "configs": {
     "name": "Default",
     "children": [],
@@ -450,7 +452,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"bed.psd","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.1.0.609",
+    "IDEVersion": "2.3.7.606",
   },
   "resourceVersion": "1.4",
   "name": "Swarm",

@@ -5,18 +5,7 @@ window_set_cursor(cr_none);
 
 global.view_width = 812
 global.view_height = 375
-camera = view_camera[0]
-drag_room_x = 0
-drag_room_y = 0
-pinching = false
 
-//Debug
-touch_x[0] = 0;
-touch_y[0] = 0;
-touch_x[1] = 0;
-touch_y[1] = 0;
-midpoint_x = 0;
-midpoint_y = 0;
 
 global.room_x_size = 1624
 global.room_y_size = 1496

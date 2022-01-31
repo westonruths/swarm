@@ -1,11 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.menu_open) || room != rm_game || pinching {
+exit
+
+if (global.menu_open) || pinching {
 	exit;
 }
 
 var _x = drag_room_x - event_data[? "guiposX"]
 var _y = drag_room_y - event_data[? "guiposY"]
+
+xTo = _x
+yTo = _y
 
 print("dragging", _x, _y)
 
@@ -18,4 +23,5 @@ camera_set_view_pos(camera,
 with (obj_ui_interface) {
 	x = (camera_get_view_x(view_camera[0]) + viewPosX);
 	y = (camera_get_view_y(view_camera[0]) + viewPosY);
-}
+}/// @description Insert description here
+// You can write your code in this editor

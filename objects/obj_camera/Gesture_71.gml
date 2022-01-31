@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 var _scale = event_data[? "relativescale"];
 var _w = camera_get_view_width(camera);
 var _h = camera_get_view_height(camera);

@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.menu_open) || room != rm_game || pinching {
+exit
+
+if (global.menu_open) || pinching {
 	exit;
 }
 
