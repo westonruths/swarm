@@ -2,11 +2,11 @@
 // You can write your code in this editor
 // Update zoom size
 if keyboard_check_pressed(ord("I")) {
-  zoom_level = 0.5;
+  global.zoom_level = 0.5;
 } else if keyboard_check_pressed(ord("O")) {
-  zoom_level = 1;
+  global.zoom_level = 1;
 } else if keyboard_check_pressed(ord("P")) {
-  zoom_level = 2;
+  global.zoom_level = 2;
 }
 
 if !global.menu_open {
@@ -30,8 +30,8 @@ y += (yTo - y) / 10;
 
 
 // Update view size
-zoomxTo = default_zoom_width * zoom_level;
-zoomyTo = default_zoom_height * zoom_level;
+zoomxTo = default_zoom_width * global.zoom_level;
+zoomyTo = default_zoom_height * global.zoom_level;
 currW += (zoomxTo - camera_get_view_width(cam)) / 25;
 currH += (zoomyTo - camera_get_view_height(cam)) / 25;
 camera_set_view_size(cam, currW, currH);
@@ -46,3 +46,9 @@ y = clamp(y, view_h_half, room_height - view_h_half);
 
 // Update camera position
 camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
+
+global.view_width = camera_get_view_width(cam)
+global.view_height = camera_get_view_height(cam)
+
+global.build_x = global.view_width - (global.view_width/3) + 5
+global.build_y = 30;

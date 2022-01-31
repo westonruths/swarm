@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 // Draw task info
 draw_set_color(c_black);
 draw_set_halign(fa_center);

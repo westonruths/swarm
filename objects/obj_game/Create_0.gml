@@ -6,7 +6,6 @@ window_set_cursor(cr_none);
 global.view_width = 812
 global.view_height = 375
 
-
 global.room_x_size = 1624
 global.room_y_size = 1496
 
