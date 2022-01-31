@@ -9,21 +9,24 @@ if keyboard_check_pressed(ord("I")) {
   zoom_level = 2;
 }
 
-// start:
-if (mouse_check_button_pressed(mb_left)) {
+if !global.menu_open {
+	// start:
+	if (mouse_check_button_pressed(mb_left)) {
     drag_x = mouse_x
     drag_y = mouse_y
-}
-// update:
-if (mouse_check_button(mb_left)) {
-    // actual dragging logic:
-    xTo = drag_x - (mouse_x - x)
-    yTo = drag_y - (mouse_y - y)
+	}
+	// update:
+	if (mouse_check_button(mb_left)) {
+	    // actual dragging logic:
+	    xTo = drag_x - (mouse_x - x)
+	    yTo = drag_y - (mouse_y - y)
+	}
 }
 
+
 // Update object position
-x += (xTo - x) / 25;
-y += (yTo - y) / 25;
+x += (xTo - x) / 10;
+y += (yTo - y) / 10;
 
 
 // Update view size
