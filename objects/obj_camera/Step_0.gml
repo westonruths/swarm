@@ -47,8 +47,8 @@ y = clamp(y, view_h_half, room_height - view_h_half);
 // Update camera position
 camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
 
-global.view_width = camera_get_view_width(cam)
-global.view_height = camera_get_view_height(cam)
+//global.view_width = camera_get_view_width(cam)
+//global.view_height = camera_get_view_height(cam)
 
-global.build_x = global.view_width - (global.view_width/3) + 5
-global.build_y = 30;
+//global.build_x = global.view_width - (global.view_width/3) + 5
+//global.build_y = 30;
