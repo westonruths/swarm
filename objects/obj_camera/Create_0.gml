@@ -3,6 +3,7 @@
 drag_x = 0
 drag_y = 0
 pinching = false
+pinch_countdown = 0
 
 //Debug
 touch_x[0] = 0;

@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_stockpile",
-    "path": "sprites/spr_stockpile/spr_stockpile.yy",
+    "name": "spr_confirm",
+    "path": "sprites/spr_confirm/spr_confirm.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_build_ui",
-    "path": "objects/obj_build_ui/obj_build_ui.yy",
+    "name": "obj_ui_interface",
+    "path": "objects/obj_ui_interface/obj_ui_interface.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,16 +24,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "build_ui_items",
-    "path": "folders/Objects/ui/build_ui/build_ui_items.yy",
+    "name": "build_ui",
+    "path": "folders/Objects/ui/build_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_build_stockpile",
+  "name": "obj_confirm_build",
   "tags": [],
   "resourceType": "GMObject",
 }

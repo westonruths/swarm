@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "build_ui",
-    "path": "folders/Objects/ui/build_ui.yy",
+    "name": "build_ui_items",
+    "path": "folders/Objects/ui/build_ui/build_ui_items.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_build_stove",

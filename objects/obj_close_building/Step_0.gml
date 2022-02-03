@@ -2,6 +2,6 @@
 // You can write your code in this editor
 event_inherited()
 
-if (!global.building) {
+if (!global.building && !global.menu_open) {
 	instance_destroy();
 }
