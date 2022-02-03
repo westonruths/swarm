@@ -6,8 +6,8 @@
 global.view_width = 812
 global.view_height = 375
 
-global.room_x_size = 1624
-global.room_y_size = 1496
+global.room_x_size = 2000
+global.room_y_size = 2000
 
 global.grid_resolution = 32
 global.grid = mp_grid_create(0, 0, global.room_x_size div global.grid_resolution + 1, 

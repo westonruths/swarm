@@ -17,7 +17,7 @@ var item_dragging = false
 //}
 
 pinch_countdown -= 1
-if !item_dragging && !pinching && pinch_countdown <= 0 {
+if !item_dragging && !device_mouse_check_button(1, mb_left) && pinch_countdown <= 0 {
 	pinch_countdown = 0
 	
 	// start:
