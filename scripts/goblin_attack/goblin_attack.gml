@@ -14,6 +14,7 @@ function goblin_attack(){
 		if distance_to_object(hunt_target) < global.grid_resolution {
 			direction = point_direction(x, y, hunt_target.x, hunt_target.y)
 			sprite_index = spr_goblin_attack
+			path_speed = 0
 			
 			with(hunt_target) {
 				defend_target = other.id

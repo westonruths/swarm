@@ -3,7 +3,9 @@
 switch(room){
 	case rm_game:
 		//draw_text(20,2, "SCORE: " + string(score));
-		draw_text(32, 32, "FPS = " + string(fps));
+		draw_set_font(fnt_btn)
+		draw_set_valign(fa_top)
+		draw_text(5, 5, "FPS: " + string(fps));
 		break;
 	
 	case rm_start:
