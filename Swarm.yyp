@@ -139,6 +139,7 @@
     {"id":{"name":"obj_daycycle","path":"objects/obj_daycycle/obj_daycycle.yy",},"order":8,},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},"order":4,},
     {"id":{"name":"shorthair_mining","path":"sprites/shorthair_mining/shorthair_mining.yy",},"order":5,},
+    {"id":{"name":"obj_hunt_task","path":"objects/obj_hunt_task/obj_hunt_task.yy",},"order":8,},
     {"id":{"name":"longhair_hurt","path":"sprites/longhair_hurt/longhair_hurt.yy",},"order":3,},
     {"id":{"name":"gw_t_top","path":"sprites/gw_t_top/gw_t_top.yy",},"order":12,},
     {"id":{"name":"spr_run","path":"sprites/spr_run/spr_run.yy",},"order":3,},

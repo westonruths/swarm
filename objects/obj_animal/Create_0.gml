@@ -9,6 +9,7 @@ targetY = y
 path = path_add();
 
 selected = false
+tmp_selected = false
 
 name = "Animal"
 

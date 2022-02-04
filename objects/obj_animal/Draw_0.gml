@@ -2,12 +2,16 @@
 // You can write your code in this editor
 draw_self()
 
-draw_set_alpha(0.7);
+
 if (selected) {
-	draw_sprite(spr_itemdisc_01, 0, x, y);
-	draw_sprite(spr_sword_btn, 0, x, y);
+	draw_sprite_ext(spr_itemdisc_01, 0, x, y-10, 1, 1, image_angle, image_blend, 0.7)
+	draw_sprite_ext(spr_sword_btn, 0, x, y-10, 1, 1, image_angle, image_blend, 0.7)
 }
-draw_set_alpha(1);
+
+if (tmp_selected) {
+	draw_sprite_ext(selectbox_top, image_index, x, y, 1, 1, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(selectbox_bottom, image_index, x, y, 1, 1, image_angle, image_blend, image_alpha)
+}
 
 var pc;
 pc = (animal_health / animal_health_max) * 100;
