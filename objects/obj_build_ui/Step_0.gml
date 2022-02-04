@@ -17,7 +17,10 @@ if place {
 	help_text = "Tap or Drag to Place" 
 	with (obj_cell) { visible = true }
 } else {
-	with (obj_cell) { visible = false }
+	with (obj_cell) { 
+		visible = false 
+		selected = false
+	}
 }
 if remove { help_text = "Tap or Drag to Remove" }
 if movecam { help_text = "Drag or Pinch to Move" }
