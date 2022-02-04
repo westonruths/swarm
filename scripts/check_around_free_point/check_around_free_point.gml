@@ -22,25 +22,30 @@ function check_around_free_point(pointX, pointY){
 	//}
 	//return true
 	
-	if mp_grid_path(global.grid, test_path, x, y, pointX + global.grid_resolution, pointY, false) {
-
-	} else if mp_grid_path(global.grid, test_path, x, y, pointX - global.grid_resolution, pointY, false) {
-
-	} else if mp_grid_path(global.grid, test_path, x, y, pointX, pointY - global.grid_resolution, false) {
-
-	} else if mp_grid_path(global.grid, test_path, x, y, pointX, pointY + global.grid_resolution, false) {
-
-	} else if mp_grid_path(global.grid, test_path, x, y, pointX + global.grid_resolution, pointY + global.grid_resolution, false) {
-
-	} else if mp_grid_path(global.grid, test_path, x, y, pointX + global.grid_resolution, pointY - global.grid_resolution, false) {
-
-	} else if mp_grid_path(global.grid, test_path, x, y, pointX - global.grid_resolution, pointY + global.grid_resolution, false) {
-
-	} else if mp_grid_path(global.grid, test_path, x, y, pointX - global.grid_resolution, pointY + global.grid_resolution, false) {
-
-	} else {
-		return false
-	}
-	return true
+	mp_grid_clear_cell(global.grid, floor(pointX / global.grid_resolution), floor(pointY / global.grid_resolution));
+	var result = mp_grid_path(global.grid, test_path, x, y, pointX, pointY, false)
+	mp_grid_add_cell(global.grid, floor(pointX / global.grid_resolution), floor(pointY / global.grid_resolution));
+	return result
+	
+	//if mp_grid_path(global.grid, test_path, x, y, pointX + global.grid_resolution, pointY, false) {
+	//	return true
+	//} else if mp_grid_path(global.grid, test_path, x, y, pointX - global.grid_resolution, pointY, false) {
+	//	return true
+	//} else if mp_grid_path(global.grid, test_path, x, y, pointX, pointY - global.grid_resolution, false) {
+	//	return true
+	//} else if mp_grid_path(global.grid, test_path, x, y, pointX, pointY + global.grid_resolution, false) {
+	//	return true
+	//} else if mp_grid_path(global.grid, test_path, x, y, pointX + global.grid_resolution, pointY + global.grid_resolution, false) {
+	//	return true
+	//} else if mp_grid_path(global.grid, test_path, x, y, pointX + global.grid_resolution, pointY - global.grid_resolution, false) {
+	//	return true
+	//} else if mp_grid_path(global.grid, test_path, x, y, pointX - global.grid_resolution, pointY + global.grid_resolution, false) {
+	//	return true
+	//} else if mp_grid_path(global.grid, test_path, x, y, pointX - global.grid_resolution, pointY + global.grid_resolution, false) {
+	//	return true
+	//} else {
+	//	return false
+	//}
+	//return true
 	
 }

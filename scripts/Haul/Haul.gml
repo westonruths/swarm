@@ -40,6 +40,8 @@ function Haul(){
 				}
 			}
 			
+			if construct_chosen { continue }
+			
 			var spot_free = false
 			with(main_pawn) {
 				spot_free = check_around_free_point(other.x, other.y)
@@ -103,6 +105,8 @@ function Haul(){
 					construct_chosen = true	
 				}
 			}
+			
+			if construct_chosen { continue }
 			
 			var spot_free = false
 			with(main_pawn) {
@@ -193,6 +197,8 @@ function Haul(){
 						construct_chosen = true	
 					}
 				}
+				
+				if construct_chosen { continue }
 		
 				var spot_free = false
 				with(main_pawn) {
