@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+unpause()
+
 with (obj_pawn_btn) {
 	instance_destroy()
 }

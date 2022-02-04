@@ -6,4 +6,13 @@ function unpause(){
 	global.time_pause = false;
 	
 	with (obj_cell) { visible = false }
+	
+	with (obj_build_ui) {
+		instance_destroy()
+	}
+	
+	with (obj_close_construction) {
+		instance_destroy()	
+	}
+
 }

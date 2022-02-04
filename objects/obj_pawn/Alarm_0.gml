@@ -1,5 +1,11 @@
 /// @description Tap Event
 // Close out other pawn menus
+var constructing = false
+with(obj_build_ui) {
+	if selected { constructing = true }
+}
+if constructing {exit}
+
 setup_pawn_menu()
 
 print(name)

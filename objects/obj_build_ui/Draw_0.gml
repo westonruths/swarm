@@ -4,13 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-//if selected {
-//	sprite_index = obj_sprite
-//	image_xscale = 1
-//	image_yscale = 1
-	
-//	draw_text(x + 30, y, name);
-	
-//	draw_self()
-//	exit
-//} 
+if dragging {
+	draw_set_color(c_white)
+	draw_rectangle(rectx1, recty1, rectx2, recty2, true)
+}

@@ -8,6 +8,7 @@ build_cost = new building_costs(0, 0)
 obj_building_ui = obj_build_wheat
 obj_building_type = obj_wheat
 name = "Wheat"
+detail = "Plants a wheat seed"
 
 image_speed = 0
 image_index = image_number - 1

@@ -8,10 +8,10 @@ if(room == rm_game){
 	//audio_play_sound(msc_song, 2, true);
 	
 	//setup UI
-	instance_create_layer(global.view_width/2-70, global.view_height - 50,
-							"Menu_Objects",obj_build_btn)
-	instance_create_layer(global.view_width/2, global.view_height - 50,
-							"Menu_Objects",obj_pawns_menu_btn)
+	//instance_create_layer(global.view_width/2-70, global.view_height - 50,
+	//						"Menu_Objects",obj_build_btn)
+	//instance_create_layer(global.view_width/2, global.view_height - 50,
+	//						"Menu_Objects",obj_pawns_menu_btn)
 	
 	//setup map
 	global.top_game = global.grid_resolution * 2;

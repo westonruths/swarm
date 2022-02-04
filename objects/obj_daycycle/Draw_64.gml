@@ -8,5 +8,6 @@ var c = c_white;
 
 draw_set_font(fnt_text)
 draw_set_valign(fa_bottom)
-draw_text_color(15,global.view_height-10, "Hour " + string(floor(global.hours))
+draw_set_halign(fa_middle)
+draw_text_color(global.view_width/2,global.view_height-10, "Hour " + string(floor(global.hours))
 					+ "   " + "Day " + string(global.day), c,c,c,c, 1);

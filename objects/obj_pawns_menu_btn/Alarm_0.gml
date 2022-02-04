@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.menu_open && !global.building) {
-	unpause();
+if (global.menu_open) {
+	//unpause();
 	exit;
 } else {
 	unpause()

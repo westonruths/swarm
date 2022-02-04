@@ -67,7 +67,8 @@ function Haul(){
 		} else if instance_exists(stockpile) {
 			// Move to stockpile (be careful with global.grid_resoultion - don't make too small)
 			if (distance_to_object(stockpile) > global.grid_resolution/2) {
-				move_to_around_free_point(stockpile.x, stockpile.y)
+				targetX = stockpile.x
+				targetY = stockpile.y
 			} else {
 				// Deposit item at stockpile
 				var stored_item = instance_create_layer(stockpile.x,stockpile.y,"Items",item_holding.object_index);

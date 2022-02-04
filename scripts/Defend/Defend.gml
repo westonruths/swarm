@@ -12,6 +12,7 @@ function Defend(){
 		if distance_to_object(defend_target) < global.grid_resolution {
 			direction = point_direction(x, y, defend_target.x, defend_target.y)
 			sprite_index = spr_pawn_defend
+			path_speed = 0
 			
 		} else {
 			sprite_index = spr_pawn_run

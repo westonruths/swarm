@@ -9,15 +9,19 @@ if keyboard_check_pressed(ord("I")) {
   global.zoom_level = 2;
 }
 
-var item_dragging = false
-//with (obj_build_ui) {
-//	if dragging {
-//		item_dragging = true
-//	}
-//}
+var move_camera = true
+with (obj_camera_btn) {
+	move_camera = toggle_on
+	pinch_countdown = 10
+}
+
+if !move_camera { 
+	pinch_countdown = 10
+	exit 
+}
 
 pinch_countdown -= 1
-if !item_dragging && !device_mouse_check_button(1, mb_left) && pinch_countdown <= 0 {
+if !device_mouse_check_button(1, mb_left) && pinch_countdown <= 0 {
 	pinch_countdown = 0
 	
 	// start:
@@ -34,7 +38,7 @@ if !item_dragging && !device_mouse_check_button(1, mb_left) && pinch_countdown <
 	
 	x += (xTo - x) / 1;
 	y += (yTo - y) / 1;
-}
+} 
 
 // Update view size
 zoomxTo = default_zoom_width * global.zoom_level;

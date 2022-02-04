@@ -33,6 +33,8 @@ function PlantCut() {
 				}
 			}
 			
+			if chosen continue
+			
 			with(main_pawn) {
 				spot_free = check_around_free_point(other.x, other.y)
 			}
