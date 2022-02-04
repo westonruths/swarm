@@ -5,6 +5,7 @@ max_hp = 3;
 hp = max_hp;
 
 selected = false
+tmp_selected = false
 
 mp_grid_add_cell(global.grid, floor(x / global.grid_resolution), floor(y / global.grid_resolution));
 

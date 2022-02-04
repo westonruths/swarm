@@ -8,15 +8,15 @@ global.building = false
 
 selected = true
 
-with (obj_cell) {
-	visible = true;
+//with (obj_cell) {
+//	visible = true;
 	
-	if (instance_exists(build_obj)) {
-		visible = false;
-	} else {	
-		build_obj = noone;
-	}
-}
+//	if (instance_exists(build_obj)) {
+//		visible = false;
+//	} else {	
+//		build_obj = noone;
+//	}
+//}
 
 y = global.view_height - sprite_height * 2
 

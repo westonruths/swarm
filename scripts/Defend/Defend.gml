@@ -18,25 +18,16 @@ function Defend(){
 			sprite_index = spr_pawn_run
 		}
 	} else {
-		//var max_dist  = global.grid_resolution * 2
+		var max_dist  = global.grid_resolution * 3
 			
-		//with(obj_goblin) {
-		//	var tmp_target = id
-		//	var chosen = false
-			
-		//	with(obj_pawn) {
-		//		if (defend_target == tmp_target) {
-		//			chosen = true;
-		//		}
-		//	}
-				
-		//	if (!chosen && hp > 0) {
-		//		var dist = distance_to_object(other)
-		//		if (dist < max_dist) {
-		//			other.defend_target = id
-		//			max_dist = dist
-		//		}
-		//	}
-		//}
+		with(obj_goblin) {	
+			if (hp > 0) {
+				var dist = distance_to_object(other)
+				if (dist < max_dist) {
+					other.defend_target = id
+					max_dist = dist
+				}
+			}
+		}
 	}
 }

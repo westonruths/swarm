@@ -5,7 +5,7 @@ function unpause(){
 	global.menu_open = false;
 	global.time_pause = false;
 	
-	with (obj_cell) { visible = false }
+	//with (obj_cell) { visible = false }
 	
 	with (obj_build_ui) {
 		instance_destroy()

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_mtn_wall",
+    "path": "sprites/spr_mtn_wall/spr_mtn_wall.yy",
+  },
   "solid": true,
   "visible": true,
   "spriteMaskId": null,

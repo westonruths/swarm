@@ -4,3 +4,5 @@ build_obj = noone;
 image_alpha = image_alpha * 0.75;
 
 visible = false
+
+selected = false
