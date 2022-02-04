@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_close_btn",
-    "path": "objects/obj_close_btn/obj_close_btn.yy",
+    "name": "obj_construct_ui",
+    "path": "objects/obj_construct_ui/obj_construct_ui.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

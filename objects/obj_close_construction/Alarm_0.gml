@@ -4,8 +4,13 @@ with (obj_cell) {
 	visible = false;
 }
 
-with (obj_build_ui) {
+with (obj_construct_ui) {
 	instance_destroy()
 }
 
 global.menu_open = false
+global.building = false
+
+
+
+
