@@ -96,7 +96,6 @@ function Haul(){
 			weapon = other.active_wpn_index
 		}
 	} else if (instance_exists(haul_target)) {
-		//item_holding = noone
 		// see if a construct needs the resource
 		with(obj_construction) {
 			var construct_chosen = false
@@ -166,22 +165,16 @@ function Haul(){
 			haul_target = tmp_haul_target
 		}
 		
-		active_wpn_index = 0 //no wpn
-		with(active_wpn){
-			target = noone
-			weapon = other.active_wpn_index
-		}
-		
-		// See if another pawn is targeting or carrying this item
-		with(obj_pawn) {
-			if (haul_target == other.haul_target) {
-				other.haul_target = noone
-			}
+		//// See if another pawn is targeting or carrying this item
+		//with(obj_pawn) {
+		//	if (haul_target == other.haul_target) {
+		//		other.haul_target = noone
+		//	}
 				
-			if (item_holding == other.haul_target) {
-				other.haul_target = noone
-			}
-		}
+		//	if (item_holding == other.haul_target) {
+		//		other.haul_target = noone
+		//	}
+		//}
 	} else {
 		// Identify haul target
 		var max_dist  = 9999
@@ -190,6 +183,19 @@ function Haul(){
 			var tmp_target = id
 			var chosen = false
 			
+			// See if another pawn is targeting or carrying this item
+			with(obj_pawn) {
+				if (haul_target == tmp_target) {
+					chosen = true;
+				}
+				
+				if (item_holding == tmp_target) {
+					chosen = true;
+				}
+			}
+			if chosen { continue }
+			
+			// see if a construction site needs the materials
 			with(obj_construction) {
 				var construct_chosen = false
 				with(obj_pawn) {
@@ -214,7 +220,7 @@ function Haul(){
 			}
 			
 			if !stored {
-				//Find stockpile with the item
+				//See if a current stockpile needs the item
 				with(obj_stockpile) {
 					if (instance_exists(item)) {
 						if (other.object_index == item.object_index) {
@@ -227,17 +233,6 @@ function Haul(){
 					if (!instance_exists(item)) {
 						stockpile = id
 					}
-				}
-			}
-			
-			// See if another pawn is targeting or carrying this item
-			with(obj_pawn) {
-				if (haul_target == tmp_target) {
-					chosen = true;
-				}
-				
-				if (item_holding == tmp_target) {
-					chosen = true;
 				}
 			}
 			

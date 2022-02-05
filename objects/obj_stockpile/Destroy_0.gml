@@ -4,6 +4,11 @@
 // Inherit the parent event
 event_inherited();
 
-if (num_stored > 1 && instance_exists(item)) {
-	instance_create_layer(x+random_range(-10,10),y+random_range(-10,10),"Items", item.object_index)
+with(obj_item) {
+	if other.id == stored_stockpile {
+		stored = false
+		stored_stockpile = noone
+		x += random_range(-10,10)
+		y += random_range(-10,10)
+	}
 }

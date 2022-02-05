@@ -10,12 +10,20 @@ function Eat(){
 	if (instance_exists(eat_target)) {
 		_clear_previous_targets()
 		
-		//move_to_around_free_point(eat_target.x, eat_target.y)
-		targetX = eat_target.x + 10
-		targetY = eat_target.y
+		move_to_around_free_point(eat_target.x, eat_target.y)
+		//targetX = eat_target.x
+		//targetY = eat_target.y
 		if path_position == 1 && distance_to_object(eat_target) < global.grid_resolution {
 			direction = point_direction(x, y, eat_target.x, eat_target.y)
 			sprite_index = spr_pawn_eat
+			
+			with(eat_target) { 
+				stored = false 
+				with (stored_stockpile) {
+					num_stored -= 1
+				}
+				stored_stockpile = noone
+			}
 		} else {
 			sprite_index = spr_pawn_walk
 		}
