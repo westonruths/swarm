@@ -21,6 +21,7 @@
     {"id":{"name":"obj_eyeball","path":"objects/obj_eyeball/obj_eyeball.yy",},"order":1,},
     {"id":{"name":"obj_build_wall","path":"objects/obj_build_wall/obj_build_wall.yy",},"order":5,},
     {"id":{"name":"obj_confirm_build","path":"objects/obj_confirm_build/obj_confirm_build.yy",},"order":18,},
+    {"id":{"name":"obj_cancel_task","path":"objects/obj_cancel_task/obj_cancel_task.yy",},"order":9,},
     {"id":{"name":"obj_close_menu","path":"objects/obj_close_menu/obj_close_menu.yy",},"order":1,},
     {"id":{"name":"spr_mine","path":"sprites/spr_mine/spr_mine.yy",},"order":9,},
     {"id":{"name":"spr_cell","path":"sprites/spr_cell/spr_cell.yy",},"order":2,},

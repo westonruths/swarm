@@ -33,5 +33,5 @@ if !selected {
 	draw_text(x + 48, y+5, name);
 	
 	draw_set_font(fnt_btn)
-	draw_text(x+48, y+25, detail);
+	draw_text(x+48, y+30, detail);
 }
