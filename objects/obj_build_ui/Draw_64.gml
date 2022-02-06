@@ -24,10 +24,10 @@ draw_set_font(fnt_text)
 draw_set_valign(fa_top)
 draw_set_halign(fa_left)
 draw_set_color(c_black);
-draw_text(x + 48, y+5, name);
+draw_text(x + 48, y+7, name);
 	
 draw_set_font(fnt_btn)
-draw_text(x+48, y+25, detail);
+draw_text(x+48, y+28, detail);
 
 var resource_x = 55
 var resource_y = 50
