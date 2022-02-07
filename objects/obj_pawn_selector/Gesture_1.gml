@@ -11,4 +11,3 @@ with (obj_pawn_btn) {
 with (obj_pawns_menu) {
 	instance_destroy()
 }
-

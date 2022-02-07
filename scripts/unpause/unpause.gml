@@ -4,6 +4,7 @@ function unpause(){
 	global.building = false;
 	global.menu_open = false;
 	global.time_pause = false;
+	global.game_speed = global.saved_game_speed
 	
 	//with (obj_cell) { visible = false }
 	

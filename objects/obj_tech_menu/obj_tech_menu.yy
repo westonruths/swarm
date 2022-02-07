@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_dt_box",
+    "path": "sprites/spr_dt_box/spr_dt_box.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -28,11 +31,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "quests_ui",
-    "path": "folders/Objects/ui/quests_ui.yy",
+    "name": "tech_ui",
+    "path": "folders/Objects/ui/tech_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_quests_ui",
+  "name": "obj_tech_menu",
   "tags": [],
   "resourceType": "GMObject",
 }

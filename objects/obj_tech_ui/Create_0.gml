@@ -1,13 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inherit the parent event
 event_inherited();
 
-unpause()
-
+//obj_sprite = sprite_index
 name = ""
-renown_reward = ""
-
-pause()
-
+detail = ""
+renown_reward = 0
+obj_sprite = noone

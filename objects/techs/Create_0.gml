@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-enum tech {
+enum quest {
 	build_stockpile,
 	collect_wood,
 }

@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "quests",
-    "path": "folders/Objects/ui/quests_ui/quests.yy",
+    "name": "quests_ui",
+    "path": "folders/Objects/ui/quests_ui.yy",
   },
   "resourceVersion": "1.0",
   "name": "quests",

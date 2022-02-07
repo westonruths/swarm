@@ -28,11 +28,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "quests_ui",
-    "path": "folders/Objects/ui/quests_ui.yy",
+    "name": "tech_ui",
+    "path": "folders/Objects/ui/tech_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_quests_ui",
+  "name": "obj_tech_ui",
   "tags": [],
   "resourceType": "GMObject",
 }
