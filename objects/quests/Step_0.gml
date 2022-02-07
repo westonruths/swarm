@@ -1,19 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//if instance_exists(obj_quest_complete) { exit }
+
+// Renown Leveling
+if (global.renown > global.renown_next_level) {
+	global.renown_level += 1
+	global.renown -= global.renown_next_level
+	global.renown_next_level = round(0.04 * (global.renown_level ^ 3) + 0.8 * (global.renown_level ^ 2) + 2 * global.renown_level) * 10
+}
+
+// Quest Logic
 var i = 0; repeat(quests_number) {
 	switch(i) {
 		#region Build stockpile
 		case quest.build_stockpile:
 			if quest_array[i][1] != -1 {
 				if instance_exists(obj_stockpile) {
-					quest_array[i][1] = -1
-					var complete = instance_create_layer(global.view_width/4, global.view_height/4,
-						"Menu_Objects",obj_quest_complete);
-					with (complete) {
-						name = other.quest_array[i][0]
-						renown_reward = other.quest_array[i][3]
-					}
+					complete_quest(i)
 				}
 			}
 		break;
@@ -21,7 +25,11 @@ var i = 0; repeat(quests_number) {
 		
 		#region Collect Wood
 		case quest.collect_wood:
-		
+			if quest_array[i][1] != -1 {
+				if instance_number(obj_wood) >= 10 {
+					complete_quest(i)
+				}
+			}
 		break;
 		#endregion
 		

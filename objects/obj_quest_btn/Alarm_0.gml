@@ -13,7 +13,6 @@ with (quests) {
 	var y_spacer = 70
 	var quests_array = quest_array
 	var i = 0; var slot = 0; repeat(quests_number) {
-		print(quests_array[i][0], quests_array[i][1])
 		
 		//continue if inactive
 		if quests_array[i][1] != -1 {

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "action_helpers",
+    "path": "folders/Scripts/action_helpers.yy",
   },
   "resourceVersion": "1.0",
   "name": "drop_item",

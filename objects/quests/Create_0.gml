@@ -11,14 +11,14 @@ quest_array = [
 		"Build a stockpile", //name of quest
 		0, //status -1 inactive, 0 active
 		"Build a stockpile to store items", //description
-		25, //renown award
+		50, //renown award
 		spr_stockpile, //icon for the quest
 	],
 	[
 		"Collect 10 wood", //name of quest
 		0, //status -1 inactive, 0 active
 		"Chop down trees to collect wood", //description
-		25, //renown award
+		75, //renown award
 		spr_wood, //icon for the quest
 	],
 ]

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "movement",
-    "path": "folders/Scripts/movement.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "check_around_free_point",
+  "name": "complete_quest",
   "tags": [],
   "resourceType": "GMScript",
 }
