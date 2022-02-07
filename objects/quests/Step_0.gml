@@ -8,7 +8,6 @@ var i = 0; repeat(quests_number) {
 			if quest_array[i][1] != -1 {
 				if instance_exists(obj_stockpile) {
 					quest_array[i][1] = -1
-					global.renown += quest_array[i][3]
 					var complete = instance_create_layer(global.view_width/4, global.view_height/4,
 						"Menu_Objects",obj_quest_complete);
 					with (complete) {

@@ -12,10 +12,9 @@ draw_set_halign(fa_center)
 draw_set_color(c_black);
 draw_text(x + sprite_width/2, y+7, "QUEST COMPLETE!");
 	
-draw_set_font(fnt_btn)
-draw_text(x + sprite_width/2, y+28, name);
+draw_text(x + sprite_width/2, y+35, name);
 
 draw_sprite_ext(spr_trophy, image_index, x+sprite_width/2, y + sprite_height/2, 3, 3, image_angle, image_blend, image_alpha)
-draw_text(x + sprite_width/2, y + sprite_height - 50, string(renown_reward) + " Renown");
+draw_text(x + sprite_width/2, y + sprite_height - 70, string(renown_reward) + " Renown");
 
 draw_text(x + sprite_width/2, y + sprite_height - 30, "Tap to Claim!");
