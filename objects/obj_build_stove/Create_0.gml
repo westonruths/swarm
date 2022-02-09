@@ -9,4 +9,4 @@ obj_building_ui = obj_build_stove
 obj_building_type = obj_stove
 name = "Stove"
 detail = "Cooks raw food into meals"
-
+techid = 2

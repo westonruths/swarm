@@ -4,7 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-build_cost = new building_costs(0, 1)
-obj_building_ui = obj_build_stonewall
-obj_building_type = obj_stonewall
-name = "Stone Wall"
+image_xscale = 10
+image_yscale = 3

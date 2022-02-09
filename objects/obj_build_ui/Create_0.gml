@@ -17,3 +17,6 @@ rectx1 = 0
 recty1 = 0
 rectx2 = 0
 recty2 = 0
+
+techid = 0 //the tech id that this building is reliant on
+techenabled = false

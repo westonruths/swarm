@@ -1,8 +1,8 @@
 
 #region // DATA tree
 var i = 0
-techname[i] = "Infrastructure"
-techdetail[i] = "Unlocks stockpiles and walls"
+techname[i] = "Stockpiles"
+techdetail[i] = "Unlocks stockpiles to store items"
 techsprite[i] = spr_stockpile
 techpoints[i] = 0
 techstatus[i] = 2
@@ -11,9 +11,9 @@ techx[i] = 260
 techy[i] = global.view_height/2
 
 i = 1
-techname[i] = "Furniture"
-techdetail[i] = "Unlocks beds"
-techsprite[i] = spr_bed
+techname[i] = "Walls"
+techdetail[i] = "Unlocks walls & doors for making rooms"
+techsprite[i] = spr_home
 techpoints[i] = 1
 techstatus[i] = 1
 techneeds[i,0] = 0
@@ -40,6 +40,15 @@ techneeds[i,0] = 2
 techx[i] = techx[2]+lengthdir_x(70, 0)
 techy[i] = techy[2]+lengthdir_y(70, 0)
 
+i = 4
+techname[i] = "Beds"
+techdetail[i] = "Unlocks beds to rest in"
+techsprite[i] = spr_bed
+techpoints[i] = 1
+techstatus[i] = 0
+techneeds[i,0] = 1
+techx[i] = techx[1]+lengthdir_x(70, 0)
+techy[i] = techy[1]+lengthdir_y(70, 0)
 
 //techname[3] = "tech1.1"
 //techimage[3] = 2

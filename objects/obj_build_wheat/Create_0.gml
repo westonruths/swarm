@@ -9,6 +9,4 @@ obj_building_ui = obj_build_wheat
 obj_building_type = obj_wheat
 name = "Wheat"
 detail = "Plants a wheat seed"
-
-image_speed = 0
-image_index = image_number - 1
+techid = 3

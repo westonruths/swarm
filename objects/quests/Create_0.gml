@@ -11,7 +11,7 @@ quest_array = [
 		"Build a stockpile", //name of quest
 		0, //status -1 inactive, 0 active
 		"Build a stockpile to store items", //description
-		350, //renown award
+		50, //renown award
 		spr_stockpile, //icon for the quest
 	],
 	[

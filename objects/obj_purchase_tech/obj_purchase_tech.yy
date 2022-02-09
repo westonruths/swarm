@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_stonewall",
-    "path": "sprites/spr_stonewall/spr_stonewall.yy",
+    "name": "spr_w_box",
+    "path": "sprites/spr_w_box/spr_w_box.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_build_ui",
-    "path": "objects/obj_build_ui/obj_build_ui.yy",
+    "name": "obj_close_btn",
+    "path": "objects/obj_close_btn/obj_close_btn.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,16 +24,19 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "build_ui_items",
-    "path": "folders/Objects/ui/build_ui/build_ui_items.yy",
+    "name": "tech_ui",
+    "path": "folders/Objects/ui/tech_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_build_stonewall",
+  "name": "obj_purchase_tech",
   "tags": [],
   "resourceType": "GMObject",
 }

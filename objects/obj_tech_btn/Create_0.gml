@@ -7,7 +7,7 @@ event_inherited();
 image_xscale = 2
 image_yscale = 2
 
-global.tech_points = 0
+global.tech_points = 5
 
 radiance_rotation = 0
 new_point = false

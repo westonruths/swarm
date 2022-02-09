@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-obj_sprite = spr_cancel
+obj_sprite = spr_cancel_circle
 
 name = "Deconstruct"
 detail = "Cancel or deconstruct a building"

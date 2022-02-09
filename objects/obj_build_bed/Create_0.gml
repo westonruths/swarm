@@ -9,3 +9,4 @@ obj_building_ui = obj_build_bed
 obj_building_type = obj_bed
 name = "Bed"
 detail = "Settlers recharge energy here"
+techid = 4

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_cancel",
-    "path": "sprites/spr_cancel/spr_cancel.yy",
+    "name": "spr_cancel_circle",
+    "path": "sprites/spr_cancel_circle/spr_cancel_circle.yy",
   },
   "solid": false,
   "visible": true,

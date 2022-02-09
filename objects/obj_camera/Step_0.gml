@@ -12,6 +12,7 @@ if keyboard_check_pressed(ord("I")) {
 var move_camera = true
 with (obj_camera_btn) { move_camera = toggle_on }
 with (obj_taskcamera_btn) { move_camera = toggle_on }
+with (obj_tech_menu) { move_camera = false }
 
 if !move_camera { 
 	pinch_countdown = 10

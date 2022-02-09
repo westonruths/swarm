@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_trophy",
-    "path": "sprites/spr_trophy/spr_trophy.yy",
+    "name": "spr_trophy_blue",
+    "path": "sprites/spr_trophy_blue/spr_trophy_blue.yy",
   },
   "solid": false,
   "visible": true,

@@ -6,6 +6,13 @@ if (global.building == false) && selected == false {
 	instance_destroy();
 }
 
+// see if the tech is enabled
+with (techs) {
+	if techstatus[other.techid] == 2 {
+		other.techenabled = true
+	}
+}
+
 var place = false
 var remove = false
 var movecam = false

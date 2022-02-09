@@ -13,7 +13,7 @@ with (techs) {
 	alarm[0] = 1
 }
 
-instance_create_layer(250,0,"Menu",obj_tech_menu);
+instance_create_layer(225,0,"Menu",obj_tech_menu);
 
 pause()
 

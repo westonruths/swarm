@@ -1,7 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
+if !techenabled {
+	image_blend = c_dkgray	
+} else {
+	image_blend = noone
+}
+
 if !selected {
 	sprite_index = spr_lt_box
+
+	
 	image_xscale = global.view_width/3.2/sprite_get_width(spr_lt_box)
 	image_yscale = 7
 } else {
@@ -18,7 +26,7 @@ if !selected {
 }
 draw_self();
 
-draw_sprite_ext(obj_sprite, image_index, x+25, y + 25, 1, 1, image_angle, image_blend, image_alpha)
+draw_sprite_ext(obj_sprite, image_number - 1, x+25, y + 25, 1, 1, image_angle, image_blend, image_alpha)
 
 draw_set_font(fnt_text)
 draw_set_valign(fa_top)
@@ -49,3 +57,14 @@ if resource_x == 55 {
 	draw_text(x + 48, y + resource_y, "No resource cost");
 }
 
+if !techenabled {
+	var tech_name = ""
+	with (techs) {
+		tech_name = techname[other.techid]
+	}
+	draw_set_font(fnt_text)
+	draw_set_valign(fa_middle)
+	draw_set_halign(fa_center)
+	draw_set_color(c_white);
+	draw_text(x + sprite_width/2, y+sprite_height/2+10, "Requires Tech:\n" + tech_name);
+}

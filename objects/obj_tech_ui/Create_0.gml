@@ -22,3 +22,10 @@ techdetail = ""
 
 image_xscale = 2
 image_yscale = 2
+
+selected = false
+
+menux = 5
+menuy = 100
+
+detail_width = 175
