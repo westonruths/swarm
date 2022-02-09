@@ -1,13 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//if instance_exists(obj_quest_complete) { exit }
+if instance_exists(obj_level_up_prompt) { exit }
 
 // Renown Leveling
 if (global.renown > global.renown_next_level) {
 	global.renown_level += 1
 	global.renown -= global.renown_next_level
 	global.renown_next_level = round(0.04 * (global.renown_level ^ 3) + 0.8 * (global.renown_level ^ 2) + 2 * global.renown_level) * 10
+	var level_up = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Objects",obj_level_up_prompt);
+	with (level_up) {
+		level = global.renown_level
+		tech_reward = 1
+	}
 }
 
 // Quest Logic

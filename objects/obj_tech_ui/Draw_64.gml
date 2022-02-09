@@ -1,27 +1,54 @@
 /// @description Insert description here
 // You can write your code in this editor
-sprite_index = spr_lt_box
-image_xscale = global.view_width/3.2/sprite_get_width(spr_lt_box)
-image_yscale = 7
+
+//draw dependencies
+if (techstatus == 0) { // set the colour of the line (black means they can unlock it, gray is still locked)
+	draw_set_colour(c_gray)
+} else {
+	draw_set_colour(c_black)
+}
+
+for (var d=0; d<needcount; d++) // loop around all of the lines we have already cached and draw them
+{
+    draw_line_width(x+sprite_width/2,y+sprite_height/2,
+					linetox[d]+sprite_width/2,linetoy[d]+sprite_height/2,2)
+};
+
+switch(techstatus) {
+	case 0:
+		sprite_index = spr_w_box
+		image_blend = c_gray
+	break;
+	
+	case 1:
+		sprite_index = spr_lt_box
+		image_blend = noone
+	break;
+	
+	case 2:
+		sprite_index = spr_lt_box
+		image_blend = c_lime
+	break;
+}
+
+image_xscale = 5
+image_yscale = 5
 
 draw_self();
 
-draw_sprite_ext(obj_sprite, image_index, x+25, y + 25, 1, 1, image_angle, image_blend, image_alpha)
+draw_sprite_ext(techsprite, image_index, x+sprite_width/2, y+sprite_height/2, 1, 1, image_angle, image_blend, image_alpha)
 
-draw_set_font(fnt_text)
-draw_set_valign(fa_top)
+draw_set_font(fnt_btn)
+draw_set_valign(fa_middle)
 draw_set_halign(fa_left)
 draw_set_color(c_black);
-draw_text(x + 48, y+7, name);
-	
-draw_set_font(fnt_btn)
-draw_text(x+48, y+28, detail);
 
-var resource_x = 48
-var resource_y = 50
-draw_set_valign(fa_middle)
+var resource_x = 10
+var resource_y = 37
 
-draw_text(x + resource_x, y + resource_y, "Reward: ");
-draw_sprite_ext(spr_trophy, image_index, x+resource_x+70, y + resource_y, 1, 1, image_angle, image_blend, image_alpha)
-draw_text(x + resource_x + 75, y + resource_y, " x" + string(renown_reward) + " Renown");
+for (var p=0; p<techpoints; p++) {
+	draw_sprite_ext(spr_tech_point, image_index, x+resource_x+p*5, y + resource_y, 1, 1, image_angle, image_blend, image_alpha)
+}
+
+
 

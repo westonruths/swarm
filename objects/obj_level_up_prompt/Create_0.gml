@@ -4,10 +4,11 @@
 // Inherit the parent event
 event_inherited();
 
-image_xscale = 2
-image_yscale = 2
+unpause()
 
-global.tech_points = 0
+level = 0
+tech_reward = 0
+skip_counter = 0
 
-radiance_rotation = 0
-new_point = false
+pause()
+

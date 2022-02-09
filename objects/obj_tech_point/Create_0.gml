@@ -4,14 +4,14 @@
 var targetX = 0
 var targetY = 0
 
-with (obj_quest_btn) {
+with (obj_tech_btn) {
 	targetX = x
 	targetY = y
 }
 
 direction = point_direction(x, y, targetX, targetY);
 
-speed = 0.5
+speed = 1
 
-image_xscale = 2
-image_yscale = 2
+image_xscale = 3
+image_yscale = 3
