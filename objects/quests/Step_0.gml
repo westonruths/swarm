@@ -38,6 +38,73 @@ var i = 0; repeat(quests_number) {
 		break;
 		#endregion
 		
+		#region Build room
+		case quest.build_room:
+			if quest_array[i][1] != -1 {
+				//room check logic
+			}
+		break;
+		#endregion
+		
+		#region Build beds
+		case quest.build_beds:
+			if quest_array[i][1] != -1 {
+				if instance_number(obj_bed) >= instance_number(obj_pawn) {
+					complete_quest(i)
+				}
+			}
+		break;
+		#endregion
+		
+		#region Mine ore
+		case quest.mine_ore:
+			if quest_array[i][1] != -1 {
+				if instance_number(obj_stone) >= 10 {
+					complete_quest(i)
+				}
+			}
+		break;
+		#endregion
+
+		#region Build stove
+		case quest.build_stove:
+			if quest_array[i][1] != -1 {
+				if instance_exists(obj_stove) {
+					complete_quest(i)
+				}
+			}
+		break;
+		#endregion
+		
+		#region Collect meat
+		case quest.collect_meat:
+			if quest_array[i][1] != -1 {
+				if instance_number(obj_meat) >= 4 {
+					complete_quest(i)
+				}
+			}
+		break;
+		#endregion
+
+		#region Cook meals
+		case quest.cook_meals:
+			if quest_array[i][1] != -1 {
+				if instance_number(obj_meal) >= 10 {
+					complete_quest(i)
+				}
+			}
+		break;
+		#endregion
+
+		#region Plant crops
+		case quest.harvest_wheat:
+			if quest_array[i][1] != -1 {
+				if instance_number(obj_wheat_item) >= 10 {
+					complete_quest(i)
+				}
+			}
+		break;
+		#endregion
 		
 	}
 	

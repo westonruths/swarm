@@ -5,7 +5,7 @@ draw_self()
 
 if (selected) {
 	draw_sprite_ext(spr_itemdisc_01, 0, x, y-10, 1, 1, image_angle, image_blend, 0.7)
-	draw_sprite_ext(spr_sword_btn, 0, x, y-10, 1, 1, image_angle, image_blend, 0.7)
+	draw_sprite_ext(spr_bow_btn, 0, x, y-10, 1, 1, image_angle, image_blend, 0.7)
 }
 
 if (tmp_selected) {

@@ -6,7 +6,14 @@ with (obj_tech_ui) {
 	if selected {
 		tech_id = techid 
 		global.tech_points -= techpoints
-		print(global.tech_points, techpoints)
+		
+		//enable quests
+		with (quests) {
+			for (var i=0; i<array_length(other.techquest); i++)	{
+					quest_array[other.techquest[i]][1] = 0
+			
+			}
+		}
 	}
 }
 

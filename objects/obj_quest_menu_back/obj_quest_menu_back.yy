@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_bow_btn",
-    "path": "sprites/spr_bow_btn/spr_bow_btn.yy",
+    "name": "spr_dt_box",
+    "path": "sprites/spr_dt_box/spr_dt_box.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_ui_task",
-    "path": "objects/obj_ui_task/obj_ui_task.yy",
+    "name": "obj_ui_interface",
+    "path": "objects/obj_ui_interface/obj_ui_interface.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -26,15 +26,19 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":2,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "tasks",
-    "path": "folders/Objects/ui/tasks.yy",
+    "name": "quests_ui",
+    "path": "folders/Objects/ui/quests_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_hunt_task",
+  "name": "obj_quest_menu_back",
   "tags": [],
   "resourceType": "GMObject",
 }

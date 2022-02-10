@@ -78,9 +78,19 @@ if selected {
 			draw_set_color(c_red);
 		}
 		draw_text(menux + resource_x + 50, menuy + resource_y, " x" + string(techpoints));
+		
+		if techstatus == 0 {
+			draw_set_font(fnt_btn)
+			draw_set_valign(fa_middle)
+			draw_set_halign(fa_center)
+			draw_set_color(c_white);
+			draw_text(menux + 115, menuy+ 70, "Requires Previous Tech");
+		}
 	} else {
 		draw_text(menux + resource_x, menuy + resource_y, "Purchased");
 	}
 
 }
+
+
 

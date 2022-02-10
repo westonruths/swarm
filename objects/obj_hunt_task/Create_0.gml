@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-obj_sprite = spr_sword_btn
+obj_sprite = spr_bow_btn
 
 name = "Hunt"
 detail = "Select animals to hunt"

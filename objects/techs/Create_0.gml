@@ -7,6 +7,7 @@ techsprite[i] = spr_stockpile
 techpoints[i] = 0
 techstatus[i] = 2
 techneeds[i,0] = -1  // -1 always available 
+techquest[i] = []
 techx[i] = 260
 techy[i] = global.view_height/2
 
@@ -17,6 +18,7 @@ techsprite[i] = spr_home
 techpoints[i] = 1
 techstatus[i] = 1
 techneeds[i,0] = 0
+techquest[i] = [quest.build_room]
 techx[i] = techx[0]+lengthdir_x(80, 45)
 techy[i] = techy[0]+lengthdir_y(80, 45)
 
@@ -27,6 +29,7 @@ techsprite[i] = spr_stove
 techpoints[i] = 1
 techstatus[i] = 1
 techneeds[i,0] = 0
+techquest[i] = [quest.build_stove, quest.collect_meat, quest.cook_meals]
 techx[i] = techx[0]+lengthdir_x(80, 315)
 techy[i] = techy[0]+lengthdir_y(80, 315)
 
@@ -37,6 +40,7 @@ techsprite[i] = spr_wheat_icon
 techpoints[i] = 2
 techstatus[i] = 0
 techneeds[i,0] = 2
+techquest[i] = [quest.harvest_wheat]
 techx[i] = techx[2]+lengthdir_x(70, 0)
 techy[i] = techy[2]+lengthdir_y(70, 0)
 
@@ -47,6 +51,7 @@ techsprite[i] = spr_bed
 techpoints[i] = 1
 techstatus[i] = 0
 techneeds[i,0] = 1
+techquest[i] = [quest.build_beds]
 techx[i] = techx[1]+lengthdir_x(70, 0)
 techy[i] = techy[1]+lengthdir_y(70, 0)
 

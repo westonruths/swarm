@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Create tech tree
 // You can write your code in this editor
 
 
@@ -11,6 +11,7 @@ for (i=0; i<array_length_1d(techname); i++) // loop around for each tech
 	newtech.techsprite = techsprite[i]
 	newtech.techpoints = techpoints[i]
 	newtech.techstatus = techstatus[i]
+	newtech.techquest = techquest[i]
 	newtech.techid = i
 
 	// ASSERT – at this point the object tech has been made 

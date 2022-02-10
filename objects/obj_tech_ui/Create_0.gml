@@ -19,6 +19,7 @@ techstatus = 0 // 0 = unavailable, 1 = available, purchased = 2
 techsprite = spr_tech_point
 techpoints = 1
 techdetail = ""
+techquest = []
 
 image_xscale = 2
 image_yscale = 2

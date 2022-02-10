@@ -15,5 +15,7 @@ function unpause(){
 	with (obj_close_construction) {
 		instance_destroy()	
 	}
+	
+	with (obj_close_task) { alarm[0] = 1 }
 
 }
