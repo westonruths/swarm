@@ -9,6 +9,6 @@ instance_create_layer(global.build_x, global.build_y+70,"Menu_Objects",obj_build
 instance_create_layer(global.build_x, global.build_y+140,"Menu_Objects",obj_build_door);
 
 with(obj_build_menu) {
-	text = "Buildings"
+	text = "Stockpiles/Buildings"
 }
 

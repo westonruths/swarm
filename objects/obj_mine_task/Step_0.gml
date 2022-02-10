@@ -12,7 +12,7 @@ with (obj_taskremove_btn) { remove = toggle_on }
 with (obj_taskcamera_btn) { movecam = toggle_on }
 
 if place { help_text = "Tap or Drag to Select" }
-if remove { help_text = "Tap or Drag to Cancel" }
+if remove { help_text = "Tap or Drag to Undo" }
 if movecam { help_text = "Drag or Pinch to Move" }
 
 if selected && mouse_check_button_pressed(mb_left) {

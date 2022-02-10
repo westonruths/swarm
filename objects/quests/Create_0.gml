@@ -19,7 +19,7 @@ quest_array = [
 		0, //status -1 inactive, 0 active
 		"Build a stockpile to store items", //description
 		25, //renown award
-		spr_stockpile, //icon for the quest
+		stockpile_zone_icon, //icon for the quest
 	],
 	[
 		"Collect 10 wood", //name of quest

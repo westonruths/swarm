@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_stockpile",
-    "path": "sprites/spr_stockpile/spr_stockpile.yy",
+    "name": "stockpile_zone_icon",
+    "path": "sprites/stockpile_zone_icon/stockpile_zone_icon.yy",
   },
   "solid": false,
   "visible": true,

@@ -6,3 +6,6 @@ event_inherited();
 
 item = noone
 num_stored = 0
+
+image_alpha = 0.2
+image_blend = c_aqua
