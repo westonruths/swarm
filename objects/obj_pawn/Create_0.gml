@@ -114,6 +114,23 @@ for(var i = 0; i < listSize; i++) {
 		job = other.jobs[i]
 		pawn = other
 		visible = false
-		enabled = true
+		skill_level = irandom_range(1, 10)
+		
+		if skill_level >= 3 {
+			enabled = true
+		}
 	}
+}
+
+enum jobid {
+	defend,
+	patient,
+	doctor,
+	cook,
+	hunt,
+	construct,
+	grow,
+	mine,
+	plantcut,
+	haul
 }

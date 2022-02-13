@@ -14,6 +14,11 @@ global.grid = mp_grid_create(0, 0, global.room_x_size div global.grid_resolution
 						global.room_y_size div global.grid_resolution + 1, global.grid_resolution, 
 						global.grid_resolution);
 
+global.enemy_grid = mp_grid_create(0, 0, global.room_x_size div global.grid_resolution + 1, 
+						global.room_y_size div global.grid_resolution + 1, global.grid_resolution, 
+						global.grid_resolution);
+
+
 score = 0;
 health = 100;
 win_score = 150;

@@ -4,7 +4,13 @@
 // Inherit the parent event
 event_inherited();
 
-image_speed = 0;
-image_index = 0;
+unpause()
 
-dmg = 0
+level = 0
+renown_reward = 0
+job = ""
+pawn_name = ""
+pawn = noone
+
+pause()
+

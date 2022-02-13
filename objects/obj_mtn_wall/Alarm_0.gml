@@ -1,9 +1,12 @@
 /// @description Mined
 
-hp -= 1;
+hp -= dmg;
 
+var chance = irandom_range(0, 100)
 if (hp <= 0) {
-	instance_create_layer(x,y,"Items",obj_stone)
+	if chance < 60 {
+		instance_create_layer(x,y,"Items",obj_stone)
+	}
 	instance_destroy()
 }
 

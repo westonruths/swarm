@@ -60,11 +60,11 @@ with(tool){
 // Update item_holding location
 with(item_holding){
 	if other.image_xscale <= 0 {
-		x = other.x-3;
+		x = other.x;
 	} else {
 		x = other.x	
 	}
-	y = other.y-17;
+	y = other.y-20;
 	depth = other.depth-3;
 	image_xscale = other.image_xscale
 }

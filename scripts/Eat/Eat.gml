@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Eat(){
-	if (char_food/char_food_max > 0.4) {
+	if (char_food/char_food_max > 0.4) && !instance_exists(eat_target) {
 		exit
 	}
 	
@@ -10,9 +10,9 @@ function Eat(){
 	if (instance_exists(eat_target)) {
 		_clear_previous_targets()
 		
-		move_to_around_free_point(eat_target.x, eat_target.y)
-		//targetX = eat_target.x
-		//targetY = eat_target.y
+		targetX = eat_target.x - 10
+		targetY = eat_target.y
+		//move_to_around_free_point(eat_target.x, eat_target.y)
 		if path_position == 1 && distance_to_object(eat_target) < global.grid_resolution {
 			direction = point_direction(x, y, eat_target.x, eat_target.y)
 			sprite_index = spr_pawn_eat

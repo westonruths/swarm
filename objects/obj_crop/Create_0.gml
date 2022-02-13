@@ -7,8 +7,9 @@ event_inherited();
 max_grow_counter = 5
 grow_counter = 0
 
-max_build_counter = 5
+max_build_counter = 50
 build_counter = 0
+dmg = 0
 
 image_speed = 0
 image_index = 0

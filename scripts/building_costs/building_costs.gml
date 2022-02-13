@@ -4,7 +4,7 @@ function building_costs(_wood, _stone, _built) constructor
 {
     original_costs = [_wood, _stone]
 	costs = original_costs
-	original_construction_health = (_wood + _stone) * 5
+	original_construction_health = (_wood + _stone) * 30
 	construction_health = original_construction_health
 	built = _built
 	

@@ -7,5 +7,6 @@ food_item = noone
 
 item_cooking = noone
 
-max_counter = 5
+max_counter = 50
 cooking_counter = 0
+dmg = 0

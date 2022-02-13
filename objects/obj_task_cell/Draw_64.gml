@@ -2,10 +2,16 @@
 // You can write your code in this editor
 draw_self()
 
+var ch = (skill_exp / skill_next_level) * 100;
+draw_healthbar(x+30,y+14, x+90, y+24, ch, c_black, c_blue, c_blue, 0, true, true)
+
 draw_set_color(c_black);
 draw_set_font(fnt_btn);
 draw_set_halign(fa_left)
-draw_text(x + 30, y+5, script_get_name(job));
+draw_set_valign(fa_top)
+draw_text(x + 30, y, script_get_name(job));
+draw_set_color(c_white);
+draw_text(x + 30, y+12, "Level: " + string(skill_level));
 
 
 if (enabled) {

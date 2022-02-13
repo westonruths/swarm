@@ -1,3 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-cooking_counter += dmg;
+
+wall_x = 0
+wall_y = 0
+
+path = path_add();

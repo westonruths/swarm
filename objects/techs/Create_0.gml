@@ -3,7 +3,7 @@
 var i = 0
 techname[i] = "Stockpiles"
 techdetail[i] = "Unlocks stockpiles to store items"
-techsprite[i] = spr_stockpile
+techsprite[i] = stockpile_zone_icon
 techpoints[i] = 0
 techstatus[i] = 2
 techneeds[i,0] = -1  // -1 always available 
