@@ -14,7 +14,7 @@ instance_create_layer(global.view_width-(global.view_width/3),0,"Menu",obj_build
 
 var category = noone
 switch (previous_menu) {
-	case "Buildings":
+	case "Stockpiles/Buildings":
 		category = instance_create_layer(global.build_x, global.build_y+10,"Menu_Objects",obj_category_buildings);
 		with (category) { alarm[0] = 1 }
 		break

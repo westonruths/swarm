@@ -1,15 +1,12 @@
 {
-  "spriteId": {
-    "name": "spr_stonewall",
-    "path": "sprites/spr_stonewall/spr_stonewall.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_wall",
-    "path": "objects/obj_wall/obj_wall.yy",
+    "name": "obj_ui_interface",
+    "path": "objects/obj_ui_interface/obj_ui_interface.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,16 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "walls",
-    "path": "folders/Objects/buildings/walls.yy",
+    "name": "info_ui",
+    "path": "folders/Objects/ui/info_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_stonewall",
+  "name": "obj_ui_info_btns",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -8,3 +8,6 @@ nutrition = 4
 
 hp = 12
 hp_max = hp
+
+title = "Meal"
+detail = "A meal that can be consumed to satiate hunger"

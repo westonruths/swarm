@@ -3,3 +3,6 @@
 
 stored = false
 stored_stockpile = noone
+
+title = ""
+detail = ""

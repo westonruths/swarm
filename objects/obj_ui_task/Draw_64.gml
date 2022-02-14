@@ -2,12 +2,16 @@
 // You can write your code in this editor
 if (global.menu_open && !selected) {
 	sprite_index = obj_sprite
+	image_xscale = 2
+	image_yscale = 2
 	draw_sprite_ext(spr_itemdisc_01, image_index, x, y, 2, 2, image_angle, image_blend, image_alpha)
 	exit
 }
 
 if !selected {
 	sprite_index = obj_sprite
+	image_xscale = 2
+	image_yscale = 2
 	draw_sprite_ext(spr_itemdisc_01, image_index, x, y, 2, 2, image_angle, image_blend, image_alpha)
 	draw_self();
 } else {

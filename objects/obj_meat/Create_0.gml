@@ -4,8 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-//if (global.building){
-//	draw_set_color(c_white)
-//	draw_circle(x, y, 5, false);
-//	draw_line(x, y, dragX, dragY);
-//}
+title = "Meat"
+detail = "A raw food material that can be cooked into a meal"

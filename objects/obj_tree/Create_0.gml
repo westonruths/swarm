@@ -10,3 +10,6 @@ selected = false
 
 mp_grid_add_cell(global.grid, floor(x / global.grid_resolution), floor(y / global.grid_resolution));
 mp_grid_add_cell(global.enemy_grid, floor(x / global.grid_resolution), floor(y / global.grid_resolution));
+
+title = "Tree"
+detail = "Can be chopped down for wood"

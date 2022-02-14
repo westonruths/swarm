@@ -102,6 +102,8 @@ if dragging && mouse_check_button_released(mb_left) {
 			if place {
 				var tmp_build_cost = build_cost.new_cost()
 				var tmp_obj_building_type = obj_building_type
+				var tmp_name = name
+				var tmp_detail = detail
 
 				with(cell){
 					if !instance_exists(build_obj) {
@@ -110,6 +112,8 @@ if dragging && mouse_check_button_released(mb_left) {
 						with(build_obj) {
 							build_cost = tmp_build_cost
 							obj_building_type = tmp_obj_building_type;	
+							name = tmp_name
+							detail = tmp_detail
 						}
 					}
 				}

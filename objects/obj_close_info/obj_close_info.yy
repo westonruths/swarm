@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_cancel",
+    "path": "sprites/spr_cancel/spr_cancel.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_building",
-    "path": "objects/obj_building/obj_building.yy",
+    "name": "obj_ui_info_btns",
+    "path": "objects/obj_ui_info_btns/obj_ui_info_btns.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -21,19 +24,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":3,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":4,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "buildings",
-    "path": "folders/Objects/buildings.yy",
+    "name": "info_ui",
+    "path": "folders/Objects/ui/info_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_drag",
+  "name": "obj_close_info",
   "tags": [],
   "resourceType": "GMObject",
 }

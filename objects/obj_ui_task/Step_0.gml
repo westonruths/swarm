@@ -7,3 +7,7 @@ with (obj_ui_task) {
 		with (other) { visible = false }
 	}
 }
+
+if !instance_exists(obj_close_task) {
+	selected = false
+}

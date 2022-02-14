@@ -12,3 +12,6 @@ mp_grid_add_cell(global.grid, floor(x / global.grid_resolution), floor(y / globa
 mp_grid_add_cell(global.enemy_grid, floor(x / global.grid_resolution), floor(y / global.grid_resolution));
 
 alarm[1] = 1
+
+title = "Mountain"
+detail = "Can be mined for stone"

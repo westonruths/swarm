@@ -23,3 +23,8 @@ instance_create_layer(global.view_width-25,y+15,"Menu_Btns",obj_close_task);
 instance_create_layer(x+10,y+70,"Menu_Btns",obj_taskplace_btn);
 instance_create_layer(x+80,y+70,"Menu_Btns",obj_taskremove_btn);
 instance_create_layer(x+150,y+70,"Menu_Btns",obj_taskcamera_btn);
+
+with (obj_ui_info) {
+	alarm[4] = -10
+	selection = noone
+}

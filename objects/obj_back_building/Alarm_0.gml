@@ -1,6 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-unpause();
+with (obj_build_ui) {
+	instance_destroy()
+}
+	
+with (obj_close_construction) {
+	instance_destroy()	
+}
+	
+with (obj_close_task) { alarm[0] = 1 }
 
 global.building = true;
 global.menu_open = true;

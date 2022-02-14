@@ -12,7 +12,7 @@ function Construct(){
 			sprite_index = spr_pawn_walk
 		}
 		
-		if construct_target.build_cost.built {
+		if construct_target.build_cost.built && object_index == obj_construction {
 			construct_target = noone
 		}
 	} else {
@@ -28,6 +28,26 @@ function Construct(){
 			}
 				
 			if (!chosen && build_cost.done() && place_empty(x,y,obj_pawn)) {
+				var dist = distance_to_object(other)
+				if (dist < max_dist) {
+					other.construct_target = id
+					max_dist = dist
+				}
+			}
+		}
+		
+		with(obj_building) {
+			if !deconstruct {continue}
+			
+			var tmp_target = id
+			var chosen = false
+			with(obj_pawn) {
+				if (construct_target == tmp_target) {
+					chosen = true;
+				}
+			}
+				
+			if (!chosen && deconstruct && place_empty(x,y,obj_pawn)) {
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
 					other.construct_target = id

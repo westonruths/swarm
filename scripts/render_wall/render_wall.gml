@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function render_wall(){
-	var object_neighbor = obj_drag
+	var object_neighbor = obj_room_wall
 	var top = instance_position(x, y - sprite_height, object_neighbor)
 	var bottom = instance_position(x, y + sprite_height, object_neighbor)
 	var left = instance_position(x - sprite_width, y, object_neighbor)

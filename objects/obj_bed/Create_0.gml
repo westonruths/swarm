@@ -5,3 +5,6 @@
 event_inherited();
 
 cover_sprite = layer_sprite_create("Cover",x,y+3,spr_bed_covers)
+
+title = "Bed"
+detail = "A place to rest and restore energy"

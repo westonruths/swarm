@@ -4,7 +4,7 @@ hp -= dmg;
 
 var chance = irandom_range(0, 100)
 if (hp <= 0) {
-	if chance < 60 {
+	if chance < 120 {
 		instance_create_layer(x,y,"Items",obj_stone)
 	}
 	instance_destroy()

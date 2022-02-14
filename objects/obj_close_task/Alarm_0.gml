@@ -10,3 +10,7 @@ with (obj_ui_task) {
 with (obj_ui_task_helper) {
 	instance_destroy()
 }
+
+with (obj_info_item) {
+	alarm[4] = -1
+}
