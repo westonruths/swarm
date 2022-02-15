@@ -13,7 +13,11 @@ if instance_exists(selection) && instance_exists (obj_close_info) {
 	draw_text(x + 48, y+5, selection.title);
 	
 	draw_set_font(fnt_btn)
-	draw_text_ext(x+48, y+30, selection.detail, 12, sprite_width-50);
+	var detail = selection.detail
+	if variable_instance_exists(selection, "hp") && variable_instance_exists(selection, "hp_max") {
+		detail += "\nHP: " + string(selection.hp) + "/" + string(selection.hp_max)
+	}
+	draw_text_ext(x+48, y+30, detail, 12, sprite_width-50);
 	
 	if selection.object_index == obj_construction {
 		draw_text(x + 48, y+48, "Resources Required:");

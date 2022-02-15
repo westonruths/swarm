@@ -14,8 +14,8 @@ if (tmp_selected) {
 }
 
 var pc;
-pc = (animal_health / animal_health_max) * 100;
-if (animal_health<animal_health_max) {
+pc = (hp / hp_max) * 100;
+if (hp<hp_max) {
 	draw_healthbar(x-15,y-10, x-35, y-15, pc, c_black, c_red, c_lime, 0, true, true)
 }
 

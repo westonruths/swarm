@@ -11,3 +11,10 @@ with (obj_ui_task) {
 if !instance_exists(obj_close_task) {
 	selected = false
 }
+
+if x == global.build_x && y == global.view_height - sprite_height * 1 {
+	if sprite_index != spr_lt_box {
+		unpause()
+		alarm[0] = 1
+	}
+}

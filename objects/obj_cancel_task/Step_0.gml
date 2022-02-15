@@ -69,7 +69,13 @@ if dragging && mouse_check_button_released(mb_left) {
 			with(building){
 				if variable_instance_exists(id, "build_cost") {
 					if (object_index == obj_construction) || object_index == obj_stockpile || object_get_parent(object_index) == obj_crop {
-						instance_destroy()
+						if place {
+							if object_index == obj_construction {
+								alarm[1] = 1
+							} else {
+								instance_destroy()
+							}
+						}
 					}
 				}
 

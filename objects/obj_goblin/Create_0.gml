@@ -1,8 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited()
+
 hp = 100
 old_hp = hp
-hp_max = 100
+hp_max = hp
 
 targetX = x + irandom_range(-50,50)
 targetY = y + irandom_range(-50,50)
@@ -16,3 +18,6 @@ hunt_target = noone
 
 strength = 10
 accuracy = 70
+
+title = "Goblin"
+detail = "A nefarious foe. Prepare your defenses."

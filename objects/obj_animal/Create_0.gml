@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-animal_health = irandom_range(20, 30);
-animal_health_max = animal_health;
+event_inherited()
+
+hp = irandom_range(20, 30);
+hp_max = hp;
 dmg = 0
 
 spd = 1;

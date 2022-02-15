@@ -2,7 +2,7 @@
 // You can write your code in this editor
 with(other) {
 	instance_destroy();
-	other.animal_health -= bullet_dmg;
+	other.hp -= bullet_dmg;
 }
 
 repeat(5){

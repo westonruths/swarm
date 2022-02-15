@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited()
 
-max_hp = 50;
-hp = max_hp;
+hp_max = 50;
+hp = hp_max;
 dmg = 0
 
 selected = false

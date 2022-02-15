@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited()
+
 image_speed = spd * global.game_speed
 path_speed = spd * global.game_speed
 
@@ -7,7 +9,7 @@ if (global.time_pause) {
 	exit;
 } 
 
-if (animal_health <= 0) {
+if (hp <= 0) {
 	instance_destroy();
 	instance_create_layer(x,y,"Items",obj_meat)
 }

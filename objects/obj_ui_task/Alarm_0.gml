@@ -1,8 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 if selected || global.menu_open {exit}
-	
-with (obj_ui_interface) {
+
+with (obj_info_item) {
+	alarm[4] = -1
+}
+
+with (obj_ui_task) {
 	selected = false
 }
 
@@ -19,12 +23,6 @@ y = global.view_height - sprite_height * 1
 
 instance_create_layer(global.view_width-25,y+15,"Menu_Btns",obj_close_task);
 
-
 instance_create_layer(x+10,y+70,"Menu_Btns",obj_taskplace_btn);
 instance_create_layer(x+80,y+70,"Menu_Btns",obj_taskremove_btn);
 instance_create_layer(x+150,y+70,"Menu_Btns",obj_taskcamera_btn);
-
-with (obj_ui_info) {
-	alarm[4] = -10
-	selection = noone
-}
