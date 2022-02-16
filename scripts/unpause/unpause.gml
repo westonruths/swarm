@@ -45,5 +45,14 @@ function unpause(){
 	with (obj_info_item) {
 		alarm[4] = -1
 	}
+	
+	with (obj_ui_task) {
+		instance_create_layer(originalX,originalY,"Menu_Static", object_index);
+		instance_destroy()
+	}
+
+	with (obj_ui_task_helper) {
+		instance_destroy()
+	}
 
 }

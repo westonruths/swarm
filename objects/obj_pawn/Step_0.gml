@@ -126,7 +126,7 @@ if (task_cells[0].enabled) {
 current_target--
 
 //update path immediately if target changed
-if old_targetX != targetX || old_targetY != targetY {
+if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_pawn_defend {
 	//move towards point
 	if mp_grid_path(global.grid, path, x, y, targetX, targetY, false)  {
 		path_start(path, spd, path_action_stop, true)

@@ -15,4 +15,4 @@ image_yscale = 3
 skill_level = 1
 
 skill_exp = 0
-skill_next_level = round(0.04 * (skill_level ^ 3) + 0.8 * (skill_level ^ 2) + 2 * skill_level) * 10
+skill_next_level = round(0.04 * (skill_level ^ 3) + 0.8 * (skill_level ^ 2) + 2 * skill_level) * 50

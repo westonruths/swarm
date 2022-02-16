@@ -11,7 +11,7 @@ function goblin_attack(){
 		
 		move_to_around_free_point(hunt_target.x, hunt_target.y)
 		//print(hunt_target.name, targetX, targetY)
-		if distance_to_object(hunt_target) < global.grid_resolution + 5 {
+		if distance_to_object(hunt_target) < 15 {
 			direction = point_direction(x, y, hunt_target.x, hunt_target.y)
 			sprite_index = spr_goblin_attack
 			path_speed = 0

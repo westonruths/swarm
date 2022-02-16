@@ -22,6 +22,7 @@ if (hp <= 0) {
 if (hp < old_hp) {
 	sprite_index = spr_goblin_hurt
 	old_hp = hp
+	hunt_target = noone //see if there is a closer target
 }
 if (sprite_index == spr_goblin_hurt && image_index < image_number - 1) {
 	path_speed = 0;
@@ -31,7 +32,7 @@ old_hp = hp
 
 goblin_attack()
 
-if old_targetX != targetX || old_targetY != targetY {
+if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_goblin_attack {
 	//move towards point
 	if mp_grid_path(global.enemy_grid, path, x, y, targetX, targetY, false)  {
 		path_start(path, spd, path_action_stop, true)
