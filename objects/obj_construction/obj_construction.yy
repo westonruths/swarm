@@ -3,7 +3,7 @@
     "name": "spr_construction",
     "path": "sprites/spr_construction/spr_construction.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

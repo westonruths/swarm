@@ -8,3 +8,7 @@ with (obj_mtn_wall) {
 }
 
 ds_list_delete(global.selected_mtns, ds_list_find_index(global.selected_mtns, id));
+
+if sprite_index != gw_middle_center { 
+	with (obj_rooms) { alarm[0] = 1 }
+}

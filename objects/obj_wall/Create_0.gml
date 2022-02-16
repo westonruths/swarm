@@ -9,3 +9,5 @@ mp_grid_add_cell(global.enemy_grid, floor(x / global.grid_resolution), floor(y /
 
 title = "Wall"
 detail = "Used to enclose a room"
+
+with (obj_rooms) { alarm[0] = 1 }

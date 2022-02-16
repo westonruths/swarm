@@ -16,7 +16,7 @@ if (hp <= 0) {
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
 
-if mp_grid_path(global.grid, path, x, y, targetX, targetY, true)  {
+if mp_grid_path(global.grid, path, x, y, targetX, targetY, false)  {
 	path_start(path, spd, path_action_stop, true)
 }
 

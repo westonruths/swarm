@@ -15,3 +15,5 @@ mp_grid_add_cell(global.enemy_grid, floor(x / global.grid_resolution), floor(y /
 
 title = "Door"
 detail = "An entry and exit point for a room"
+
+with (obj_rooms) { alarm[0] = 1 }

@@ -10,11 +10,17 @@ function Construct(){
 			sprite_index = spr_pawn_hammering
 		} else {
 			sprite_index = spr_pawn_walk
+			move_to_around_free_point(construct_target.x, construct_target.y)
 		}
 		
-		if construct_target.build_cost.built && object_index == obj_construction {
-			construct_target = noone
-		}
+		
+		//if construct_target.build_cost.built && construct_target.object_index == obj_construction {
+		//	construct_target = noone
+		//}
+		
+		//if !construct_target.deconstruct {
+		//	construct_target = noone	
+		//}
 	} else {
 		var max_dist  = 9999
 			
@@ -47,7 +53,7 @@ function Construct(){
 				}
 			}
 				
-			if (!chosen && deconstruct && place_empty(x,y,obj_pawn)) {
+			if (!chosen && deconstruct) {
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
 					other.construct_target = id

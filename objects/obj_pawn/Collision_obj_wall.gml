@@ -22,3 +22,6 @@ if place_empty(y+global.grid_resolution) {
 	y=y-1
 }
 
+//x = xprevious
+//y = yprevious
+

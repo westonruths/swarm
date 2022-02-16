@@ -6,5 +6,5 @@ if (image_index >= image_number - 1) {
 	exit
 }
 
-image_speed = 1;
+image_speed = 1
 

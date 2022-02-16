@@ -20,9 +20,9 @@ if instance_exists(selection) && instance_exists (obj_close_info) {
 	draw_text_ext(x+48, y+30, detail, 12, sprite_width-50);
 	
 	if selection.object_index == obj_construction {
-		draw_text(x + 48, y+48, "Resources Required:");
+		draw_text(x + 48, y+52, "Resources Required:");
 		
-		var resource_x = 55
+		var resource_x = 60
 		var resource_y = 70
 		draw_set_valign(fa_middle)
 		draw_set_halign(fa_left)
@@ -39,7 +39,7 @@ if instance_exists(selection) && instance_exists (obj_close_info) {
 			resource_x += 50
 		}
 
-		if resource_x == 55 {
+		if resource_x == 60 {
 			draw_text(x + 48, y + resource_y, "All materials present");
 		}	
 	}
