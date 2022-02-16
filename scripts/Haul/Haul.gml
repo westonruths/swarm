@@ -192,6 +192,10 @@ function Haul(){
 				if (item_holding == tmp_target) {
 					chosen = true;
 				}
+				
+				if (eat_target == tmp_target) {
+					chosen = true;
+				}
 			}
 			if chosen { continue }
 			
