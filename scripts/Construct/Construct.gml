@@ -31,6 +31,10 @@ function Construct(){
 				if (construct_target == tmp_target) {
 					chosen = true;
 				}
+				
+				if instance_position(x, y, tmp_target) {
+					chosen = true
+				}
 			}
 				
 			if (!chosen && build_cost.done() && place_empty(x,y,obj_pawn)) {
