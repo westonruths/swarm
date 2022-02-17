@@ -6,7 +6,7 @@ if keyboard_check_pressed(ord("I")) {
 } else if keyboard_check_pressed(ord("O")) {
   global.zoom_level = 1;
 } else if keyboard_check_pressed(ord("P")) {
-  global.zoom_level = 2;
+  global.zoom_level = 1.3;
 }
 
 var move_camera = true

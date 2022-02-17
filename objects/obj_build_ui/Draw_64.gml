@@ -62,9 +62,9 @@ if !techenabled {
 	with (techs) {
 		tech_name = techname[other.techid]
 	}
-	draw_set_font(fnt_text)
+	draw_set_font(fnt_big_btn)
 	draw_set_valign(fa_middle)
 	draw_set_halign(fa_center)
 	draw_set_color(c_white);
-	draw_text(x + sprite_width/2, y+sprite_height/2+10, "Requires Tech:\n" + tech_name);
+	draw_text(x + sprite_width/2, y+sprite_height/2, "Requires Tech:\n" + tech_name);
 }

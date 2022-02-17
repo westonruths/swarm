@@ -21,10 +21,10 @@ if !selected {
 	
 	draw_sprite_ext(spr_w_box, image_index, global.view_width/2-110, 5, 25, 3, image_angle, image_blend, image_alpha)
 	draw_set_color(c_black)
-	draw_set_font(fnt_text)
+	draw_set_font(fnt_big_btn)
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_middle)
-	draw_text(global.view_width/2, 10, help_text);
+	draw_text(global.view_width/2, 7, help_text);
 	
 	draw_self();
 

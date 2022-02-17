@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-unpause()
+//unpause()
 
 level = 0
 tech_reward = 0

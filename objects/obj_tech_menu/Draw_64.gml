@@ -14,7 +14,7 @@ draw_set_valign(fa_middle);
 draw_set_font(fnt_btn);
 draw_set_color(c_white);
 draw_text(x + 10, y+35, "Available Tech Points:       " + " x" + string(global.tech_points))
-draw_sprite_ext(spr_tech_point, image_index, x+160, y + 35, 1, 1, image_angle, image_blend, image_alpha)
+draw_sprite_ext(spr_tech_point, image_index, x+150, y + 35, 1, 1, image_angle, image_blend, image_alpha)
 
 draw_set_color(c_black);
 draw_line(x+2, y+45, x+sprite_width-5, y+45)

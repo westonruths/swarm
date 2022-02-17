@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_ui_interface",
-    "path": "objects/obj_ui_interface/obj_ui_interface.yy",
+    "name": "obj_speed_controls",
+    "path": "objects/obj_speed_controls/obj_speed_controls.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

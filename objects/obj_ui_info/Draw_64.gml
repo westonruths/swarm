@@ -10,7 +10,7 @@ if instance_exists(selection) && instance_exists (obj_close_info) {
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_left)
 	draw_set_color(c_black);
-	draw_text(x + 48, y+5, selection.title);
+	draw_text(x + 48, y+10, selection.title);
 	
 	draw_set_font(fnt_btn)
 	var detail = selection.detail

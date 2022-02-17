@@ -132,7 +132,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fnt_btn",
+  "name": "fnt_big_btn",
   "tags": [],
   "resourceType": "GMFont",
 }

@@ -7,6 +7,8 @@ if (global.menu_open) {
 	unpause()
 }
 
+new_quest = false
+
 global.menu_open = true;
 
 instance_create_layer(global.view_width-(global.view_width/3),0,"Menu_Background",obj_quest_menu_back);

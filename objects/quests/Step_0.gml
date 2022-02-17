@@ -7,8 +7,8 @@ if instance_exists(obj_level_up_prompt) { exit }
 if (global.renown > global.renown_next_level) {
 	global.renown_level += 1
 	global.renown -= global.renown_next_level
-	global.renown_next_level = round(0.04 * (global.renown_level ^ 3) + 0.8 * (global.renown_level ^ 2) + 2 * global.renown_level) * 10
-	var level_up = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Objects",obj_level_up_prompt);
+	global.renown_next_level = round(0.04 * (global.renown_level ^ 3) + 0.8 * (global.renown_level ^ 2) + 2 * global.renown_level) * 50
+	var level_up = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_level_up_prompt);
 	with (level_up) {
 		level = global.renown_level
 		tech_reward = 1
@@ -42,6 +42,16 @@ var i = 0; repeat(quests_number) {
 		case quest.build_room:
 			if quest_array[i][1] != -1 {
 				//room check logic
+				var built_room = false
+				with(obj_rooms) {
+					if array_length(rooms) > 0 {
+						built_room = true
+					}
+				}
+				
+				if built_room {
+					complete_quest(i)
+				}
 			}
 		break;
 		#endregion

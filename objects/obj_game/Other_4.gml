@@ -56,7 +56,9 @@ if(room == rm_game){
 				
 				if j >= start_x && j <= end_x && i >= start_y && i <= end_y {
 					with (cell) {
-						build_obj = instance_create_layer(x,y,"Buildings",obj_mtn_wall);
+						if instance_position(x, y, obj_pawn) == noone {
+							build_obj = instance_create_layer(x,y,"Buildings",obj_mtn_wall);
+						}
 					}	
 				}
 			}
@@ -68,7 +70,9 @@ if(room == rm_game){
 			if (place_object > 0 && place_object < 100) {
 				with (cell) {
 					if !instance_exists(build_obj) {
-						build_obj = instance_create_layer(x,y,"Buildings",obj_tree);
+						if instance_position(x, y, obj_pawn) == noone {
+							build_obj = instance_create_layer(x,y,"Buildings",obj_tree);
+						}
 					}
 				}
 			} 

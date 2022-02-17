@@ -11,9 +11,9 @@ with (obj_tech_ui) {
 		with (quests) {
 			for (var i=0; i<array_length(other.techquest); i++)	{
 					quest_array[other.techquest[i]][1] = 0
-			
 			}
 		}
+		with (obj_quest_btn) { new_quest = true }
 	}
 }
 

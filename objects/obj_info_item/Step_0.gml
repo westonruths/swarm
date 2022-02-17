@@ -3,6 +3,10 @@
 
 if(mouse_check_button_pressed(mb_left)){
     if(position_meeting(device_mouse_x(0),device_mouse_y(0),id)){
-        alarm[4] = 1
+		if(position_meeting(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),obj_speed_controls)){
+			
+		} else {
+			alarm[4] = 1	
+		}
     }
 }
