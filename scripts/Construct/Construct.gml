@@ -8,9 +8,11 @@ function Construct(){
 		if path_position == 1 {
 			direction = point_direction(x, y, construct_target.x, construct_target.y)
 			sprite_index = spr_pawn_hammering
+			current_task = "Constructing"
 		} else {
 			sprite_index = spr_pawn_walk
 			move_to_around_free_point(construct_target.x, construct_target.y)
+			current_task = "Constructing"
 		}
 		
 		

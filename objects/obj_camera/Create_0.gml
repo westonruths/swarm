@@ -25,3 +25,5 @@ default_zoom_width = camera_get_view_width(cam);
 default_zoom_height = camera_get_view_height(cam);
 currW = default_zoom_width;
 currH = default_zoom_height;
+
+camera_set_view_pos(cam, x - view_w_half, y - view_h_half);

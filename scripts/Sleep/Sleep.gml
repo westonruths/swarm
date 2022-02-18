@@ -11,13 +11,24 @@ function Sleep(){
 	if (instance_exists(sleep_target) && char_energy/char_energy_max < 1.0) {
 		_clear_previous_targets()
 		
-		targetX = sleep_target.x-3
+		targetX = sleep_target.x
 		targetY = sleep_target.y
-		if path_position == 1 && distance_to_object(sleep_target) < global.grid_resolution {
+		if distance_to_object(sleep_target) < global.grid_resolution {
 			direction = point_direction(x, y, sleep_target.x, sleep_target.y)
 			sprite_index = spr_pawn_sleep
+			current_task = "Sleeping"
+			
+			if instance_place(x, y, obj_bed) == noone {
+				mood.thoughtactive[mood_thoughts.slept_ground] = 1	
+			}
+			
+			if !in_room(x, y) {
+				mood.thoughtactive[mood_thoughts.slept_outside] = 1	
+			}
+			
 		} else {
 			sprite_index = spr_pawn_walk
+			current_task = "Heading to bed"
 		}
 		
 	} else if (char_energy/char_energy_max < 0.2) {
@@ -52,5 +63,9 @@ function Sleep(){
 				}
 			}
 		}
+	} 
+	
+	if (char_energy/char_energy_max <= 0) {
+		sleep_target = instance_nearest(x, y, obj_cell)
 	}
 }

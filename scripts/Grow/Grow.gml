@@ -17,8 +17,10 @@ function Grow(){
 		if path_position == 1 {
 			direction = point_direction(x, y, grow_target.x, grow_target.y)
 			sprite_index = spr_pawn_digging
+			current_task = "Planting"
 		} else {
 			sprite_index = spr_pawn_walk
+			current_task = "Planting"
 		}
 		
 	} else {

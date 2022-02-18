@@ -50,7 +50,17 @@ if dragging && mouse_check_button(mb_left) {
 	}
 	
 	var _list = ds_list_create();
-	var _num = collision_rectangle_list(rectx1, recty1, rectx2, recty2, obj_cell, false, true, _list, false);
+	var _num = 0
+	
+	if obj_building_type == obj_wall {
+		_num += collision_line_list(rectx1, recty1, rectx2, recty1, obj_cell, false, true, _list, false)
+		_num += collision_line_list(rectx1, recty1, rectx1, recty2, obj_cell, false, true, _list, false)
+		_num += collision_line_list(rectx2, recty2, rectx1, recty2, obj_cell, false, true, _list, false)
+		_num += collision_line_list(rectx2, recty2, rectx2, recty1, obj_cell, false, true, _list, false)
+	} else {
+		_num += collision_rectangle_list(rectx1, recty1, rectx2, recty2, obj_cell, false, true, _list, false);
+	}
+	
 	if _num > 0 {
 	    for (var i = 0; i < _num; ++i;) {
 	        var cell = _list[| i]
@@ -58,7 +68,10 @@ if dragging && mouse_check_button(mb_left) {
 				if place && !(instance_exists(build_obj)) {
 					visible = true
 					selected = true
-				} 
+				} else if place && build_obj.object_index == obj_construction {
+					visible = true
+					selected = true
+				}
 				
 				if remove {
 					with (build_obj) {
@@ -86,7 +99,16 @@ if dragging && mouse_check_button_released(mb_left) {
 	dragging = false
 	
 	var _list = ds_list_create();
-	var _num = collision_rectangle_list(rectx1, recty1, rectx2, recty2, obj_cell, false, true, _list, false);
+	var _num = 0
+	
+	if obj_building_type == obj_wall {
+		_num += collision_line_list(rectx1, recty1, rectx2, recty1, obj_cell, false, true, _list, false)
+		_num += collision_line_list(rectx1, recty1, rectx1, recty2, obj_cell, false, true, _list, false)
+		_num += collision_line_list(rectx2, recty2, rectx1, recty2, obj_cell, false, true, _list, false)
+		_num += collision_line_list(rectx2, recty2, rectx2, recty1, obj_cell, false, true, _list, false)
+	} else {
+		_num += collision_rectangle_list(rectx1, recty1, rectx2, recty2, obj_cell, false, true, _list, false);
+	}
 	
 	with(obj_cell) {
 		if point_in_rectangle(mouse_x, mouse_y, x-sprite_width/2, y-sprite_height/2, x+sprite_width/2, y+sprite_height/2) {
@@ -107,6 +129,16 @@ if dragging && mouse_check_button_released(mb_left) {
 
 				with(cell){
 					if !instance_exists(build_obj) {
+						build_obj = instance_create_layer(x,y,"Buildings",obj_construction);
+
+						with(build_obj) {
+							build_cost = tmp_build_cost
+							obj_building_type = tmp_obj_building_type;	
+							name = tmp_name
+							detail = tmp_detail
+						}
+					} else if build_obj.object_index == obj_construction {
+						instance_destroy(build_obj)
 						build_obj = instance_create_layer(x,y,"Buildings",obj_construction);
 
 						with(build_obj) {

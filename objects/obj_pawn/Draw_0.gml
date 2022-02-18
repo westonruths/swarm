@@ -17,7 +17,7 @@ draw_self();
 //}
 
 
-draw_set_halign(fa_center);
+draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 if global.zoom_level > 1.1 {
 	draw_set_font(fnt_big_btn);
@@ -27,6 +27,18 @@ if global.zoom_level > 1.1 {
 
 draw_set_color(c_white);
 draw_text(x, y +15, name)
+
+// Draw thoughts & mood modifiers
+var cm = (mood.mood / mood.mood_max) * 100;
+if cm >= 80 {
+	draw_sprite_ext(happiness_01, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
+} else if cm >= 50 {
+	draw_sprite_ext(happiness_02, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
+} else if cm >= 20 {
+	draw_sprite_ext(happiness_03, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
+} else {
+	draw_sprite_ext(happiness_04, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
+}
 
 if menu_open {
 	//draw_ellipse_colour(x-10, y+1, x+10, y+10, c_green, c_green, true);

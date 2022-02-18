@@ -4,16 +4,22 @@ draw_self()
 
 // Draw pawn
 var x_offset = 50
-var y_offset = 75
+var y_offset = 72
 var xscale = 2
 var yscale = 2
 draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.hair.sprite_index, pawn.hair.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.tool.sprite_index, pawn.tool.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 
+// Draw current task
+draw_set_color(c_black);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_font(fnt_btn);
+draw_text_ext(x + 85, y+50, pawn.current_task, 10, 80);
+
 // Draw status bars
 draw_set_color(c_black);
-draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 draw_set_font(fnt_btn);
 draw_set_halign(fa_right);
@@ -29,6 +35,45 @@ draw_healthbar(x+55,y+105, x+140, y+115, cf, c_black, c_green, c_green, 0, true,
 draw_text(x + 52, y+120, "Energy:");
 var ce = (pawn.char_energy / pawn.char_energy_max) * 100;
 draw_healthbar(x+55,y+120, x+140, y+130, ce, c_black, c_blue, c_blue, 0, true, true)
+
+draw_text(x + 52, y+135, "Mood:");
+var cm = (pawn.mood.mood / pawn.mood.mood_max) * 100;
+draw_healthbar(x+55,y+135, x+140, y+145, cm, c_black, c_aqua, c_aqua, 0, true, true)
+
+// Draw thoughts & mood modifiers
+if cm >= 80 {
+	draw_sprite_ext(happiness_01, image_index, x+100, y+152, 2, 2, image_angle, image_blend, image_alpha)
+} else if cm >= 50 {
+	draw_sprite_ext(happiness_02, image_index, x+100, y+152, 2, 2, image_angle, image_blend, image_alpha)
+} else if cm >= 20 {
+	draw_sprite_ext(happiness_03, image_index, x+100, y+152, 2, 2, image_angle, image_blend, image_alpha)
+} else {
+	draw_sprite_ext(happiness_04, image_index, x+100, y+152, 2, 2, image_angle, image_blend, image_alpha)
+}
+
+var menu_x = x
+var menu_y = y
+with (pawn.mood) {
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	draw_set_font(fnt_btn);
+	draw_set_color(c_black);
+	draw_text(menu_x + 2, menu_y + 152, "Mood Modifiers");
+	
+	var y_buff = 170
+	for(var i=0; i<array_length(thought); i++) {
+		if thoughtactive[i] {
+			if thoughteffect[i] > 0 {
+				draw_set_color(make_color_rgb(79, 121, 66));
+			} else {
+				draw_set_color(make_color_rgb(136, 8, 8));
+			}
+			draw_text_ext(menu_x + 5, menu_y + y_buff, thought[i], 10, 120);
+			draw_text(menu_x + 130, menu_y + y_buff, string(thoughteffect[i]));
+			y_buff += 14
+		}
+	}
+}
 
 // Draw header text
 draw_set_halign(fa_center);

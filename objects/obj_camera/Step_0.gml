@@ -36,8 +36,14 @@ if !device_mouse_check_button(1, mb_left) && pinch_countdown <= 0 {
 	    yTo = drag_y - (mouse_y - y)
 	}
 	
+	if abs((xTo - x) / 1) > 2 && abs((yTo - y) / 1) > 2 {
+		with(obj_close_info) { alarm[0] = 1 }
+	}
+	
 	x += (xTo - x) / 1;
 	y += (yTo - y) / 1;
+	
+
 } 
 
 // Update view size
@@ -53,7 +59,6 @@ view_h_half = camera_get_view_height(cam) * 0.5;
 // Clamp camrea
 x = clamp(x, view_w_half, room_width - view_w_half);
 y = clamp(y, view_h_half, room_height - view_h_half);
-
 
 
 // Update camera position

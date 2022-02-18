@@ -10,6 +10,10 @@ char_food_max = 100
 char_energy = 100
 char_energy_max = 100
 
+mood = instance_create_layer(x, y, "Instances", obj_mood)
+
+current_task = ""
+
 work_spd = 1
 spd = 1;
 path = path_add();

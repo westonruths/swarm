@@ -10,8 +10,10 @@ function Mine(){
 		if path_position == 1 && distance_to_object(mine_target) < global.grid_resolution {
 			direction = point_direction(x, y, mine_target.x, mine_target.y)
 			sprite_index = spr_pawn_mine
+			current_task = "Mining"
 		} else {
 			sprite_index = spr_pawn_walk
+			current_task = "Mining"
 		}
 	} else {
 		var max_dist  = 9999

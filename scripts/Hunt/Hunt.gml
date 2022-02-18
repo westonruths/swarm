@@ -11,12 +11,16 @@ function Hunt(){
 	if (instance_exists(hunt_target)) {
 		_clear_previous_targets()
 		
-		move_to_around_free_point(hunt_target.x, hunt_target.y)
+		//move_to_around_free_point(hunt_target.x, hunt_target.y)
+		targetX = hunt_target.x
+		targetY = hunt_target.y
 		if path_position == 1 && distance_to_object(hunt_target) < global.grid_resolution {
 			direction = point_direction(x, y, hunt_target.x, hunt_target.y)
 			sprite_index = spr_pawn_hunt
+			current_task = "Hunting"
 		} else {
 			sprite_index = spr_pawn_run
+			current_task = "On the hunt"
 		}
 	} else {
 		var max_dist  = 9999

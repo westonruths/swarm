@@ -3,8 +3,13 @@
 
 if global.menu_open {
 	if !instance_exists(obj_task_menu) {
+		
+		if instance_exists(obj_tech_menu) {
+			exit
+		}
+		
+		
 		unpause()
-		//exit
 	}
 }
 

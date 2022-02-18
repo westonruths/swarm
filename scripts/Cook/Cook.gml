@@ -93,6 +93,7 @@ function Cook(){
 				var dist = distance_to_object(other)
 				if spot_free && (dist < max_dist_stove) && !chosen{
 					sprite_index = spr_pawn_carry
+					current_task = "Hauling to cook"
 					cooking_target = other.id
 					max_dist_stove = dist
 					move_to_around_free_point(other.x, other.y)
@@ -131,8 +132,10 @@ function Cook(){
 					if path_position == 1 {
 						direction = point_direction(x, y, cooking_target.x, cooking_target.y)
 						sprite_index = spr_pawn_cooking
+						current_task = "Cooking"
 					} else {
 						sprite_index = spr_pawn_walk
+						current_task = "Cooking"
 					}
 					_clear_previous_targets()
 				}

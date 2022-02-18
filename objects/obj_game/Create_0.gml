@@ -32,3 +32,5 @@ global.build_y = 30;
 global.menu_open = false;
 
 global.selected_mtns = ds_list_create()
+
+first_step = true

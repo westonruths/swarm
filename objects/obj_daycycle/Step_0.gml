@@ -77,6 +77,11 @@ if(global.minutes >= 60){
 		alarm[1] = 1;
 	}
 	
+	// Pawn mood adjusts
+	with(obj_mood) {
+		alarm[0] = 1	
+	}
+	
 	if(global.hours >= 24) {
 		global.hours = 0;
 		global.day += 1;

@@ -27,4 +27,5 @@ function Idle() {
 	}
 	
 	sprite_index = spr_pawn_walk
+	current_task = "Idle"
 }

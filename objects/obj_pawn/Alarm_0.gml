@@ -6,6 +6,7 @@ with(obj_build_ui) {
 }
 if constructing {exit}
 
+
 setup_pawn_menu()
 
 print(name)

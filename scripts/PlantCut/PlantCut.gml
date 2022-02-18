@@ -14,8 +14,10 @@ function PlantCut() {
 		if path_position == 1 && distance_to_object(fell_target) < global.grid_resolution {
 			direction = point_direction(x, y, fell_target.x, fell_target.y)
 			sprite_index = spr_pawn_chop
+			current_task = "Plant cutting"
 		} else {
 			sprite_index = spr_pawn_walk
+			current_task = "Plant cutting"
 		}
 	} else {
 		var max_dist  = 9999

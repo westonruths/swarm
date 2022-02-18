@@ -7,6 +7,7 @@ repeat(5){
 }
 
 if (hp <= 0) {
-	instance_create_layer(x,y,"Items",obj_wood)
+	instance_create_layer(x+random_range(-3,3),y+random_range(-3,3),"Items",obj_wood)
+	instance_create_layer(x+random_range(-3,3),y+random_range(-3,3),"Items",obj_wood)
 	instance_destroy()
 }

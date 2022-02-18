@@ -131,7 +131,18 @@ if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_paw
 	if mp_grid_path(global.grid, path, x, y, targetX, targetY, false)  {
 		path_start(path, spd, path_action_stop, true)
 	} else {
-		move_to_random_point()	
+		var max_dist = 9999
+		var cell = noone
+		with (obj_cell) {
+			var dist = distance_to_point(other.x, other.y)
+			if  dist < max_dist && !instance_exists(build_obj) {
+				max_dist = dist
+				cell = id
+			}
+		}
+		
+		x = cell.x
+		y = cell.y
 	}
 }
 old_targetX = targetX
