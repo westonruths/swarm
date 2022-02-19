@@ -47,7 +47,7 @@ thoughttimero[i] = 4 //number of hours thought lasts
 i = 3
 thought[i] = "Starving"
 thoughtcaption[i] = "I'm so hungry"
-thoughteffect[i] = -20 //how it effects the character's mood
+thoughteffect[i] = -30 //how it effects the character's mood
 thoughtactive[i] = 0 //0 is inactive, 1 is active
 thoughttimer[i] = 4 //thought counter
 thoughttimero[i] = 4 //number of hours thought lasts
@@ -56,7 +56,7 @@ i = 4
 thought[i] = "Low expectations"
 thoughtcaption[i] = "Let's get to work!"
 thoughteffect[i] = 15 //how it effects the character's mood
-thoughtactive[i] = 1 //0 is inactive, 1 is active
+thoughtactive[i] = 0 //0 is inactive, 1 is active
 thoughttimer[i] = 48 //thought counter
 thoughttimero[i] = 48 //number of hours thought lasts
 

@@ -11,6 +11,12 @@ function Mood() {
 		moody_end = irandom_range(12, 24)
 		moody_counter += 1
 		first_break = false
+		
+		var prompt = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_tantrum_prompt);
+		with (prompt) {
+			pawn_name = other.name
+			pawn = other
+		}
 	}
 	
 	if moody_counter >= moody_end {
@@ -21,6 +27,9 @@ function Mood() {
 		first_break = true
 	}
 	
+	targetX = x
+	targetY = y
+	
 	sprite_index = spr_pawn_moody
-	current_task = "Moody Tantrum"
+	current_task = "Moody Tantrum, Ends in " + string(moody_end-moody_counter) + " hours";
 }

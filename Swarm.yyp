@@ -132,6 +132,7 @@
     {"id":{"name":"snd_hit","path":"sounds/snd_hit/snd_hit.yy",},"order":9,},
     {"id":{"name":"obj_ui_task_helper","path":"objects/obj_ui_task_helper/obj_ui_task_helper.yy",},"order":3,},
     {"id":{"name":"obj_stockpile","path":"objects/obj_stockpile/obj_stockpile.yy",},"order":1,},
+    {"id":{"name":"obj_tantrum_prompt","path":"objects/obj_tantrum_prompt/obj_tantrum_prompt.yy",},"order":12,},
     {"id":{"name":"spr_hunt","path":"sprites/spr_hunt/spr_hunt.yy",},"order":13,},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},"order":1,},
     {"id":{"name":"move_to_random_point","path":"scripts/move_to_random_point/move_to_random_point.yy",},"order":3,},

@@ -25,10 +25,8 @@ if global.zoom_level > 1.1 {
 	draw_set_font(fnt_btn);
 }
 
-draw_set_color(c_white);
-draw_text(x, y +15, name)
-
 // Draw thoughts & mood modifiers
+draw_set_color(c_white);
 var cm = (mood.mood / mood.mood_max) * 100;
 if cm >= 80 {
 	draw_sprite_ext(happiness_01, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
@@ -37,8 +35,12 @@ if cm >= 80 {
 } else if cm >= 20 {
 	draw_sprite_ext(happiness_03, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
 } else {
+	draw_set_color(c_red);
+	draw_text(x+5, y-15, "I'm upset!")
 	draw_sprite_ext(happiness_04, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
 }
+
+draw_text(x, y +15, name)
 
 //draw_set_color(c_aqua);
 //draw_text(x+15, y-15, mood.caption)

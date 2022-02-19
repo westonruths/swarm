@@ -14,9 +14,9 @@ draw_sprite_ext(pawn.tool.sprite_index, pawn.tool.image_index, x+x_offset, y+y_o
 // Draw current task
 draw_set_color(c_black);
 draw_set_halign(fa_left);
-draw_set_valign(fa_top);
+draw_set_valign(fa_center);
 draw_set_font(fnt_btn);
-draw_text_ext(x + 85, y+50, pawn.current_task, 10, 80);
+draw_text_ext(x + 80, y+60, pawn.current_task, 12, 80);
 
 // Draw status bars
 draw_set_color(c_black);
