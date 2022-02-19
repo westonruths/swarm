@@ -5,13 +5,10 @@ function Mood() {
 		exit
 	}
 	
-	print(name, moody_counter)
 	if first_break {
-		print(name, "begin moodiness")
 		//begin moodiness and choose duration
 		mood.thoughtactive[mood_thoughts.mental_break] = 1
 		moody_end = irandom_range(12, 24)
-		move_to_random_point()
 		moody_counter += 1
 		first_break = false
 	}
@@ -24,13 +21,6 @@ function Mood() {
 		first_break = true
 	}
 	
-	sprite_index = spr_pawn_walk
-	current_task = "Moody Sulking"
-	
-	
-	if path_index == 1 {
-		sprite_index = spr_pawn_idle
-		targetX = x
-		targetY = y
-	}
+	sprite_index = spr_pawn_moody
+	current_task = "Moody Tantrum"
 }

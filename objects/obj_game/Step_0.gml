@@ -24,7 +24,6 @@ if (global.hours == 1) {
 if (first_step) {
 	first_step = false
 	with (obj_camera) {
-		print(x, y, xstart, ystart)
 		x = xstart
 		y = ystart
 		xTo = x

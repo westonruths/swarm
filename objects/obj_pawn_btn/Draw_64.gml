@@ -38,5 +38,5 @@ if cm >= 80 {
 
 draw_healthbar(x+110,y+10, global.view_width-25, y+15, ch, c_black, c_red, c_red, 0, true, true)
 draw_healthbar(x+110,y+17, global.view_width-25, y+22, cf, c_black, c_green, c_green, 0, true, true)
-draw_healthbar(x+110,y+24, global.view_width-25, y+29, ce, c_black, c_blue, c_blue, 0, true, true)
-draw_healthbar(x+110,y+31, global.view_width-25, y+36, cm, c_black, c_aqua, c_aqua, 0, true, true)
+draw_healthbar(x+110,y+24, global.view_width-25, y+29, ce, c_black, make_color_rgb(255,215,0), make_color_rgb(255,215,0), 0, true, true)
+draw_healthbar(x+110,y+31, global.view_width-25, y+36, cm, c_black, c_blue, c_blue, 0, true, true)

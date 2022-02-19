@@ -36,6 +36,7 @@ if (hp <= 0) {
 if (hp < old_hp) {
 	sprite_index = spr_pawn_hurt
 	old_hp = hp
+	mood.thoughtactive[mood_thoughts.pain] = 1
 }
 if (sprite_index == spr_pawn_hurt && image_index < image_number - 1) {
 	path_speed = 0;

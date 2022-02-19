@@ -19,6 +19,7 @@ if char_food <= 0 {
 
 if char_energy <= 0 {
 	char_energy = 0
+	mood.thoughtactive[mood_thoughts.exhausted] = 1
 } else {
 	
 }

@@ -34,11 +34,20 @@ draw_healthbar(x+55,y+105, x+140, y+115, cf, c_black, c_green, c_green, 0, true,
 
 draw_text(x + 52, y+118, "Energy:");
 var ce = (pawn.char_energy / pawn.char_energy_max) * 100;
-draw_healthbar(x+55,y+120, x+140, y+130, ce, c_black, c_blue, c_blue, 0, true, true)
+draw_healthbar(x+55,y+120, x+140, y+130, ce, c_black, make_color_rgb(255,215,0), make_color_rgb(255,215,0), 0, true, true)
 
 draw_text(x + 52, y+132, "Mood:");
 var cm = (pawn.mood.mood / pawn.mood.mood_max) * 100;
-draw_healthbar(x+55,y+135, x+140, y+145, cm, c_black, c_aqua, c_aqua, 0, true, true)
+draw_healthbar(x+55,y+135, x+140, y+145, cm, c_black, c_blue, c_blue, 0, true, true)
+
+draw_sprite_ext(indicator, image_index, x+55+(140-55)*(pawn.mood.mood_goal/pawn.mood.mood_max), y+137, 1, 1, image_angle, image_blend, image_alpha)
+var line_x = x+55+(140-55)*(20/pawn.mood.mood_max)
+draw_line_color(line_x,140,line_x,145,c_white, c_white)
+line_x = x+55+(140-55)*(50/pawn.mood.mood_max)
+draw_line_color(line_x,140,line_x,145,c_white, c_white)
+line_x = x+55+(140-55)*(80/pawn.mood.mood_max)
+draw_line_color(line_x,140,line_x,145,c_white, c_white)
+
 
 // Draw thoughts & mood modifiers
 if cm >= 80 {
@@ -64,7 +73,7 @@ with (pawn.mood) {
 	for(var i=0; i<array_length(thought); i++) {
 		if thoughtactive[i] {
 			if thoughteffect[i] > 0 {
-				draw_set_color(make_color_rgb(34, 139, 34));
+				draw_set_color(make_color_rgb(0, 100, 0));
 			} else {
 				draw_set_color(make_color_rgb(136, 8, 8));
 			}
