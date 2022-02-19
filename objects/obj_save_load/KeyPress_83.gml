@@ -64,9 +64,35 @@ with (obj_pawn) {
 		hp: hp,
 		char_food: char_food,
 		char_energy: char_energy,
-		mood: mood,
-		hair: hair,
-		task_cells: task_cells,
+		hair_type: hair.hair_type,
+		name: name,
+		spd: spd,
+		old_hp: old_hp,
+	}
+	
+	with (mood) {
+		_saveEntity.mood = {
+			mood: mood,
+			mood_base: mood_base,
+			mood_goal: mood_goal,
+			thought: thought,
+			thoughtcaption: thoughtcaption,
+			thoughteffect: thoughteffect,
+			thoughtactive: thoughtactive,
+			thoughttimer: thoughttimer,
+			thoughttimero: thoughttimero,
+		}
+	}
+	
+	_saveEntity.task_cells = []
+	var listSize = array_length(jobs);
+	for(var i = 0; i < listSize; i++) {
+		_saveEntity.task_cells[i] = {
+			skill_level: task_cells[i].skill_level,
+			enabled: task_cells[i].enabled,
+			skill_exp: task_cells[i].skill_exp,
+			skill_next_level: task_cells[i].skill_next_level,
+		}
 	}
 	
 	array_push(_saveData, _saveEntity)	
