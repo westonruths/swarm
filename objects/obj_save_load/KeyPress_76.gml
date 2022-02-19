@@ -5,6 +5,8 @@ unpause()
 
 with (obj_info_item) instance_destroy()
 with (obj_pawn) instance_destroy()
+with (techs) instance_destroy()
+with (quests) instance_destroy()
 
 #region Load info items
 if (file_exists("info_items.save")) {
@@ -93,5 +95,87 @@ if (file_exists("settler.save")) {
 		}
 	}
 	print("Loaded settlers! ", _string)
+}
+#endregion
+
+#region Load techs
+if (file_exists("techs.save")) {
+	
+	var _buffer = buffer_load("techs.save")
+	var _string = buffer_read( _buffer, buffer_string)
+	buffer_delete( _buffer)
+	
+	var _loadData = json_parse( _string)
+	
+	while (array_length(_loadData) > 0) {
+		var _loadEntity = array_pop(_loadData)
+		
+		with (instance_create_layer(_loadEntity.x, _loadEntity.y, _loadEntity.layer, techs)) {
+
+			techname = _loadEntity.techname
+			techdetail = _loadEntity.techdetail
+			techsprite = _loadEntity.techsprite
+			techpoints = _loadEntity.techpoints
+			techstatus = _loadEntity.techstatus
+			techneeds = _loadEntity.techneeds
+			techquest = _loadEntity.techquest
+			techx = _loadEntity.techx
+			techy = _loadEntity.techy
+		
+		}
+	}
+	print("Loaded techs! ", _string)
+}
+#endregion
+
+#region Load quests
+if (file_exists("quests.save")) {
+	
+	var _buffer = buffer_load("quests.save")
+	var _string = buffer_read( _buffer, buffer_string)
+	buffer_delete( _buffer)
+	
+	var _loadData = json_parse( _string)
+	
+	while (array_length(_loadData) > 0) {
+		var _loadEntity = array_pop(_loadData)
+		
+		with (instance_create_layer(_loadEntity.x, _loadEntity.y, _loadEntity.layer, quests)) {
+
+			quest_array = _loadEntity.quest_array
+		
+		}
+	}
+	print("Loaded quests! ", _string)
+}
+#endregion
+
+#region Load global variables
+if (file_exists("global.save")) {
+	
+	var _buffer = buffer_load("global.save")
+	var _string = buffer_read( _buffer, buffer_string)
+	buffer_delete( _buffer)
+	
+	var _loadData = json_parse( _string)
+	
+	while (array_length(_loadData) > 0) {
+		var _loadEntity = array_pop(_loadData)
+		
+		global.renown = _loadEntity.renown
+		global.renown_level = _loadEntity.renown_level
+		global.renown_next_level = _loadEntity.renown_next_level
+		global.tech_points = _loadEntity.tech_points
+		
+
+		global.selected_mtns = ds_list_create()
+		var size = array_length(_loadEntity.selected_mtns);
+		for(var i=0; i<size; i++){
+			var mtn = instance_position(_loadEntity.selected_mtns[i].x, _loadEntity.selected_mtns[i].y, obj_mtn_wall)
+			ds_list_add(global.selected_mtns, mtn)		
+		}
+
+	}
+	print("Loaded global variables! ", _string)
 }
 #endregion

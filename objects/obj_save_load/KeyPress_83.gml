@@ -105,4 +105,95 @@ buffer_save( _buffer, "settler.save")
 buffer_delete( _buffer)
 #endregion
 
+#region Save techs
+//make save array
+var _saveData = array_create(0)
+
+//for every instance, create a struct and add it to the array
+with (techs) {
+	
+	var _saveEntity = 
+	{
+		x: x,
+		y: y,
+		layer: layer,
+		
+		techname: techname,
+		techdetail: techdetail,
+		techsprite: techsprite,
+		techpoints: techpoints,
+		techstatus: techstatus,
+		techneeds: techneeds,
+		techquest: techquest,
+		techx: techx,
+		techy: techy,
+	}
+	
+	array_push(_saveData, _saveEntity)	
+}
+
+var _string = json_stringify(_saveData)
+var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed, 1);
+buffer_write( _buffer, buffer_string, _string)
+buffer_save( _buffer, "techs.save")
+buffer_delete( _buffer)
+#endregion
+
+#region Save quests
+//make save array
+var _saveData = array_create(0)
+
+//for every instance, create a struct and add it to the array
+with (quests) {
+	
+	var _saveEntity = 
+	{
+		x: x,
+		y: y,
+		layer: layer,
+		
+		quest_array: quest_array,
+	}
+	
+	array_push(_saveData, _saveEntity)	
+}
+
+var _string = json_stringify(_saveData)
+var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed, 1);
+buffer_write( _buffer, buffer_string, _string)
+buffer_save( _buffer, "quests.save")
+buffer_delete( _buffer)
+#endregion
+
+#region Save global variables
+//make save array
+var _saveData = array_create(0)
+
+var _saveEntity = 
+{
+	renown: global.renown,
+	renown_level: global.renown_level,
+	renown_next_level: global.renown_next_level,
+	tech_points: global.tech_points,
+}
+
+var tmp_selected_mtns = []
+var size = ds_list_size(global.selected_mtns);
+for(var i=0; i<size; i++){
+	var mtn = ds_list_find_value(global.selected_mtns,i);
+	if instance_exists(mtn) {
+		tmp_selected_mtns[i] = { x: mtn.x, y: mtn.y }
+	}
+}
+_saveEntity.selected_mtns = tmp_selected_mtns
+	
+array_push(_saveData, _saveEntity)	
+
+var _string = json_stringify(_saveData)
+var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed, 1);
+buffer_write( _buffer, buffer_string, _string)
+buffer_save( _buffer, "global.save")
+buffer_delete( _buffer)
+#endregion
+
 print("Game saved! ", _string)

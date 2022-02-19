@@ -2,6 +2,11 @@
 // You can write your code in this editor
 draw_self()
 
+if !instance_exists(pawn) {
+	unpause()
+	exit	
+}
+
 // Draw pawn
 var x_offset = 50
 var y_offset = 72
