@@ -4,5 +4,8 @@
 stored = false
 stored_stockpile = noone
 
+hp = 50
+hp_max = hp
+
 title = ""
 detail = ""
