@@ -13,7 +13,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_btn);
 draw_text(x+25, y + 10, pawn.name)
-draw_text(x+30, y + 25, pawn.current_task)
+draw_text(x+28, y + 30, pawn.current_task)
 
 var ch = (pawn.hp / pawn.hp_max) * 100;
 var cf = (pawn.char_food / pawn.char_food_max) * 100;
@@ -22,13 +22,13 @@ var cm = (pawn.mood.mood / pawn.mood.mood_max) * 100;
 
 // Draw thoughts & mood modifiers
 if cm >= 80 {
-	draw_sprite_ext(happiness_01, image_index, x+80, y+15, 2, 2, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(happiness_01, image_index, x+80, y+8, 2, 2, image_angle, image_blend, image_alpha)
 } else if cm >= 50 {
-	draw_sprite_ext(happiness_02, image_index, x+80, y+15, 2, 2, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(happiness_02, image_index, x+80, y+8, 2, 2, image_angle, image_blend, image_alpha)
 } else if cm >= 20 {
-	draw_sprite_ext(happiness_03, image_index, x+80, y+15, 2, 2, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(happiness_03, image_index, x+80, y+8, 2, 2, image_angle, image_blend, image_alpha)
 } else {
-	draw_sprite_ext(happiness_04, image_index, x+80, y+15, 2, 2, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(happiness_04, image_index, x+80, y+8, 2, 2, image_angle, image_blend, image_alpha)
 }
 
 //draw_text(x+110, y + 7, "H:")

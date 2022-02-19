@@ -16,6 +16,10 @@ draw_self();
 //	draw_healthbar(x-10,y+15, x+10, y+17, ce, c_black, c_blue, c_blue, 0, true, true)
 //}
 
+//if (instance_exists(sleep_target)) {
+//	draw_sprite_ext(spr_home, image_index, sleep_target.x, sleep_target.y, 1, 1, image_angle, image_blend, image_alpha)
+//}
+
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);

@@ -35,7 +35,7 @@ for(var i=0;i<array_length(rooms);i++) {
 		draw_set_font(fnt_btn);
 	}
 	draw_set_color(c_white);
-	draw_text(label_cell.x-10, label_cell.y-10, room_name)
+	draw_text(label_cell.x-10, label_cell.y-20, room_name)
 }
 
 draw_set_alpha(1)

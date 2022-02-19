@@ -18,12 +18,16 @@ function Sleep(){
 			sprite_index = spr_pawn_sleep
 			current_task = "Sleeping"
 			
-			if instance_place(x, y, obj_bed) == noone {
+			if sleep_target.object_index != obj_bed {
 				mood.thoughtactive[mood_thoughts.slept_ground] = 1	
+			} else {
+				mood.thoughtactive[mood_thoughts.slept_ground] = 0
 			}
 			
 			if !in_room(x, y) {
 				mood.thoughtactive[mood_thoughts.slept_outside] = 1	
+			} else {
+				mood.thoughtactive[mood_thoughts.slept_outside] = 0
 			}
 			
 		} else {
@@ -41,7 +45,7 @@ function Sleep(){
 			
 			var tmp_target = id
 			var chosen = false
-			var spot_free = false
+			//var spot_free = false
 			
 			with(obj_pawn) {
 				if sleep_target == tmp_target {
@@ -63,9 +67,40 @@ function Sleep(){
 				}
 			}
 		}
+		
+		// if can't find bed, sleep inside at least
+		max_dist  = 9999
+		if !instance_exists(sleep_target) {
+			with (obj_rooms) {
+				for(var i=0;i<array_length(rooms);i++) {
+					for(var j=0;j<array_length(rooms[i]);j++) {
+						var cell = rooms[i][j]
+						var chosen = false
+						
+						with(obj_pawn) {
+							if instance_exists(sleep_target) {
+								if sleep_target.x == cell.x && sleep_target.y == cell.y {
+									chosen = true
+									break
+								}
+							}
+						}
+		
+						
+						dist = point_distance(other.x, other.y, cell.x, cell.y)
+						if !chosen && (dist < max_dist) {
+							other.sleep_target = cell.id
+							max_dist = dist
+						}
+					}
+				}
+			}
+		}
+		
+		if !instance_exists(sleep_target) || (char_energy/char_energy_max <= 0) {
+			sleep_target = instance_nearest(x, y, obj_cell)
+		}
 	} 
 	
-	if (char_energy/char_energy_max <= 0) {
-		sleep_target = instance_nearest(x, y, obj_cell)
-	}
+
 }

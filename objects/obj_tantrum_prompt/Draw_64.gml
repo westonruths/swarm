@@ -10,8 +10,8 @@ var x_offset = 50
 var y_offset = 75
 if instance_exists(pawn) {
 	draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
-	draw_sprite_ext(pawn.hair.sprite_index, pawn.hair.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
-	draw_sprite_ext(pawn.tool.sprite_index, pawn.tool.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
 }
 
 draw_set_font(fnt_text)
@@ -55,7 +55,7 @@ draw_set_font(fnt_big_btn)
 draw_set_valign(fa_top)
 draw_set_halign(fa_center)
 draw_set_color(c_black);
-draw_text(x + sprite_width/2, y + sprite_height - 60, "The tantrum will end in " + string(pawn.moody_end-pawn.moody_counter) + " hours");
+draw_text(x + sprite_width/2, y + sprite_height - 60, "The tantrum will end in " + string(round(pawn.moody_end-pawn.moody_counter)) + " hours");
 
 draw_set_font(fnt_text)
 draw_text(x + sprite_width/2, y + sprite_height - 30, "Tap to Dismiss");

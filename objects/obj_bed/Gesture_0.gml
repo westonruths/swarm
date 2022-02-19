@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-print("bed construct health: ", build_cost.construction_health)
+//print("bed construct health: ", build_cost.construction_health)

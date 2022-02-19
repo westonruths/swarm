@@ -68,11 +68,8 @@ if(draw_daylight){
 
 
 #region Cycle Check
-if(global.minutes >= 60){
-	global.seconds = 0;
-	global.hours += 1;
-	
-	// Pawns lose food and energy
+if(global.seconds mod 60 == 0) {
+	// Pawns lose food and energy and update moody timer
 	with(obj_pawn) {
 		alarm[1] = 1;
 	}
@@ -81,6 +78,12 @@ if(global.minutes >= 60){
 	with(obj_mood) {
 		alarm[0] = 1	
 	}
+}
+
+if(global.minutes >= 60){
+	global.seconds = 0;
+	global.hours += 1;
+	
 	
 	if(global.hours >= 24) {
 		global.hours = 0;
