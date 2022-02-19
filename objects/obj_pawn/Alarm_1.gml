@@ -20,6 +20,9 @@ if char_food <= 0 {
 if char_energy <= 0 {
 	char_energy = 0
 } else {
-	//spd = 1
-	//work_spd = 1
+	
+}
+
+if (mood.mood < 20) {
+	moody_counter += 1
 }

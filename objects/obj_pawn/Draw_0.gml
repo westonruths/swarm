@@ -40,6 +40,9 @@ if cm >= 80 {
 	draw_sprite_ext(happiness_04, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
 }
 
+//draw_set_color(c_aqua);
+//draw_text(x+15, y-15, mood.caption)
+
 if menu_open {
 	//draw_ellipse_colour(x-10, y+1, x+10, y+10, c_green, c_green, true);
 	draw_sprite_ext(selectbox_top, image_index, x, y, 1, 1, image_angle, image_blend, image_alpha)

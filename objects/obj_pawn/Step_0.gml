@@ -93,18 +93,19 @@ with(selector) {
 }
 
 // Loop through and execute enabled tasks
-targets[0] = defend_target
-targets[1] = eat_target
-targets[2] = sleep_target
-targets[3] = patient_target
-targets[4] = doctor_target
-targets[5] = cooking_target
-targets[6] = hunt_target
-targets[7] = construct_target
-targets[8] = grow_target
-targets[9] = mine_target
-targets[10] = fell_target
-targets[11] = haul_target
+targets[0] = mood_target
+targets[1] = defend_target
+targets[2] = eat_target
+targets[3] = sleep_target
+targets[4] = patient_target
+targets[5] = doctor_target
+targets[6] = cooking_target
+targets[7] = hunt_target
+targets[8] = construct_target
+targets[9] = grow_target
+targets[10] = mine_target
+targets[11] = fell_target
+targets[12] = haul_target
 current_target = targets_listsize-1
 Idle()
 var listSize = array_length(task_cells);
@@ -123,6 +124,9 @@ current_target--
 if (task_cells[0].enabled) {
 	script_execute(task_cells[0].job)
 }
+current_target--
+// Mood actions
+Mood()
 current_target--
 
 //update path immediately if target changed

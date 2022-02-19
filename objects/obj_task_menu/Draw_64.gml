@@ -24,19 +24,19 @@ draw_set_valign(fa_top);
 draw_set_font(fnt_btn);
 draw_set_halign(fa_right);
 
-draw_text(x + 52, y+90, "Health:");
+draw_text(x + 52, y+88, "Health:");
 var ch = (pawn.hp / pawn.hp_max) * 100;
 draw_healthbar(x+55,y+90, x+140, y+100, ch, c_black, c_red, c_red, 0, true, true)
 
-draw_text(x + 52, y+105, "Food:");
+draw_text(x + 52, y+103, "Food:");
 var cf = (pawn.char_food / pawn.char_food_max) * 100;
 draw_healthbar(x+55,y+105, x+140, y+115, cf, c_black, c_green, c_green, 0, true, true)
 
-draw_text(x + 52, y+120, "Energy:");
+draw_text(x + 52, y+118, "Energy:");
 var ce = (pawn.char_energy / pawn.char_energy_max) * 100;
 draw_healthbar(x+55,y+120, x+140, y+130, ce, c_black, c_blue, c_blue, 0, true, true)
 
-draw_text(x + 52, y+135, "Mood:");
+draw_text(x + 52, y+132, "Mood:");
 var cm = (pawn.mood.mood / pawn.mood.mood_max) * 100;
 draw_healthbar(x+55,y+135, x+140, y+145, cm, c_black, c_aqua, c_aqua, 0, true, true)
 
@@ -58,18 +58,20 @@ with (pawn.mood) {
 	draw_set_valign(fa_top);
 	draw_set_font(fnt_btn);
 	draw_set_color(c_black);
-	draw_text(menu_x + 2, menu_y + 152, "Mood Modifiers");
+	draw_text(menu_x + 5, menu_y + 152, "Mood Modifiers");
 	
 	var y_buff = 170
 	for(var i=0; i<array_length(thought); i++) {
 		if thoughtactive[i] {
 			if thoughteffect[i] > 0 {
-				draw_set_color(make_color_rgb(79, 121, 66));
+				draw_set_color(make_color_rgb(34, 139, 34));
 			} else {
 				draw_set_color(make_color_rgb(136, 8, 8));
 			}
-			draw_text_ext(menu_x + 5, menu_y + y_buff, thought[i], 10, 120);
-			draw_text(menu_x + 130, menu_y + y_buff, string(thoughteffect[i]));
+			draw_set_halign(fa_left);
+			draw_text_ext(menu_x + 7, menu_y + y_buff, thought[i], 10, 120);
+			draw_set_halign(fa_right);
+			draw_text(menu_x + 140, menu_y + y_buff, string(thoughteffect[i]));
 			y_buff += 14
 		}
 	}

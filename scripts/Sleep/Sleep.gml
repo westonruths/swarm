@@ -3,7 +3,7 @@
 function Sleep(){	
 	var main_pawn = self
 	
-	if char_energy/char_energy_max >= 1.0 { 
+	if char_energy/char_energy_max >= 1.0 || mood.mood < 20 { 
 		sleep_target = noone 
 		exit
 	}

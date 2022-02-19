@@ -54,6 +54,7 @@ equipped_wpn = 1;
 active_wpn_index = 0;
 
 // Action targets
+mood_target = noone
 defend_target = noone
 eat_target = noone
 sleep_target = noone
@@ -67,18 +68,19 @@ mine_target = noone
 fell_target = noone
 haul_target = noone
 
-targets[0] = defend_target
-targets[1] = eat_target
-targets[2] = sleep_target
-targets[3] = patient_target
-targets[4] = doctor_target
-targets[5] = cooking_target
-targets[6] = hunt_target
-targets[7] = construct_target
-targets[8] = grow_target
-targets[9] = mine_target
-targets[10] = fell_target
-targets[11] = haul_target
+targets[0] = mood_target
+targets[1] = defend_target
+targets[2] = eat_target
+targets[3] = sleep_target
+targets[4] = patient_target
+targets[5] = doctor_target
+targets[6] = cooking_target
+targets[7] = hunt_target
+targets[8] = construct_target
+targets[9] = grow_target
+targets[10] = mine_target
+targets[11] = fell_target
+targets[12] = haul_target
 targets_listsize = array_length(targets);
 current_target = targets_listsize-1
 
@@ -88,6 +90,11 @@ targetX = x + irandom_range(-50,50)
 targetY = y + irandom_range(-50,50)
 old_targetX = targetX
 old_targetY = targetY
+
+// Moody counter
+moody_counter = 0
+moody_end = irandom_range(12, 24)
+first_break = true
 
 // Item we are holding
 item_holding = noone

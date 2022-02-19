@@ -2,14 +2,21 @@
 // You can write your code in this editor
 
 mood = 50
-mood_base = 50
+mood_base = mood
+mood_goal = mood
 mood_max = 100
+
+caption = ""
 
 enum mood_thoughts {
 	slept_outside,
 	slept_ground,
 	ate,
 	starving,
+	low_expectations,
+	catharsis,
+	pain,
+	mental_break,
 }
 
 var i = 0
@@ -30,7 +37,7 @@ thoughttimero[i] = 6 //number of hours thought lasts
 
 i = 2
 thought[i] = "Recently ate"
-thoughtcaption[i] = "Nice and full"
+thoughtcaption[i] = "I'm nice and full"
 thoughteffect[i] = 10 //how it effects the character's mood
 thoughtactive[i] = 0 //0 is inactive, 1 is active
 thoughttimer[i] = 4 //thought counter
@@ -39,15 +46,39 @@ thoughttimero[i] = 4 //number of hours thought lasts
 i = 3
 thought[i] = "Starving"
 thoughtcaption[i] = "I'm so hungry"
-thoughteffect[i] = -10 //how it effects the character's mood
+thoughteffect[i] = -40 //how it effects the character's mood
 thoughtactive[i] = 0 //0 is inactive, 1 is active
 thoughttimer[i] = 4 //thought counter
 thoughttimero[i] = 4 //number of hours thought lasts
 
 i = 4
 thought[i] = "Low expectations"
-thoughtcaption[i] = "It's a new world!"
+thoughtcaption[i] = "Let's get to work!"
 thoughteffect[i] = 20 //how it effects the character's mood
-thoughtactive[i] = 1 //0 is inactive, 1 is active
+thoughtactive[i] = 0 //0 is inactive, 1 is active
 thoughttimer[i] = 48 //thought counter
 thoughttimero[i] = 48 //number of hours thought lasts
+
+i = 5
+thought[i] = "Catharsis"
+thoughtcaption[i] = "Feeling much better now"
+thoughteffect[i] = 40 //how it effects the character's mood
+thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughttimer[i] = 48 //thought counter
+thoughttimero[i] = 48 //number of hours thought lasts
+
+i = 6
+thought[i] = "In Pain"
+thoughtcaption[i] = "I'm bleeding!"
+thoughteffect[i] = -20 //how it effects the character's mood
+thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughttimer[i] = 4 //thought counter
+thoughttimero[i] = 4 //number of hours thought lasts
+
+i = 7
+thought[i] = "Mental Break"
+thoughtcaption[i] = "Life is terrible!"
+thoughteffect[i] = -40 //how it effects the character's mood
+thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughttimer[i] = 6 //thought counter
+thoughttimero[i] = 6 //number of hours thought lasts

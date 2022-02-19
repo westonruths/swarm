@@ -2,7 +2,7 @@
 // You can write your code in this editor
 draw_self()
 
-var x_offset = 10
+var x_offset = 13
 var y_offset = 20
 draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 1, 1, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.hair.sprite_index, pawn.hair.image_index, x+x_offset, y+y_offset, 1, 1, image_angle, image_blend, image_alpha)
@@ -19,6 +19,17 @@ var ch = (pawn.hp / pawn.hp_max) * 100;
 var cf = (pawn.char_food / pawn.char_food_max) * 100;
 var ce = (pawn.char_energy / pawn.char_energy_max) * 100;
 var cm = (pawn.mood.mood / pawn.mood.mood_max) * 100;
+
+// Draw thoughts & mood modifiers
+if cm >= 80 {
+	draw_sprite_ext(happiness_01, image_index, x+80, y+15, 2, 2, image_angle, image_blend, image_alpha)
+} else if cm >= 50 {
+	draw_sprite_ext(happiness_02, image_index, x+80, y+15, 2, 2, image_angle, image_blend, image_alpha)
+} else if cm >= 20 {
+	draw_sprite_ext(happiness_03, image_index, x+80, y+15, 2, 2, image_angle, image_blend, image_alpha)
+} else {
+	draw_sprite_ext(happiness_04, image_index, x+80, y+15, 2, 2, image_angle, image_blend, image_alpha)
+}
 
 //draw_text(x+110, y + 7, "H:")
 //draw_text(x+110, y + 17, "F:")

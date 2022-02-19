@@ -184,6 +184,7 @@
     {"id":{"name":"spr_trophy_blue","path":"sprites/spr_trophy_blue/spr_trophy_blue.yy",},"order":34,},
     {"id":{"name":"obj_taskremove_btn","path":"objects/obj_taskremove_btn/obj_taskremove_btn.yy",},"order":5,},
     {"id":{"name":"shorthair_sleep","path":"sprites/shorthair_sleep/shorthair_sleep.yy",},"order":4,},
+    {"id":{"name":"Mood","path":"scripts/Mood/Mood.yy",},"order":16,},
     {"id":{"name":"obj_wpn","path":"objects/obj_wpn/obj_wpn.yy",},"order":1,},
     {"id":{"name":"snd_zap","path":"sounds/snd_zap/snd_zap.yy",},"order":4,},
     {"id":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},"order":3,},
