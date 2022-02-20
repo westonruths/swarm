@@ -1,8 +1,9 @@
 /// @description Hunger and Energy Deplete
 // You can write your code in this editor
 
-//char_food -= 6
-char_food -= 5/20
+if (sprite_index != spr_pawn_eat) {
+	char_food -= 5/20
+}
 
 if (char_food > 100) { char_food = 100 }
 

@@ -165,6 +165,8 @@ var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed, 1);
 buffer_write( _buffer, buffer_string, _string)
 buffer_save( _buffer, "quests.save")
 buffer_delete( _buffer)
+
+print("Game saved! ", _string)
 #endregion
 
 #region Save global variables
@@ -198,4 +200,3 @@ buffer_save( _buffer, "global.save")
 buffer_delete( _buffer)
 #endregion
 
-print("Game saved! ", _string)

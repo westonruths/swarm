@@ -158,4 +158,8 @@ if path_position == 1 && (sprite_index == spr_pawn_idle || sprite_index == spr_p
 	sprite_index = spr_pawn_idle
 }
 
+if path_position == 0 && x == targetX && y == targetY {
+	path_position = 1	
+}
+
 

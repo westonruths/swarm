@@ -5,8 +5,8 @@
 
 //with (obj_info_item) instance_destroy()
 //with (obj_pawn) instance_destroy()
-//with (techs) instance_destroy()
-//with (quests) instance_destroy()
+with (techs) instance_destroy()
+with (quests) instance_destroy()
 
 #region Load info items
 if (file_exists("info_items.save")) {
@@ -146,7 +146,7 @@ if (file_exists("quests.save")) {
 		
 		}
 	}
-	//print("Loaded quests! ", _string)
+	print("Loaded quests! ", _string)
 }
 #endregion
 
@@ -171,8 +171,11 @@ if (file_exists("global.save")) {
 		global.selected_mtns = ds_list_create()
 		var size = array_length(_loadEntity.selected_mtns);
 		for(var i=0; i<size; i++){
+			if _loadEntity.selected_mtns[i] == 0 { continue }
 			var mtn = instance_position(_loadEntity.selected_mtns[i].x, _loadEntity.selected_mtns[i].y, obj_mtn_wall)
-			ds_list_add(global.selected_mtns, mtn)		
+			if instance_exists(mtn) {
+				ds_list_add(global.selected_mtns, mtn)	
+			}
 		}
 
 	}
