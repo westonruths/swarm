@@ -53,7 +53,7 @@
     "spriteId": {"name":"spr_pawn_hurt","path":"sprites/spr_pawn_hurt/spr_pawn_hurt.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 15.0,
+    "playbackSpeed": 8.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

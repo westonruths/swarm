@@ -5,6 +5,6 @@ function spawn_enemies(){
 		var xx = room_width - 16 - random(3) * 5;
 		var yy = spawn_list[| irandom(ds_list_size(spawn_list)-1)];;
 
-		instance_create_layer(xx, yy, "Instances", obj_eyeball)
+		instance_create_layer(xx, yy, "Instances", obj_goblin)
 	}
 }

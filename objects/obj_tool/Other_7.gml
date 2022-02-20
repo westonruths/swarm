@@ -103,7 +103,13 @@ switch(sprite_index){
 		break;
 	case spr_sleep:
 		with (pawn) {
-			char_energy += 2
+			char_energy += 5
+		}
+		break;
+	case spr_patient:
+		with (pawn) {
+			char_energy += 1
+			hp += heal_rate
 		}
 		break;
 }

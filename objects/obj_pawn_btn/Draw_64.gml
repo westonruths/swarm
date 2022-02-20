@@ -31,12 +31,30 @@ if cm >= 80 {
 	draw_sprite_ext(happiness_04, image_index, x+80, y+8, 2, 2, image_angle, image_blend, image_alpha)
 }
 
-//draw_text(x+110, y + 7, "H:")
-//draw_text(x+110, y + 17, "F:")
-//draw_text(x+110, y + 27, "E:")
-//draw_text(x+110, y + 37, "M:")
 
-draw_healthbar(x+110,y+10, global.view_width-25, y+15, ch, c_black, c_red, c_red, 0, true, true)
-draw_healthbar(x+110,y+17, global.view_width-25, y+22, cf, c_black, c_green, c_green, 0, true, true)
-draw_healthbar(x+110,y+24, global.view_width-25, y+29, ce, c_black, make_color_rgb(255,215,0), make_color_rgb(255,215,0), 0, true, true)
-draw_healthbar(x+110,y+31, global.view_width-25, y+36, cm, c_black, c_blue, c_blue, 0, true, true)
+draw_set_color(c_black);
+draw_set_halign(fa_right);
+draw_set_valign(fa_middle);
+draw_set_font(fnt_btn);
+
+var x_bar = 130
+
+var y_top = 5
+var y_btm = y_top+5
+draw_healthbar(x+x_bar,y+y_top, global.view_width-25, y+y_btm, ch, c_black, c_red, c_red, 0, true, true)
+//draw_text(x+x_bar, y + y_top, "H: ")
+
+var y_top = y_btm+4
+var y_btm = y_top+5
+draw_healthbar(x+x_bar,y+y_top, global.view_width-25, y+y_btm, cf, c_black, c_green, c_green, 0, true, true)
+//draw_text(x+x_bar, y + y_top, "F: ")
+
+var y_top = y_btm+4
+var y_btm = y_top+5
+draw_healthbar(x+x_bar,y+y_top, global.view_width-25, y+y_btm, ce, c_black, make_color_rgb(255,215,0), make_color_rgb(255,215,0), 0, true, true)
+//draw_text(x+x_bar, y + y_top, "E: ")
+
+var y_top = y_btm+4
+var y_btm = y_top+5
+draw_healthbar(x+x_bar,y+y_top, global.view_width-25, y+y_btm, cm, c_black, c_blue, c_blue, 0, true, true)
+//draw_text(x+x_bar, y + y_top, "M: ")

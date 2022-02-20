@@ -9,7 +9,7 @@ function Haul(){
 	if (instance_exists(item_holding)){
 		haul_target = noone
 		sprite_index = spr_pawn_carry
-		current_task = "Hauling item"
+		current_task = "Hauling " + item_holding.title 
 		
 		//Find stockpile with the item we are holding
 		with(obj_stockpile) {

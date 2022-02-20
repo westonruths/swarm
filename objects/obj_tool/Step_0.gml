@@ -50,4 +50,7 @@ switch(pawn.sprite_index){
 	case spr_pawn_moody:
 		sprite_index = spr_moody
 		break;
+	case spr_pawn_patient:
+		sprite_index = spr_patient
+		break;
 }

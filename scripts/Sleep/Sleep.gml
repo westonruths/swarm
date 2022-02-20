@@ -52,6 +52,11 @@ function Sleep(){
 					chosen = true
 					break
 				}
+				
+				if patient_target == tmp_target {
+					chosen = true
+					break
+				}
 			}
 			
 			//with(main_pawn) {
@@ -80,6 +85,13 @@ function Sleep(){
 						with(obj_pawn) {
 							if instance_exists(sleep_target) {
 								if sleep_target.x == cell.x && sleep_target.y == cell.y {
+									chosen = true
+									break
+								}
+							}
+							
+							if instance_exists(patient_target) {
+								if patient_target.x == cell.x && patient_target.y == cell.y {
 									chosen = true
 									break
 								}

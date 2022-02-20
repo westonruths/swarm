@@ -6,3 +6,5 @@ target = noone
 
 strength = 50
 accuracy = 70
+
+heal_rate = 1

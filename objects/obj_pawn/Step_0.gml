@@ -35,6 +35,7 @@ if (hp <= 0) {
 //detect loss in health
 if (hp < old_hp) {
 	sprite_index = spr_pawn_hurt
+	image_index = 0
 	old_hp = hp
 	mood.thoughtactive[mood_thoughts.pain] = 1
 }
