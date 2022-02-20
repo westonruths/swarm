@@ -53,4 +53,7 @@ switch(pawn.sprite_index){
 	case spr_pawn_patient:
 		sprite_index = asset_get_index(hair_type + "patient")
 		break;
+	case spr_pawn_doctor:
+		sprite_index = asset_get_index(hair_type + "doctor")
+		break;
 }

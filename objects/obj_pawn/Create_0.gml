@@ -99,10 +99,12 @@ first_break = true
 // Item we are holding
 item_holding = noone
 food_holding = noone
+medicine_holding = noone
 // Construct target
 target_construct = noone
 // Cook haul target
 cook_haul_target = noone
+doctor_haul_target = noone
 
 jobs[0] = Defend
 jobs[1] = Patient

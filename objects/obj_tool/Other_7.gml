@@ -112,4 +112,22 @@ switch(sprite_index){
 			hp += heal_rate
 		}
 		break;
+	case spr_doctor:
+		var pawn_dmg = 0
+		with (pawn) {
+			pawn_dmg = task_cells[jobid.doctor].skill_level
+			task_cells[jobid.doctor].skill_exp += 5
+		}
+		with (pawn.doctor_target) { 
+			var _herb = instance_place(x, y, obj_healing_herb)
+			if instance_exists(_herb) {
+				hp += _herb.heal_pwr
+			}
+			
+			with (_herb) {
+				dmg = 1
+				alarm[0] = 1 
+			}
+		}
+		break;
 }

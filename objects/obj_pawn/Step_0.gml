@@ -62,15 +62,25 @@ with(tool){
 // Update item_holding location
 with(item_holding){
 	if other.image_xscale <= 0 {
-		x = other.x;
+		x = other.x-3;
 	} else {
 		x = other.x	
 	}
-	y = other.y-20;
+	y = other.y-17;
 	depth = other.depth-3;
 	image_xscale = other.image_xscale
 }
 with(food_holding){
+	if other.image_xscale <= 0 {
+		x = other.x-3;
+	} else {
+		x = other.x	
+	}
+	y = other.y-17;
+	depth = other.depth-3;
+	image_xscale = other.image_xscale
+}
+with(medicine_holding){
 	if other.image_xscale <= 0 {
 		x = other.x-3;
 	} else {

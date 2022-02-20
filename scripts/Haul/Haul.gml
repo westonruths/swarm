@@ -89,6 +89,9 @@ function Haul(){
 		} else if !instance_exists(cook_haul_target) && !instance_exists(cooking_target) {
 			drop_item()
 			haul_target = noone
+		} else if !instance_exists(doctor_haul_target) && !instance_exists(doctor_target) {
+			drop_item()
+			haul_target = noone
 		}
 
 		active_wpn_index = 0 //no wpn
@@ -204,6 +207,10 @@ function Haul(){
 				}
 				
 				if (food_holding == tmp_target) {
+					chosen = true;	
+				}
+
+				if (medicine_holding == tmp_target) {
 					chosen = true;	
 				}
 			}

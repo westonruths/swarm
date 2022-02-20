@@ -14,6 +14,11 @@ function _clear_previous_targets(){
 		if i == 6 {
 			food_holding = noone
 		}
+
+		//drop food item for cooking
+		if i == 5 {
+			medicine_holding = noone
+		}
 	}
 	
 	//update targets

@@ -19,9 +19,9 @@ function Patient(){
 			current_task = "Healing"
 			
 			if patient_target.object_index != obj_bed {
-				heal_rate = 1
+				heal_rate = 0.1
 			} else {
-				heal_rate = 2
+				heal_rate = 0.5
 			}
 			
 			//if !in_room(x, y) {
