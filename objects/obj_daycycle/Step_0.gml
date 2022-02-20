@@ -84,6 +84,10 @@ if(global.minutes >= 60){
 	global.seconds = 0;
 	global.hours += 1;
 	
+	// Auto save game
+	with(obj_save_load) { 
+		alarm[0] = 1
+	}
 	
 	if(global.hours >= 24) {
 		global.hours = 0;

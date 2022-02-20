@@ -1,0 +1,82 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function make_new_game(){
+	obj_size = sprite_get_width(spr_cell);
+	buffer = global.grid_resolution
+	first_cell_y = global.top_game + obj_size/2;
+	first_cell_x = global.left_limit + obj_size/2;
+	
+	//Identify mountain range
+	mtn_list = []
+	var num_mtns = irandom_range(1,5)
+	for (var i = 0; i<num_mtns; i+=1) {
+		var start_x = irandom_range(first_cell_x,global.right_limit)
+		var start_y = irandom_range(first_cell_y,global.bottom_game)
+		var end_x = start_x + irandom_range(5*buffer,20*buffer)
+		var end_y = start_y + irandom_range(5*buffer,20*buffer)
+		start_x = start_x - (start_x mod buffer) + obj_size/2
+		start_y = start_y - (start_y mod buffer) + obj_size/2
+		end_x = end_x - (end_x mod buffer) + obj_size/2
+		end_y = end_y - (end_y mod buffer) + obj_size/2
+		
+		mtn_list[i] = [start_x, end_x, start_y, end_y]
+	}
+	
+	
+	//make pawns
+	instance_create_layer(first_cell_x,first_cell_y,"Instances",obj_pawn);
+	instance_create_layer(first_cell_x+buffer,first_cell_y,"Instances",obj_pawn);
+	instance_create_layer(first_cell_x,first_cell_y+buffer,"Instances",obj_pawn);
+	
+	//make starting meals
+	instance_create_layer(first_cell_x,first_cell_y,"Items",obj_meal);
+	instance_create_layer(first_cell_x+buffer,first_cell_y,"Items",obj_meal);
+	instance_create_layer(first_cell_x,first_cell_y+buffer,"Items",obj_meal);
+	
+	//setup cells
+	spawn_list = ds_list_create();
+	for (var i = first_cell_y; i<global.bottom_game; i+=buffer) {
+		ds_list_add(spawn_list, i);
+		for (var j = first_cell_x; j<global.right_limit; j+=buffer) {
+			var cell = instance_create_layer(j,i,"BuildUI",obj_cell);
+			
+			for (var m = 0; m<num_mtns; m+=1) {
+				var start_x = mtn_list[m][0]
+				var end_x = mtn_list[m][1]
+				var start_y = mtn_list[m][2]
+				var end_y = mtn_list[m][3]
+				
+				if j >= start_x && j <= end_x && i >= start_y && i <= end_y {
+					with (cell) {
+						if instance_position(x, y, obj_pawn) == noone {
+							build_obj = instance_create_layer(x,y,"Buildings",obj_mtn_wall);
+						}
+					}	
+				}
+			}
+			
+			//place objects helper code
+			var place_object = irandom_range(0,1000)
+
+			//place trees
+			if (place_object > 0 && place_object < 100) {
+				with (cell) {
+					if !instance_exists(build_obj) {
+						if instance_position(x, y, obj_pawn) == noone {
+							build_obj = instance_create_layer(x,y,"Buildings",obj_tree);
+						}
+					}
+				}
+			} 
+			
+			//place animals
+			if (place_object > 100 && place_object < 110) {
+				with (cell) {
+					if !instance_exists(build_obj) {
+						instance_create_layer(j, i, "Instances", obj_bull)
+					}
+				}
+			}
+		}
+	}
+}

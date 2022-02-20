@@ -1,5 +1,7 @@
-/// @description Insert description here
+/// @description SAVE GAME
 // You can write your code in this editor
+
+instance_create_layer(20, 32, "Menu_Prompts", obj_save_icon)
 
 #region Save info items
 //make save array

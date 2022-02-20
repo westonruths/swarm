@@ -1,12 +1,12 @@
-/// @description Insert description here
+/// @description LOAD GAME
 // You can write your code in this editor
 
-unpause()
+//unpause()
 
-with (obj_info_item) instance_destroy()
-with (obj_pawn) instance_destroy()
-with (techs) instance_destroy()
-with (quests) instance_destroy()
+//with (obj_info_item) instance_destroy()
+//with (obj_pawn) instance_destroy()
+//with (techs) instance_destroy()
+//with (quests) instance_destroy()
 
 #region Load info items
 if (file_exists("info_items.save")) {
@@ -47,7 +47,7 @@ if (file_exists("info_items.save")) {
 			}
 		}
 	}
-	print("Loaded info items! ", _string)
+	//print("Loaded info items! ", _string)
 }
 #endregion 
 
@@ -94,7 +94,7 @@ if (file_exists("settler.save")) {
 			}
 		}
 	}
-	print("Loaded settlers! ", _string)
+	//print("Loaded settlers! ", _string)
 }
 #endregion
 
@@ -124,7 +124,7 @@ if (file_exists("techs.save")) {
 		
 		}
 	}
-	print("Loaded techs! ", _string)
+	//print("Loaded techs! ", _string)
 }
 #endregion
 
@@ -146,7 +146,7 @@ if (file_exists("quests.save")) {
 		
 		}
 	}
-	print("Loaded quests! ", _string)
+	//print("Loaded quests! ", _string)
 }
 #endregion
 
@@ -176,6 +176,8 @@ if (file_exists("global.save")) {
 		}
 
 	}
-	print("Loaded global variables! ", _string)
+	//print("Loaded global variables! ", _string)
 }
 #endregion
+
+print("Game Loaded")

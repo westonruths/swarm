@@ -19,12 +19,6 @@ global.enemy_grid = mp_grid_create(0, 0, global.room_x_size div global.grid_reso
 						global.grid_resolution);
 
 
-score = 0;
-health = 100;
-win_score = 150;
-
-draw_set_font(fnt_text);
-
 global.building = false;
 global.build_x = global.view_width - (global.view_width/3) + 5
 global.build_y = 30;
@@ -34,3 +28,5 @@ global.menu_open = false;
 global.selected_mtns = ds_list_create()
 
 first_step = true
+
+global.start_new_game = true
