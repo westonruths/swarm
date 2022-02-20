@@ -1,10 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
 if instance_exists(selection) && instance_exists (obj_close_info) {	
+	
+	
 	// draw ui
 	draw_self();
 
-	draw_sprite_ext(selection.sprite_index, image_index, x+25, y + 25, 1, 1, image_angle, image_blend, image_alpha)
+	var selection_image = selection.sprite_index
+	
+	if selection.object_index == obj_stockpile {
+		selection_image = stockpile_zone_icon
+	}
+
+	draw_sprite_ext(selection_image, image_index, x+25, y + 25, 1, 1, image_angle, image_blend, image_alpha)
 
 	draw_set_font(fnt_text)
 	draw_set_valign(fa_top)
