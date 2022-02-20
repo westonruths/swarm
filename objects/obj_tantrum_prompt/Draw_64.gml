@@ -10,8 +10,8 @@ var x_offset = 50
 var y_offset = 75
 if instance_exists(pawn) {
 	draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
-	draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
-	draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(pawn.hair.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
+	draw_sprite_ext(pawn.tool.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 3, 3, image_angle, image_blend, image_alpha)
 }
 
 draw_set_font(fnt_text)

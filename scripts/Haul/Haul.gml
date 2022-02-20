@@ -9,12 +9,12 @@ function Haul(){
 	if (instance_exists(item_holding)){
 		haul_target = noone
 		sprite_index = spr_pawn_carry
-		current_task = "Hauling"
+		current_task = "Hauling item"
 		
 		//Find stockpile with the item we are holding
 		with(obj_stockpile) {
 			if (instance_exists(item)) {
-				if (other.item_holding.object_index == item.object_index) {
+				if (other.item_holding.object_index == item.object_index) && num_stored < 10 {
 					stockpile = id	
 				}
 			} 
@@ -97,7 +97,7 @@ function Haul(){
 			weapon = other.active_wpn_index
 		}
 	} else if (instance_exists(haul_target)) {
-		current_task = "Hauling"
+		current_task = "Hauling " + haul_target.title 
 		// see if a construct needs the resource
 		with(obj_construction) {
 			var construct_chosen = false
@@ -125,7 +125,7 @@ function Haul(){
 			//Find stockpile with the needed item
 			with(obj_stockpile) {
 				if (instance_exists(item)) {
-					if (other.haul_target.object_index == item.object_index) {
+					if (other.haul_target.object_index == item.object_index) && num_stored < 10 {
 						stockpile = id
 					}
 				} 
@@ -164,9 +164,11 @@ function Haul(){
 					}
 				}
 			}
+			
 			haul_target = tmp_haul_target
 		}
 		
+		//print(name, haul_target)
 		//// See if another pawn is targeting or carrying this item
 		//with(obj_pawn) {
 		//	if (haul_target == other.haul_target) {
@@ -179,6 +181,8 @@ function Haul(){
 		//}
 	} else {
 		// Identify haul target
+		stockpile = noone
+		construct = noone
 		var max_dist  = 9999
 		
 		with(obj_item) {
@@ -233,7 +237,7 @@ function Haul(){
 				//See if a current stockpile needs the item
 				with(obj_stockpile) {
 					if (instance_exists(item)) {
-						if (other.object_index == item.object_index) {
+						if (other.object_index == item.object_index) && num_stored < 10 {
 							stockpile = id	
 						}
 					} 
@@ -247,7 +251,7 @@ function Haul(){
 			}
 			
 			// Get the closest item that isn't chosen or already at another spot
-			if !chosen && (instance_exists(stockpile) || instance_exists(construct)) {
+			if (instance_exists(stockpile) && !stored) || instance_exists(construct) {
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
 					other.haul_target = id

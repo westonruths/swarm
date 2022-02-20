@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_stockpile",
-    "path": "sprites/spr_stockpile/spr_stockpile.yy",
+    "name": "spr_fade",
+    "path": "sprites/spr_fade/spr_fade.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
-  "persistent": false,
-  "parentObjectId": {
-    "name": "obj_building",
-    "path": "objects/obj_building/obj_building.yy",
-  },
+  "persistent": true,
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,19 +22,16 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":5,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "buildings",
-    "path": "folders/Objects/buildings.yy",
+    "name": "game_menu",
+    "path": "folders/Objects/ui/game_menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_stockpile",
+  "name": "obj_fade",
   "tags": [],
   "resourceType": "GMObject",
 }

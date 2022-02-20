@@ -11,11 +11,12 @@ function continue_game(){
 	for (var i = first_cell_y; i<global.bottom_game; i+=buffer) {
 		ds_list_add(spawn_list, i);
 		for (var j = first_cell_x; j<global.right_limit; j+=buffer) {
-			var cell = instance_create_layer(j,i,"BuildUI",obj_cell);
+			instance_create_layer(j,i,"BuildUI",obj_cell);
 		}
 	}
 	
 	with(obj_save_load) {
 		alarm[1] = 1	
 	}
+	
 }

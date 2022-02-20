@@ -12,3 +12,5 @@ image_blend = c_aqua
 
 title = "Stockpile"
 detail = "Used to store and consolidate various materials"
+
+alarm[5] = 1

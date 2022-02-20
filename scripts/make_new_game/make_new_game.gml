@@ -25,13 +25,13 @@ function make_new_game(){
 	
 	//make pawns
 	instance_create_layer(first_cell_x,first_cell_y,"Instances",obj_pawn);
-	instance_create_layer(first_cell_x+buffer,first_cell_y,"Instances",obj_pawn);
 	instance_create_layer(first_cell_x,first_cell_y+buffer,"Instances",obj_pawn);
+	instance_create_layer(first_cell_x,first_cell_y+buffer*2,"Instances",obj_pawn);
 	
 	//make starting meals
 	instance_create_layer(first_cell_x,first_cell_y,"Items",obj_meal);
-	instance_create_layer(first_cell_x+buffer,first_cell_y,"Items",obj_meal);
 	instance_create_layer(first_cell_x,first_cell_y+buffer,"Items",obj_meal);
+	instance_create_layer(first_cell_x,first_cell_y+buffer*2,"Items",obj_meal);
 	
 	//setup cells
 	spawn_list = ds_list_create();
