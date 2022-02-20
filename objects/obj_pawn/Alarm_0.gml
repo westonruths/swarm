@@ -6,7 +6,6 @@ with(obj_build_ui) {
 }
 if constructing {exit}
 
-hp -= 10
 
 setup_pawn_menu()
 
