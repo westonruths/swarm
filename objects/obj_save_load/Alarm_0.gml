@@ -166,7 +166,7 @@ buffer_write( _buffer, buffer_string, _string)
 buffer_save( _buffer, "quests.save")
 buffer_delete( _buffer)
 
-print("Game saved! ", _string)
+//print("Game saved! ", _string)
 #endregion
 
 #region Save global variables

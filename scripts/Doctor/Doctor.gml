@@ -103,7 +103,6 @@ function Doctor(){
 				}
 			
 				if instance_exists(doctor_target) {
-					print(name, " -> ", doctor_target.name)
 					if (distance_to_object(doctor_target) < global.grid_resolution) { 
 						if instance_exists(medicine_holding) {
 								medicine_holding.x = other.x

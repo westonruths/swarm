@@ -57,3 +57,5 @@ switch(pawn.sprite_index){
 		sprite_index = spr_doctor
 		break;
 }
+	
+	

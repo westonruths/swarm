@@ -4,8 +4,8 @@ draw_self()
 
 draw_set_alpha(0.5);
 if (selected) {
-	//draw_sprite(spr_itemdisc_01, 0, x, y);
-	draw_sprite(spr_axe_btn, 0, x, y);
+	draw_sprite(spr_itemdisc_01, 0, x, y+10);
+	draw_sprite(spr_axe_btn, 0, x, y+10);
 }
 draw_set_alpha(1);
 

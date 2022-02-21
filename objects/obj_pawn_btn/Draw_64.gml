@@ -10,10 +10,10 @@ draw_sprite_ext(pawn.tool.sprite_index, pawn.tool.image_index, x+x_offset, y+y_o
 
 draw_set_color(c_black);
 draw_set_halign(fa_left);
-draw_set_valign(fa_middle);
+draw_set_valign(fa_top);
 draw_set_font(fnt_btn);
 draw_text(x+25, y + 10, pawn.name)
-draw_text(x+28, y + 30, pawn.current_task)
+draw_text_ext(x+28, y + 27, pawn.current_task, 9999, 100)
 
 var ch = (pawn.hp / pawn.hp_max) * 100;
 var cf = (pawn.char_food / pawn.char_food_max) * 100;

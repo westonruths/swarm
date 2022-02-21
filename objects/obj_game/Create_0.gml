@@ -23,6 +23,11 @@ global.building = false;
 global.build_x = global.view_width - (global.view_width/3) + 5
 global.build_y = 30;
 
+audio_falloff_set_model(audio_falloff_linear_distance_clamped);
+global.falloff_ref = 400
+global.falloff_max = 1200
+global.falloff_factor = 1
+
 global.menu_open = false;
 
 global.selected_mtns = ds_list_create()

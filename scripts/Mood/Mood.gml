@@ -31,5 +31,5 @@ function Mood() {
 	targetY = y
 	
 	sprite_index = spr_pawn_moody
-	current_task = "Moody Tantrum, Ends in " + string(moody_end-moody_counter) + " hours";
+	current_task = "Moody Tantrum Ends in " + string(moody_end-moody_counter) + " hours";
 }

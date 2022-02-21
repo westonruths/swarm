@@ -6,6 +6,7 @@ function goblin_attack(){
 		//print(hunt_target.name, hunt_target.hp)
 		if hunt_target.hp <= 0 {
 			hunt_target = noone
+			sprite_index = spr_goblin_idle
 			exit
 		}
 		

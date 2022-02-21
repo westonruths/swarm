@@ -60,6 +60,9 @@ view_h_half = camera_get_view_height(cam) * 0.5;
 x = clamp(x, view_w_half, room_width - view_w_half);
 y = clamp(y, view_h_half, room_height - view_h_half);
 
+audio_listener_position(x, y, 100*global.zoom_level);
+audio_listener_orientation(0,-1,0,0,0,-1)
+global.falloff_factor = global.zoom_level+0.1
 
 // Update camera position
 camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
