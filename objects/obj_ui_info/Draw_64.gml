@@ -2,6 +2,7 @@
 // You can write your code in this editor
 if instance_exists(selection) && instance_exists (obj_close_info) {	
 	
+	image_blend = c_white
 	
 	// draw ui
 	draw_self();

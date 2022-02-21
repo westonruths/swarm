@@ -17,17 +17,29 @@ for (var d=0; d<needcount; d++) // loop around all of the lines we have already 
 switch(techstatus) {
 	case 0:
 		sprite_index = spr_w_box
-		image_blend = c_gray
+		if image_blend == c_gray {
+			image_blend = c_dkgray
+		} else {
+			image_blend = c_gray
+		}
 	break;
 	
 	case 1:
 		sprite_index = spr_lt_box
-		image_blend = noone
+		if image_blend == c_gray {
+			image_blend = c_gray
+		} else {
+			image_blend = c_white
+		}
 	break;
 	
 	case 2:
 		sprite_index = spr_lt_box
-		image_blend = c_lime
+		if image_blend == c_gray {
+			image_blend = c_green
+		} else {
+			image_blend = c_lime
+		}
 	break;
 }
 

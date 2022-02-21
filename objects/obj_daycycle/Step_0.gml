@@ -91,6 +91,11 @@ if(global.minutes >= 60){
 		}
 	}
 	
+	// Update storyteller counters
+	with(obj_storyteller) { 
+		alarm[0] = 1
+	}
+	
 	if(global.hours >= 24) {
 		global.hours = 0;
 		global.day += 1;

@@ -18,6 +18,7 @@ if !selected {
 	sprite_index = spr_lt_box
 	image_xscale = global.view_width/3.1/sprite_get_width(spr_lt_box)
 	image_yscale = 13
+	image_blend = c_white
 	
 	draw_sprite_ext(spr_w_box, image_index, global.view_width/2-110, 5, 25, 3, image_angle, image_blend, image_alpha)
 	draw_set_color(c_black)

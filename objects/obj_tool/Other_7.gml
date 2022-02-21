@@ -76,7 +76,7 @@ switch(sprite_index){
 			alarm[0] = 1 
 		}
 		with (pawn) {
-			if cooking_target.item_cooking == noone {
+			if !instance_exists(cooking_target.item_cooking) {
 				cooking_target = noone
 			}
 		}
