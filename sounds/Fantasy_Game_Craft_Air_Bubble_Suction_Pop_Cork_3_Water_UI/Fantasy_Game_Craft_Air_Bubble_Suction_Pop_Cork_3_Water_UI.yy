@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_book_page.wav",
-  "duration": 0.812494,
+  "soundFile": "Fantasy_Game_Craft_Air_Bubble_Suction_Pop_Cork_3_Water_UI.wav",
+  "duration": 0.75,
   "parent": {
     "name": "btn",
     "path": "folders/Sounds/btn.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_book_page",
+  "name": "Fantasy_Game_Craft_Air_Bubble_Suction_Pop_Cork_3_Water_UI",
   "tags": [],
   "resourceType": "GMSound",
 }

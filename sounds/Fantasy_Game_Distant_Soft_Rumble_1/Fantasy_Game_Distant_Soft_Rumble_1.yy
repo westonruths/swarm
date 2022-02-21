@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_book_page.wav",
-  "duration": 0.812494,
+  "soundFile": "Fantasy_Game_Distant_Soft_Rumble_1.wav",
+  "duration": 5.0,
   "parent": {
     "name": "btn",
     "path": "folders/Sounds/btn.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_book_page",
+  "name": "Fantasy_Game_Distant_Soft_Rumble_1",
   "tags": [],
   "resourceType": "GMSound",
 }

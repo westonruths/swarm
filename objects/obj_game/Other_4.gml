@@ -6,7 +6,10 @@ if(room == rm_game){
 	//	audio_stop_sound(msc_song);
 	//}
 	
-	//audio_play_sound(msc_song, 2, true);
+	audio_sound_gain(_07_IMAscore_DustyTavern_LOOP, 0,1000)
+	audio_sound_gain(_02_IMAscore_PeacefulKingdom_LOOP, 0,0)
+	audio_sound_gain(_02_IMAscore_PeacefulKingdom_LOOP, 0.5,10000)
+	audio_play_sound(_02_IMAscore_PeacefulKingdom_LOOP, 1, true);
 	
 	//setup map
 	global.top_game = global.grid_resolution * 2;
@@ -24,4 +27,9 @@ if(room == rm_game){
 	with (obj_mtn_wall) {
 		render_mtn_wall()
 	}
+} else {
+	with instance_create_depth(0,0, -9999, obj_fade) { image_blend = c_black }
+	audio_sound_gain(_07_IMAscore_DustyTavern_LOOP, 0,0)
+	audio_sound_gain(_07_IMAscore_DustyTavern_LOOP, 0.7,5000)
+	audio_play_sound(_07_IMAscore_DustyTavern_LOOP, 1, true);
 }

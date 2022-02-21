@@ -10,3 +10,9 @@ text = "Quests"
 
 dragging = false
 drag_y = 0
+
+if(audio_is_playing(snd_book_page)){
+	audio_stop_sound(snd_book_page);
+}
+	
+audio_play_sound(snd_book_page, 1, false);

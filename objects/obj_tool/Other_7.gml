@@ -2,7 +2,7 @@
 // You can write your code in this editor
 switch(sprite_index){
 	case spr_chop:
-		var _snd = choose(snd_Chop_Wood_A, snd_Chop_Wood_C)
+		var _snd = choose(snd_chop_woodA, snd_chop_woodB)
 		if instance_exists(pawn.fell_target) {
 			if pawn.fell_target.object_index != obj_tree {
 				_snd = choose(snd_Gather_Herb_A, snd_Gather_Herb_B, snd_Gather_Herb_C)
