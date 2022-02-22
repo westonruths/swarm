@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "tools",
-    "path": "folders/Objects/characters/tools.yy",
+    "name": "characters",
+    "path": "folders/Objects/characters.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_tool",

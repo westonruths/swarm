@@ -16,11 +16,14 @@ if (hp <= 0) {
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
 
-if mp_grid_path(global.grid, path, x, y, targetX, targetY, false)  {
-	path_start(path, spd, path_action_stop, true)
+if mp_grid_path(global.enemy_grid, path, x, y, targetX, targetY, true)  {
+	path_start(path, spd, path_action_stop, false)
+} else {
+	image_index = 0
 }
 
 if path_position == 1 {
 	image_index = 0
 }
+
 

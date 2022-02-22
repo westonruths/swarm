@@ -14,8 +14,8 @@
   "soundFile": "snd_blade_hit.wav",
   "duration": 0.858231,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "combat",
+    "path": "folders/Sounds/combat.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_blade_hit",

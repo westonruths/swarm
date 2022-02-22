@@ -48,3 +48,5 @@ with (techs) {
 }
 
 with (obj_close_tech_detail) { alarm[0] = 1 }
+
+audio_play_sound(Fantasy_Game_Action_Rune_A, 10, false);

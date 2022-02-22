@@ -14,8 +14,8 @@
   "soundFile": "snd_blade_miss.wav",
   "duration": 0.984989,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "combat",
+    "path": "folders/Sounds/combat.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_blade_miss",

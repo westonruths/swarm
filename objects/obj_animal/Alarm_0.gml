@@ -3,4 +3,4 @@
 spd = 1;
 move_to_random_point()
 
-alarm[0] = irandom_range(50, 150)
+alarm[0] = irandom_range(50, 300)

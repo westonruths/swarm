@@ -78,7 +78,7 @@ function make_new_game(){
 			if (place_object > 100 && place_object < 110) {
 				with (cell) {
 					if !instance_exists(build_obj) {
-						instance_create_layer(j, i, "Instances", obj_bull)
+						instance_create_layer(j, i, "Instances", obj_bunny)
 					}
 				}
 			}

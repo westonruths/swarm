@@ -18,3 +18,9 @@ if global.menu_open {
 with pawn {
 	alarm[0] = 1
 }
+
+if(audio_is_playing(Fantasy_Game_Gear_Inventory_UI_3)){
+	audio_stop_sound(Fantasy_Game_Gear_Inventory_UI_3);
+}
+	
+audio_play_sound(Fantasy_Game_Gear_Inventory_UI_3, 1, false);

@@ -51,13 +51,15 @@ switch(sprite_index){
 		   //print(pawn.name, " lands a strike, dealing ", damage, " damage!")
 		   with(pawn.defend_target) {
 				hp -= damage
-				audio_sound_pitch(snd_blade_hit, choose(0.9,1.0,1.1))
-				audio_play_sound_at(snd_blade_hit, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
+				var _snd = choose(snd_blade_hit, snd_Cloth_Armor_Hit_A, snd_Cloth_Armor_Hit_B)
+				audio_sound_pitch(_snd, choose(0.9,1.0,1.1))
+				audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
 		   }
 		}else{
 		    //Unsuccessful attack
-			//print(pawn.name, " misses!")
-			audio_play_sound_at(snd_blade_miss, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
+			var _snd = choose(snd_blade_miss, snd_Cloth_Armor_Hit_A, snd_Cloth_Armor_Hit_B)
+			audio_sound_pitch(_snd, choose(0.9,1.0,1.1))
+			audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
 		}
 		break;
 	case spr_mine:
