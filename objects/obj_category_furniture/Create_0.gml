@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-text = "Workstations"
+text = "Furniture"

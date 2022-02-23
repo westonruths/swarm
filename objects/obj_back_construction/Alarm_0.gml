@@ -19,15 +19,19 @@ switch (previous_menu) {
 		with (category) { alarm[0] = 1 }
 		break
 	case "Furniture":
-		category = instance_create_layer(global.build_x, global.build_y+150,"Menu_Objects",obj_category_furniture);
+		category = instance_create_layer(global.build_x, global.build_y+140,"Menu_Objects",obj_category_furniture);
 		with (category) { alarm[0] = 1 }
 		break
 	case "Workstations":
-		category = instance_create_layer(global.build_x, global.build_y+80,"Menu_Objects",obj_category_workstations);
+		category = instance_create_layer(global.build_x, global.build_y+70,"Menu_Objects",obj_category_workstations);
 		with (category) { alarm[0] = 1 }
 		break
 	case "Plants":
-		category = instance_create_layer(global.build_x, global.build_y+220,"Menu_Objects",obj_category_plants);
+		category = instance_create_layer(global.build_x, global.build_y+210,"Menu_Objects",obj_category_plants);
+		with (category) { alarm[0] = 1 }
+		break
+	case "Defenses":
+		category = instance_create_layer(global.build_x, global.build_y+270,"Menu_Objects",obj_category_defenses);
 		with (category) { alarm[0] = 1 }
 		break
 }

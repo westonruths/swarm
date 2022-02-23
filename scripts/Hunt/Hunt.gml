@@ -26,7 +26,7 @@ function Hunt(){
 		with(obj_animal) {
 			var tmp_target = id
 			var chosen = false
-			var spot_free = false
+			var spot_free = true
 			
 			if !selected continue
 			
@@ -36,11 +36,11 @@ function Hunt(){
 				}
 			}
 			
-			with(main_pawn) {
-				spot_free = check_around_free_point(other.x, other.y)
-			}
+			//with(main_pawn) {
+			//	spot_free = check_around_free_point(other.x, other.y)
+			//}
 				
-			if (!chosen && selected && spot_free) {
+			if (!chosen && spot_free) {
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
 					other.hunt_target = id

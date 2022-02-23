@@ -8,13 +8,13 @@ function Doctor(){
 		holding_medicine = true
 	}
 	
-
+	var tmp_patient = noone
 	//Identify targets
 	with(obj_pawn) {
 		if sprite_index != spr_pawn_patient { continue }
 		
 		var max_dist_patient = 9999
-		var tmp_patient = self.id
+		tmp_patient = self.id
 		if !holding_medicine && !instance_place(x, y, obj_healing_herb) {
 			//If pawn is injured and we aren't holding medicine, then target medicine to carry there
 			var max_dist  = 9999
@@ -94,8 +94,13 @@ function Doctor(){
 			with(main_pawn) {
 				var dist = distance_to_object(other)
 				if spot_free && (dist < max_dist_patient) && !chosen{
-					sprite_index = spr_pawn_carry
-					current_task = "Hauling to patient"
+					if instance_exists(medicine_holding) {
+						sprite_index = spr_pawn_carry
+						current_task = "Hauling to patient"
+					} else {
+						sprite_index = spr_pawn_run
+						current_task = "Heading to patient"
+					}
 					doctor_target = tmp_patient
 					max_dist_patient = dist
 					move_to_around_free_point(other.x, other.y)
@@ -124,4 +129,9 @@ function Doctor(){
 			}
 		} 
 	}
+
+	if !instance_exists(tmp_patient) {
+		medicine_holding = noone
+	}
+
 }

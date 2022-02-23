@@ -20,6 +20,11 @@ view_w_half = camera_get_view_width(cam) * 0.5;
 view_h_half = camera_get_view_height(cam) * 0.5;
 xTo = xstart;
 yTo = ystart;
+xPanTo = -1
+yPanTo = -1
+
+xPrev = -1
+yPrev = -1
 
 default_zoom_width = camera_get_view_width(cam);
 default_zoom_height = camera_get_view_height(cam);

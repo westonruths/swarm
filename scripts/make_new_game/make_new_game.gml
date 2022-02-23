@@ -8,12 +8,12 @@ function make_new_game(){
 	
 	//Identify mountain range
 	mtn_list = []
-	var num_mtns = irandom_range(1,5)
+	var num_mtns = irandom_range(5,10)
 	for (var i = 0; i<num_mtns; i+=1) {
 		var start_x = irandom_range(first_cell_x,global.right_limit)
 		var start_y = irandom_range(first_cell_y,global.bottom_game)
-		var end_x = start_x + irandom_range(5*buffer,20*buffer)
-		var end_y = start_y + irandom_range(5*buffer,20*buffer)
+		var end_x = start_x + irandom_range(5*buffer,10*buffer)
+		var end_y = start_y + irandom_range(5*buffer,10*buffer)
 		start_x = start_x - (start_x mod buffer) + obj_size/2
 		start_y = start_y - (start_y mod buffer) + obj_size/2
 		end_x = end_x - (end_x mod buffer) + obj_size/2

@@ -135,6 +135,8 @@ current_target--
 // Do defend last since it is highest priority
 if (task_cells[0].enabled) {
 	script_execute(task_cells[0].job)
+} else {
+	Hide()	
 }
 current_target--
 // Mood actions
@@ -151,7 +153,7 @@ if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_paw
 		var cell = noone
 		with (obj_cell) {
 			var dist = distance_to_point(other.x, other.y)
-			if  dist < max_dist && !instance_exists(build_obj) {
+			if  dist < max_dist && place_free(x, y) {
 				max_dist = dist
 				cell = id
 			}

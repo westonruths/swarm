@@ -10,11 +10,8 @@ if constructing {exit}
 setup_pawn_menu()
 
 with (obj_camera) {
-	x = other.x+100
-	y = other.y
-	xTo = x
-	yTo = y
-	camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
+	xPanTo = other.x
+	yPanTo = other.y
 }
 
 //print(name)

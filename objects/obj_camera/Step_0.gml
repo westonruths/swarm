@@ -20,31 +20,46 @@ if !move_camera {
 	exit 
 }
 
-pinch_countdown -= 1
-if !device_mouse_check_button(1, mb_left) && pinch_countdown <= 0 {
-	pinch_countdown = 0
+// Pan to event
+if xPanTo > 0 {
+	x += (xPanTo - x) / 2;
+	y += (yPanTo - y) / 2;
 	
-	// start:
-	if (mouse_check_button_pressed(mb_left)) {
-	    drag_x = mouse_x
-	    drag_y = mouse_y
-	}
-	// update:
-	if (mouse_check_button(mb_left)) {
-	    // actual dragging logic:
-	    xTo = drag_x - (mouse_x - x)
-	    yTo = drag_y - (mouse_y - y)
-	}
-	
-	if abs((xTo - x) / 1) > 2 && abs((yTo - y) / 1) > 2 {
-		with(obj_close_info) { alarm[0] = 1 }
-	}
-	
-	x += (xTo - x) / 1;
-	y += (yTo - y) / 1;
-	
+	xTo = x
+	yTo = y
 
-} 
+	if abs(xprevious - x) == xPrev && abs(yprevious - y) == yPrev {
+		xPanTo = -1
+		yPanTo = -1
+	} 
+	
+	xPrev = abs(xprevious - x)
+	yPrev = abs(yprevious - y)
+} else {
+	pinch_countdown -= 1
+	if !device_mouse_check_button(1, mb_left) && pinch_countdown <= 0 {
+		pinch_countdown = 0
+	
+		// start:
+		if (mouse_check_button_pressed(mb_left)) {
+		    drag_x = mouse_x
+		    drag_y = mouse_y
+		}
+		// update:
+		if (mouse_check_button(mb_left)) {
+		    // actual dragging logic:
+		    xTo = drag_x - (mouse_x - x)
+		    yTo = drag_y - (mouse_y - y)
+		}
+	
+		if abs((xTo - x) / 1) > 2 && abs((yTo - y) / 1) > 2 {
+			with(obj_close_info) { alarm[0] = 1 }
+		}
+	
+		x += (xTo - x) / 1;
+		y += (yTo - y) / 1;
+	} 
+}
 
 // Update view size
 zoomxTo = default_zoom_width * global.zoom_level;

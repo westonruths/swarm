@@ -52,8 +52,19 @@ techpoints[i] = 1
 techstatus[i] = 0
 techneeds[i,0] = 1
 techquest[i] = [quest.build_beds]
-techx[i] = techx[1]+lengthdir_x(70, 0)
-techy[i] = techy[1]+lengthdir_y(70, 0)
+techx[i] = techx[1]+lengthdir_x(85, 35)
+techy[i] = techy[1]+lengthdir_y(85, 35)
+
+i = 5
+techname[i] = "Defenses"
+techdetail[i] = "Unlocks defensive and hiding positions"
+techsprite[i] = spr_shield
+techpoints[i] = 2
+techstatus[i] = 0
+techneeds[i,0] = 1
+techquest[i] = []
+techx[i] = techx[1]+lengthdir_x(85, 325)
+techy[i] = techy[1]+lengthdir_y(85, 325)
 
 //techname[3] = "tech1.1"
 //techimage[3] = 2
