@@ -27,7 +27,7 @@ global.menu_open = true
 
 instance_create_layer(global.view_width-25,y+15,"Menu_Btns",obj_close_info);
 
-//var action_btn = instance_create_layer(x+10,y+70,"Menu_Btns",obj_info_action);
-//with (action_btn) {
-//	text = other.selection.action_text
-//}
+var action_btn = instance_create_layer(x+150,y+70,"Menu_Btns",obj_info_action);
+with (action_btn) {
+	selection = other.selection
+}

@@ -31,11 +31,11 @@ function goblin_attack(){
 			var tmp_target = id
 			var chosen = false
 			
-			with(obj_goblin) {
-				if (hunt_target == tmp_target) {
-					chosen = true;
-				}
-			}
+			//with(obj_goblin) {
+			//	if (hunt_target == tmp_target) {
+			//		chosen = true;
+			//	}
+			//}
 				
 			if (!chosen && hp > 0) {
 				var dist = distance_to_object(other)

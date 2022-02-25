@@ -29,9 +29,11 @@ function make_new_game(){
 	instance_create_layer(first_cell_x,first_cell_y+buffer*2,"Instances",obj_pawn);
 	
 	//make starting meals
-	instance_create_layer(first_cell_x,first_cell_y,"Items",obj_meal);
-	instance_create_layer(first_cell_x,first_cell_y+buffer,"Items",obj_meal);
-	instance_create_layer(first_cell_x,first_cell_y+buffer*2,"Items",obj_meal);
+	repeat(3) {
+		instance_create_layer(first_cell_x,first_cell_y,"Items",obj_meal);
+		instance_create_layer(first_cell_x,first_cell_y+buffer,"Items",obj_meal);
+		instance_create_layer(first_cell_x,first_cell_y+buffer*2,"Items",obj_meal);
+	}
 	
 	//make starting medicines
 	instance_create_layer(first_cell_x-buffer,first_cell_y,"Items",obj_healing_herb);
@@ -53,7 +55,7 @@ function make_new_game(){
 				
 				if j >= start_x && j <= end_x && i >= start_y && i <= end_y {
 					with (cell) {
-						if instance_position(x, y, obj_pawn) == noone {
+						if instance_position(x, y, obj_pawn) == noone && !instance_exists(build_obj) {
 							build_obj = instance_create_layer(x,y,"Buildings",obj_mtn_wall);
 						}
 					}	
@@ -84,11 +86,22 @@ function make_new_game(){
 			}
 
 			//place healing herbs
-			if (place_object > 110 && place_object < 180) {
+			if (place_object > 110 && place_object < 150) {
 				with (cell) {
 					if !instance_exists(build_obj) {
 						if instance_position(x, y, obj_pawn) == noone {
 							build_obj = instance_create_layer(x,y,"Buildings",obj_herb_plant);
+						}
+					}
+				}
+			} 
+	
+			//place berry bushes
+			if (place_object > 150 && place_object < 200) {
+				with (cell) {
+					if !instance_exists(build_obj) {
+						if instance_position(x, y, obj_pawn) == noone {
+							build_obj = instance_create_layer(x,y,"Buildings",obj_berry_bush);
 						}
 					}
 				}

@@ -4,7 +4,19 @@
 image_index = tool.image_index
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
 
+with(tool){
+	x = other.x;
+	y = other.y;
+}
+
+with (hair) {
+	x = other.x
+	y = other.y
+}
+
 draw_self();
+
+if hp <= 0 { exit }
 
 //var ch = (hp / hp_max) * 100;
 //var cf = (char_food / char_food_max) * 100;
@@ -64,13 +76,3 @@ if menu_open {
 //	draw_set_color(c_white)
 //	draw_path(path, x, y, 1);
 //}
-
-with(tool){
-	x = other.x;
-	y = other.y;
-}
-
-with (hair) {
-	x = other.x
-	y = other.y
-}

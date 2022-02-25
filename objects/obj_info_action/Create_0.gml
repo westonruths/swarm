@@ -7,6 +7,12 @@ event_inherited();
 image_xscale = 7
 image_yscale = 4
 
-toggle_on = false
+selection = noone
 
 text = ""
+
+with (obj_info_action) { 
+	if other.id != id {
+		instance_destroy() 
+	}
+}

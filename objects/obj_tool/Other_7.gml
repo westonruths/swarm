@@ -106,10 +106,8 @@ switch(sprite_index){
 		with (pawn.cooking_target) { 
 			dmg = pawn_dmg
 			alarm[0] = 1 
-		}
-		with (pawn) {
-			if !instance_exists(cooking_target.item_cooking) {
-				cooking_target = noone
+			if !instance_exists(item_cooking) {
+				other.cooking_target = noone
 			}
 		}
 		break;
@@ -140,7 +138,7 @@ switch(sprite_index){
 		break;
 	case spr_sleep:
 		with (pawn) {
-			char_energy += 5
+			char_energy += 3
 		}
 		break;
 	case spr_patient:

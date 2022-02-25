@@ -45,7 +45,8 @@ with (hair) {
 }
 
 // The active weapon being employed
-active_wpn = instance_create_layer(x,y,"Items",obj_wpn)
+active_wpn = noone
+//active_wpn = instance_create_layer(x,y,"Items",obj_wpn)
 
 // The primary enemy engagement weapon
 equipped_wpn = 1;

@@ -3,7 +3,7 @@
     "name": "spr_herb_plant",
     "path": "sprites/spr_herb_plant/spr_herb_plant.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

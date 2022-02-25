@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 with (obj_storyteller_prompt) {
-	script_execute(storyteller_script)
+	if storyteller_script != noone {
+		script_execute(storyteller_script)
+	}
 	
 	instance_destroy()
 }

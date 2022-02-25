@@ -1,7 +1,7 @@
 // Logic to cut down trees
 function Mood() {
 	
-	if (mood.mood >= 20) || mood.thoughtactive[mood_thoughts.catharsis] == 1 {
+	if (mood.mood >= 20) || mood.thoughtactive[mood_thoughts.catharsis] == 1 || instance_exists(defend_target) {
 		exit
 	}
 	

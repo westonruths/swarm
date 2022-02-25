@@ -6,6 +6,7 @@ event_inherited();
 
 obj_sprite = spr_cancel_circle
 
-name = "Deconstruct"
-detail = "Cancel construction or select a structure to deconstruct"
+name = "Cancel Task"
+detail = "Cancel any task or set a building for deconstruction"
 
+with(obj_taskremove_btn) { instance_destroy() }
