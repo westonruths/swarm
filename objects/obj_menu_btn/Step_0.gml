@@ -16,9 +16,9 @@ event_inherited();
 if hide_buttons {
 	with obj_ui_task {
 		direction = point_direction(x,y, other.x, other.y)	
-		speed = 5
+		speed = 7
 		
-		if point_distance(x, y, other.x, other.y) < 3 {
+		if point_distance(x, y, other.x, other.y) < 4 {
 			visible = false
 			speed = 0
 		}
@@ -28,10 +28,10 @@ if hide_buttons {
 		if selected { exit }
 		
 		direction = point_direction(x,y, xstart, ystart)	
-		speed = 5
+		speed = 7
 		visible = true
 		
-		if point_distance(x, y, xstart , ystart) < 3 {
+		if point_distance(x, y, xstart , ystart) < 4 {
 			speed = 0
 		}
 	}

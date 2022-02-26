@@ -50,10 +50,12 @@ if xPanTo > 0 {
 		    // actual dragging logic:
 		    xTo = drag_x - (mouse_x - x)
 		    yTo = drag_y - (mouse_y - y)
+			
 		}
 	
 		if abs((xTo - x) / 1) > 2 && abs((yTo - y) / 1) > 2 {
 			with(obj_close_info) { alarm[0] = 1 }
+			with (obj_menu_btn) { hide_buttons = true }
 		}
 	
 		x += (xTo - x) / 1;
