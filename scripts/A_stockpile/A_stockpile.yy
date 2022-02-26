@@ -6,7 +6,7 @@
     "path": "folders/Scripts/storyteller/tutorial.yy",
   },
   "resourceVersion": "1.0",
-  "name": "A_time_controls",
+  "name": "A_stockpile",
   "tags": [],
   "resourceType": "GMScript",
 }

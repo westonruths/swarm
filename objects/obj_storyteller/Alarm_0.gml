@@ -3,23 +3,6 @@
 
 if instance_exists(obj_storyteller_prompt) exit
 
-#region Tutorial
-if (tutorial_counter_hrs == 0) {
-	var prompt = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_storyteller_prompt);
-	with (prompt) {
-		instance_create_layer(365, 256, "Menu_Prompt_Btns",obj_accept_storyteller);
-		
-		title = "Arrival"
-		detail = "Your settlers arrive on the outskirts of a new land. \nIt's time to begin anew... \n \nLet's run through a quick tutorial."
-		prompt_sprite = noone
-		storyteller_script = A_time_controls
-	}		
-	
-	tutorial_counter_hrs = -1
-}
-
-#endregion
-
 #region Goblin Raid
 raid_counter_hrs -= 1
 

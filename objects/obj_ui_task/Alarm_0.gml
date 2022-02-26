@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+with(obj_menu_btn) {
+	if hide_buttons { exit }
+}
+
 if selected || global.menu_open {exit}
 
 with (obj_info_item) {

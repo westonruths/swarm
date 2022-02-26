@@ -1,6 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function make_new_game(){
+	
+	instance_create_layer(0, 0, "Menu_Prompts", obj_tutorial)
+	
+	
 	obj_size = sprite_get_width(spr_cell);
 	buffer = global.grid_resolution
 	first_cell_y = global.top_game + obj_size/2;

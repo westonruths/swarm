@@ -18,3 +18,12 @@ help_text = ""
 
 originalX = x
 originalY = y
+
+with (obj_menu_btn) {
+	if variable_instance_exists(id, "hide_buttons") {
+		if hide_buttons {
+			other.x = x
+			other.y = y
+		}
+	}
+}

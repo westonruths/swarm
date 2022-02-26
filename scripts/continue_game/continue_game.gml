@@ -19,8 +19,4 @@ function continue_game(){
 		alarm[1] = 1	
 	}
 	
-	with (obj_storyteller) {
-		tutorial_counter_hrs = -1	
-	}
-	
 }

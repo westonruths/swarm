@@ -7,8 +7,8 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 15,
+  "bbox_left": 1,
+  "bbox_right": 14,
   "bbox_top": 0,
   "bbox_bottom": 15,
   "HTile": false,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7a3ad05e-3cf5-44f2-8fa9-f99f663d23be","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7a3ad05e-3cf5-44f2-8fa9-f99f663d23be","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"LayerId":{"name":"f8e1b770-1efa-472c-8aa6-80ad90800398","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_healing_herbs","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"resourceVersion":"1.0","name":"7a3ad05e-3cf5-44f2-8fa9-f99f663d23be","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7910721a-3f06-4991-a603-a637bde3fb3c","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7910721a-3f06-4991-a603-a637bde3fb3c","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"LayerId":{"name":"adecfbf3-773c-4f62-bb13-83b4c8fc56a2","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_healing_herbs","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"resourceVersion":"1.0","name":"7910721a-3f06-4991-a603-a637bde3fb3c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_healing_herbs","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4b2f814b-3806-49df-8c57-51efc6875c75","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7a3ad05e-3cf5-44f2-8fa9-f99f663d23be","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f6420c52-a66d-4ac3-9d9f-0be5f6e80eb4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7910721a-3f06-4991-a603-a637bde3fb3c","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f8e1b770-1efa-472c-8aa6-80ad90800398","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"adecfbf3-773c-4f62-bb13-83b4c8fc56a2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
