@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"expression_chat","path":"sprites/expression_chat/expression_chat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "expression_chat",
     "tags": [],
     "resourceType": "GMSequence",

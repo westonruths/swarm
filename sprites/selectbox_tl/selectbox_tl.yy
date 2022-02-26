@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"selectbox_tl","path":"sprites/selectbox_tl/selectbox_tl.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "selectbox_tl",
     "tags": [],
     "resourceType": "GMSequence",

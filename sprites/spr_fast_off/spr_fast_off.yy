@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fast_off","path":"sprites/spr_fast_off/spr_fast_off.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fast_off",
     "tags": [],
     "resourceType": "GMSequence",

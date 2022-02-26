@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_hurt","path":"sprites/spikeyhair_hurt/spikeyhair_hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_hurt",
     "tags": [],
     "resourceType": "GMSequence",

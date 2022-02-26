@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_carry","path":"sprites/curlyhair_carry/curlyhair_carry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_carry",
     "tags": [],
     "resourceType": "GMSequence",

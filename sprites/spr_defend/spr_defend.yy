@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_defend","path":"sprites/spr_defend/spr_defend.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_defend",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_hurt","path":"sprites/spr_pawn_hurt/spr_pawn_hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_hurt",
     "tags": [],
     "resourceType": "GMSequence",

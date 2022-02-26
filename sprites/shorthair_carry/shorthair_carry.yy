@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_carry","path":"sprites/shorthair_carry/shorthair_carry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_carry",
     "tags": [],
     "resourceType": "GMSequence",

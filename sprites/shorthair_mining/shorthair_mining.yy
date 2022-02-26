@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_mining","path":"sprites/shorthair_mining/shorthair_mining.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_mining",
     "tags": [],
     "resourceType": "GMSequence",

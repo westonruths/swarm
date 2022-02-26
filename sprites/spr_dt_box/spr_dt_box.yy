@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_dt_box","path":"sprites/spr_dt_box/spr_dt_box.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_dt_box",
     "tags": [],
     "resourceType": "GMSequence",

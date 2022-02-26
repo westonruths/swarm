@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_carry","path":"sprites/longhair_carry/longhair_carry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_carry",
     "tags": [],
     "resourceType": "GMSequence",

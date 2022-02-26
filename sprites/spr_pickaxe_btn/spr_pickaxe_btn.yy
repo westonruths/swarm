@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pickaxe_btn","path":"sprites/spr_pickaxe_btn/spr_pickaxe_btn.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pickaxe_btn",
     "tags": [],
     "resourceType": "GMSequence",

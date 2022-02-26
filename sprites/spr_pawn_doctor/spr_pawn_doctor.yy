@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_doctor","path":"sprites/spr_pawn_doctor/spr_pawn_doctor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_doctor",
     "tags": [],
     "resourceType": "GMSequence",

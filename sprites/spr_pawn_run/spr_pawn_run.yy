@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_run","path":"sprites/spr_pawn_run/spr_pawn_run.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_run",
     "tags": [],
     "resourceType": "GMSequence",

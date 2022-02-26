@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_carry","path":"sprites/mophair_carry/mophair_carry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_carry",
     "tags": [],
     "resourceType": "GMSequence",

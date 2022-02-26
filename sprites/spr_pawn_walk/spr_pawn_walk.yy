@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_walk","path":"sprites/spr_pawn_walk/spr_pawn_walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_walk",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_run","path":"sprites/shorthair_run/shorthair_run.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_run",
     "tags": [],
     "resourceType": "GMSequence",

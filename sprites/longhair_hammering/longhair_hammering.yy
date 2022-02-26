@@ -147,7 +147,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_hammering","path":"sprites/longhair_hammering/longhair_hammering.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_hammering",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_debri","path":"sprites/spr_debri/spr_debri.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_debri",
     "tags": [],
     "resourceType": "GMSequence",

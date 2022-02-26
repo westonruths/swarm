@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_moody","path":"sprites/shorthair_moody/shorthair_moody.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_moody",
     "tags": [],
     "resourceType": "GMSequence",

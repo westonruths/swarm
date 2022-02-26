@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawns_menu_btn","path":"sprites/spr_pawns_menu_btn/spr_pawns_menu_btn.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawns_menu_btn",
     "tags": [],
     "resourceType": "GMSequence",

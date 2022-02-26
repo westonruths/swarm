@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_digging","path":"sprites/spr_digging/spr_digging.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_digging",
     "tags": [],
     "resourceType": "GMSequence",

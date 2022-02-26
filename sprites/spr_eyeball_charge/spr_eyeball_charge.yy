@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_eyeball_charge","path":"sprites/spr_eyeball_charge/spr_eyeball_charge.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_eyeball_charge",
     "tags": [],
     "resourceType": "GMSequence",

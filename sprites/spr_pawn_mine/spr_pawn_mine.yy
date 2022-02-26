@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_mine","path":"sprites/spr_pawn_mine/spr_pawn_mine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_mine",
     "tags": [],
     "resourceType": "GMSequence",

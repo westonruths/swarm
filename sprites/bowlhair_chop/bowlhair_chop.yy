@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_chop","path":"sprites/bowlhair_chop/bowlhair_chop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_chop",
     "tags": [],
     "resourceType": "GMSequence",

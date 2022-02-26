@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"expression_alerted","path":"sprites/expression_alerted/expression_alerted.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "expression_alerted",
     "tags": [],
     "resourceType": "GMSequence",

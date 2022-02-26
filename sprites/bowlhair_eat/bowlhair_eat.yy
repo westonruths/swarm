@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_eat","path":"sprites/bowlhair_eat/bowlhair_eat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_eat",
     "tags": [],
     "resourceType": "GMSequence",

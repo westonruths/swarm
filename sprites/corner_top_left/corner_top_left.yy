@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"corner_top_left","path":"sprites/corner_top_left/corner_top_left.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "corner_top_left",
     "tags": [],
     "resourceType": "GMSequence",

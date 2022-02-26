@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_hunt","path":"sprites/spikeyhair_hunt/spikeyhair_hunt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_hunt",
     "tags": [],
     "resourceType": "GMSequence",

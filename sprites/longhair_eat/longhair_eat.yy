@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_eat","path":"sprites/longhair_eat/longhair_eat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_eat",
     "tags": [],
     "resourceType": "GMSequence",

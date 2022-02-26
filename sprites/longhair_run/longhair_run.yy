@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_run","path":"sprites/longhair_run/longhair_run.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_run",
     "tags": [],
     "resourceType": "GMSequence",

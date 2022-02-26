@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_dead","path":"sprites/shorthair_dead/shorthair_dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_dead",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_walk","path":"sprites/shorthair_walk/shorthair_walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_walk",
     "tags": [],
     "resourceType": "GMSequence",

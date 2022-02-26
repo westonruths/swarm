@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_eat","path":"sprites/curlyhair_eat/curlyhair_eat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_eat",
     "tags": [],
     "resourceType": "GMSequence",

@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_hunt","path":"sprites/curlyhair_hunt/curlyhair_hunt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_hunt",
     "tags": [],
     "resourceType": "GMSequence",

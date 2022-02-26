@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_defend","path":"sprites/longhair_defend/longhair_defend.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_defend",
     "tags": [],
     "resourceType": "GMSequence",

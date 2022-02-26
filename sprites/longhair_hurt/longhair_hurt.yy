@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_hurt","path":"sprites/longhair_hurt/longhair_hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_hurt",
     "tags": [],
     "resourceType": "GMSequence",

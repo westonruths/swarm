@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_cooking","path":"sprites/mophair_cooking/mophair_cooking.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_cooking",
     "tags": [],
     "resourceType": "GMSequence",

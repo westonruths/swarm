@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_idle","path":"sprites/curlyhair_idle/curlyhair_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_idle",
     "tags": [],
     "resourceType": "GMSequence",

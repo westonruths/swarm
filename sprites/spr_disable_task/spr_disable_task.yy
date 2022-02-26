@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_disable_task","path":"sprites/spr_disable_task/spr_disable_task.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_disable_task",
     "tags": [],
     "resourceType": "GMSequence",

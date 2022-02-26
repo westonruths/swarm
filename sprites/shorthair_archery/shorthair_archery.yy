@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_archery","path":"sprites/shorthair_archery/shorthair_archery.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_archery",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_archery","path":"sprites/spr_pawn_archery/spr_pawn_archery.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_archery",
     "tags": [],
     "resourceType": "GMSequence",

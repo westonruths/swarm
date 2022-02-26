@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_walk","path":"sprites/curlyhair_walk/curlyhair_walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_walk",
     "tags": [],
     "resourceType": "GMSequence",

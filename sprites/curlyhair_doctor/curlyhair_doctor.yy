@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_doctor","path":"sprites/curlyhair_doctor/curlyhair_doctor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_doctor",
     "tags": [],
     "resourceType": "GMSequence",

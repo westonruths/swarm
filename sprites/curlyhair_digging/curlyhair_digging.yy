@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_digging","path":"sprites/curlyhair_digging/curlyhair_digging.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_digging",
     "tags": [],
     "resourceType": "GMSequence",

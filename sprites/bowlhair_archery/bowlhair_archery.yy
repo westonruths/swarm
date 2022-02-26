@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_archery","path":"sprites/bowlhair_archery/bowlhair_archery.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_archery",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_shadow_plant","path":"sprites/spr_shadow_plant/spr_shadow_plant.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_shadow_plant",
     "tags": [],
     "resourceType": "GMSequence",

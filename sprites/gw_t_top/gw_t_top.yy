@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"gw_t_top","path":"sprites/gw_t_top/gw_t_top.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "gw_t_top",
     "tags": [],
     "resourceType": "GMSequence",

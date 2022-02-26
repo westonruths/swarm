@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_tech_point_crystal","path":"sprites/spr_tech_point_crystal/spr_tech_point_crystal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_tech_point_crystal",
     "tags": [],
     "resourceType": "GMSequence",

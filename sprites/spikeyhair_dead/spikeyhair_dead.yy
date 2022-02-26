@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_dead","path":"sprites/spikeyhair_dead/spikeyhair_dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_dead",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_eat","path":"sprites/shorthair_eat/shorthair_eat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_eat",
     "tags": [],
     "resourceType": "GMSequence",

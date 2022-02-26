@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_meal","path":"sprites/spr_meal/spr_meal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_meal",
     "tags": [],
     "resourceType": "GMSequence",

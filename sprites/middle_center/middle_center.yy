@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"middle_center","path":"sprites/middle_center/middle_center.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "middle_center",
     "tags": [],
     "resourceType": "GMSequence",

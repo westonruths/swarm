@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_dead","path":"sprites/curlyhair_dead/curlyhair_dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_dead",
     "tags": [],
     "resourceType": "GMSequence",

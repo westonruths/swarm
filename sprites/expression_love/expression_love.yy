@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"expression_love","path":"sprites/expression_love/expression_love.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "expression_love",
     "tags": [],
     "resourceType": "GMSequence",

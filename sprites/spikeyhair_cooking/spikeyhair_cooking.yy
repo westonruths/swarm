@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_cooking","path":"sprites/spikeyhair_cooking/spikeyhair_cooking.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_cooking",
     "tags": [],
     "resourceType": "GMSequence",

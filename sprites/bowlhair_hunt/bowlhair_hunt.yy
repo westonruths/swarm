@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_hunt","path":"sprites/bowlhair_hunt/bowlhair_hunt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_hunt",
     "tags": [],
     "resourceType": "GMSequence",

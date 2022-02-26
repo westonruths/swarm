@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_patient","path":"sprites/bowlhair_patient/bowlhair_patient.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_patient",
     "tags": [],
     "resourceType": "GMSequence",

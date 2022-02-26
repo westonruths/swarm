@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_patient","path":"sprites/spr_patient/spr_patient.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_patient",
     "tags": [],
     "resourceType": "GMSequence",

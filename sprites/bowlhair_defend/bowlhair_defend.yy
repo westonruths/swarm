@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_defend","path":"sprites/bowlhair_defend/bowlhair_defend.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_defend",
     "tags": [],
     "resourceType": "GMSequence",

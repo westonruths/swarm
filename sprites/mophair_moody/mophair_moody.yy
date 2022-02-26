@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_moody","path":"sprites/mophair_moody/mophair_moody.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_moody",
     "tags": [],
     "resourceType": "GMSequence",

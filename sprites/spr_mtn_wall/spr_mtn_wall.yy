@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_mtn_wall","path":"sprites/spr_mtn_wall/spr_mtn_wall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_mtn_wall",
     "tags": [],
     "resourceType": "GMSequence",

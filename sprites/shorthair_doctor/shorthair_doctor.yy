@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_doctor","path":"sprites/shorthair_doctor/shorthair_doctor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_doctor",
     "tags": [],
     "resourceType": "GMSequence",

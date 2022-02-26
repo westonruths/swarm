@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_hunt","path":"sprites/longhair_hunt/longhair_hunt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_hunt",
     "tags": [],
     "resourceType": "GMSequence",

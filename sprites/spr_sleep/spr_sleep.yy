@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_sleep","path":"sprites/spr_sleep/spr_sleep.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_sleep",
     "tags": [],
     "resourceType": "GMSequence",

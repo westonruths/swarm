@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_sleep","path":"sprites/longhair_sleep/longhair_sleep.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_sleep",
     "tags": [],
     "resourceType": "GMSequence",

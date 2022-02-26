@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_chop","path":"sprites/spr_pawn_chop/spr_pawn_chop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_chop",
     "tags": [],
     "resourceType": "GMSequence",

@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_digging","path":"sprites/mophair_digging/mophair_digging.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_digging",
     "tags": [],
     "resourceType": "GMSequence",

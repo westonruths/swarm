@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_sunnyside_test","path":"sprites/spr_sunnyside_test/spr_sunnyside_test.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_sunnyside_test",
     "tags": [],
     "resourceType": "GMSequence",

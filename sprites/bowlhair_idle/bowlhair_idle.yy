@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_idle","path":"sprites/bowlhair_idle/bowlhair_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_idle",
     "tags": [],
     "resourceType": "GMSequence",

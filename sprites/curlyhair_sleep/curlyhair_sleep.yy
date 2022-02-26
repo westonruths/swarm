@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_sleep","path":"sprites/curlyhair_sleep/curlyhair_sleep.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_sleep",
     "tags": [],
     "resourceType": "GMSequence",

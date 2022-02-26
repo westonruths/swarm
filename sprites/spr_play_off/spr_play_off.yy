@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_play_off","path":"sprites/spr_play_off/spr_play_off.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_play_off",
     "tags": [],
     "resourceType": "GMSequence",

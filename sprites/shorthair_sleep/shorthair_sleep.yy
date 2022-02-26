@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_sleep","path":"sprites/shorthair_sleep/shorthair_sleep.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_sleep",
     "tags": [],
     "resourceType": "GMSequence",

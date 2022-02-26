@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_carry","path":"sprites/spr_pawn_carry/spr_pawn_carry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_carry",
     "tags": [],
     "resourceType": "GMSequence",

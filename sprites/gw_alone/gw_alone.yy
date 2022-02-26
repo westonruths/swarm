@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"gw_alone","path":"sprites/gw_alone/gw_alone.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "gw_alone",
     "tags": [],
     "resourceType": "GMSequence",

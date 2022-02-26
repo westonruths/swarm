@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_sleep_icon","path":"sprites/spr_sleep_icon/spr_sleep_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_sleep_icon",
     "tags": [],
     "resourceType": "GMSequence",

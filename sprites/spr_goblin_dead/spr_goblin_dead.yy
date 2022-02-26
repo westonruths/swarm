@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_goblin_dead","path":"sprites/spr_goblin_dead/spr_goblin_dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_goblin_dead",
     "tags": [],
     "resourceType": "GMSequence",

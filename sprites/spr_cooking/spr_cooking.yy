@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_cooking","path":"sprites/spr_cooking/spr_cooking.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_cooking",
     "tags": [],
     "resourceType": "GMSequence",

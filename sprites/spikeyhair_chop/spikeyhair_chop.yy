@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_chop","path":"sprites/spikeyhair_chop/spikeyhair_chop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_chop",
     "tags": [],
     "resourceType": "GMSequence",

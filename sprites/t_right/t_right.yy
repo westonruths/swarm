@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"t_right","path":"sprites/t_right/t_right.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "t_right",
     "tags": [],
     "resourceType": "GMSequence",

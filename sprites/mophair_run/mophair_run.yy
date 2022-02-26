@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_run","path":"sprites/mophair_run/mophair_run.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_run",
     "tags": [],
     "resourceType": "GMSequence",

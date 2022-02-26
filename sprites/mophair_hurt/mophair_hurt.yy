@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_hurt","path":"sprites/mophair_hurt/mophair_hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_hurt",
     "tags": [],
     "resourceType": "GMSequence",

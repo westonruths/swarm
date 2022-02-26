@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_confirm","path":"sprites/spr_confirm/spr_confirm.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_confirm",
     "tags": [],
     "resourceType": "GMSequence",

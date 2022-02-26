@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_chop","path":"sprites/mophair_chop/mophair_chop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_chop",
     "tags": [],
     "resourceType": "GMSequence",

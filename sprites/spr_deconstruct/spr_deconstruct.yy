@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_deconstruct","path":"sprites/spr_deconstruct/spr_deconstruct.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_deconstruct",
     "tags": [],
     "resourceType": "GMSequence",

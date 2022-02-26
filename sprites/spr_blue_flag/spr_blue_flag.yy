@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_blue_flag","path":"sprites/spr_blue_flag/spr_blue_flag.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_blue_flag",
     "tags": [],
     "resourceType": "GMSequence",

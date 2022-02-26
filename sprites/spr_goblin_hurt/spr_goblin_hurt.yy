@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_goblin_hurt","path":"sprites/spr_goblin_hurt/spr_goblin_hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_goblin_hurt",
     "tags": [],
     "resourceType": "GMSequence",

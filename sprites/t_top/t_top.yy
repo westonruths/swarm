@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"t_top","path":"sprites/t_top/t_top.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "t_top",
     "tags": [],
     "resourceType": "GMSequence",

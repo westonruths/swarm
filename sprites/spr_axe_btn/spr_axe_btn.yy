@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_axe_btn","path":"sprites/spr_axe_btn/spr_axe_btn.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_axe_btn",
     "tags": [],
     "resourceType": "GMSequence",

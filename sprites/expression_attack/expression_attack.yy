@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"expression_attack","path":"sprites/expression_attack/expression_attack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "expression_attack",
     "tags": [],
     "resourceType": "GMSequence",

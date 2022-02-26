@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_patient","path":"sprites/mophair_patient/mophair_patient.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_patient",
     "tags": [],
     "resourceType": "GMSequence",

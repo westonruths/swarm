@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"horizontal_right","path":"sprites/horizontal_right/horizontal_right.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "horizontal_right",
     "tags": [],
     "resourceType": "GMSequence",

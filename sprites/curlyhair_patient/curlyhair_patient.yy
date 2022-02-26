@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_patient","path":"sprites/curlyhair_patient/curlyhair_patient.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_patient",
     "tags": [],
     "resourceType": "GMSequence",

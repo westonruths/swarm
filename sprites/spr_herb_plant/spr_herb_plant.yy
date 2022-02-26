@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_herb_plant","path":"sprites/spr_herb_plant/spr_herb_plant.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_herb_plant",
     "tags": [],
     "resourceType": "GMSequence",

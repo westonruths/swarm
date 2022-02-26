@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_patient","path":"sprites/longhair_patient/longhair_patient.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_patient",
     "tags": [],
     "resourceType": "GMSequence",

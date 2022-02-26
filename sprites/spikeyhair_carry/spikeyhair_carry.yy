@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_carry","path":"sprites/spikeyhair_carry/spikeyhair_carry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_carry",
     "tags": [],
     "resourceType": "GMSequence",

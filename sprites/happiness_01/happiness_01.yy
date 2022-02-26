@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"happiness_01","path":"sprites/happiness_01/happiness_01.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "happiness_01",
     "tags": [],
     "resourceType": "GMSequence",

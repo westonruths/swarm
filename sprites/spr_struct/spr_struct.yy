@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_struct","path":"sprites/spr_struct/spr_struct.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_struct",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_doctor","path":"sprites/spr_doctor/spr_doctor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_doctor",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"gw_horizontal_left","path":"sprites/gw_horizontal_left/gw_horizontal_left.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "gw_horizontal_left",
     "tags": [],
     "resourceType": "GMSequence",

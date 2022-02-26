@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_cancel_circle","path":"sprites/spr_cancel_circle/spr_cancel_circle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_cancel_circle",
     "tags": [],
     "resourceType": "GMSequence",

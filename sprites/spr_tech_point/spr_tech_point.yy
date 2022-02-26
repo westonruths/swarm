@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_tech_point","path":"sprites/spr_tech_point/spr_tech_point.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_tech_point",
     "tags": [],
     "resourceType": "GMSequence",

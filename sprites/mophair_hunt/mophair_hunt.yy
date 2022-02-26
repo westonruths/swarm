@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_hunt","path":"sprites/mophair_hunt/mophair_hunt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_hunt",
     "tags": [],
     "resourceType": "GMSequence",

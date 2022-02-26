@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"playercount","path":"sprites/playercount/playercount.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "playercount",
     "tags": [],
     "resourceType": "GMSequence",

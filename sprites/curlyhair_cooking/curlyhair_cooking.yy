@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_cooking","path":"sprites/curlyhair_cooking/curlyhair_cooking.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_cooking",
     "tags": [],
     "resourceType": "GMSequence",

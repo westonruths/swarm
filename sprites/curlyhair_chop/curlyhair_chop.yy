@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_chop","path":"sprites/curlyhair_chop/curlyhair_chop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_chop",
     "tags": [],
     "resourceType": "GMSequence",

@@ -147,7 +147,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_hammering","path":"sprites/shorthair_hammering/shorthair_hammering.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_hammering",
     "tags": [],
     "resourceType": "GMSequence",

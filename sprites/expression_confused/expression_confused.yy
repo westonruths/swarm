@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"expression_confused","path":"sprites/expression_confused/expression_confused.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "expression_confused",
     "tags": [],
     "resourceType": "GMSequence",

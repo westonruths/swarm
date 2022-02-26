@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_chop","path":"sprites/longhair_chop/longhair_chop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_chop",
     "tags": [],
     "resourceType": "GMSequence",

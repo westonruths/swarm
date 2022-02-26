@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_archery","path":"sprites/mophair_archery/mophair_archery.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_archery",
     "tags": [],
     "resourceType": "GMSequence",

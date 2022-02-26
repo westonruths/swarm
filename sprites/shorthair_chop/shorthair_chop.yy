@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_chop","path":"sprites/shorthair_chop/shorthair_chop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_chop",
     "tags": [],
     "resourceType": "GMSequence",

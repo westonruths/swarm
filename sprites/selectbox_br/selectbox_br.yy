@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"selectbox_br","path":"sprites/selectbox_br/selectbox_br.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "selectbox_br",
     "tags": [],
     "resourceType": "GMSequence",

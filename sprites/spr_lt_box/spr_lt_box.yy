@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_lt_box","path":"sprites/spr_lt_box/spr_lt_box.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_lt_box",
     "tags": [],
     "resourceType": "GMSequence",

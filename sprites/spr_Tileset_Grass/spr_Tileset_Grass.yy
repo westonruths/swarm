@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Tileset_Grass","path":"sprites/spr_Tileset_Grass/spr_Tileset_Grass.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Tileset_Grass",
     "tags": [],
     "resourceType": "GMSequence",

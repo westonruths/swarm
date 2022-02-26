@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_moody","path":"sprites/curlyhair_moody/curlyhair_moody.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_moody",
     "tags": [],
     "resourceType": "GMSequence",

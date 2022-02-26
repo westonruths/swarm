@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_eat","path":"sprites/spr_pawn_eat/spr_pawn_eat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_eat",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_doctor","path":"sprites/longhair_doctor/longhair_doctor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_doctor",
     "tags": [],
     "resourceType": "GMSequence",

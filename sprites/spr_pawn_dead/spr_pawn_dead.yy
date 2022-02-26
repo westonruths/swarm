@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_dead","path":"sprites/spr_pawn_dead/spr_pawn_dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_dead",
     "tags": [],
     "resourceType": "GMSequence",

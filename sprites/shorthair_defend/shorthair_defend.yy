@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_defend","path":"sprites/shorthair_defend/shorthair_defend.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_defend",
     "tags": [],
     "resourceType": "GMSequence",

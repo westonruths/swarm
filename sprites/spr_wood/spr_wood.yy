@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_wood","path":"sprites/spr_wood/spr_wood.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_wood",
     "tags": [],
     "resourceType": "GMSequence",

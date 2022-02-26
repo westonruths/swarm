@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_hurt","path":"sprites/shorthair_hurt/shorthair_hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_hurt",
     "tags": [],
     "resourceType": "GMSequence",

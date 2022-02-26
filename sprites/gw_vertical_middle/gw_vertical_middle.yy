@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"gw_vertical_middle","path":"sprites/gw_vertical_middle/gw_vertical_middle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "gw_vertical_middle",
     "tags": [],
     "resourceType": "GMSequence",

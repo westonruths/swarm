@@ -115,7 +115,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_eyeball_die","path":"sprites/spr_eyeball_die/spr_eyeball_die.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_eyeball_die",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_renown_crystal","path":"sprites/spr_renown_crystal/spr_renown_crystal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_renown_crystal",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_walk","path":"sprites/spikeyhair_walk/spikeyhair_walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_walk",
     "tags": [],
     "resourceType": "GMSequence",

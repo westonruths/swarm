@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_w_box","path":"sprites/spr_w_box/spr_w_box.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_w_box",
     "tags": [],
     "resourceType": "GMSequence",

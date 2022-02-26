@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"hand_open_02","path":"sprites/hand_open_02/hand_open_02.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "hand_open_02",
     "tags": [],
     "resourceType": "GMSequence",

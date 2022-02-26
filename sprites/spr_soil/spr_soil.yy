@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_soil","path":"sprites/spr_soil/spr_soil.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_soil",
     "tags": [],
     "resourceType": "GMSequence",

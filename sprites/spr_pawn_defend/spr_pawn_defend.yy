@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_defend","path":"sprites/spr_pawn_defend/spr_pawn_defend.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_defend",
     "tags": [],
     "resourceType": "GMSequence",

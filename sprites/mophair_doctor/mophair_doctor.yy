@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_doctor","path":"sprites/mophair_doctor/mophair_doctor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_doctor",
     "tags": [],
     "resourceType": "GMSequence",

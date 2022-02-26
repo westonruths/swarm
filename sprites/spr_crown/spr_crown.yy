@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_crown","path":"sprites/spr_crown/spr_crown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_crown",
     "tags": [],
     "resourceType": "GMSequence",

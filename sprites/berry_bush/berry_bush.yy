@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"berry_bush","path":"sprites/berry_bush/berry_bush.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "berry_bush",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"expression_stress","path":"sprites/expression_stress/expression_stress.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "expression_stress",
     "tags": [],
     "resourceType": "GMSequence",

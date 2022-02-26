@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_defend","path":"sprites/curlyhair_defend/curlyhair_defend.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_defend",
     "tags": [],
     "resourceType": "GMSequence",

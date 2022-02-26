@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_idle","path":"sprites/shorthair_idle/shorthair_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_idle",
     "tags": [],
     "resourceType": "GMSequence",

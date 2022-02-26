@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_moody","path":"sprites/spikeyhair_moody/spikeyhair_moody.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_moody",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"gw_t_bottom","path":"sprites/gw_t_bottom/gw_t_bottom.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "gw_t_bottom",
     "tags": [],
     "resourceType": "GMSequence",

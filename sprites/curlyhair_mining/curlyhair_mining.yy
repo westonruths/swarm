@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_mining","path":"sprites/curlyhair_mining/curlyhair_mining.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_mining",
     "tags": [],
     "resourceType": "GMSequence",

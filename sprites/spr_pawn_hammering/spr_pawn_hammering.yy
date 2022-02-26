@@ -147,7 +147,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_hammering","path":"sprites/spr_pawn_hammering/spr_pawn_hammering.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_hammering",
     "tags": [],
     "resourceType": "GMSequence",

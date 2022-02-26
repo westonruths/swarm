@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_patient","path":"sprites/spikeyhair_patient/spikeyhair_patient.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_patient",
     "tags": [],
     "resourceType": "GMSequence",

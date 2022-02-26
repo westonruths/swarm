@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_mining","path":"sprites/mophair_mining/mophair_mining.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_mining",
     "tags": [],
     "resourceType": "GMSequence",

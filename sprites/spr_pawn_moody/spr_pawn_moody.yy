@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_moody","path":"sprites/spr_pawn_moody/spr_pawn_moody.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_moody",
     "tags": [],
     "resourceType": "GMSequence",

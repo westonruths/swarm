@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_healing_herbs","path":"sprites/spr_healing_herbs/spr_healing_herbs.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_healing_herbs",
     "tags": [],
     "resourceType": "GMSequence",

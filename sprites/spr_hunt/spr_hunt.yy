@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_hunt","path":"sprites/spr_hunt/spr_hunt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_hunt",
     "tags": [],
     "resourceType": "GMSequence",

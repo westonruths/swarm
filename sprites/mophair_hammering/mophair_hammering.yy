@@ -147,7 +147,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_hammering","path":"sprites/mophair_hammering/mophair_hammering.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_hammering",
     "tags": [],
     "resourceType": "GMSequence",

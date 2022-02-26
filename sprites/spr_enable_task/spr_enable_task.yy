@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_enable_task","path":"sprites/spr_enable_task/spr_enable_task.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_enable_task",
     "tags": [],
     "resourceType": "GMSequence",

@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_dead","path":"sprites/bowlhair_dead/bowlhair_dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_dead",
     "tags": [],
     "resourceType": "GMSequence",

@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_dead","path":"sprites/longhair_dead/longhair_dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_dead",
     "tags": [],
     "resourceType": "GMSequence",

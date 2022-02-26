@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_archery","path":"sprites/spr_archery/spr_archery.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_archery",
     "tags": [],
     "resourceType": "GMSequence",

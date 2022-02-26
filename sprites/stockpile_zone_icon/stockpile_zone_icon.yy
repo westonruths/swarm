@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"stockpile_zone_icon","path":"sprites/stockpile_zone_icon/stockpile_zone_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "stockpile_zone_icon",
     "tags": [],
     "resourceType": "GMSequence",

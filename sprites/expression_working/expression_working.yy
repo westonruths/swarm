@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"expression_working","path":"sprites/expression_working/expression_working.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "expression_working",
     "tags": [],
     "resourceType": "GMSequence",

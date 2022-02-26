@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_carry","path":"sprites/spr_carry/spr_carry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_carry",
     "tags": [],
     "resourceType": "GMSequence",

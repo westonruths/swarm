@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_wheat_icon","path":"sprites/spr_wheat_icon/spr_wheat_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_wheat_icon",
     "tags": [],
     "resourceType": "GMSequence",

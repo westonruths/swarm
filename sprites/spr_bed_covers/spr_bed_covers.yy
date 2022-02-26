@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bed_covers","path":"sprites/spr_bed_covers/spr_bed_covers.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bed_covers",
     "tags": [],
     "resourceType": "GMSequence",

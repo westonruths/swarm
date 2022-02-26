@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_defend","path":"sprites/spikeyhair_defend/spikeyhair_defend.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_defend",
     "tags": [],
     "resourceType": "GMSequence",

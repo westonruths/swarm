@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_eyeball_attack","path":"sprites/spr_eyeball_attack/spr_eyeball_attack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_eyeball_attack",
     "tags": [],
     "resourceType": "GMSequence",

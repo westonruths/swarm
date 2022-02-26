@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_moody","path":"sprites/bowlhair_moody/bowlhair_moody.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_moody",
     "tags": [],
     "resourceType": "GMSequence",

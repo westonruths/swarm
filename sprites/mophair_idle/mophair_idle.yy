@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_idle","path":"sprites/mophair_idle/mophair_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_idle",
     "tags": [],
     "resourceType": "GMSequence",

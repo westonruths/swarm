@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_idle","path":"sprites/spikeyhair_idle/spikeyhair_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_idle",
     "tags": [],
     "resourceType": "GMSequence",

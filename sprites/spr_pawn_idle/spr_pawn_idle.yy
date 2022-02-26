@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pawn_idle","path":"sprites/spr_pawn_idle/spr_pawn_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pawn_idle",
     "tags": [],
     "resourceType": "GMSequence",

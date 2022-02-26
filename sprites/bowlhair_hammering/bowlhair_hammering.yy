@@ -147,7 +147,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_hammering","path":"sprites/bowlhair_hammering/bowlhair_hammering.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_hammering",
     "tags": [],
     "resourceType": "GMSequence",

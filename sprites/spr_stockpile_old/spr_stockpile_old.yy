@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_stockpile_old","path":"sprites/spr_stockpile_old/spr_stockpile_old.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_stockpile_old",
     "tags": [],
     "resourceType": "GMSequence",

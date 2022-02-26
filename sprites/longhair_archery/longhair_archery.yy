@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_archery","path":"sprites/longhair_archery/longhair_archery.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_archery",
     "tags": [],
     "resourceType": "GMSequence",

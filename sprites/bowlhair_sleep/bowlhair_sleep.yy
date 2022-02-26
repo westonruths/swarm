@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_sleep","path":"sprites/bowlhair_sleep/bowlhair_sleep.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_sleep",
     "tags": [],
     "resourceType": "GMSequence",

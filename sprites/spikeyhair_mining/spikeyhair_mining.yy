@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spikeyhair_mining","path":"sprites/spikeyhair_mining/spikeyhair_mining.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spikeyhair_mining",
     "tags": [],
     "resourceType": "GMSequence",

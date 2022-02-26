@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_archery","path":"sprites/curlyhair_archery/curlyhair_archery.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_archery",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_carry","path":"sprites/bowlhair_carry/bowlhair_carry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_carry",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_trophy_blue","path":"sprites/spr_trophy_blue/spr_trophy_blue.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_trophy_blue",
     "tags": [],
     "resourceType": "GMSequence",

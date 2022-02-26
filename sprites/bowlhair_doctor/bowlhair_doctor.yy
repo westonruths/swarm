@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_doctor","path":"sprites/bowlhair_doctor/bowlhair_doctor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_doctor",
     "tags": [],
     "resourceType": "GMSequence",

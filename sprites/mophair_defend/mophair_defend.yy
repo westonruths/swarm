@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_defend","path":"sprites/mophair_defend/mophair_defend.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_defend",
     "tags": [],
     "resourceType": "GMSequence",

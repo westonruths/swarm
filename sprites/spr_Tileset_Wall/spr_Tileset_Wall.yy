@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Tileset_Wall","path":"sprites/spr_Tileset_Wall/spr_Tileset_Wall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Tileset_Wall",
     "tags": [],
     "resourceType": "GMSequence",

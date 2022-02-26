@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"hammer","path":"sprites/hammer/hammer.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "hammer",
     "tags": [],
     "resourceType": "GMSequence",

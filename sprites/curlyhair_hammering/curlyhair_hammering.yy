@@ -147,7 +147,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"curlyhair_hammering","path":"sprites/curlyhair_hammering/curlyhair_hammering.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "curlyhair_hammering",
     "tags": [],
     "resourceType": "GMSequence",

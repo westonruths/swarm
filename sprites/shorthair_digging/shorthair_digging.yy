@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shorthair_digging","path":"sprites/shorthair_digging/shorthair_digging.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shorthair_digging",
     "tags": [],
     "resourceType": "GMSequence",

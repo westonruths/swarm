@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_digging","path":"sprites/bowlhair_digging/bowlhair_digging.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_digging",
     "tags": [],
     "resourceType": "GMSequence",

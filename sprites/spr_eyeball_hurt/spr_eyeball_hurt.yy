@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_eyeball_hurt","path":"sprites/spr_eyeball_hurt/spr_eyeball_hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_eyeball_hurt",
     "tags": [],
     "resourceType": "GMSequence",

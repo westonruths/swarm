@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"mophair_dead","path":"sprites/mophair_dead/mophair_dead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "mophair_dead",
     "tags": [],
     "resourceType": "GMSequence",

@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_idle","path":"sprites/longhair_idle/longhair_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_idle",
     "tags": [],
     "resourceType": "GMSequence",

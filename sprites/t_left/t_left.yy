@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"t_left","path":"sprites/t_left/t_left.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "t_left",
     "tags": [],
     "resourceType": "GMSequence",

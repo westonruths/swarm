@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fast","path":"sprites/spr_fast/spr_fast.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fast",
     "tags": [],
     "resourceType": "GMSequence",

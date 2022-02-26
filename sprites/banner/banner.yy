@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"banner","path":"sprites/banner/banner.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "banner",
     "tags": [],
     "resourceType": "GMSequence",

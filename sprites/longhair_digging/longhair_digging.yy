@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_digging","path":"sprites/longhair_digging/longhair_digging.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_digging",
     "tags": [],
     "resourceType": "GMSequence",

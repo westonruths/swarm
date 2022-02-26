@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bowlhair_run","path":"sprites/bowlhair_run/bowlhair_run.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bowlhair_run",
     "tags": [],
     "resourceType": "GMSequence",

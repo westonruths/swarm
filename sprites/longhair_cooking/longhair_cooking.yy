@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_cooking","path":"sprites/longhair_cooking/longhair_cooking.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_cooking",
     "tags": [],
     "resourceType": "GMSequence",

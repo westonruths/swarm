@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"longhair_mining","path":"sprites/longhair_mining/longhair_mining.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "longhair_mining",
     "tags": [],
     "resourceType": "GMSequence",
