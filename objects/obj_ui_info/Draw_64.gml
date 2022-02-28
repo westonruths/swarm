@@ -29,10 +29,10 @@ if instance_exists(selection) && instance_exists (obj_close_info) {
 	draw_text_ext(x+48, y+30, detail, 15, sprite_width-50);
 	
 	if selection.object_index == obj_construction {
-		draw_text(x + 48, y+52, "Resources Required:");
+		draw_text(x + 48, y+55, "Resources Required:");
 		
 		var resource_x = 60
-		var resource_y = 70
+		var resource_y = 75
 		draw_set_valign(fa_middle)
 		draw_set_halign(fa_left)
 		if selection.build_cost.original_costs[0] > 0 {

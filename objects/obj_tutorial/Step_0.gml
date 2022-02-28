@@ -535,7 +535,7 @@ switch status {
 		x_indicator = -100
 		y_indicator = -100
 		
-		image_xscale = global.view_width/5/sprite_get_width(spr_lt_box)
+		image_xscale = global.view_width/4/sprite_get_width(spr_lt_box)
 		image_yscale = global.view_width/6/sprite_get_height(spr_lt_box)
 		
 		title = "Build a Room"
@@ -555,8 +555,8 @@ switch status {
 		x_indicator = -100
 		y_indicator = -100
 		
-		image_xscale = global.view_width/4/sprite_get_width(spr_lt_box)
-		image_yscale = global.view_width/4/sprite_get_height(spr_lt_box)
+		image_xscale = global.view_width/2/sprite_get_width(spr_lt_box)
+		image_yscale = global.view_width/6/sprite_get_height(spr_lt_box)
 		
 		title = "Go Forth"
 		detail = "This concludes the tutorial. Continue growing and expanding. \n\nThere is also word that goblins are about, prepare your defenses... \n\nTap to Dismiss"
@@ -570,8 +570,9 @@ switch status {
 	break;
 
 	case 27:
-		x = -100
-		y = -100
+		visible = false
+		x = -1000
+		y = -1000
 		
 		x_indicator = -100
 		y_indicator = -100
