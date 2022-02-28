@@ -12,3 +12,8 @@ if (image_index <= image_number - 1) {
 	image_speed = -1
 }
 
+if instance_place(x,y+global.grid_resolution,obj_wall) || instance_place(x,y-global.grid_resolution,obj_wall) {
+	image_angle = 90
+} else {
+	image_angle = 0
+}

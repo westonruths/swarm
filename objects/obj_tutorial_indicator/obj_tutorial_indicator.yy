@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_cancel",
-    "path": "sprites/spr_cancel/spr_cancel.yy",
+    "name": "indicator_animated",
+    "path": "sprites/indicator_animated/indicator_animated.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_ui_task_helper",
-    "path": "objects/obj_ui_task_helper/obj_ui_task_helper.yy",
+    "name": "obj_ui_interface",
+    "path": "objects/obj_ui_interface/obj_ui_interface.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,18 +24,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "tasks",
-    "path": "folders/Objects/ui/tasks.yy",
+    "name": "storyteller",
+    "path": "folders/Objects/storyteller.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_close_task",
+  "name": "obj_tutorial_indicator",
   "tags": [],
   "resourceType": "GMObject",
 }

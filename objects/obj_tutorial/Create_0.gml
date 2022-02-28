@@ -8,13 +8,9 @@ title = ""
 detail = ""
 prompt_sprite = noone
 
-status = tutorial.start
+x_indicator = -100
+y_indicator = -100
 
-visible = false
+tutorial_indicator = instance_create_layer(x_indicator, y_indicator, "Menu_Prompt_Btns", obj_tutorial_indicator)
 
-enum tutorial {
-	start,
-	stockpile,
-	chop,
-	mine,
-}
+status = 0
