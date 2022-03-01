@@ -3,7 +3,7 @@
     "name": "spr_tree",
     "path": "sprites/spr_tree/spr_tree.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

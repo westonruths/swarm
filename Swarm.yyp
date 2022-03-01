@@ -402,6 +402,7 @@
     {"id":{"name":"arrow_left","path":"sprites/arrow_left/arrow_left.yy",},"order":2,},
     {"id":{"name":"spr_tech_point_crystal","path":"sprites/spr_tech_point_crystal/spr_tech_point_crystal.yy",},"order":21,},
     {"id":{"name":"obj_building","path":"objects/obj_building/obj_building.yy",},"order":0,},
+    {"id":{"name":"select_dots_large","path":"sprites/select_dots_large/select_dots_large.yy",},"order":40,},
     {"id":{"name":"obj_ui_task","path":"objects/obj_ui_task/obj_ui_task.yy",},"order":0,},
     {"id":{"name":"mophair_archery","path":"sprites/mophair_archery/mophair_archery.yy",},"order":3,},
     {"id":{"name":"obj_purchase_tech","path":"objects/obj_purchase_tech/obj_purchase_tech.yy",},"order":6,},

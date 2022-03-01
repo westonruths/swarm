@@ -3,7 +3,7 @@
     "name": "spr_mtn_wall",
     "path": "sprites/spr_mtn_wall/spr_mtn_wall.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
