@@ -3,18 +3,21 @@
 function Construct(){
 	if (instance_exists(construct_target)) {
 		_clear_previous_targets()
-		
+			
 		move_to_around_free_point(construct_target.x, construct_target.y)
 		if path_position == 1 {
 			direction = point_direction(x, y, construct_target.x, construct_target.y)
 			sprite_index = spr_pawn_hammering
 			current_task = "Constructing"
+
+			if instance_position(construct_target.x, construct_target.y, obj_pawn) {
+				construct_target = noone
+			}
 		} else {
 			sprite_index = spr_pawn_walk
 			move_to_around_free_point(construct_target.x, construct_target.y)
 			current_task = "Constructing"
 		}
-		
 		
 		//if construct_target.build_cost.built && construct_target.object_index == obj_construction {
 		//	construct_target = noone

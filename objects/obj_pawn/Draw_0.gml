@@ -67,12 +67,12 @@ if menu_open {
 	draw_sprite_ext(selectbox_bottom, image_index, x, y-5, 1, 1, image_angle, image_blend, image_alpha)
 }
 
-//draw_ellipse_colour(targetX-5, targetY-3, targetX+5, targetY+5, c_red, c_red, false);
-//if instance_exists(construct_target) {
-//	draw_ellipse_colour(construct_target.x-5, construct_target.y-3, 
-//		construct_target.x+5, construct_target.y+5, c_blue, c_blue, false);
-//}
-//if path_index != -1 {
-//	draw_set_color(c_white)
-//	draw_path(path, x, y, 1);
-//}
+draw_ellipse_colour(targetX-5, targetY-3, targetX+5, targetY+5, c_red, c_red, false);
+if instance_exists(construct_target) {
+	draw_ellipse_colour(construct_target.x-5, construct_target.y-3, 
+		construct_target.x+5, construct_target.y+5, c_blue, c_blue, false);
+}
+if path_index != -1 {
+	draw_set_color(c_white)
+	draw_path(path, x, y, 1);
+}

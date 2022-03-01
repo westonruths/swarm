@@ -33,7 +33,7 @@ if object_is_ancestor(selection.object_index, obj_tree) {
 	else if selection.selected == false { selection.selected = true }	
 }
 
-if (object_index == obj_construction) || object_index == obj_stockpile || object_get_parent(object_index) == obj_crop {
+if (selection.object_index == obj_construction) || selection.object_index == obj_stockpile || object_get_parent(selection.object_index) == obj_crop {
 	unpause()
 	instance_destroy(selection)
 }

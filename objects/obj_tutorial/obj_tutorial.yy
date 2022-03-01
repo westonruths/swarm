@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "storyteller",
-    "path": "folders/Objects/storyteller.yy",
+    "name": "tutorial",
+    "path": "folders/Objects/storyteller/tutorial.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_tutorial",

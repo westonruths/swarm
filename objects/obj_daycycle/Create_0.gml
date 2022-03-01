@@ -1,6 +1,6 @@
 global.seconds = 80000;
 global.minutes = 0;
-global.hours = 10;
+global.hours = 8;
 
 global.day = 1;
 global.season = 1;

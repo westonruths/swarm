@@ -8,7 +8,7 @@ if (sprite_index != spr_pawn_eat) && (sprite_index != spr_pawn_sleep){
 if (char_food > 100) { char_food = 100 }
 
 if (sprite_index != spr_pawn_sleep) {
-	char_energy -= 10/20
+	char_energy -= 5/20
 }
 
 if char_food <= 0 {

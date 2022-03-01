@@ -109,7 +109,7 @@ function Sleep(){
 			}
 		}
 		
-		if !instance_exists(sleep_target) || (char_energy/char_energy_max <= 0) {
+		if (char_energy/char_energy_max <= 0) {
 			sleep_target = instance_nearest(x, y, obj_cell)
 		}
 	} 

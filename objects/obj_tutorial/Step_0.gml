@@ -11,19 +11,19 @@ y_indicator = -100
 
 switch status {
 	case 0:
-		x = global.view_width/3
+		image_xscale = global.view_width/3/sprite_get_width(spr_lt_box)
+		image_yscale = global.view_width/6/sprite_get_height(spr_lt_box)
+		x = global.view_width/2 - sprite_width/2
 		y = global.view_height/4
-		image_xscale = global.view_width/5/sprite_get_width(spr_lt_box)
-		image_yscale = global.view_width/8/sprite_get_height(spr_lt_box)
 		
-		title = "Tutorial"
-		detail = "Let's run through a quick tutorial. \nTap to continue."
+		title = "Welcome"
+		detail = "Let's run through a quick tutorial."
 		
-		if(mouse_check_button_released(mb_left)){
-		    if(position_meeting(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),id)){
-		        status += 1
-		    }
-		}
+		//if(mouse_check_button_released(mb_left)){
+		//    if(position_meeting(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),id)){
+		//        status += 1
+		//    }
+		//}
 	break;
 
 	case 1:
@@ -153,7 +153,7 @@ switch status {
 	break;
 
 	case 8:
-		x = 100
+		x = 25
 		y = 100
 	
 		with (obj_quest_complete) {
@@ -248,11 +248,11 @@ switch status {
 			other.y_indicator = y-16	
 		}
 		
-		image_xscale = global.view_width/4/sprite_get_width(spr_lt_box)
+		image_xscale = global.view_width/3/sprite_get_width(spr_lt_box)
 		image_yscale = global.view_width/4/sprite_get_height(spr_lt_box)
 		
 		title = "Settlers"
-		detail = "This is an overview of your settlers. You can see what each is doing, their mood, and statuses. Tap on one of your settlers."
+		detail = "This is an overview of your settlers. You can see what each is doing, their mood, and statuses. \n\nTap on one of your settlers."
 		
 		if instance_exists(obj_task_menu){
 		    status += 1
