@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ui",
-    "path": "folders/Objects/ui.yy",
+    "name": "speed_controls",
+    "path": "folders/Objects/ui/speed_controls.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_pause",

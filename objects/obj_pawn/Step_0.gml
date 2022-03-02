@@ -149,7 +149,6 @@ if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_paw
 	if mp_grid_path(global.grid, path, x, y, targetX, targetY, false)  {
 		path_start(path, spd, path_action_stop, true)
 	} else {
-		print(name, " has no path")
 		var max_dist = 9999
 		var cell = noone
 		with (obj_cell) {

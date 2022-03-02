@@ -3,9 +3,9 @@
 
 // Inherit the parent event
 event_inherited();
-
+y = -3
 image_xscale = global.view_width/3/sprite_width
-image_yscale = global.view_height/sprite_height
+image_yscale = 35/sprite_height
 
 if(audio_is_playing(snd_book_page)){
 	audio_stop_sound(snd_book_page);
