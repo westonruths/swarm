@@ -6,7 +6,7 @@ function place_empty_list(pointX, pointY){
 	for (var i = 0; i < array_length(_objects); i++) {
 		var _object = _objects[i]
 		
-		if !place_empty(pointX + global.grid_resolution, pointY, _object) {
+		if !place_empty(pointX, pointY, _object) {
 			return false
 		}
 	}

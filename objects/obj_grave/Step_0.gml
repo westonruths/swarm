@@ -18,3 +18,17 @@ if(mouse_check_button_released(mb_left)){
 		}
     }
 } 
+
+if num_stored > 0 {
+	num_stored = 999
+}
+
+if instance_place(x,y, obj_skull) {
+	title = "Filled Grave"
+	detail = "A final resting spot."
+	instance_destroy(item)
+	filled = true
+} else if !filled {
+	title = "Empty Grave"
+	detail = "A final resting spot for friend and foe alike"
+}

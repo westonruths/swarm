@@ -8,7 +8,7 @@ function check_room_cell(cell){
 			if cell == other_cell { 
 				used = true 
 			} else {
-				print("not used: ", cell)
+				//print("not used: ", cell)
 			}
 		}
 			

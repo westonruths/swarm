@@ -3,6 +3,10 @@
 
 if sprite_index == spr_goblin_dead { 
 	image_index = image_number-1
+	with (instance_create_layer(x, y, "Items", obj_skull)) {
+		title = other.title
+	}
+	instance_destroy()
 	exit 
 }
 

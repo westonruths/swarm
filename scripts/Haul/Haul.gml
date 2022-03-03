@@ -90,7 +90,7 @@ function Haul(){
 			drop_item()
 			haul_target = noone
 		} else if !instance_exists(doctor_haul_target) && !instance_exists(doctor_target) {
-			print(name, "dropping item")
+			//print(name, "dropping item")
 			drop_item()
 			haul_target = noone
 		}

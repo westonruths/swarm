@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_grave",
-    "path": "sprites/spr_grave/spr_grave.yy",
+    "name": "skull",
+    "path": "sprites/skull/skull.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_stockpile",
-    "path": "objects/obj_stockpile/obj_stockpile.yy",
+    "name": "obj_item",
+    "path": "objects/obj_item/obj_item.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,20 +25,16 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":5,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":4,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "furniture",
-    "path": "folders/Objects/buildings/furniture.yy",
+    "name": "items",
+    "path": "folders/Objects/items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_grave",
+  "name": "obj_skull",
   "tags": [],
   "resourceType": "GMObject",
 }
