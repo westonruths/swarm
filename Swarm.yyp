@@ -527,6 +527,7 @@
     {"id":{"name":"obj_save_load","path":"objects/obj_save_load/obj_save_load.yy",},"order":14,},
     {"id":{"name":"longhair_chop","path":"sprites/longhair_chop/longhair_chop.yy",},"order":3,},
     {"id":{"name":"fnt_big_btn","path":"fonts/fnt_big_btn/fnt_big_btn.yy",},"order":2,},
+    {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"order":0,},
     {"id":{"name":"obj_place_btn","path":"objects/obj_place_btn/obj_place_btn.yy",},"order":2,},
     {"id":{"name":"spr_sunnyside_test","path":"sprites/spr_sunnyside_test/spr_sunnyside_test.yy",},"order":13,},
     {"id":{"name":"spr_task_menu","path":"sprites/spr_task_menu/spr_task_menu.yy",},"order":0,},
@@ -701,6 +702,7 @@
     {"folderPath":"folders/Scripts/storyteller/tutorial.yy","order":2,"resourceVersion":"1.0","name":"tutorial","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/storyteller/tutorial.yy","order":6,"resourceVersion":"1.0","name":"tutorial","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/ui/speed_controls.yy","order":14,"resourceVersion":"1.0","name":"speed_controls","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/ui/inventory.yy","order":15,"resourceVersion":"1.0","name":"inventory","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
