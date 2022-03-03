@@ -66,6 +66,17 @@ techquest[i] = []
 techx[i] = techx[1]+lengthdir_x(85, 325)
 techy[i] = techy[1]+lengthdir_y(85, 325)
 
+i = 6
+techname[i] = "Graves"
+techdetail[i] = "Unlocks burial spots"
+techsprite[i] = spr_grave
+techpoints[i] = 1
+techstatus[i] = 0
+techneeds[i,0] = 4
+techquest[i] = []
+techx[i] = techx[4]+lengthdir_x(70, 0)
+techy[i] = techy[4]+lengthdir_y(70, 0)
+
 //techname[3] = "tech1.1"
 //techimage[3] = 2
 //techneeds[3,0] = 0 

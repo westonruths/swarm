@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_eyeball_die",
-    "path": "sprites/spr_eyeball_die/spr_eyeball_die.yy",
+    "name": "spr_grave",
+    "path": "sprites/spr_grave/spr_grave.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_build_ui",
+    "path": "objects/obj_build_ui/obj_build_ui.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,16 +24,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "enemies",
-    "path": "folders/Objects/enemies.yy",
+    "name": "buildings",
+    "path": "folders/Objects/ui/build_ui/build_ui_items/buildings.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_eyeball_die",
+  "name": "obj_build_grave",
   "tags": [],
   "resourceType": "GMObject",
 }
