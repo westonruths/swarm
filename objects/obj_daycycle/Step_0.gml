@@ -105,6 +105,9 @@ if(global.minutes >= 60){
 			alarm[1] = 1; 
 		}
 		
+		// Check rooms
+		with (obj_rooms) { alarm[2] = 100 }
+		
 		if(global.day > 30){
 			global.day = 1;
 			global.season += 1;

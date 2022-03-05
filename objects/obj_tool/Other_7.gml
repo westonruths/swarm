@@ -54,12 +54,23 @@ switch(sprite_index){
 				var _snd = choose(snd_blade_hit, snd_Cloth_Armor_Hit_A, snd_Cloth_Armor_Hit_B)
 				audio_sound_pitch(_snd, choose(0.9,1.0,1.1))
 				audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
+				
+				with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+					text = string(damage*-1)
+					image_blend = c_red
+				}
 		   }
 		}else{
 		    //Unsuccessful attack
 			var _snd = choose(snd_blade_miss, snd_Cloth_Armor_Hit_A, snd_Cloth_Armor_Hit_B)
 			audio_sound_pitch(_snd, choose(0.9,1.0,1.1))
 			audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
+			with(pawn.defend_target) {
+				with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+					text = "Miss"
+					image_blend = c_black
+				}
+			}
 		}
 		break;
 	case spr_mine:
@@ -162,11 +173,24 @@ switch(sprite_index){
 			var _herb = instance_place(x, y, obj_healing_herb)
 			if instance_exists(_herb) {
 				hp += _herb.heal_pwr
+				
+				with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+					text = "+" + string(_herb.heal_pwr)
+					image_blend = c_lime
+				}
 			}
 			
 			with (_herb) {
 				dmg = 1
 				alarm[0] = 1 
+			}
+		}
+		break;
+	case spr_moody:
+		if (random_range(-1,1) > 0) {
+			with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+				text = "I'm upset!"
+				image_blend = c_red
 			}
 		}
 		break;

@@ -24,6 +24,8 @@ function Haul(){
 		if !instance_exists(stockpile) {
 			var max_dist_stockpile  = 9999
 			with(obj_stockpile) {
+				if object_index == obj_grave { continue }
+				
 				var dist_stockpile = distance_to_object(other)
 				if (dist_stockpile < max_dist_stockpile && !instance_exists(item)) {
 					stockpile = id
@@ -56,6 +58,13 @@ function Haul(){
 			}
 		}
 		
+		var _grave = noone
+		with (obj_grave) {
+			if !filled && other.item_holding.object_index == obj_skull {
+				_grave = id
+			}
+		}
+		
 		// Move item back to stockpile or construction site
 		if instance_exists(construct) {
 			if (distance_to_object(construct) > global.grid_resolution) { 
@@ -66,6 +75,21 @@ function Haul(){
 				}
 				instance_destroy(item_holding)
 				target_construct = noone
+			}
+		} else if instance_exists(_grave) {
+			// Move to stockpile (be careful with global.grid_resoultion - don't make too small)
+			if (distance_to_object(_grave) > global.grid_resolution/2) {
+				targetX = _grave.x
+				targetY = _grave.y
+			} else {
+				// Deposit item at stockpile
+				with(_grave) {
+					title = "Grave of " + other.item_holding.title
+					detail = "Final resting spot of " + other.item_holding.title
+					filled = true
+				}
+
+				instance_destroy(item_holding)
 			}
 		} else if instance_exists(stockpile) {
 			// Move to stockpile (be careful with global.grid_resoultion - don't make too small)
@@ -90,7 +114,6 @@ function Haul(){
 			drop_item()
 			haul_target = noone
 		} else if !instance_exists(doctor_haul_target) && !instance_exists(doctor_target) {
-			//print(name, "dropping item")
 			drop_item()
 			haul_target = noone
 		}
@@ -142,7 +165,14 @@ function Haul(){
 			}
 		}
 		
-		if instance_exists(construct) || instance_exists(stockpile) {
+		var _grave = noone
+		with (obj_grave) {
+			if !filled && other.haul_target.object_index == obj_skull {
+				_grave = id
+			}
+		}
+		
+		if instance_exists(construct) || instance_exists(stockpile) || instance_exists(_grave) {
 			// Go move towards haul target
 			if (distance_to_object(haul_target) > 2) { 
 				targetX = haul_target.x
@@ -265,6 +295,18 @@ function Haul(){
 					other.haul_target = id
 					max_dist = dist
 				}
+			}
+			
+			//grave logic
+			var _grave = noone
+			with (obj_grave) {
+				if !filled {
+					_grave = id
+				}
+			}
+			
+			if (instance_exists(_grave) && object_index == obj_skull) {
+				other.haul_target = id
 			}
 		}
 	}

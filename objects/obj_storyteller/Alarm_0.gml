@@ -4,12 +4,12 @@
 if instance_exists(obj_storyteller_prompt) exit
 
 #region Goblin Raid
-raid_counter_hrs -= 1
+counter_hrs[story.raid] -= 1
 
-if (raid_counter_hrs <= 0) {
-	num_goblins = 1 + irandom_range(0, global.day)
+if (counter_hrs[story.raid] <= 0) {
+	num_goblins = 1 + irandom_range(1, global.day)
 
-	raid_counter_hrs = 72 + irandom_range(-2,2)
+	counter_hrs[story.raid] = 72 + irandom_range(-2,2)
 	
 	var prompt = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_storyteller_prompt);
 	with (prompt) {
@@ -27,11 +27,11 @@ if (raid_counter_hrs <= 0) {
 #endregion
 
 #region Save Settler
-save_settler_counter_hrs -= 1
+counter_hrs[story.save_settler] -= 1
 
-if (save_settler_counter_hrs <= 0) {
+if (counter_hrs[story.save_settler] <= 0) {
 
-	save_settler_counter_hrs = (100 + irandom_range(0,5)) * instance_number(obj_pawn)
+	counter_hrs[story.save_settler] = (100 + irandom_range(0,5)) * instance_number(obj_pawn)
 	
 	var prompt = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_storyteller_prompt);
 	with (prompt) {

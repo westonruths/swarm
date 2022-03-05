@@ -18,16 +18,51 @@ function Sleep(){
 			sprite_index = spr_pawn_sleep
 			current_task = "Sleeping"
 			
+			if random_range(-80, 1) > 0 {
+				with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+					text = "zzz"
+					image_blend = c_navy
+				}
+			}
+			
 			if sleep_target.object_index != obj_bed {
 				mood.thoughtactive[mood_thoughts.slept_ground] = 1	
+				if random_range(-100, 1) > 0 {
+					with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+						text = "I want a bed"
+						image_blend = c_red
+					}
+				}
 			} else {
 				mood.thoughtactive[mood_thoughts.slept_ground] = 0
 			}
 			
 			if !in_room(x, y) {
 				mood.thoughtactive[mood_thoughts.slept_outside] = 1	
+				if random_range(-200, 1) > 0 {
+					with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+						text = "I want to sleep inside"
+						image_blend = c_red
+					}
+				}
 			} else {
 				mood.thoughtactive[mood_thoughts.slept_outside] = 0
+			}
+			
+			var room_name = get_room_name(x,y)
+			if room_name != "Bedroom" {
+				if random_range(-200, 1) > 0 {
+					with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+						text = "I want my own bedroom"
+						image_blend = c_red
+					}
+				}
+				
+				mood.thoughtactive[mood_thoughts.wants_own_room] = 1
+			} else {
+				print(name, "has own bedroom")
+				mood.thoughtactive[mood_thoughts.wants_own_room] = 0
+				mood.thoughtactive[mood_thoughts.likes_room] = 1
 			}
 			
 		} else {

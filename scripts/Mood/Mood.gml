@@ -5,6 +5,8 @@ function Mood() {
 		exit
 	}
 	
+	_clear_previous_targets()
+	
 	if first_break {
 		//begin moodiness and choose duration
 		mood.thoughtactive[mood_thoughts.mental_break] = 1
@@ -31,5 +33,5 @@ function Mood() {
 	targetY = y
 	
 	sprite_index = spr_pawn_moody
-	current_task = "Moody Tantrum Ends in " + string(moody_end-moody_counter) + " hours";
+	current_task = "Moody Tantrum Ends in " + string(round(moody_end-moody_counter)) + " hours";
 }

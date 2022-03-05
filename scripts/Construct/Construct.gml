@@ -19,6 +19,13 @@ function Construct(){
 			current_task = "Constructing"
 		}
 		
+		if instance_exists(construct_target) {
+			if !construct_target.deconstruct && construct_target.hp == construct_target.hp_max && construct_target.object_index != obj_construction  {
+				print(name, "stopping construction", construct_target)
+				construct_target = noone
+			}
+		}
+		
 		//if construct_target.build_cost.built && construct_target.object_index == obj_construction {
 		//	construct_target = noone
 		//}
@@ -51,6 +58,7 @@ function Construct(){
 			}
 		}
 		
+		// check for buildings that need to be deconstructed
 		with(obj_building) {
 			if !deconstruct {continue}
 			
@@ -60,9 +68,34 @@ function Construct(){
 				if (construct_target == tmp_target) {
 					chosen = true;
 				}
+				
+				if instance_position(x, y, tmp_target) {
+					chosen = true
+				}
 			}
 				
 			if (!chosen && deconstruct) {
+				var dist = distance_to_object(other)
+				if (dist < max_dist) {
+					other.construct_target = id
+					max_dist = dist
+				}
+			}
+		}
+
+		// check for buildings that need to be repaired
+		with(obj_building) {
+			if hp == hp_max {continue}
+			
+			var tmp_target = id
+			var chosen = false
+			with(obj_pawn) {
+				if (construct_target == tmp_target) {
+					chosen = true;
+				}
+			}
+				
+			if (!chosen) {
 				var dist = distance_to_object(other)
 				if (dist < max_dist) {
 					other.construct_target = id

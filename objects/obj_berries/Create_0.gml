@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-nutrition = 2
+nutrition = 4
 
 hp = 12
 hp_max = hp

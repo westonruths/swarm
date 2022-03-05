@@ -36,9 +36,12 @@ if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_gob
 	//move towards point
 	if mp_grid_path(global.enemy_grid, path, x, y, targetX, targetY, false)  {
 		path_start(path, spd, path_action_stop, true)
+		sprite_index = spr_goblin_run
 	} else {
-		move_to_random_point()
-		sprite_index = spr_goblin_idle
+		if mp_grid_path(global.enemy_grid, path, x, y, targetX+global.grid_resolution*irandom_range(-1,1), targetY+global.grid_resolution*irandom_range(-1,1), false) {
+			print("goblin trying new path")
+			path_start(path, spd, path_action_stop, true)
+		}
 	}
 }
 old_targetX = targetX

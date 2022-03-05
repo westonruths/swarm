@@ -9,7 +9,7 @@ for (var i=0; i < array_length(inventory_objects); i++) {
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);
 	draw_set_font(fnt_btn);
-	draw_set_color(c_black);
+	draw_set_color(c_white);
 	
-	draw_text(drawX+15, drawY+(i*y_interval), "x " + string(instance_number(_obj)))
+	draw_text_outline(drawX+15, drawY+(i*y_interval), c_white, c_black, "x " + string(instance_number(_obj)))
 }

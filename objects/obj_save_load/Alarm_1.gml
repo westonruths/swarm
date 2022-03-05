@@ -7,6 +7,7 @@
 //with (obj_pawn) instance_destroy()
 with (techs) instance_destroy()
 with (quests) instance_destroy()
+with (obj_storyteller) instance_destroy()
 
 #region Load info items
 if (file_exists("info_items.save")) {
@@ -40,6 +41,10 @@ if (file_exists("info_items.save")) {
 				build_cost.original_construction_health = _loadEntity.build_cost.original_construction_health
 				build_cost.construction_health = _loadEntity.build_cost.construction_health
 				build_cost.built = _loadEntity.build_cost.built
+			}
+			
+			if variable_instance_exists(id, "filled") {
+				filled = _loadEntity.filled
 			}
 			
 			if object_is_ancestor(object_index, obj_building) || object_is_ancestor(object_index, obj_resource) {
@@ -146,7 +151,29 @@ if (file_exists("quests.save")) {
 		
 		}
 	}
-	print("Loaded quests! ", _string)
+	//print("Loaded quests! ", _string)
+}
+#endregion
+
+#region Load story
+if (file_exists("story.save")) {
+	
+	var _buffer = buffer_load("story.save")
+	var _string = buffer_read( _buffer, buffer_string)
+	buffer_delete( _buffer)
+	
+	var _loadData = json_parse( _string)
+	
+	while (array_length(_loadData) > 0) {
+		var _loadEntity = array_pop(_loadData)
+		
+		with (instance_create_layer(_loadEntity.x, _loadEntity.y, _loadEntity.layer, obj_storyteller)) {
+
+			counter_hrs = _loadEntity.counter_hrs
+		
+		}
+	}
+	print("Loaded story! ", _string)
 }
 #endregion
 

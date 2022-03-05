@@ -7,7 +7,9 @@ if global.menu_open {
 		if instance_exists(obj_tech_menu) {
 			exit
 		}
-		
+		if instance_exists(obj_close_construction) {
+			exit
+		}
 		
 		unpause()
 	}

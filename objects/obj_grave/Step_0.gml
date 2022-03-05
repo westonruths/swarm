@@ -23,12 +23,10 @@ if num_stored > 0 {
 	num_stored = 999
 }
 
-if instance_place(x,y, obj_skull) {
-	title = "Filled Grave"
-	detail = "A final resting spot."
-	instance_destroy(item)
-	filled = true
-} else if !filled {
+if !filled {
 	title = "Empty Grave"
 	detail = "A final resting spot for friend and foe alike"
+	sprite_index = spr_grave_empty
+} else {
+	sprite_index = spr_grave
 }

@@ -5,6 +5,7 @@ draw_sprite_ext(spr_lt_box,0,x-10,y-20,12,15,image_angle,c_white,image_alpha)
 
 draw_self()
 
+image_alpha = 1
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_btn);

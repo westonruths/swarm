@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function save_settler(){
-	with (obj_storyteller) { raid_counter_hrs = irandom_range(2, 4) }
+	with (obj_storyteller) { counter_hrs[story.raid] = irandom_range(2, 4) }
 	
 	var _x = irandom_range(0,global.room_y_size)
 	var _y = 32

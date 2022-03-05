@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp_max = 10;
+hp_max = 100;
 hp = hp_max;
 
 image_speed = 0;

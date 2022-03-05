@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "food",
-    "path": "folders/Objects/items/food.yy",
+    "name": "items",
+    "path": "folders/Objects/items.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_healing_herb",

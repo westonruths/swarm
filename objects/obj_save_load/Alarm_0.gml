@@ -1,7 +1,7 @@
 /// @description SAVE GAME
 // You can write your code in this editor
 
-instance_create_layer(20, 32, "Menu_Prompts", obj_save_icon)
+instance_create_layer(global.view_width/2, 32, "Menu_Prompts", obj_save_icon)
 
 #region Save info items
 //make save array
@@ -38,6 +38,10 @@ with (obj_info_item) {
 			construction_health: build_cost.construction_health,
 			built: build_cost.built,
 		}
+	}
+	
+	if variable_instance_exists(id, "filled") {
+		_saveEntity.filled = filled
 	}
 	
 	array_push(_saveData, _saveEntity)	
@@ -164,6 +168,34 @@ var _string = json_stringify(_saveData)
 var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed, 1);
 buffer_write( _buffer, buffer_string, _string)
 buffer_save( _buffer, "quests.save")
+buffer_delete( _buffer)
+
+//print("Game saved! ", _string)
+#endregion
+
+#region Save story
+//make save array
+var _saveData = array_create(0)
+
+//for every instance, create a struct and add it to the array
+with (obj_storyteller) {
+	
+	var _saveEntity = 
+	{
+		x: x,
+		y: y,
+		layer: layer,
+		
+		counter_hrs: counter_hrs,
+	}
+	
+	array_push(_saveData, _saveEntity)	
+}
+
+var _string = json_stringify(_saveData)
+var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed, 1);
+buffer_write( _buffer, buffer_string, _string)
+buffer_save( _buffer, "story.save")
 buffer_delete( _buffer)
 
 //print("Game saved! ", _string)

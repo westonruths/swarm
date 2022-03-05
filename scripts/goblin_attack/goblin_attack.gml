@@ -24,6 +24,16 @@ function goblin_attack(){
 		} else {
 			sprite_index = spr_goblin_run
 		}
+		
+		if !mp_grid_path(global.enemy_grid, path, x, y, hunt_target.x, hunt_target.y, false)  {
+			hunt_target = instance_nearest(hunt_target.x, hunt_target.y, obj_room_wall)
+		}
+		
+		if !mp_grid_path(global.enemy_grid, path, x, y, hunt_target.x, hunt_target.y, false)  {
+			hunt_target = instance_nearest(x, y, obj_room_wall)
+		} else {
+			hunt_target = noone
+		}
 	} else {
 		var max_dist  = 9999
 			
@@ -36,6 +46,10 @@ function goblin_attack(){
 			//		chosen = true;
 			//	}
 			//}
+			
+			if !mp_grid_path(global.enemy_grid, path, x, y, tmp_target.x, tmp_target.y, false) {
+				chosen = true	
+			}
 				
 			if (!chosen && hp > 0) {
 				var dist = distance_to_object(other)

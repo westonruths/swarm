@@ -3,6 +3,6 @@
 
 //global.renown += renown_reward
 
-unpause()
+//unpause()
 
 instance_destroy()

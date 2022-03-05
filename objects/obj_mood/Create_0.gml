@@ -18,6 +18,9 @@ enum mood_thoughts {
 	pain,
 	mental_break,
 	exhausted,
+	dead_body,
+	wants_own_room,
+	likes_room,
 }
 
 var i = 0
@@ -56,7 +59,7 @@ i = 4
 thought[i] = "Low expectations"
 thoughtcaption[i] = "Let's get to work!"
 thoughteffect[i] = 15 //how it effects the character's mood
-thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughtactive[i] = 1 //0 is inactive, 1 is active
 thoughttimer[i] = 48 //thought counter
 thoughttimero[i] = 48 //number of hours thought lasts
 
@@ -91,3 +94,27 @@ thoughteffect[i] = -5 //how it effects the character's mood
 thoughtactive[i] = 0 //0 is inactive, 1 is active
 thoughttimer[i] = 4 //thought counter
 thoughttimero[i] = 4 //number of hours thought lasts
+
+i = 9
+thought[i] = "Saw Dead Body"
+thoughtcaption[i] = "Really unnerving..."
+thoughteffect[i] = -5 //how it effects the character's mood
+thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughttimer[i] = 4 //thought counter
+thoughttimero[i] = 4 //number of hours thought lasts
+
+i = 10
+thought[i] = "Wants Own Room"
+thoughtcaption[i] = "Is this too much to ask for??"
+thoughteffect[i] = -2 //how it effects the character's mood
+thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughttimer[i] = 14 //thought counter
+thoughttimero[i] = 14 //number of hours thought lasts
+
+i = 11
+thought[i] = "Likes Bedroom"
+thoughtcaption[i] = "Nice and cozy"
+thoughteffect[i] = 8 //how it effects the character's mood
+thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughttimer[i] = 12 //thought counter
+thoughttimero[i] = 12 //number of hours thought lasts

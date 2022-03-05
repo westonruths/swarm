@@ -11,11 +11,7 @@ function Eat(){
 		_clear_previous_targets()
 		
 		move_to_around_free_point(eat_target.x, eat_target.y)
-		if path_position == 1 && distance_to_object(eat_target) < global.grid_resolution {
-			//eat_target.x = x + 10
-			//eat_target.y = y
-			//targetX = x
-			//targetY = y
+		if distance_to_object(eat_target) < global.grid_resolution {
 			direction = point_direction(x, y, eat_target.x, eat_target.y)
 			sprite_index = spr_pawn_eat
 			current_task = "Eating"
@@ -29,6 +25,12 @@ function Eat(){
 			}
 			
 			mood.thoughtactive[mood_thoughts.ate] = 1
+			if random_range(-50, 1) > 0 {
+				with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+					text = "Yum!"
+					image_blend = c_green
+				}
+			}
 			
 		} else {
 			sprite_index = spr_pawn_walk
@@ -47,6 +49,11 @@ function Eat(){
 			
 			with(obj_pawn) {
 				if eat_target == tmp_target {
+					chosen = true
+					break
+				}
+				
+				if item_holding == tmp_target {
 					chosen = true
 					break
 				}

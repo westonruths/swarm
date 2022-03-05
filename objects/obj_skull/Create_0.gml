@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-title = ""
-detail = "The final remains. Best to bury soon."
+title = "Dead Body"
+detail = "Skeletal remains. Bury in a grave soon."

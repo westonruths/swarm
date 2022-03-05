@@ -23,7 +23,7 @@ function Defend(){
 			}
 			
 			if instance_exists(_enemy) {
-				if distance_to_object(_enemy) < global.grid_resolution {
+				if distance_to_object(_enemy) < global.grid_resolution*3 {
 					defend_target = _enemy
 				} else {
 					if x == defend_target.x && y == defend_target.y {

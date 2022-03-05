@@ -37,6 +37,10 @@ function Cook(){
 						if (food_holding == other.id) {
 							chosen = true;
 						}
+
+						if (item_holding == other.id) {
+							chosen = true;
+						}
 					}
 				}
 				

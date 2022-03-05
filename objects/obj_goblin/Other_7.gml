@@ -29,11 +29,21 @@ if (attackRoll <= accuracy){
 		var _snd = choose(snd_blade_hit, snd_Cloth_Armor_Hit_A, snd_Cloth_Armor_Hit_B)
 		audio_sound_pitch(_snd, choose(0.9,1.0,1.1))
 		audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
+		with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+			text = string(damage*-1) 
+			image_blend = c_red
+		}
    }
 }else{
     //Unsuccessful attack
 	var _snd = choose(snd_blade_miss, snd_Cloth_Armor_Hit_A, snd_Cloth_Armor_Hit_B)
 	audio_sound_pitch(_snd, choose(0.9,1.0,1.1))
 	audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
+	with(hunt_target) {
+		with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
+			text = "Miss" 
+			image_blend = c_dkgray
+		}
+	}
 }
 

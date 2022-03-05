@@ -566,6 +566,8 @@ switch status {
 		        status += 1
 		    }
 		}
+		
+		with (obj_storyteller) { counter_hrs[story.raid] = irandom_range(2, 4) }
 	
 	break;
 

@@ -1,7 +1,5 @@
 /// @description Just check existing rooms
 // You can write your code in this editor
-/// @description Refresh all rooms
-// You can write your code in this editor
 tmp_cells = []
 inside_cells = []
 rooms = []
