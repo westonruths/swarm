@@ -64,3 +64,62 @@ if (counter_hrs[story.game_over] <= 0) {
 	exit
 }
 #endregion
+
+#region End Game
+
+counter_hrs[story.reforest] -= 1
+
+if (counter_hrs[story.reforest] <= 0) {
+	
+	var cell = instance_find(obj_cell, irandom(instance_number(obj_cell) - 1));
+	
+	//place objects helper code
+	var place_object = irandom_range(0,400)
+
+	//place trees
+	if (place_object > 0 && place_object < 100) {
+		with (cell) {
+			if !instance_exists(build_obj) {
+				if instance_position(x, y, obj_pawn) == noone {
+					build_obj = instance_create_layer(x,y,"Buildings",obj_tree);
+				}
+			}
+		}
+	} 
+			
+	//place animals
+	if (place_object > 100 && place_object < 110) {
+		with (cell) {
+			if !instance_exists(build_obj) {
+				instance_create_layer(x, y, "Instances", obj_bunny)
+			}
+		}
+	}
+
+	//place healing herbs
+	if (place_object > 110 && place_object < 150) {
+		with (cell) {
+			if !instance_exists(build_obj) {
+				if instance_position(x, y, obj_pawn) == noone {
+					build_obj = instance_create_layer(x,y,"Buildings",obj_herb_plant);
+				}
+			}
+		}
+	} 
+	
+	//place berry bushes
+	if (place_object > 150 && place_object < 200) {
+		with (cell) {
+			if !instance_exists(build_obj) {
+				if instance_position(x, y, obj_pawn) == noone {
+					build_obj = instance_create_layer(x,y,"Buildings",obj_berry_bush);
+				}
+			}
+		}
+	} 		
+
+	counter_hrs[story.reforest] = 1
+
+	exit
+}
+#endregion

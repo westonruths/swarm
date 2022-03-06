@@ -11,16 +11,22 @@ if (global.time_pause) {
 
 if (hp <= 0) {
 	instance_destroy();
-	instance_create_layer(x,y,"Items",obj_meat)
+	repeat(irandom_range(1,4)) {
+		instance_create_layer(x,y,"Items",obj_meat)
+	}
 }
 
 if (direction > 90) && (direction < 270) image_xscale = -1; else image_xscale = 1;
 
-if mp_grid_path(global.enemy_grid, path, x, y, targetX, targetY, true)  {
-	path_start(path, spd, path_action_stop, false)
-} else {
-	image_index = 0
+if (old_targetX != targetX || old_targetY != targetY) {
+	if mp_grid_path(global.enemy_grid, path, x, y, targetX, targetY, true)  {
+		path_start(path, spd, path_action_stop, false)
+	} else {
+		image_index = 0
+	}
 }
+old_targetX = targetX
+old_targetY = targetY
 
 if path_position == 1 {
 	image_index = 0

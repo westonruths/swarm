@@ -212,6 +212,18 @@ var _saveEntity =
 	renown_level: global.renown_level,
 	renown_next_level: global.renown_next_level,
 	tech_points: global.tech_points,
+	
+	seconds: global.seconds,
+	minutes: global.minutes,
+	hours: global.hours,
+
+	day: global.day,
+	season: global.season,
+	year: global.year,
+
+	game_speed: global.game_speed,
+	time_pause: global.time_pause,
+	saved_game_speed: global.saved_game_speed,
 }
 
 var tmp_selected_mtns = []

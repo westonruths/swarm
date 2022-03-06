@@ -9,6 +9,8 @@ dmg = 0
 spd = 1;
 targetX = x
 targetY = y
+old_targetX = targetX
+old_targetY = targetY
 path = path_add();
 
 selected = false

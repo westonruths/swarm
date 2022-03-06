@@ -194,6 +194,18 @@ if (file_exists("global.save")) {
 		global.renown_level = _loadEntity.renown_level
 		global.renown_next_level = _loadEntity.renown_next_level
 		global.tech_points = _loadEntity.tech_points
+
+		global.seconds = _loadEntity.seconds
+		global.minutes = _loadEntity.minutes
+		global.hours = _loadEntity.hours
+
+		global.day = _loadEntity.day
+		global.season = _loadEntity.season
+		global.year = _loadEntity.year
+
+		global.game_speed = _loadEntity.game_speed
+		global.time_pause = _loadEntity.time_pause
+		global.saved_game_speed = _loadEntity.saved_game_speed
 		
 
 		global.selected_mtns = ds_list_create()

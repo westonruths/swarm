@@ -14,3 +14,6 @@ mp_grid_add_cell(global.enemy_grid, floor(x / global.grid_resolution), floor(y /
 
 title = "Tree"
 detail = "Can be chopped down for wood"
+
+image_xscale = 0
+image_yscale = 0

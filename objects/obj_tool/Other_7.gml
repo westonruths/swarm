@@ -31,6 +31,13 @@ switch(sprite_index){
 		with (pawn) {
 			pawn_dmg = task_cells[jobid.hunt].skill_level
 			task_cells[jobid.hunt].skill_exp += 5
+			
+			if instance_exists(hunt_target) {
+				with(instance_create_layer(hunt_target.x,hunt_target.y-10,"Cover",obj_status)) { 
+					text = string(pawn_dmg*-1)
+					image_blend = c_red
+				}
+			}
 		}
 		with (pawn.hunt_target) { 
 			dmg = pawn_dmg
