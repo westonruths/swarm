@@ -46,6 +46,22 @@ if (file_exists("info_items.save")) {
 			if variable_instance_exists(id, "filled") {
 				filled = _loadEntity.filled
 			}
+
+			if variable_instance_exists(id, "watered") {
+				watered = _loadEntity.watered
+			}
+			if variable_instance_exists(id, "max_grow_counter") {
+				max_grow_counter = _loadEntity.max_grow_counter
+			}
+			if variable_instance_exists(id, "grow_counter") {
+				grow_counter = _loadEntity.grow_counter
+			}
+			if variable_instance_exists(id, "max_build_counter") {
+				max_build_counter = _loadEntity.max_build_counter
+			}
+			if variable_instance_exists(id, "build_counter") {
+				build_counter = _loadEntity.build_counter
+			}	
 			
 			if object_is_ancestor(object_index, obj_building) || object_is_ancestor(object_index, obj_resource) {
 				with(instance_position(x, y, obj_cell)) { build_obj = other }	

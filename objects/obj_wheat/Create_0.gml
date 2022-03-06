@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-crop_drop = obj_wheat_item
+crop_drop = obj_wheat_grown
 
 title = "Wheat Plant"
-detail = "Will grow and yield raw wheat after a few days"
+detail = "Will grow and yield wheat after a few days"

@@ -43,6 +43,22 @@ with (obj_info_item) {
 	if variable_instance_exists(id, "filled") {
 		_saveEntity.filled = filled
 	}
+
+	if variable_instance_exists(id, "watered") {
+		_saveEntity.watered = watered
+	}
+	if variable_instance_exists(id, "max_grow_counter") {
+		_saveEntity.max_grow_counter = max_grow_counter
+	}
+	if variable_instance_exists(id, "grow_counter") {
+		_saveEntity.grow_counter = grow_counter
+	}
+	if variable_instance_exists(id, "max_build_counter") {
+		_saveEntity.max_build_counter = max_build_counter
+	}
+	if variable_instance_exists(id, "build_counter") {
+		_saveEntity.build_counter = build_counter
+	}	
 	
 	array_push(_saveData, _saveEntity)	
 }

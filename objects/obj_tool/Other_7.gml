@@ -142,7 +142,7 @@ switch(sprite_index){
 		}
 		with (pawn.grow_target) { 
 			dmg = pawn_dmg
-			alarm[0] = 1 
+			alarm[2] = 1 
 		}
 		break;
 	case spr_dead:
@@ -199,6 +199,16 @@ switch(sprite_index){
 				text = "I'm upset!"
 				image_blend = c_red
 			}
+		}
+		break;
+	case spr_watering:
+		var _snd = choose(snd_watering_1, snd_watering_2)
+		audio_stop_sound(_snd)
+		audio_sound_pitch(_snd, random_range(0.8, 1))
+		audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
+		
+		with (pawn.grow_target) { 
+			watered = true
 		}
 		break;
 	case spr_walk:
