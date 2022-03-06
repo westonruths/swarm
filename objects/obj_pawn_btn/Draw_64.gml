@@ -7,6 +7,9 @@ var y_offset = 20
 draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, 1, 1, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.hair.sprite_index, pawn.hair.image_index, x+x_offset, y+y_offset, 1, 1, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.tool.sprite_index, pawn.tool.image_index, x+x_offset, y+y_offset, 1, 1, image_angle, image_blend, image_alpha)
+if pawn.crowned {
+	draw_sprite_ext(spr_crown,0,x+x_offset,y+y_offset-7, .7, .7, image_angle, image_blend, image_alpha)	
+}
 
 draw_set_color(c_black);
 draw_set_halign(fa_left);

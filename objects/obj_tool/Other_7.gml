@@ -176,7 +176,7 @@ switch(sprite_index){
 				
 				with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
 					text = "+" + string(_herb.heal_pwr)
-					image_blend = c_lime
+					image_blend = c_green
 				}
 			}
 			

@@ -6,3 +6,6 @@ if (global.menu_open == false || pawn.menu_open == false || global.building) {
 	instance_destroy();
 }
 
+if !instance_exists(pawn) {
+	unpause()
+}

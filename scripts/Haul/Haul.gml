@@ -203,16 +203,16 @@ function Haul(){
 		}
 		
 		//print(name, haul_target)
-		//// See if another pawn is targeting or carrying this item
-		//with(obj_pawn) {
-		//	if (haul_target == other.haul_target) {
-		//		other.haul_target = noone
-		//	}
+		// See if another pawn is targeting or carrying this item
+		with(obj_pawn) {
+			//if (haul_target == other.haul_target) {
+			//	other.haul_target = noone
+			//}
 				
-		//	if (item_holding == other.haul_target) {
-		//		other.haul_target = noone
-		//	}
-		//}
+			if (item_holding == other.haul_target) {
+				other.haul_target = noone
+			}
+		}
 	} else {
 		// Identify haul target
 		stockpile = noone

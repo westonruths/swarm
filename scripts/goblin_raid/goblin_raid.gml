@@ -7,7 +7,7 @@ function goblin_raid(){
 	var _goblin = noone
 	repeat(_num_goblins) {
 		var _x = irandom_range(0,global.room_y_size)
-		var _y = 32
+		var _y = 16
 	
 		var max_dist = 9999
 		var cell = noone
@@ -21,6 +21,8 @@ function goblin_raid(){
 		
 		_goblin = instance_create_layer(cell.x, cell.y, "Instances", obj_goblin)
 	}
+	
+	with (quests) { quest_array[quest.defeat_goblins][1] = 0}
 	
 		
 	//if instance_exists(_goblin) {

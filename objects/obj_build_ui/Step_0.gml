@@ -49,6 +49,14 @@ if dragging && mouse_check_button(mb_left) {
 		selected = false
 	}
 	
+	with (obj_mtn_wall) {
+		tmp_selected = false
+	}
+	
+	with (obj_building) {
+		tmp_selected = false
+	}
+	
 	var _list = ds_list_create();
 	var _num = 0
 	
@@ -65,13 +73,31 @@ if dragging && mouse_check_button(mb_left) {
 	    for (var i = 0; i < _num; ++i;) {
 	        var cell = _list[| i]
 			with (cell) {
-				if place && !(instance_exists(build_obj)) {
-					visible = true
-					selected = true
-				} else if place && build_obj.object_index == obj_construction {
-					visible = true
-					selected = true
+				if place {
+					if !(instance_exists(build_obj)) {
+						visible = true
+						selected = true
+					} else if build_obj.object_index == obj_construction {
+						visible = true
+						selected = true
+					} else if instance_place(x, y, obj_resource) {
+						var _resource = instance_place(x, y, obj_resource)
+						
+						if _resource.object_index == obj_mtn_wall {
+							_resource.tmp_selected = true
+						}					
+	
+						visible = true
+						selected = true
+					} else if instance_place(x, y, obj_building) {
+						var _build = instance_place(x, y, obj_building)
+						visible = true
+						selected = true				
+						
+						_build.tmp_selected = true
+					}
 				}
+				
 				
 				if remove {
 					with (build_obj) {
@@ -95,6 +121,15 @@ if dragging && mouse_check_button_released(mb_left) {
 	with (obj_cell) { 
 		selected = false
 	}
+
+	with (obj_mtn_wall) {
+		tmp_selected = false
+	}
+	
+	with (obj_building) {
+		tmp_selected = false
+	}
+	
 	
 	dragging = false
 	
@@ -146,6 +181,37 @@ if dragging && mouse_check_button_released(mb_left) {
 							obj_building_type = tmp_obj_building_type;	
 							name = tmp_name
 							detail = tmp_detail
+						}
+					} else if instance_place(x, y, obj_resource) {
+						var _resource = instance_place(x, y, obj_resource)
+						_resource.selected = true
+						
+						if _resource.object_index == obj_mtn_wall {
+							ds_list_add(global.selected_mtns, _resource)	
+						}
+						
+						build_obj = instance_create_layer(x,y,"Buildings",obj_construction);
+
+						with(build_obj) {
+							build_cost = tmp_build_cost
+							obj_building_type = tmp_obj_building_type;	
+							name = tmp_name
+							detail = tmp_detail
+						}						
+					} else if instance_place(x, y, obj_building) {
+						var _build = instance_place(x, y, obj_building)
+						
+						if _build.object_index != tmp_obj_building_type {
+							_build.deconstruct = true
+						
+							build_obj = instance_create_layer(x,y,"Buildings",obj_construction);
+
+							with(build_obj) {
+								build_cost = tmp_build_cost
+								obj_building_type = tmp_obj_building_type;	
+								name = tmp_name
+								detail = tmp_detail
+							}		
 						}
 					}
 				}

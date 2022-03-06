@@ -17,6 +17,9 @@ var yscale = 2
 draw_sprite_ext(pawn.sprite_index, pawn.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.hair.sprite_index, pawn.hair.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
 draw_sprite_ext(pawn.tool.sprite_index, pawn.tool.image_index, x+x_offset, y+y_offset, xscale, yscale, image_angle, image_blend, image_alpha)
+if pawn.crowned {
+	draw_sprite_ext(spr_crown,0,x+x_offset,y+y_offset-12, xscale*.7, yscale*.7, image_angle, image_blend, image_alpha)	
+}
 
 // Draw current task
 draw_set_color(c_black);
@@ -78,7 +81,7 @@ with (pawn.mood) {
 	
 	var y_buff = 170
 	for(var i=0; i<array_length(thought); i++) {
-		if thoughtactive[i] {
+		if thoughtactive[i] && y_buff < global.view_height-30{
 			if thoughteffect[i] > 0 {
 				draw_set_color(make_color_rgb(0, 100, 0));
 			} else {

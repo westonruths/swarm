@@ -7,7 +7,7 @@ if instance_exists(obj_storyteller_prompt) exit
 counter_hrs[story.raid] -= 1
 
 if (counter_hrs[story.raid] <= 0) {
-	num_goblins = 1 + irandom_range(1, global.day)
+	num_goblins = 1 + irandom_range(global.day/2, global.day)
 
 	counter_hrs[story.raid] = 72 + irandom_range(-2,2)
 	
@@ -41,6 +41,25 @@ if (counter_hrs[story.save_settler] <= 0) {
 		title = "A Call for Help"
 		detail = "A traveler is being pursued by goblins! They offer to join your town if you fend off their pursuers. Do you accept?"
 		storyteller_script = save_settler
+	}
+	exit
+}
+#endregion
+
+#region End Game
+if instance_number(obj_pawn) == 0 {
+	counter_hrs[story.game_over] -= 1
+}
+
+if (counter_hrs[story.game_over] <= 0) {
+	
+	var prompt = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_storyteller_prompt);
+	with (prompt) {
+		instance_create_layer(365, 256, "Menu_Prompt_Btns",obj_accept_storyteller);
+		
+		title = "Game Over"
+		detail = "Your settlement no longer has any settlers. This ends your kingdom's story."
+		storyteller_script = game_over
 	}
 	exit
 }

@@ -4,6 +4,10 @@ function Defend(){
 	if instance_exists(defend_target) {
 		_clear_previous_targets()
 		
+		current_task = "On the Defense"
+		
+		//print(name, defend_target)
+		
 		if defend_target.object_index == obj_defensive_position {
 			if instance_number(obj_goblin) == 0 {
 				defend_target = noone
@@ -52,10 +56,16 @@ function Defend(){
 				sprite_index = spr_pawn_defend
 				current_task = "Fighting"
 				path_speed = 0
+				targetX = x
+				targetY = y
 			} else {
 				move_to_around_free_point(defend_target.x, defend_target.y)
 				sprite_index = spr_pawn_run
 				current_task = "Moving to attack"
+				
+				if distance_to_object(defend_target) < global.grid_resolution+10 {
+					path_position += 0.0001
+				}
 			}
 		}
 	} else {

@@ -14,6 +14,8 @@ mood = instance_create_layer(x, y, "Instances", obj_mood)
 
 current_task = ""
 
+crowned = false
+
 work_spd = 1
 spd = 1;
 path = path_add();

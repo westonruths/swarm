@@ -21,6 +21,8 @@ enum mood_thoughts {
 	dead_body,
 	wants_own_room,
 	likes_room,
+	im_king,
+	near_king,
 }
 
 var i = 0
@@ -118,3 +120,19 @@ thoughteffect[i] = 8 //how it effects the character's mood
 thoughtactive[i] = 0 //0 is inactive, 1 is active
 thoughttimer[i] = 12 //thought counter
 thoughttimero[i] = 12 //number of hours thought lasts
+
+i = 12
+thought[i] = "I'm Regent!"
+thoughtcaption[i] = "Feels good"
+thoughteffect[i] = 25 //how it effects the character's mood
+thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughttimer[i] = 12 //thought counter
+thoughttimero[i] = 12 //number of hours thought lasts
+
+i = 13
+thought[i] = "Near the king"
+thoughtcaption[i] = "What a great leader"
+thoughteffect[i] = 5 //how it effects the character's mood
+thoughtactive[i] = 0 //0 is inactive, 1 is active
+thoughttimer[i] = 4 //thought counter
+thoughttimero[i] = 4 //number of hours thought lasts

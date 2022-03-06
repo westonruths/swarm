@@ -77,6 +77,17 @@ techquest[i] = []
 techx[i] = techx[4]+lengthdir_x(70, 0)
 techy[i] = techy[4]+lengthdir_y(70, 0)
 
+i = 7
+techname[i] = "Traps"
+techdetail[i] = "Unlocks spike traps"
+techsprite[i] = spr_spike_trap
+techpoints[i] = 2
+techstatus[i] = 0
+techneeds[i,0] = 5
+techquest[i] = []
+techx[i] = techx[5]+lengthdir_x(70, 0)
+techy[i] = techy[5]+lengthdir_y(70, 0)
+
 //techname[3] = "tech1.1"
 //techimage[3] = 2
 //techneeds[3,0] = 0 

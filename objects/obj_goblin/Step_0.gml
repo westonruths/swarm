@@ -31,18 +31,38 @@ if (sprite_index == spr_goblin_hurt && image_index < image_number - 1) {
 old_hp = hp
 
 goblin_attack()
+goblin_retreat()
 
-if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_goblin_attack {
+//if (path_position == path_positionprevious && path_position != 1 && sprite_index == spr_goblin_run) {
+//	if mp_grid_path(global.enemy_grid, path, x, y, targetX, targetY, false)  {
+//		path_start(path, spd, path_action_stop, true)
+//		sprite_index = spr_goblin_run
+//		//print("goblin", id,  "starting new path", targetX, targetY, x, y, path_speed)
+//	}
+//}
+
+if (old_targetX != targetX || old_targetY != targetY) {
 	//move towards point
 	if mp_grid_path(global.enemy_grid, path, x, y, targetX, targetY, false)  {
 		path_start(path, spd, path_action_stop, true)
-		sprite_index = spr_goblin_run
 	} else {
-		if mp_grid_path(global.enemy_grid, path, x, y, targetX+global.grid_resolution*irandom_range(-1,1), targetY+global.grid_resolution*irandom_range(-1,1), false) {
-			print("goblin trying new path")
-			path_start(path, spd, path_action_stop, true)
+		var max_dist = 9999
+		var cell = noone
+		with (obj_cell) {
+			var dist = distance_to_point(other.x, other.y)
+			if  dist < max_dist && place_empty(x, y, obj_wall) && place_empty(x, y, obj_mtn_wall) && place_empty(x, y, obj_tree) && place_empty(x, y, obj_door){
+				max_dist = dist
+				cell = id
+			}
 		}
+		
+		x = cell.x
+		y = cell.y
 	}
 }
 old_targetX = targetX
 old_targetY = targetY
+
+if path_position == 0 && x == targetX && y == targetY {
+	path_position = 1	
+}

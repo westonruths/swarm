@@ -18,6 +18,17 @@ if (global.renown > global.renown_next_level) {
 // Quest Logic
 var i = 0; repeat(quests_number) {
 	switch(i) {
+		#region Gather Renown
+		case quest.gather_renown:
+			if quest_array[i][1] != -1 {
+				if global.renown_level >= 10 {
+					print("gained renown")
+					complete_quest(i)
+				}
+			}
+		break;
+		#endregion
+
 		#region Build stockpile
 		case quest.build_stockpile:
 			if quest_array[i][1] != -1 {
@@ -110,6 +121,16 @@ var i = 0; repeat(quests_number) {
 		case quest.harvest_wheat:
 			if quest_array[i][1] != -1 {
 				if instance_number(obj_wheat_item) >= 10 {
+					complete_quest(i)
+				}
+			}
+		break;
+		#endregion
+		
+		#region Plant crops
+		case quest.defeat_goblins:
+			if quest_array[i][1] != -1 {
+				if instance_number(obj_goblin) == 0 {
 					complete_quest(i)
 				}
 			}

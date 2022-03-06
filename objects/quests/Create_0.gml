@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 enum quest {
+	gather_renown,
 	build_stockpile,
 	collect_wood,
 	build_room,
@@ -11,9 +12,17 @@ enum quest {
 	collect_meat,
 	cook_meals,
 	harvest_wheat,
+	defeat_goblins,
 }
 
 quest_array = [
+	[
+		"Gather Renown", //name of quest
+		0, //status -1 inactive, 0 active
+		"Achieve Renown Level 10", //description
+		"The Regent Crown", //renown award
+		spr_crown, //icon for the quest
+	],
 	[
 		"Build a stockpile", //name of quest
 		0, //status -1 inactive, 0 active
@@ -57,14 +66,14 @@ quest_array = [
 		spr_stove, //icon for the quest
 	],
 	[
-		"Collect 4 raw meat", //name of quest
+		"Collect 3 raw meat", //name of quest
 		-1, //status -1 inactive, 0 active
 		"Hunt animals to collect meat", //description
 		75, //renown award
 		spr_bull, //icon for the quest
 	],
 	[
-		"Cook 10 meals", //name of quest
+		"Cook 3 meals", //name of quest
 		-1, //status -1 inactive, 0 active
 		"Use a stove to cook raw food", //description
 		75, //renown award
@@ -76,6 +85,13 @@ quest_array = [
 		"Plant and grow wheat", //description
 		75, //renown award
 		spr_wheat_icon, //icon for the quest
+	],
+	[
+		"Survive Goblin Raid", //name of quest
+		-1, //status -1 inactive, 0 active
+		"Repel the enemy attack", //description
+		100, //renown award
+		spr_goblin_attack, //icon for the quest
 	],
 ]
 

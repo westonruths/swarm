@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_construction",
-    "path": "sprites/spr_construction/spr_construction.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

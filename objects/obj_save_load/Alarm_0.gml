@@ -74,6 +74,7 @@ with (obj_pawn) {
 		name: name,
 		spd: spd,
 		old_hp: old_hp,
+		crowned: crowned,
 	}
 	
 	with (mood) {

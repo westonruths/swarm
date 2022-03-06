@@ -21,3 +21,5 @@ accuracy = 70
 
 title = "Goblin"
 detail = "A nefarious foe. Prepare your defenses."
+
+start_num_pawns = instance_number(obj_pawn)

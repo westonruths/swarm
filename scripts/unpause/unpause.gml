@@ -13,6 +13,10 @@ function unpause(){
 	with (obj_pawns_menu) {
 		instance_destroy()
 	}
+	
+	with(obj_crown_pawn_btn) {
+		instance_destroy()
+	}
 
 	with (obj_close_info) {
 		alarm[0] = 1

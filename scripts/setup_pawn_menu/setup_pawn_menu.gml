@@ -21,6 +21,17 @@ function setup_pawn_menu(){
 			visible = true
 		}
 	}
+	
+	var crown_unlocked = false
+	with (quests) {
+		if quest_array[quest.gather_renown][1] == -1 { crown_unlocked = true }
+	}
+	
+	if crown_unlocked {
+		with(instance_create_layer(global.view_width-235,global.view_height-30,"Menu",obj_crown_pawn_btn)) {
+			pawn = other
+		}
+	}
 
 	instance_create_layer(global.view_width-30,15,"Menu",obj_close_menu);
 	var task_menu = instance_create_layer(global.view_width-(global.view_width/3),0,"Menu",obj_task_menu);

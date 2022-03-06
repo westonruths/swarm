@@ -21,7 +21,7 @@ function Construct(){
 		
 		if instance_exists(construct_target) {
 			if !construct_target.deconstruct && construct_target.hp == construct_target.hp_max && construct_target.object_index != obj_construction  {
-				print(name, "stopping construction", construct_target)
+				//print(name, "stopping construction", construct_target)
 				construct_target = noone
 			}
 		}

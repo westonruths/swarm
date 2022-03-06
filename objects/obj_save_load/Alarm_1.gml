@@ -77,6 +77,7 @@ if (file_exists("settler.save")) {
 			hair.hair_type= _loadEntity.hair_type
 			name = _loadEntity.name
 			spd = _loadEntity.spd
+			crowned = _loadEntity.crowned
 			
 			with (mood) {
 				mood = _loadEntity.mood.mood

@@ -143,8 +143,12 @@ current_target--
 Mood()
 current_target--
 
+if (path_position == path_positionprevious) && (sprite_index == spr_pawn_walk || sprite_index == spr_pawn_run) {
+	Idle()
+}
+
 //update path immediately if target changed
-if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_pawn_defend {
+if (old_targetX != targetX || old_targetY != targetY) {
 	//move towards point
 	if mp_grid_path(global.grid, path, x, y, targetX, targetY, false)  {
 		path_start(path, spd, path_action_stop, true)
@@ -159,33 +163,12 @@ if (old_targetX != targetX || old_targetY != targetY) && sprite_index != spr_paw
 			}
 		}
 		
-		x = cell.x
-		y = cell.y
-		
-		var _tmpx = targetX+global.grid_resolution*irandom_range(-1,1)
-		var _tmpy = targetY+global.grid_resolution*irandom_range(-1,1)
-		
-		if mp_grid_path(global.grid, path, x, y, _tmpx, _tmpy, false) {
-			path_start(path, spd, path_action_stop, true)
+		if instance_exists(cell) {
+			x = cell.x
+			y = cell.y
 		}
 	}
 }
-
-//if (old_targetX == targetX || old_targetY == targetY) && (sprite_index == spr_pawn_walk || sprite_index == spr_pawn_run) {
-//	var max_dist = 9999
-//	var cell = noone
-//	with (obj_cell) {
-//		var dist = distance_to_point(other.x, other.y)
-//		if  dist < max_dist && place_empty(x, y, obj_wall) && place_empty(x, y, obj_mtn_wall) && place_empty(x, y, obj_tree) {
-//			max_dist = dist
-//			cell = id
-//		}
-//	}
-	
-//	if instance_exists(cell) {
-//		x = cell.x
-//		y = cell.y
-//	}
 		
 //	var _tmpx = targetX+global.grid_resolution*irandom_range(-1,1)
 //	var _tmpy = targetY+global.grid_resolution*irandom_range(-1,1)
@@ -207,15 +190,5 @@ if path_position == 1 && (sprite_index == spr_pawn_idle || sprite_index == spr_p
 
 if path_position == 0 && x == targetX && y == targetY {
 	path_position = 1	
-}
-
-if distance_to_object(instance_nearest(x,y,obj_skull)) < global.grid_resolution*2 {
-	mood.thoughtactive[mood_thoughts.dead_body] = 1		
-	if random_range(-100, 1) > 0 {
-		with(instance_create_layer(x,y-10,"Cover",obj_status)) { 
-			text = "A dead body!"
-			image_blend = c_red
-		}
-	}
 }
 
