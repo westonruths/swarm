@@ -14,7 +14,7 @@ function unpause(){
 		instance_destroy()
 	}
 	
-	with(obj_crown_pawn_btn) {
+	with (obj_target_btn) {
 		instance_destroy()
 	}
 

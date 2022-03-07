@@ -81,7 +81,7 @@ with (pawn.mood) {
 	
 	var y_buff = 170
 	for(var i=0; i<array_length(thought); i++) {
-		if thoughtactive[i] && y_buff < global.view_height-30{
+		if thoughtactive[i] && y_buff < global.view_height-75{
 			if thoughteffect[i] > 0 {
 				draw_set_color(make_color_rgb(0, 100, 0));
 			} else {

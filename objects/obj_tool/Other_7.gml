@@ -54,10 +54,11 @@ switch(sprite_index){
 		var attackRoll = irandom_range(1, 100);
 		if (attackRoll <= pawn_dmg*10){
 		   //Successful attack
-		   var damage = irandom_range(1, pawn_dmg*10);
+		   var damage = irandom_range(1, pawn_dmg*2);
 		   //print(pawn.name, " lands a strike, dealing ", damage, " damage!")
 		   with(pawn.defend_target) {
 				hp -= damage
+				
 				var _snd = choose(snd_blade_hit, snd_Cloth_Armor_Hit_A, snd_Cloth_Armor_Hit_B)
 				audio_sound_pitch(_snd, choose(0.9,1.0,1.1))
 				audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
@@ -156,12 +157,12 @@ switch(sprite_index){
 		break;
 	case spr_sleep:
 		with (pawn) {
-			char_energy += 3
+			char_energy += 0.9
 		}
 		break;
 	case spr_patient:
 		with (pawn) {
-			char_energy += 1
+			char_energy += 0.5
 			hp += heal_rate
 		}
 		break;

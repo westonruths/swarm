@@ -16,3 +16,4 @@ mp_grid_clear_cell(global.grid, floor(x / global.grid_resolution), floor(y /glob
 mp_grid_clear_cell(global.enemy_grid, floor(x / global.grid_resolution), floor(y /global.grid_resolution));
 
 image_index = image_number-1
+image_speed = 0

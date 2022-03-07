@@ -59,8 +59,8 @@ if xPanTo > 0 {
 			with (obj_menu_btn) { hide_buttons = true }
 		}
 	
-		x += (xTo - x) / 1;
-		y += (yTo - y) / 1;
+		x += (xTo - x) / 2;
+		y += (yTo - y) / 2;
 	} 
 }
 

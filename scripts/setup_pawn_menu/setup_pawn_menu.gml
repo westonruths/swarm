@@ -28,9 +28,18 @@ function setup_pawn_menu(){
 	}
 	
 	if crown_unlocked {
-		with(instance_create_layer(global.view_width-235,global.view_height-30,"Menu",obj_crown_pawn_btn)) {
+		with(instance_create_layer(global.view_width-235,global.view_height-60,"Menu",obj_crown_pawn_btn)) {
 			pawn = other
 		}
+	}
+	
+	with(instance_create_layer(global.view_width-265,global.view_height-30,"Menu",obj_draft_btn)) {
+		pawn = other
+	}
+	
+
+	with(instance_create_layer(global.view_width-170,global.view_height-30,"Menu",obj_target_btn)) {
+		pawn = other.id
 	}
 
 	instance_create_layer(global.view_width-30,15,"Menu",obj_close_menu);

@@ -23,4 +23,12 @@ with (obj_info_item) {
 	alarm[4] = -1
 }
 
+with(obj_target_task) { 
+	instance_destroy() 
+	
+	with (obj_menu_btn) {
+		alarm[0] = 1
+	}
+}
+
 

@@ -12,10 +12,10 @@ if(room == rm_game){
 	audio_play_sound(_02_IMAscore_PeacefulKingdom_LOOP, 1, true);
 	
 	//setup map
-	global.top_game = global.grid_resolution * 2;
-	global.bottom_game = room_height - global.grid_resolution/2;
-	global.left_limit = global.grid_resolution * 2;
-	global.right_limit = room_width - global.grid_resolution/2;
+	global.top_game = global.grid_resolution * 3;
+	global.bottom_game = room_height - global.grid_resolution*5;
+	global.left_limit = global.grid_resolution * 3;
+	global.right_limit = room_width - global.grid_resolution*5;
 
 	if global.start_new_game {
 		make_new_game()

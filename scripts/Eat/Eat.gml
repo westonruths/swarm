@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Eat(){
-	if (char_food/char_food_max > 0.4) && !instance_exists(eat_target) {
+	if (char_food/char_food_max > 0.2) && !instance_exists(eat_target) {
 		exit
 	}
 	
@@ -33,7 +33,7 @@ function Eat(){
 			}
 			
 		} else {
-			sprite_index = spr_pawn_walk
+			sprite_index = spr_pawn_run
 			//targetX = eat_target.x
 			//targetY = eat_target.y
 		

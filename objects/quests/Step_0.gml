@@ -22,7 +22,6 @@ var i = 0; repeat(quests_number) {
 		case quest.gather_renown:
 			if quest_array[i][1] != -1 {
 				if global.renown_level >= 10 {
-					print("gained renown")
 					complete_quest(i)
 				}
 			}

@@ -11,6 +11,8 @@ with (obj_task_cell) {
 }
 
 with (obj_crown_pawn_btn) { instance_destroy() }
+with (obj_draft_btn) { instance_destroy() }
+with (obj_target_btn) { instance_destroy() }
 
 global.menu_open = true;
 

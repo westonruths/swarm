@@ -12,7 +12,7 @@ function Mine(){
 			sprite_index = spr_pawn_mine
 			current_task = "Mining"
 		} else {
-			sprite_index = spr_pawn_walk
+			sprite_index = spr_pawn_run
 			current_task = "Mining"
 		}
 	} else {

@@ -46,6 +46,10 @@ if (file_exists("info_items.save")) {
 			if variable_instance_exists(id, "filled") {
 				filled = _loadEntity.filled
 			}
+			
+			if variable_instance_exists(id, "start_num_pawns") {
+				start_num_pawns = _loadEntity.start_num_pawns
+			}
 
 			if variable_instance_exists(id, "watered") {
 				watered = _loadEntity.watered
@@ -94,6 +98,7 @@ if (file_exists("settler.save")) {
 			name = _loadEntity.name
 			spd = _loadEntity.spd
 			crowned = _loadEntity.crowned
+			drafted = _loadEntity.drafted
 			
 			with (mood) {
 				mood = _loadEntity.mood.mood
@@ -187,6 +192,28 @@ if (file_exists("story.save")) {
 		with (instance_create_layer(_loadEntity.x, _loadEntity.y, _loadEntity.layer, obj_storyteller)) {
 
 			counter_hrs = _loadEntity.counter_hrs
+		
+		}
+	}
+	print("Loaded story! ", _string)
+}
+#endregion
+
+#region Load targets
+if (file_exists("targets.save")) {
+	
+	var _buffer = buffer_load("targets.save")
+	var _string = buffer_read( _buffer, buffer_string)
+	buffer_delete( _buffer)
+	
+	var _loadData = json_parse( _string)
+	
+	while (array_length(_loadData) > 0) {
+		var _loadEntity = array_pop(_loadData)
+		
+		with (instance_create_layer(_loadEntity.x, _loadEntity.y, _loadEntity.layer, obj_storyteller)) {
+
+			pawn = _loadEntity.pawn
 		
 		}
 	}

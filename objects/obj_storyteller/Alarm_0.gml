@@ -7,9 +7,13 @@ if instance_exists(obj_storyteller_prompt) exit
 counter_hrs[story.raid] -= 1
 
 if (counter_hrs[story.raid] <= 0) {
-	num_goblins = 1 + irandom_range(global.day/2, global.day)
+	num_goblins = 1 + irandom_range(global.day/4, global.day)
 
-	counter_hrs[story.raid] = 72 + irandom_range(-2,2)
+	if instance_number(obj_pawn) < 7 {
+		counter_hrs[story.raid] = 72 + irandom_range(12,24)
+	} else {
+		counter_hrs[story.raid] = 12 + irandom_range(12,24)
+	}
 	
 	var prompt = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_storyteller_prompt);
 	with (prompt) {
@@ -31,7 +35,7 @@ counter_hrs[story.save_settler] -= 1
 
 if (counter_hrs[story.save_settler] <= 0) {
 
-	counter_hrs[story.save_settler] = (100 + irandom_range(0,5)) * instance_number(obj_pawn)
+	counter_hrs[story.save_settler] = (24 * instance_number(obj_pawn)) + irandom_range(0,5)
 	
 	var prompt = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_storyteller_prompt);
 	with (prompt) {

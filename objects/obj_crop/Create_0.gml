@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-max_grow_counter = 5
+max_grow_counter = 4
 grow_counter = 0
 
 max_build_counter = 50

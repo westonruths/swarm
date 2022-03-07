@@ -51,7 +51,7 @@ function Doctor(){
 				with(main_pawn) {
 					var dist = distance_to_object(other)
 					if spot_free && (dist < max_dist) && !chosen{
-						sprite_index = spr_pawn_walk
+						sprite_index = spr_pawn_run
 						doctor_haul_target = other.id
 						doctor_target = tmp_patient
 						max_dist = dist
@@ -120,7 +120,7 @@ function Doctor(){
 							sprite_index = spr_pawn_doctor
 							current_task = "Doctoring"
 						} else {
-							sprite_index = spr_pawn_walk
+							sprite_index = spr_pawn_run
 							current_task = "Doctoring"
 						}
 					}

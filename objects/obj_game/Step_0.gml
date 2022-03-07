@@ -8,11 +8,12 @@ if(room != rm_game) {
 // janky camera setup to start near center of map
 if (first_step) {
 	first_step = false
+	
 	with (obj_camera) {
-		x = xstart
-		y = ystart
-		xTo = x
-		yTo = y
+		//x = xstart
+		//y = ystart
+		xTo = xstart
+		yTo = ystart
 		camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
 	}
 }

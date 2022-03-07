@@ -43,6 +43,10 @@ with (obj_info_item) {
 	if variable_instance_exists(id, "filled") {
 		_saveEntity.filled = filled
 	}
+	
+	if variable_instance_exists(id, "start_num_pawns") {
+		_saveEntity.start_num_pawns = start_num_pawns
+	}
 
 	if variable_instance_exists(id, "watered") {
 		_saveEntity.watered = watered
@@ -91,6 +95,7 @@ with (obj_pawn) {
 		spd: spd,
 		old_hp: old_hp,
 		crowned: crowned,
+		drafted: drafted,
 	}
 	
 	with (mood) {
@@ -190,7 +195,7 @@ buffer_delete( _buffer)
 //print("Game saved! ", _string)
 #endregion
 
-#region Save story
+#region Save targets
 //make save array
 var _saveData = array_create(0)
 
@@ -213,6 +218,34 @@ var _string = json_stringify(_saveData)
 var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed, 1);
 buffer_write( _buffer, buffer_string, _string)
 buffer_save( _buffer, "story.save")
+buffer_delete( _buffer)
+
+//print("Game saved! ", _string)
+#endregion
+
+#region Save story
+//make save array
+var _saveData = array_create(0)
+
+//for every instance, create a struct and add it to the array
+with (obj_target) {
+	
+	var _saveEntity = 
+	{
+		x: x,
+		y: y,
+		layer: layer,
+		
+		pawn: pawn,
+	}
+	
+	array_push(_saveData, _saveEntity)	
+}
+
+var _string = json_stringify(_saveData)
+var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed, 1);
+buffer_write( _buffer, buffer_string, _string)
+buffer_save( _buffer, "targets.save")
 buffer_delete( _buffer)
 
 //print("Game saved! ", _string)

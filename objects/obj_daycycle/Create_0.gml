@@ -15,7 +15,7 @@ darkness = 0;
 light_colour = c_black;
 
 //turn on or off drawing of daylight
-draw_daylight = true;
+draw_daylight = false;
 
 guiWidth = room_width
 guiHeight = room_height

@@ -14,7 +14,7 @@ function Construct(){
 				construct_target = noone
 			}
 		} else {
-			sprite_index = spr_pawn_walk
+			sprite_index = spr_pawn_run
 			move_to_around_free_point(construct_target.x, construct_target.y)
 			current_task = "Constructing"
 		}

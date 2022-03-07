@@ -10,13 +10,13 @@ function PlantCut() {
 	if (instance_exists(fell_target)) {
 		_clear_previous_targets()
 		
-		move_to_around_free_point(fell_target.x, fell_target.y)
 		if path_position == 1 && distance_to_object(fell_target) < global.grid_resolution {
 			direction = point_direction(x, y, fell_target.x, fell_target.y)
 			sprite_index = spr_pawn_chop
 			current_task = "Plant cutting"
 		} else {
-			sprite_index = spr_pawn_walk
+			move_to_around_free_point(fell_target.x, fell_target.y)
+			sprite_index = spr_pawn_run
 			current_task = "Plant cutting"
 		}
 	} else {

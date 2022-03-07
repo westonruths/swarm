@@ -4,7 +4,7 @@ function Idle() {
 	
 	if idle_counter <= 0 {
 		move_to_random_point()
-		idle_counter = irandom_range(50, 150)
+		idle_counter = irandom_range(250, 500)
 	}
 	
 	active_wpn_index = 0 //no wpn
@@ -26,6 +26,17 @@ function Idle() {
 		targetY = irandom_range(y-100, y+100)
 	}
 	
-	sprite_index = spr_pawn_walk
-	current_task = "Idle"
+	if (sprite_index == spr_pawn_run || sprite_index == spr_pawn_carry) {
+	
+	} else {
+		sprite_index = spr_pawn_walk
+		current_task = "Idle"
+	}
+	
+	if current_target == targets_listsize-1 {
+		sprite_index = spr_pawn_walk
+		current_task = "Idle"
+	}
+	
+	
 }

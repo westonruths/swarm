@@ -20,7 +20,7 @@ function check_around_free_point(pointX, pointY){
 		return true
 	}
 
-	return false
+	//return false
 	
 	//mp_grid_clear_cell(global.grid, floor(pointX / global.grid_resolution), floor(pointY / global.grid_resolution));
 	//var result = mp_grid_path(global.grid, test_path, x, y, pointX, pointY, false)

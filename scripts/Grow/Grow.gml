@@ -5,7 +5,7 @@ function Grow(){
 		if build_counter >= max_build_counter && watered {
 			with (other) {
 				grow_target = noone
-				sprite_index = spr_pawn_walk
+				sprite_index = spr_pawn_run
 			}
 		}
 	}
@@ -20,7 +20,7 @@ function Grow(){
 				sprite_index = spr_pawn_digging
 				current_task = "Planting"
 			} else {
-				sprite_index = spr_pawn_walk
+				sprite_index = spr_pawn_run
 				current_task = "Planting"
 			}		
 		} else if !grow_target.watered {
@@ -30,7 +30,7 @@ function Grow(){
 				sprite_index = spr_pawn_watering
 				current_task = "Watering"
 			} else {
-				sprite_index = spr_pawn_walk
+				sprite_index = spr_pawn_run
 				current_task = "Watering"
 			}					
 		}

@@ -15,3 +15,5 @@ y -= 0.2 + log10(image_alpha*35)
 image_alpha -= 0.01
 
 if image_alpha <= 0 { instance_destroy() }
+
+draw_set_alpha(1)

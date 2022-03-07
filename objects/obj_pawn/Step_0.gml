@@ -142,8 +142,9 @@ current_target--
 // Mood actions
 Mood()
 current_target--
+Draft()
 
-if (path_position == path_positionprevious) && (sprite_index == spr_pawn_walk || sprite_index == spr_pawn_run) {
+if (path_position == path_positionprevious) && (sprite_index == spr_pawn_walk || sprite_index == spr_pawn_run || sprite_index == spr_pawn_carry) {
 	Idle()
 }
 

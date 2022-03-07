@@ -26,29 +26,50 @@ function make_new_game(){
 		mtn_list[i] = [start_x, end_x, start_y, end_y]
 	}
 	
-	
+	var _x = first_cell_x
+	var _y = first_cell_y
+	with (obj_camera) {
+		_x = x
+		_y = y
+	}
+		
 	//make pawns
-	instance_create_layer(first_cell_x,first_cell_y,"Instances",obj_pawn);
-	instance_create_layer(first_cell_x,first_cell_y+buffer,"Instances",obj_pawn);
-	instance_create_layer(first_cell_x,first_cell_y+buffer*2,"Instances",obj_pawn);
+	instance_create_layer(_x,_y,"Instances",obj_pawn);
+	instance_create_layer(_x,_y+buffer,"Instances",obj_pawn);
+	instance_create_layer(_x,_y+buffer*2,"Instances",obj_pawn);
 	
 	//make starting meals
 	repeat(3) {
-		instance_create_layer(first_cell_x,first_cell_y,"Items",obj_meal);
-		instance_create_layer(first_cell_x,first_cell_y+buffer,"Items",obj_meal);
-		instance_create_layer(first_cell_x,first_cell_y+buffer*2,"Items",obj_meal);
+		instance_create_layer(_x,_y,"Items",obj_meal);
+		instance_create_layer(_x,_y+buffer,"Items",obj_meal);
+		instance_create_layer(_x,_y+buffer*2,"Items",obj_meal);
 	}
 	
 	//make starting medicines
-	instance_create_layer(first_cell_x-buffer,first_cell_y,"Items",obj_healing_herb);
-	instance_create_layer(first_cell_x-buffer,first_cell_y+buffer,"Items",obj_healing_herb);
-	instance_create_layer(first_cell_x-buffer,first_cell_y+buffer*2,"Items",obj_healing_herb);
+	instance_create_layer(_x,_y,"Items",obj_healing_herb);
+	instance_create_layer(_x,_y+buffer,"Items",obj_healing_herb);
+	instance_create_layer(_x,_y+buffer*2,"Items",obj_healing_herb);
 	
 	//setup cells
 	spawn_list = ds_list_create();
 	for (var i = first_cell_y; i<global.bottom_game; i+=buffer) {
 		ds_list_add(spawn_list, i);
 		for (var j = first_cell_x; j<global.right_limit; j+=buffer) {
+			
+			if i-16 == global.top_game && j-16 == global.left_limit {
+				continue	
+			}
+			if i+16 == global.bottom_game && j+16 == global.right_limit {
+				continue	
+			}
+			if i+16 == global.bottom_game && j-16 == global.left_limit {
+				continue	
+			}
+			if i-16 == global.top_game && j+16 == global.right_limit {
+				continue	
+			}
+			
+			
 			var cell = instance_create_layer(j,i,"BuildUI",obj_cell);
 			
 			for (var m = 0; m<num_mtns; m+=1) {

@@ -15,6 +15,7 @@ mood = instance_create_layer(x, y, "Instances", obj_mood)
 current_task = ""
 
 crowned = false
+drafted = false
 
 work_spd = 1
 spd = 1;
@@ -88,7 +89,7 @@ targets_listsize = array_length(targets);
 current_target = targets_listsize-1
 
 // Idle target
-idle_counter = 50
+idle_counter = 0
 targetX = x + irandom_range(-50,50)
 targetY = y + irandom_range(-50,50)
 old_targetX = targetX

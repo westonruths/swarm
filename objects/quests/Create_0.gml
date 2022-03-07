@@ -73,10 +73,10 @@ quest_array = [
 		spr_bull, //icon for the quest
 	],
 	[
-		"Cook 3 meals", //name of quest
+		"Cook 10 meals", //name of quest
 		-1, //status -1 inactive, 0 active
 		"Use a stove to cook raw food", //description
-		75, //renown award
+		150, //renown award
 		spr_meal, //icon for the quest
 	],
 	[

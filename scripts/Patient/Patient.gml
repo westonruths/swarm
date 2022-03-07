@@ -31,7 +31,7 @@ function Patient(){
 			//}
 			
 		} else {
-			sprite_index = spr_pawn_walk
+			sprite_index = spr_pawn_run
 			current_task = "Going to heal"
 		}
 		

@@ -17,7 +17,7 @@ path = path_add();
 hunt_target = noone
 
 strength = 10
-accuracy = 70
+accuracy = 55
 
 title = "Goblin"
 detail = "A nefarious foe. Prepare your defenses."

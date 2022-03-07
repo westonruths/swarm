@@ -60,13 +60,12 @@ function Sleep(){
 				
 				mood.thoughtactive[mood_thoughts.wants_own_room] = 1
 			} else {
-				print(name, "has own bedroom")
 				mood.thoughtactive[mood_thoughts.wants_own_room] = 0
 				mood.thoughtactive[mood_thoughts.likes_room] = 1
 			}
 			
 		} else {
-			sprite_index = spr_pawn_walk
+			sprite_index = spr_pawn_run
 			current_task = "Heading to bed"
 		}
 		
