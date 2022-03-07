@@ -44,7 +44,7 @@ goblin_retreat()
 if (old_targetX != targetX || old_targetY != targetY) {
 	//move towards point
 	if mp_grid_path(global.enemy_grid, path, x, y, targetX, targetY, false)  {
-		path_start(path, spd, path_action_stop, true)
+		path_start(path, spd * global.game_speed, path_action_stop, true)
 	} else {
 		var max_dist = 9999
 		var cell = noone
