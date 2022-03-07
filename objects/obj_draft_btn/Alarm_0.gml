@@ -21,6 +21,8 @@ if !pawn.drafted {
 		y = pawn.y
 	}
 	
+	with(obj_target_btn) { alarm[0] = 1}
+	
 } else {
 	pawn.drafted = false
 }

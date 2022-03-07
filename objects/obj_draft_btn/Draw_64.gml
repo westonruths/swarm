@@ -7,10 +7,10 @@ image_yscale = 3
 var _text = "Draft"
 if instance_exists(pawn) {
 	if pawn.drafted {
-		sprite_index = spr_dt_box
-		_text = "Drafted"
+		sprite_index = spr_w_box
+		_text = "Undraft"
 	} else {
-		sprite_index = spr_lt_box
+		sprite_index = spr_w_box
 	}
 }
 

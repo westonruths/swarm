@@ -7,7 +7,7 @@ function Mine(){
 		_clear_previous_targets()
 		
 		move_to_around_free_point(mine_target.x, mine_target.y)
-		if path_position == 1 && distance_to_object(mine_target) < global.grid_resolution {
+		if path_position > 0.85 && distance_to_object(mine_target) < global.grid_resolution {
 			direction = point_direction(x, y, mine_target.x, mine_target.y)
 			sprite_index = spr_pawn_mine
 			current_task = "Mining"

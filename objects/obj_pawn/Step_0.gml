@@ -104,72 +104,39 @@ with(selector) {
 	y = other.y;
 }
 
-// Loop through and execute enabled tasks
-targets[0] = mood_target
-targets[1] = defend_target
-targets[2] = eat_target
-targets[3] = sleep_target
-targets[4] = patient_target
-targets[5] = doctor_target
-targets[6] = cooking_target
-targets[7] = hunt_target
-targets[8] = construct_target
-targets[9] = grow_target
-targets[10] = mine_target
-targets[11] = fell_target
-targets[12] = haul_target
-current_target = targets_listsize-1
-Idle()
-var listSize = array_length(task_cells);
-for(var i = listSize - 1; i >= 1; i--) {
-	if (task_cells[i].enabled) {
-		script_execute(task_cells[i].job)
-	}
-	current_target--
-}
-// Sleep and then eat next
-Sleep()
-current_target--
-Eat()
-current_target--
-// Do defend last since it is highest priority
-if (task_cells[0].enabled) {
-	script_execute(task_cells[0].job)
-} else {
-	Hide()	
-}
-current_target--
-// Mood actions
-Mood()
-current_target--
-Draft()
-
-if (path_position == path_positionprevious) && (sprite_index == spr_pawn_walk || sprite_index == spr_pawn_run || sprite_index == spr_pawn_carry) {
-	Idle()
-}
-
-//update path immediately if target changed
-if (old_targetX != targetX || old_targetY != targetY) {
-	//move towards point
-	if mp_grid_path(global.grid, path, x, y, targetX, targetY, false)  {
-		path_start(path, spd * global.game_speed, path_action_stop, true)
-	} else {
-		var max_dist = 9999
-		var cell = noone
-		with (obj_cell) {
-			var dist = distance_to_point(other.x, other.y)
-			if  dist < max_dist && place_empty(x, y, obj_wall) && place_empty(x, y, obj_mtn_wall) && place_empty(x, y, obj_tree) {
-				max_dist = dist
-				cell = id
-			}
-		}
+#region OLD CODE
+//if (old_targetX != targetX || old_targetY != targetY) {
+//	if name == "Temy" {
+//		print(name, "target has changed", path, path_position)
+//	}	
+	
+//	//move towards point
+//	if mp_grid_path(global.grid, path, x, y, targetX, targetY, true)  {
+//		path_start(path, spd * global.game_speed, path_action_stop, true)
 		
-		if instance_exists(cell) {
-			x = cell.x
-			y = cell.y
-		}
-	}
-}
+//		if name == "Temy" {
+//			print(name, "starting path", path, path_position)
+//		}
+	
+//	} else {
+//		print(name, "has no path")
+		
+//		var max_dist = 9999
+//		var cell = noone
+//		with (obj_cell) {
+//			var dist = distance_to_point(other.x, other.y)
+//			if  dist < max_dist && place_empty(x, y, obj_wall) && place_empty(x, y, obj_mtn_wall) && place_empty(x, y, obj_tree) {
+//				max_dist = dist
+//				cell = id
+//			}
+//		}
+		
+//		if instance_exists(cell) {
+//			x = cell.x
+//			y = cell.y
+//		}
+//	}
+//}
 		
 //	var _tmpx = targetX+global.grid_resolution*irandom_range(-1,1)
 //	var _tmpy = targetY+global.grid_resolution*irandom_range(-1,1)
@@ -180,16 +147,16 @@ if (old_targetX != targetX || old_targetY != targetY) {
 //		path_start(path, spd, path_action_stop, true)
 //	}
 //}
+//old_targetX = targetX
+//old_targetY = targetY
+#endregion
 
-old_targetX = targetX
-old_targetY = targetY
 
 //if moving then just be idle
-if path_position == 1 && (sprite_index == spr_pawn_idle || sprite_index == spr_pawn_walk) {
+if path_position > 0.85 && (sprite_index == spr_pawn_idle || sprite_index == spr_pawn_walk) {
 	sprite_index = spr_pawn_idle
 }
 
-if path_position == 0 && x == targetX && y == targetY {
-	path_position = 1	
-}
-
+//if path_position < 0.1 && x == targetX && y == targetY {
+//	path_position = 1	
+//}

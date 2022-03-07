@@ -9,10 +9,10 @@ if !selected {
 	if instance_exists(pawn) {
 		if !pawn.drafted {
 			image_blend = c_dkgrey
-			sprite_index = spr_dt_box
+			sprite_index = spr_w_box
 		} else {
 			image_blend = c_white
-			sprite_index = spr_lt_box
+			sprite_index = spr_w_box
 		}
 	}
 

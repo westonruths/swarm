@@ -14,10 +14,15 @@ with (hair) {
 	y = other.y
 }
 
-if menu_open {
+if menu_open || drafted{
 	//draw_ellipse_colour(x-10, y+1, x+10, y+10, c_green, c_green, true);
-	draw_sprite_ext(selectbox_top, image_index, x, y, 1, 1, image_angle, image_blend, image_alpha)
-	draw_sprite_ext(selectbox_bottom, image_index, x, y-5, 1, 1, image_angle, image_blend, image_alpha)
+	if drafted {
+		draw_sprite_ext(selectbox_top, image_index, x, y, 1, 1, image_angle, c_red, image_alpha)
+		draw_sprite_ext(selectbox_bottom, image_index, x, y-5, 1, 1, image_angle, c_red, image_alpha)	
+	} else {
+		draw_sprite_ext(selectbox_top, image_index, x, y, 1, 1, image_angle, image_blend, image_alpha)
+		draw_sprite_ext(selectbox_bottom, image_index, x, y-5, 1, 1, image_angle, image_blend, image_alpha)		
+	}
 	
 	draw_sprite_ext(select_dots_large, image_index, targetX, targetY, 1, 1, image_angle, image_blend, image_alpha)
 	

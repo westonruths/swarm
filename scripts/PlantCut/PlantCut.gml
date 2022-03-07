@@ -10,7 +10,8 @@ function PlantCut() {
 	if (instance_exists(fell_target)) {
 		_clear_previous_targets()
 		
-		if path_position == 1 && distance_to_object(fell_target) < global.grid_resolution {
+		print(name, path_position)
+		if path_position > 0.85 && distance_to_object(fell_target) < global.grid_resolution {
 			direction = point_direction(x, y, fell_target.x, fell_target.y)
 			sprite_index = spr_pawn_chop
 			current_task = "Plant cutting"

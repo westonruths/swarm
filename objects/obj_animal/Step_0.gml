@@ -28,7 +28,7 @@ if (old_targetX != targetX || old_targetY != targetY) {
 old_targetX = targetX
 old_targetY = targetY
 
-if path_position == 1 {
+if path_position > 0.85 {
 	image_index = 0
 }
 

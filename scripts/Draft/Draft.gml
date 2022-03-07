@@ -20,18 +20,19 @@ function Draft(){
 			sprite_index = spr_pawn_run
 		}
 		
+
+		
 		var _enemy = instance_nearest(x,y,obj_goblin)
 		if distance_to_object(obj_goblin) < global.grid_resolution {
 			direction = point_direction(x, y, _enemy.x, _enemy.y)
 			sprite_index = spr_pawn_defend
 			current_task = "Fighting"
-			targetX = x
-			targetY = y
+			//targetX = x
+			//targetY = y
 		}
 		
-		if distance_to_object(obj_goblin) < global.grid_resolution*3 {
-			targetX = _enemy.x
-			targetY = _enemy.y
-		}
+		//if distance_to_object(obj_goblin) < global.grid_resolution*3 {
+		//	move_to_around_free_point(_enemy.x, _enemy.y)
+		//}
 	}
 }

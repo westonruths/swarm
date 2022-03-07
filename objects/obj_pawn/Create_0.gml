@@ -94,6 +94,7 @@ targetX = x + irandom_range(-50,50)
 targetY = y + irandom_range(-50,50)
 old_targetX = targetX
 old_targetY = targetY
+alarm[2] = 1
 
 // Moody counter
 moody_counter = 0

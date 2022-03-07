@@ -7,7 +7,7 @@ function goblin_raid(){
 	var _goblin = noone
 	repeat(_num_goblins) {
 		var _x = irandom_range(0,global.room_y_size)
-		var _y = 16
+		var _y = choose(global.top_game,global.bottom_game)
 	
 		var max_dist = 9999
 		var cell = noone

@@ -115,7 +115,7 @@ function Doctor(){
 								medicine_holding = noone	
 						}
 							
-						if path_position == 1 {
+						if path_position > 0.85 {
 							direction = point_direction(x, y, doctor_target.x, doctor_target.y)
 							sprite_index = spr_pawn_doctor
 							current_task = "Doctoring"

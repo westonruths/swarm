@@ -15,7 +15,7 @@ function Grow(){
 		
 		if grow_target.build_counter < grow_target.max_build_counter {
 			move_to_around_free_point(grow_target.x, grow_target.y)
-			if path_position == 1 {
+			if path_position > 0.85 {
 				direction = point_direction(x, y, grow_target.x, grow_target.y)
 				sprite_index = spr_pawn_digging
 				current_task = "Planting"
@@ -25,7 +25,7 @@ function Grow(){
 			}		
 		} else if !grow_target.watered {
 			move_to_around_free_point(grow_target.x, grow_target.y)
-			if path_position == 1 {
+			if path_position > 0.85 {
 				direction = point_direction(x, y, grow_target.x, grow_target.y)
 				sprite_index = spr_pawn_watering
 				current_task = "Watering"

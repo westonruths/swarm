@@ -13,6 +13,7 @@ old_targetY = targetY
 
 spd = 1;
 path = path_add();
+alarm[2] = 1
 
 hunt_target = noone
 
@@ -23,3 +24,4 @@ title = "Goblin"
 detail = "A nefarious foe. Prepare your defenses."
 
 start_num_pawns = instance_number(obj_pawn)
+

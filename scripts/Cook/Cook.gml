@@ -133,7 +133,7 @@ function Cook(){
 					cooking_target = other.id
 					max_dist_stove = dist
 					move_to_around_free_point(other.x, other.y)
-					if path_position == 1 {
+					if path_position > 0.85 {
 						direction = point_direction(x, y, cooking_target.x, cooking_target.y)
 						sprite_index = spr_pawn_cooking
 						current_task = "Cooking"

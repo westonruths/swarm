@@ -6,8 +6,25 @@ function move_to_random_point(){
 	var _num = collision_rectangle_list(x-100, y-100, x+100, y+100, obj_cell, false, true, _list, false);
 	if _num > 0 {
 		var cell = _list[| irandom_range(0, _num-1)]
-		targetX = cell.x
-		targetY = cell.y
+		var _x = cell.x
+		var _y = cell.y
+		
+		var max_dist = 100
+		with (obj_cell) {
+			var dist = distance_to_point(_x, _y)
+			if  dist < max_dist && place_empty(x, y, obj_wall) && place_empty(x, y, obj_mtn_wall) && place_empty(x, y, obj_tree) {
+				max_dist = dist
+				cell = id
+			}
+		}
+		
+		if instance_exists(cell) {
+			_x = cell.x
+			_y = cell.y
+		}
+		
+		targetX = _x
+		targetY = _y
 	}
 	ds_list_destroy(_list);
 	

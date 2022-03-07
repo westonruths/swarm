@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+if !instance_exists(pawn) { instance_destroy() }
+
 if (global.menu_open == false || pawn.menu_open == false || global.building) && !selected{
 	print("destroy target btn")
 	instance_destroy()
@@ -42,12 +44,27 @@ if mouse_check_button_released(mb_left) {
 	var _x = device_mouse_x(0)
 	var _y = device_mouse_y(0)
 	
-	with(instance_nearest(_x, _y, obj_cell)) {
-		if !place_empty_list(_x,_y) { exit }
-		
-		_x = x
-		_y = y
+	var max_dist = 16
+	var cell = noone
+	with (obj_cell) {
+		var dist = distance_to_point(_x, _y)
+		if  dist < max_dist && place_empty(x, y, obj_wall) && place_empty(x, y, obj_mtn_wall) && place_empty(x, y, obj_tree) {
+			max_dist = dist
+			cell = id
+		}
 	}
+		
+	if instance_exists(cell) {
+		_x = cell.x
+		_y = cell.y
+	}
+	
+	//with(instance_nearest(_x, _y, obj_cell)) {
+	//	if !place_empty_list(_x,_y) { exit }
+		
+	//	_x = x
+	//	_y = y
+	//}
 	
 	with (obj_target) {
 		if pawn == other.pawn {

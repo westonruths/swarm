@@ -52,9 +52,9 @@ switch(sprite_index){
 		}
 		
 		var attackRoll = irandom_range(1, 100);
-		if (attackRoll <= pawn_dmg*10){
+		if (attackRoll <= accuracy+pawn_dmg){
 		   //Successful attack
-		   var damage = irandom_range(1, pawn_dmg*2);
+		   var damage = irandom_range(pawn_dmg, pawn_dmg*2);
 		   //print(pawn.name, " lands a strike, dealing ", damage, " damage!")
 		   with(pawn.defend_target) {
 				hp -= damage
@@ -157,7 +157,7 @@ switch(sprite_index){
 		break;
 	case spr_sleep:
 		with (pawn) {
-			char_energy += 0.9
+			char_energy += 2
 		}
 		break;
 	case spr_patient:

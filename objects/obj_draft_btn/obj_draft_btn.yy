@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_lt_box",
-    "path": "sprites/spr_lt_box/spr_lt_box.yy",
+    "name": "spr_w_box",
+    "path": "sprites/spr_w_box/spr_w_box.yy",
   },
   "solid": false,
   "visible": true,
