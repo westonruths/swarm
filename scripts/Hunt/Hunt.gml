@@ -11,11 +11,15 @@ function Hunt(){
 	if (instance_exists(hunt_target)) {
 		_clear_previous_targets()
 		
-		if distance_to_object(hunt_target) < global.grid_resolution {
+		if melee && distance_to_object(hunt_target) < global.grid_resolution {
 			direction = point_direction(x, y, hunt_target.x, hunt_target.y)
 			sprite_index = spr_pawn_hunt
 			current_task = "Hunting"
-		} else {
+		} else if !melee && distance_to_object(hunt_target) < global.grid_resolution*6 {
+			direction = point_direction(x, y, hunt_target.x, hunt_target.y)
+			sprite_index = spr_pawn_archery
+			current_task = "Hunting"
+		}else {
 			move_to_around_free_point(hunt_target.x, hunt_target.y)
 			sprite_index = spr_pawn_run
 			current_task = "On the hunt"

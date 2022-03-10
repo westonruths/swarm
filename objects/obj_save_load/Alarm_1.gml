@@ -99,6 +99,7 @@ if (file_exists("settler.save")) {
 			spd = _loadEntity.spd
 			crowned = _loadEntity.crowned
 			drafted = _loadEntity.drafted
+			melee = _loadEntity.melee
 			
 			with (mood) {
 				mood = _loadEntity.mood.mood

@@ -81,6 +81,37 @@ switch(sprite_index){
 			}
 		}
 		break;
+	case spr_archery:
+		var _snd = choose(snd_bow1, snd_bow2, snd_bow3, snd_bow4, snd_bow5)
+		audio_sound_pitch(_snd, choose(0.9,1.0,1.1))
+		audio_play_sound_at(_snd, x, y, 0, global.falloff_ref, global.falloff_max, global.falloff_factor, false, 5);
+		
+		var pawn_dmg = 0
+		var _target = noone
+		with (pawn) {
+			pawn_dmg = task_cells[jobid.hunt].skill_level
+			task_cells[jobid.hunt].skill_exp += 5
+			
+			if instance_exists(defend_target) { 
+				_target = defend_target 
+			}
+			if instance_exists(hunt_target) { 
+				_target = hunt_target 
+			}
+		}
+		
+		with (instance_create_layer(x+lengthdir_x(2,direction),y+lengthdir_y(2,direction),"Instances",obj_arrow)) {
+			dmg = pawn_dmg;
+			
+			if instance_exists(_target) {
+				direction = point_direction(x,y,_target.x,_target.y)
+				image_angle = point_direction(x,y,_target.x,_target.y)-90
+			}
+			
+			speed = 5
+		}		
+		
+		break
 	case spr_mine:
 		var _snd = choose(snd_Mining_Rock_A, snd_Mining_Rock_B, snd_Mining_Rock_C)
 		audio_stop_sound(_snd)

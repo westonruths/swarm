@@ -57,6 +57,8 @@ equipped_wpn = 1;
 // The weapon index that is active
 active_wpn_index = 0;
 
+melee = choose(true, false)
+
 // Action targets
 mood_target = noone
 defend_target = noone

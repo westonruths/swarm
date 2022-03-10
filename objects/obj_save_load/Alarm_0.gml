@@ -96,6 +96,7 @@ with (obj_pawn) {
 		old_hp: old_hp,
 		crowned: crowned,
 		drafted: drafted,
+		melee: melee,
 	}
 	
 	with (mood) {

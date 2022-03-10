@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_debri",
-    "path": "sprites/spr_debri/spr_debri.yy",
+    "name": "spr_w_box",
+    "path": "sprites/spr_w_box/spr_w_box.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_ui_interface",
+    "path": "objects/obj_ui_interface/obj_ui_interface.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,17 +24,19 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "old_weapons",
-    "path": "folders/Objects/weapons/old_weapons.yy",
+    "name": "pawn_ui",
+    "path": "folders/Objects/ui/pawn_ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_debri",
+  "name": "obj_combat_mode_btn",
   "tags": [],
   "resourceType": "GMObject",
 }

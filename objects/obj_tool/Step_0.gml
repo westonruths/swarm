@@ -59,6 +59,9 @@ switch(pawn.sprite_index){
 	case spr_pawn_watering:
 		sprite_index = spr_watering
 		break;
+	case spr_pawn_archery:
+		sprite_index = spr_archery
+		break;
 }
 	
 	

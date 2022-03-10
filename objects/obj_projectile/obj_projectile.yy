@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "weapons",
-    "path": "folders/Objects/weapons.yy",
+    "name": "old_weapons",
+    "path": "folders/Objects/weapons/old_weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_projectile",
