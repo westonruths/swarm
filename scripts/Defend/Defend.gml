@@ -58,7 +58,7 @@ function Defend(){
 				path_speed = 0
 				targetX = x
 				targetY = y
-			} else if melee && distance_to_object(defend_target) < global.grid_resolution {
+			} else if !melee && distance_to_object(defend_target) < global.grid_resolution*6 {
 				direction = point_direction(x, y, defend_target.x, defend_target.y)
 				sprite_index = spr_pawn_archery
 				current_task = "Shooting"

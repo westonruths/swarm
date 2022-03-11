@@ -28,7 +28,7 @@ if object_is_ancestor(selection.object_index, obj_building) {
 	else if selection.deconstruct == false { selection.deconstruct = true }
 }
 
-if object_is_ancestor(selection.object_index, obj_tree) {
+if object_is_ancestor(selection.object_index, obj_harvestable) {
 	if selection.selected == true { selection.selected = false }
 	else if selection.selected == false { selection.selected = true }	
 }

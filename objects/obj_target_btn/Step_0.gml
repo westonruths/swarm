@@ -7,7 +7,6 @@ event_inherited();
 if !instance_exists(pawn) { instance_destroy() }
 
 if (global.menu_open == false || pawn.menu_open == false || global.building) && !selected{
-	print("destroy target btn")
 	instance_destroy()
 }
 

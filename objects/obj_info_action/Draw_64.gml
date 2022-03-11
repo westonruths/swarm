@@ -28,9 +28,9 @@ if object_is_ancestor(selection.object_index, obj_building) {
 	else if selection.deconstruct == false { text = "Deconstruct" }
 }
 
-if object_is_ancestor(selection.object_index, obj_tree) {
-	if selection.selected == true { text = "Cancel Chop" }
-	else if selection.selected == false { text = "Chop" }
+if object_is_ancestor(selection.object_index, obj_harvestable) {
+	if selection.selected == true { text = "Cancel Harvest" }
+	else if selection.selected == false { text = "Harvest" }
 }
 
 if text == "" { exit }

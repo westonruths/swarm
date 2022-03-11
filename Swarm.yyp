@@ -424,6 +424,7 @@
     {"id":{"name":"spr_dt_box","path":"sprites/spr_dt_box/spr_dt_box.yy",},"order":0,},
     {"id":{"name":"spr_meal","path":"sprites/spr_meal/spr_meal.yy",},"order":3,},
     {"id":{"name":"playercount","path":"sprites/playercount/playercount.yy",},"order":35,},
+    {"id":{"name":"obj_harvestable","path":"objects/obj_harvestable/obj_harvestable.yy",},"order":7,},
     {"id":{"name":"spr_wheat_item","path":"sprites/spr_wheat_item/spr_wheat_item.yy",},"order":4,},
     {"id":{"name":"C_chop_controls","path":"scripts/C_chop_controls/C_chop_controls.yy",},"order":2,},
     {"id":{"name":"arrow_left","path":"sprites/arrow_left/arrow_left.yy",},"order":2,},

@@ -39,7 +39,7 @@ if dragging && mouse_check_button(mb_left) {
 	    for (var i = 0; i < _num; ++i;) {
 	        var cell = _list[| i]
 			with (cell) {
-				if instance_place(x,y,obj_tree) {
+				if instance_place(x,y,obj_tree) || instance_place(x,y,obj_harvestable) {
 					visible = true
 					selected = true
 				}
@@ -58,6 +58,7 @@ if dragging && mouse_check_button_released(mb_left) {
 	
 	var _list = ds_list_create();
 	var _num = collision_rectangle_list(rectx1, recty1, rectx2, recty2, obj_tree, false, true, _list, false);
+	_num += collision_rectangle_list(rectx1, recty1, rectx2, recty2, obj_harvestable, false, true, _list, false);
 	if _num > 0 {
 	    for (var i = 0; i < _num; ++i;) {
 	        var tree = _list[| i]

@@ -4,7 +4,7 @@ switch(sprite_index){
 	case spr_chop:
 		var _snd = choose(snd_chop_woodA, snd_chop_woodB)
 		if instance_exists(pawn.fell_target) {
-			if pawn.fell_target.object_index != obj_tree {
+			if pawn.fell_target.object_index == obj_harvestable {
 				_snd = choose(snd_Gather_Herb_A, snd_Gather_Herb_B, snd_Gather_Herb_C)
 			}
 		} else {
@@ -100,16 +100,17 @@ switch(sprite_index){
 			}
 		}
 		
-		with (instance_create_layer(x+lengthdir_x(2,direction),y+lengthdir_y(2,direction),"Instances",obj_arrow)) {
-			dmg = pawn_dmg;
+		if instance_exists(_target) {
+			with (instance_create_layer(x+lengthdir_x(2,direction),y+lengthdir_y(2,direction),"Instances",obj_arrow)) {
+				dmg = pawn_dmg;
 			
-			if instance_exists(_target) {
+			
 				direction = point_direction(x,y,_target.x,_target.y)
 				image_angle = point_direction(x,y,_target.x,_target.y)-90
-			}
 			
-			speed = 5
-		}		
+				speed = 5
+			}		
+		}
 		
 		break
 	case spr_mine:

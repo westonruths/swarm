@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_tree",
-    "path": "objects/obj_tree/obj_tree.yy",
+    "name": "obj_harvestable",
+    "path": "objects/obj_harvestable/obj_harvestable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
