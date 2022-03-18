@@ -6,7 +6,7 @@ event_inherited();
 
 inventory_objects = [obj_stone, obj_wood, obj_healing_herb, obj_meal]
 
-drawX = 12
+drawX = 25
 drawY = 30
 
 y_interval = 25

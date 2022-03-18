@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-mood = 50
+mood = 90
 mood_base = mood
 mood_goal = mood
 mood_max = 100
