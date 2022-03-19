@@ -53,5 +53,5 @@ if mp_grid_path(global.grid, path, x, y, targetX, targetY, true)  {
 old_targetX = targetX
 old_targetY = targetY
 
-alarm[2] = 10
+alarm[2] = 5
 

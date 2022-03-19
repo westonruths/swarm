@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-//cursor_sprite = hand_open_02
-//window_set_cursor(cr_none);
+cursor_sprite = hand_open_02
+window_set_cursor(cr_none);
 
 global.view_width = 812
 global.view_height = 375
