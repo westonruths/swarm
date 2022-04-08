@@ -10,7 +10,7 @@ if (selected) {
 }
 draw_set_alpha(1);
 
-var ch = (hp / hp_max) * 100;
+var ch = round((hp / hp_max) * 100);
 
 if (hp < hp_max) {
 	draw_healthbar(x-10,y+7, x+10, y+10, ch, c_black, c_lime, c_lime, 0, true, true)

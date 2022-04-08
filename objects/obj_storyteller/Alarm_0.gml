@@ -10,7 +10,7 @@ if (counter_hrs[story.raid] <= 0) {
 	num_goblins = 1 + irandom_range(global.day/4, global.day)
 
 	if instance_number(obj_pawn) < 7 {
-		counter_hrs[story.raid] = 72 + irandom_range(12,24)
+		counter_hrs[story.raid] = 72 + irandom_range(12,72)
 	} else {
 		counter_hrs[story.raid] = 12 + irandom_range(12,24)
 	}
@@ -35,7 +35,7 @@ counter_hrs[story.save_settler] -= 1
 
 if (counter_hrs[story.save_settler] <= 0) {
 
-	counter_hrs[story.save_settler] = (24 * instance_number(obj_pawn)) + irandom_range(0,5)
+	counter_hrs[story.save_settler] = (24 * instance_number(obj_pawn)) + irandom_range(0,15 * instance_number(obj_pawn))
 	
 	var prompt = instance_create_layer(global.view_width/4, global.view_height/4, "Menu_Prompts",obj_storyteller_prompt);
 	with (prompt) {

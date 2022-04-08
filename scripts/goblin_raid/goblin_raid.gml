@@ -8,6 +8,11 @@ function goblin_raid(){
 	repeat(_num_goblins) {
 		var _x = irandom_range(0,global.room_y_size)
 		var _y = choose(global.top_game,global.bottom_game)
+		
+		if instance_exists(_goblin) {
+			var _x = _goblin.x + irandom_range(-50,50)
+			var _y = _goblin.y
+		}
 	
 		var max_dist = 9999
 		var cell = noone
@@ -25,10 +30,10 @@ function goblin_raid(){
 	with (quests) { quest_array[quest.defeat_goblins][1] = 0}
 	
 		
-	//if instance_exists(_goblin) {
-	//	with (obj_camera) {
-	//		xPanTo = _goblin.x
-	//		yPanTo = _goblin.y
-	//	}
-	//}
+	if instance_exists(_goblin) {
+		with (obj_camera) {
+			xPanTo = _goblin.x
+			yPanTo = _goblin.y
+		}
+	}
 }

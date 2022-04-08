@@ -28,7 +28,7 @@ if(mouse_check_button_released(mb_left)){
 		} else {
 			with(instance_create_layer(x-50,y-10,"Instances",obj_status)) { 
 				text = "No save file!"
-				image_blend = c_white
+				image_blend = c_black
 			}			
 		}
     }

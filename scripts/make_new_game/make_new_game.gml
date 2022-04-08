@@ -4,6 +4,7 @@ function make_new_game(){
 	
 	instance_create_layer(0, 0, "Menu_Prompts", obj_tutorial)
 	
+	randomise()
 	
 	obj_size = sprite_get_width(spr_cell);
 	buffer = global.grid_resolution
@@ -91,7 +92,7 @@ function make_new_game(){
 			var place_object = irandom_range(0,1000)
 
 			//place trees
-			if (place_object > 0 && place_object < 100) {
+			if (place_object > 0 && place_object < 70) {
 				with (cell) {
 					if !instance_exists(build_obj) {
 						if instance_position(x, y, obj_pawn) == noone {
@@ -111,7 +112,7 @@ function make_new_game(){
 			}
 
 			//place healing herbs
-			if (place_object > 110 && place_object < 150) {
+			if (place_object > 110 && place_object < 120) {
 				with (cell) {
 					if !instance_exists(build_obj) {
 						if instance_position(x, y, obj_pawn) == noone {
@@ -122,7 +123,7 @@ function make_new_game(){
 			} 
 	
 			//place berry bushes
-			if (place_object > 150 && place_object < 200) {
+			if (place_object > 150 && place_object < 160) {
 				with (cell) {
 					if !instance_exists(build_obj) {
 						if instance_position(x, y, obj_pawn) == noone {

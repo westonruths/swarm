@@ -36,7 +36,7 @@ draw_self();
 
 if hp <= 0 { exit }
 
-var ch = (hp / hp_max) * 100;
+var ch = round((hp / hp_max) * 100);
 //var cf = (char_food / char_food_max) * 100;
 //var ce = (char_energy / char_energy_max) * 100;
 
@@ -53,30 +53,28 @@ if (hp < hp_max) {
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
-if global.zoom_level > 1.1 {
-	draw_set_font(fnt_big_btn);
-} else {
-	draw_set_font(fnt_btn);
-}
+draw_set_font(fnt_btn);
 
 // Draw thoughts & mood modifiers
-draw_set_color(c_white);
-var _name_color = c_black
-var cm = (mood.mood / mood.mood_max) * 100;
-if cm >= 80 {
-	draw_sprite_ext(happiness_01, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
-} else if cm >= 50 {
-	draw_sprite_ext(happiness_02, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
-} else if cm >= 20 {
-	draw_sprite_ext(happiness_03, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
-} else {
-	//draw_set_color(c_red);
-	//draw_text(x+5, y-15, "I'm upset!")
-	_name_color = c_red
-	draw_sprite_ext(happiness_04, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
-}
+if global.zoom_level < 1.1 {
+	draw_set_color(c_white);
+	var _name_color = c_black
+	var cm = (mood.mood / mood.mood_max) * 100;
+	if cm >= 80 {
+		draw_sprite_ext(happiness_01, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
+	} else if cm >= 50 {
+		draw_sprite_ext(happiness_02, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
+	} else if cm >= 20 {
+		draw_sprite_ext(happiness_03, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
+	} else {
+		//draw_set_color(c_red);
+		//draw_text(x+5, y-15, "I'm upset!")
+		_name_color = c_red
+		draw_sprite_ext(happiness_04, image_index, x-9, y+11, 1, 1, image_angle, image_blend, image_alpha)
+	}
 
-draw_text_outline(x, y +15, c_white, _name_color, name)
+	draw_text_outline(x, y +15, c_white, _name_color, name)
+}
 
 //draw_set_color(c_aqua);
 //draw_text(x+15, y-15, mood.caption)

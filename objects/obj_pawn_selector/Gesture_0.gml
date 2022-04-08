@@ -10,7 +10,9 @@ if global.menu_open {
 		if instance_exists(obj_close_construction) {
 			exit
 		}
-		
+		if instance_exists(obj_storyteller_prompt) {
+			exit
+		}
 		unpause()
 	}
 }

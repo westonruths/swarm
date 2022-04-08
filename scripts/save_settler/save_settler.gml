@@ -18,10 +18,10 @@ function save_settler(){
 
 	var settler = instance_create_layer(cell.x, cell.y, "Instances", obj_pawn)
 
-	//if instance_exists(settler) {
-	//	with (obj_camera) {
-	//		xPanTo = settler.x
-	//		yPanTo = settler.y
-	//	}
-	//}
+	if instance_exists(settler) {
+		with (obj_camera) {
+			xPanTo = settler.x
+			yPanTo = settler.y
+		}
+	}
 }

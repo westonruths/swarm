@@ -15,7 +15,7 @@ if (tmp_selected) {
 	draw_sprite_ext(selectbox_bottom, image_index, x, y, 1, 1, image_angle, image_blend, image_alpha)
 }
 
-var ch = (hp / hp_max) * 100;
+var ch = round((hp / hp_max) * 100);
 
 if (hp < hp_max) {
 	draw_healthbar(x-sprite_width/2,y+sprite_height/2-5, x+sprite_width/2, y+sprite_height/2-1, ch, c_black, c_lime, c_lime, 0, true, true)

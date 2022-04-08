@@ -32,3 +32,4 @@ with(obj_pawn) {
 instance_create_layer(global.view_width-30,15,"Menu_Btns",obj_close_menu);
 instance_create_layer(global.view_width-(global.view_width/3),0,"Menu_Btns",obj_pawns_menu);
 
+instance_destroy(id)

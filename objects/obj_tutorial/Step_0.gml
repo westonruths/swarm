@@ -178,15 +178,27 @@ switch status {
 		with (obj_quest_btn) {
 			other.x = x - other.sprite_width*1.5
 			other.y = y
-			other.x_indicator = x
-			other.y_indicator = y-sprite_height/2
+		}
+	
+		if instance_exists(obj_close_construction) {
+			with (obj_close_construction) {
+				other.x_indicator = x
+				other.y_indicator = y-sprite_height/2
+			}
+		} else {
+			with (obj_quest_btn) {
+				other.x = x - other.sprite_width*1.5
+				other.y = y
+				other.x_indicator = x
+				other.y_indicator = y-sprite_height/2
+			}
 		}
 		
 		image_xscale = global.view_width/5/sprite_get_width(spr_lt_box)
-		image_yscale = global.view_width/6/sprite_get_height(spr_lt_box)
+		image_yscale = global.view_width/4/sprite_get_height(spr_lt_box)
 		
 		title = "Quests"
-		detail = "Let's see if there are more quests to complete. Click on the quest button."
+		detail = "Exit out of construction mode. \n\nLet's see if there are more quests to complete. Click on the quest button."
 		
 		if instance_exists(obj_quest_menu){
 		    status += 1

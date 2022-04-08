@@ -5,6 +5,7 @@ function setup_pawn_menu(){
 	with(obj_task_cell) {
 		visible = false
 	}
+	
 	with(obj_pawn) { 
 		menu_open = false;
 	}
